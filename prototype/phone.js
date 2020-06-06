@@ -1,44 +1,28 @@
-import Click from "./click.js";
-//Handy vom Spieler
-export default class Phone extends Click {
-  constructor(x, y, width, height) {
-    super(x, y, width, height);
-    this.t = 0;
-    this.min = 0;
-    this.h = 0;
-  }
-  clock() {
-    this.t++;
-    if (this.t === 50) {
-      this.min++;
-      this.t = 0;
-    }
-    if (this.min === 60) {
-      this.h++;
-      this.min = 0;
-    }
-    if (this.h === 24 && this.min == 1) {
-      this.h = 0;
-      this.min = 1;
-    }
+export default class Phone {
+  constructor(x, y, width, height, clock) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.clock = clock;
+    this.screen = "PhoneScreen";
   }
   display() {
-    noFill();
+    fill(30, 30, 30);
     stroke(180, 0, 125);
     strokeWeight(3);
-    fill(30, 30, 30);
-    rect(this.x, this.y, this.width, this.height, 20);
+    rect(this.x, this.y, this.width, this.height, 15);
     fill(180, 0, 125);
-    rect(this.x + this.width / 2.5, this.y + 5, 20, 2, 2);
-    this.clock();
+    rect(
+      this.x + this.width / 3,
+      this.y + 10,
+      this.width / 3,
+      this.height / 50,
+      15
+    );
     noStroke();
     fill(220, 220, 220);
-    textSize(40);
-    textAlign(CENTER);
-    text(this.h, this.x + this.width / 2, this.y + this.height / 2);
-    text(this.min, this.x + this.width / 2, this.y + this.height / 2 + 40);
-  }
-  clicked() {
-    console.log("Phone");
+    textSize(15);
+    text(this.clock.h + ":" + this.clock.min, this.x + 30, this.y + 20);
   }
 }

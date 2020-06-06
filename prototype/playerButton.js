@@ -1,8 +1,9 @@
 import Click from "./click.js";
 //Button zur Übersicht vom Spieler
-export default class Player extends Click {
+export default class PlayerButton extends Click {
   constructor(x, y, width, height) {
     super(x, y, width, height);
+    this.playerScreen = false;
   }
   display() {
     stroke(180, 0, 125);
@@ -30,6 +31,11 @@ export default class Player extends Click {
     );
   }
   clicked() {
-    console.log("Player");
+    if (this.playerScreen === false) {
+      this.playerScreen = true;
+    } else {
+      this.playerScreen = false;
+    }
+    console.log("PlayerButton");
   }
 }

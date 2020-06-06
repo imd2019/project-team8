@@ -9,7 +9,7 @@ export default class Talking extends Click {
     noFill();
     stroke(180, 0, 125);
     strokeWeight(3);
-    rect(this.x, this.y, this.width, this.height, 20);
+    rect(this.x, this.y, this.width, this.height, 15);
     noStroke();
     fill(220, 220, 220);
     textAlign(LEFT);
