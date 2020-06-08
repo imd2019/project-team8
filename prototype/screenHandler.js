@@ -5,9 +5,11 @@ import Phone from "./phone.js";
 import PlayerOverview from "./playerOverview.js";
 
 export default class ScreenHandler {
-  constructor(phoneButton, playerButton) {
+  constructor(phoneButton, playerButton, questionButton, textButton) {
     this.phoneButton = phoneButton;
     this.playerButton = playerButton;
+    this.questionButton = questionButton;
+    this.textButton = textButton;
     this.screen = "questionScreen";
 
     this.talking = new Talking(150, 500, 630, 100);
@@ -20,15 +22,23 @@ export default class ScreenHandler {
   display() {
     if (
       this.phoneButton.phoneScreen === false &&
-      this.playerButton.playerScreen === false
+      this.playerButton.playerScreen === false &&
+      this.questionButton.screen === false &&
+      this.textButton.screen === false
     ) {
-      this.screen = "questionScreen";
+      this.screen = "homeScreen";
     }
     if (this.phoneButton.phoneScreen === true) {
       this.screen = "phoneScreen";
     }
     if (this.playerButton.playerScreen === true) {
       this.screen = "playerOverviewScreen";
+    }
+    if (this.questionButton.screen === true) {
+      this.screen = "questionScreen";
+    }
+    if (this.textButton.screen === true) {
+      this.screen = "talkingScreen";
     }
   }
 }

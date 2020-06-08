@@ -1,5 +1,6 @@
 import PhoneButton from "./phoneButton.js";
 import PlayerButton from "./playerButton.js";
+import Button from "./button.js";
 // import Talking from "./talking.js";
 // import Choice from "./choice.js";
 // import Question from "./question.js";
@@ -8,12 +9,21 @@ import PlayerButton from "./playerButton.js";
 import ScreenHandler from "./screenHandler.js";
 let phoneButton = new PhoneButton(820, 510, 70, 100);
 let playerButton = new PlayerButton(10, 510, 100, 100);
+let questionButton = new Button(10, 10, 100, 40, "Question");
+let textButton = new Button(10, 60, 100, 40, "Text");
 
-let screenHandler = new ScreenHandler(phoneButton, playerButton);
+let screenHandler = new ScreenHandler(
+  phoneButton,
+  playerButton,
+  questionButton,
+  textButton
+);
 
 function mouseClicked() {
   phoneButton.mouseClicked();
   playerButton.mouseClicked();
+  questionButton.mouseClicked();
+  textButton.mouseClicked();
 
   screenHandler.talking.mouseClicked();
   screenHandler.choice1.mouseClicked();
@@ -43,5 +53,7 @@ function draw() {
 
   phoneButton.display();
   playerButton.display();
+  questionButton.display();
+  textButton.display();
 }
 window.draw = draw;
