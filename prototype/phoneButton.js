@@ -44,6 +44,6 @@ export default class PhoneButton extends Click {
     } else {
       this.phoneScreen = false;
     }
-    console.log("Phone");
+    console.log("PhoneButton");
   }
 }
