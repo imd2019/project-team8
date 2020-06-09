@@ -24,10 +24,19 @@ function mouseClicked() {
   playerButton.mouseClicked();
   questionButton.mouseClicked();
   textButton.mouseClicked();
-
-  screenHandler.talking.mouseClicked();
-  screenHandler.choice1.mouseClicked();
-  screenHandler.choice2.mouseClicked();
+  switch (screenHandler.screen) {
+    case "phoneScreen":
+      break;
+    case "playerOverviewScreen":
+      break;
+    case "talkingScreen":
+      screenHandler.talking.mouseClicked();
+      break;
+    case "questionScreen":
+      screenHandler.choice1.mouseClicked();
+      screenHandler.choice2.mouseClicked();
+      break;
+  }
 }
 window.mouseClicked = mouseClicked;
 function draw() {
