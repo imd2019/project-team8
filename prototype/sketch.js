@@ -49,6 +49,8 @@ function draw() {
       break;
     case "playerOverviewScreen":
       screenHandler.playerOverview.display();
+      screenHandler.scale1.display();
+      screenHandler.scale2.display();
       break;
     case "talkingScreen":
       screenHandler.talking.display();
