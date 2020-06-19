@@ -62,14 +62,35 @@ let mentorTalking6 = new Talking(
   "Mentor",
   "Also, nochmal zum Thema zurück, unser Unternehmen ist dabei wirklich drastische Entscheidungen zu treffen und das bereitet mir Sorgen."
 );
+let mentorTalking7 = new Talking(
+  305,
+  630,
+  700,
+  100,
+  "Mentor",
+  "Diese Maschine hier wird dich in ein paralleles Universum transportieren, das schon um einiges fortschrittlicher ist als unseres."
+);
+let mentorTalking8 = new Talking(
+  305,
+  630,
+  700,
+  100,
+  "Mentor",
+  "Ob das ungefährlich ist? Natürlich! Zumindest soweit ich weiß, hehe…"
+);
+let mentorTalking9 = new Talking(
+  305,
+  630,
+  700,
+  100,
+  "Mentor",
+  "Also! Bevor wir anfangen muss ich dich noch einmal fragen, ob du diese Mission wirklich antreten möchtest. Bist du dabei?"
+);
 
 function mouseMoved() {
   if (start.start === false) {
     start.mouseMoved();
-  } else {
-    phoneButton.mouseMoved();
-    beamerButton.mouseMoved();
-
+  } else if (talking.counter >= 1 && talking.counter <= 9) {
     //Talking
     mentorTalking1.mouseMoved();
     mentorTalking2.mouseMoved();
@@ -77,7 +98,12 @@ function mouseMoved() {
     mentorTalking4.mouseMoved();
     mentorTalking5.mouseMoved();
     mentorTalking6.mouseMoved();
+    mentorTalking7.mouseMoved();
+    mentorTalking8.mouseMoved();
+    mentorTalking9.mouseMoved();
   }
+  phoneButton.mouseMoved();
+  beamerButton.mouseMoved();
 }
 window.mouseMoved = mouseMoved;
 
@@ -87,8 +113,11 @@ function mouseClicked() {
   }
   phoneButton.mouseClicked();
   beamerButton.mouseClicked();
+
   //Talking
-  talking.mouseClicked();
+  if (talking.counter >= 1 && talking.counter <= 9) {
+    talking.mouseClicked();
+  }
 }
 window.mouseClicked = mouseClicked;
 
@@ -132,6 +161,16 @@ function draw() {
         break;
       case 6:
         mentorTalking6.display();
+        break;
+      case 7:
+        mentorTalking7.display();
+        image(beamer, 639, 135, 240, 440);
+        break;
+      case 8:
+        mentorTalking8.display();
+        break;
+      case 9:
+        mentorTalking9.display();
         break;
     }
   }
