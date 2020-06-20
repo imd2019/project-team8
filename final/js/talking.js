@@ -1,11 +1,30 @@
 import Button from "./button.js";
 
+// <style>
+//   @import url("https://use.typekit.net/dss7qvd.css");
+// </style>
+// function setup() {
+//   fill("black");
+//   textFont(text);
+// }
+// let text;
+// function preload() {
+//   text = loadFont("https://use.typekit.net/dss7qvd.css");
+// }
+
 export default class Talking extends Button {
   constructor(x, y, width, height, person, text) {
     super(x, y, width, height);
     this.person = person;
     this.text = text;
     this.counter = 1;
+  }
+  preload() {
+    this.text = loadFont("https://use.typekit.net/dss7qvd.css");
+  }
+  setup() {
+    fill("black");
+    textFont(this.text);
   }
   display() {
     fill(30, 30, 30, 180);
