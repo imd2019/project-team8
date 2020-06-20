@@ -4,8 +4,6 @@ import Button from "./button.js";
 import Start from "./start.js";
 import TalkingHandler from "./talkingHandler.js";
 
-//talking Counter
-// let talking = new Talking(305, 630, 700, 100, " ", " ");
 //Buttons
 let start = new Start(562.5, 337.5, 185, 65);
 let phoneButton = new Button(1200, 630, 80, 100);
@@ -60,49 +58,13 @@ function draw() {
     start.display();
   } else {
     talkingHandler.display();
-    //Text
-    // switch (talking.counter) {
-    //   case 0:
-    //     break;
-    //   case 1:
-    //     mentorTalking1.display();
-    //     break;
-    //   case 2:
-    //     mentorTalking2.display();
-    //     break;
-    //   case 3:
-    //     mentorTalking3.display();
-    //     break;
-    //   case 4:
-    //     mentorTalking4.display();
-    //     break;
-    //   case 5:
-    //     mentorTalking5.display();
-    //     break;
-    //   case 6:
-    //     mentorTalking6.display();
-    //     break;
-    //   case 7:
-    //     mentorTalking7.display();
-    //     image(beamer, 639, 135, 240, 440);
-    //     break;
-    //   case 8:
-    //     mentorTalking8.display();
-    //     break;
-    //   case 9:
-    //     mentorTalking9.display();
-    //     break;
-    // }
   }
-  //if (talking.counter > 9) {
-  //phoneButton.display();
-  //beamerButton.display();
 
   //Gegenstände
   if (beamerButton.effect === true) {
     image(beamer, 639, 135, 240, 440);
   }
-  //}
+
   //Umrandung
   noFill();
   stroke(30, 30, 30);

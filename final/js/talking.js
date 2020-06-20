@@ -19,7 +19,6 @@ export default class Talking extends Button {
     this.text = text;
     this.next = this;
     this.handler = null;
-    // this.counter = 1;
   }
   preload() {
     this.text = loadFont("https://use.typekit.net/dss7qvd.css");
@@ -58,10 +57,7 @@ export default class Talking extends Button {
   clicked() {
     if (this.handler != null) {
       this.handler.activeTalk = this.next;
-      console.log("clicked");
     }
-
-    // this.counter++;
   }
   changeNext(next, handler) {
     this.next = next;

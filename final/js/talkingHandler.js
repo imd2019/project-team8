@@ -1,4 +1,5 @@
 import Talking from "./talking.js";
+import TalkingDecision from "./talkingDecision.js";
 // import Button from "./button.js";
 
 //Talking
@@ -80,6 +81,31 @@ export default class TalkingHandler {
       "Mentor",
       "Also! Bevor wir anfangen muss ich dich noch einmal fragen, ob du diese Mission wirklich antreten möchtest. Bist du dabei?"
     );
+    this.mentorTalking10 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "*seufz* Na gut, trotzdem danke, dass du hergekommen bist, dann muss ich mir wohl jemanden anderes suchen…"
+    );
+    this.mentorTalking11 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Fantastisch! Dann erkläre ich dir noch einmal kurz die wichtigsten Dinge."
+    );
+    this.talkingDecision1 = new TalkingDecision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      "Tut mir Leid, das ist mir zu riskant.",
+      "Ja, du kannst auf mich zählen."
+    );
 
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
@@ -90,6 +116,9 @@ export default class TalkingHandler {
     this.mentorTalking6.changeNext(this.mentorTalking7, this);
     this.mentorTalking7.changeNext(this.mentorTalking8, this);
     this.mentorTalking8.changeNext(this.mentorTalking9, this);
+    this.mentorTalking9.changeNext(this.talkingDecision1, this);
+    this.talkingDecision1.changeNext1(this.mentorTalking10, this);
+    this.talkingDecision1.changeNext2(this.mentorTalking11, this);
   }
 
   mouseMoved() {
