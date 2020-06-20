@@ -4,7 +4,7 @@ export default class Button {
     this.y = y;
     this.width = width;
     this.height = height;
-    this.effect = false;
+
     this.triggert = false;
   }
   display() {

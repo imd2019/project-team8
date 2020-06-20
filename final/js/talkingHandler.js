@@ -6,7 +6,10 @@ import TalkingDecision from "./talkingDecision.js";
 
 export default class TalkingHandler {
   constructor() {
+    this.empty = new Talking();
     //szene 1
+
+    //Mentor Talking
     this.mentorTalking1 = new Talking(
       305,
       630,
@@ -97,6 +100,72 @@ export default class TalkingHandler {
       "Mentor",
       "Fantastisch! Dann erkläre ich dir noch einmal kurz die wichtigsten Dinge."
     );
+    this.mentorTalking12 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Sobald du in deiner Wohnung ankommst findest du dort Kontaktlinsen, über die ich dich kontaktieren werde."
+    );
+    this.mentorTalking13 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Darüber erhältst du Aufträge von mir, in denen du Entscheidungen treffen musst."
+    );
+    this.mentorTalking14 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Über dein Handy musst du dokumentieren, wie du dich in diesen Situationen fühlst"
+    );
+    this.mentorTalking15 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Über dein Profil kannst du jederzeit sehen, was du tun musst und schon geschafft hast."
+    );
+    this.mentorTalking16 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "In dieser Welt besitzt du eine ID, die alle Informationen über dich zugänglich macht, also bitte geh vorsichtig damit um."
+    );
+    this.mentorTalking17 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Alles verstanden?"
+    );
+    this.mentorTalking18 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Kein Problem."
+    );
+    this.mentorTalking19 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Sehr gut, bitte füll dieses Formular aus, dann kann es losgehen."
+    );
+
+    //Decitions
     this.talkingDecision1 = new TalkingDecision(
       305,
       630,
@@ -105,6 +174,15 @@ export default class TalkingHandler {
       "Ich",
       "Tut mir Leid, das ist mir zu riskant.",
       "Ja, du kannst auf mich zählen."
+    );
+    this.talkingDecision2 = new TalkingDecision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      " Nein, wiederhol das bitte.",
+      " Ja, verstanden."
     );
 
     this.activeTalk = this.mentorTalking1;
@@ -119,6 +197,17 @@ export default class TalkingHandler {
     this.mentorTalking9.changeNext(this.talkingDecision1, this);
     this.talkingDecision1.changeNext1(this.mentorTalking10, this);
     this.talkingDecision1.changeNext2(this.mentorTalking11, this);
+    this.mentorTalking10.changeNext(this.empty, this);
+    this.mentorTalking11.changeNext(this.mentorTalking12, this);
+    this.mentorTalking12.changeNext(this.mentorTalking13, this);
+    this.mentorTalking13.changeNext(this.mentorTalking14, this);
+    this.mentorTalking14.changeNext(this.mentorTalking15, this);
+    this.mentorTalking15.changeNext(this.mentorTalking16, this);
+    this.mentorTalking16.changeNext(this.mentorTalking17, this);
+    this.mentorTalking17.changeNext(this.talkingDecision2, this);
+    this.talkingDecision2.changeNext1(this.mentorTalking18, this);
+    this.talkingDecision2.changeNext2(this.mentorTalking19, this);
+    this.mentorTalking18.changeNext(this.mentorTalking12, this);
   }
 
   mouseMoved() {
