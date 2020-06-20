@@ -5,7 +5,9 @@ export default class Talking extends Button {
     super(x, y, width, height);
     this.person = person;
     this.text = text;
-    this.counter = 1;
+    this.next = this;
+    this.handler = null;
+    // this.counter = 1;
   }
   display() {
     fill(30, 30, 30, 180);
@@ -31,9 +33,19 @@ export default class Talking extends Button {
     if (this.effect === false) {
       fill(100, 100, 100);
     }
-    text("weiter", this.x + 650, this.y + 90);
+    textAlign(RIGHT);
+    text("weiter", this.x, this.y + 80, this.width - 5, this.height + 15);
   }
   clicked() {
-    this.counter++;
+    if (this.handler != null) {
+      this.handler.activeTalk = this.next;
+      console.log("clicked");
+    }
+
+    // this.counter++;
+  }
+  changeNext(next, handler) {
+    this.next = next;
+    this.handler = handler;
   }
 }
