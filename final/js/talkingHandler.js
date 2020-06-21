@@ -1,12 +1,10 @@
 import Talking from "./talking.js";
 import TalkingDecision from "./talkingDecision.js";
-// import Button from "./button.js";
-
-//Talking
 
 export default class TalkingHandler {
   constructor() {
-    this.empty = new Talking();
+    this.empty1 = new Talking();
+    this.empty2 = new Talking();
     //szene 1
 
     //Mentor Talking
@@ -197,7 +195,7 @@ export default class TalkingHandler {
     this.mentorTalking9.changeNext(this.talkingDecision1, this);
     this.talkingDecision1.changeNext1(this.mentorTalking10, this);
     this.talkingDecision1.changeNext2(this.mentorTalking11, this);
-    this.mentorTalking10.changeNext(this.empty, this);
+    this.mentorTalking10.changeNext(this.empty1, this);
     this.mentorTalking11.changeNext(this.mentorTalking12, this);
     this.mentorTalking12.changeNext(this.mentorTalking13, this);
     this.mentorTalking13.changeNext(this.mentorTalking14, this);
@@ -208,6 +206,7 @@ export default class TalkingHandler {
     this.talkingDecision2.changeNext1(this.mentorTalking18, this);
     this.talkingDecision2.changeNext2(this.mentorTalking19, this);
     this.mentorTalking18.changeNext(this.mentorTalking12, this);
+    this.mentorTalking19.changeNext(this.empty2, this);
   }
 
   mouseMoved() {

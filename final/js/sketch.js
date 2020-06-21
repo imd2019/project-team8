@@ -3,6 +3,7 @@ import { laboratoryBackground, beamer } from "./p5setup.js";
 import Button from "./button.js";
 import Start from "./start.js";
 import TalkingHandler from "./talkingHandler.js";
+import Paper from "./paper.js";
 
 //Buttons
 let start = new Start(562.5, 337.5, 185, 65);
@@ -11,12 +12,26 @@ let beamerButton = new Button(650, 210, 230, 370);
 
 let talkingHandler = new TalkingHandler();
 
+let paper = new Paper();
+
+function keyPressed() {
+  paper.keyPressed();
+}
+window.keyPressed = keyPressed;
+
 function mouseMoved() {
   if (start.start === false) {
     start.mouseMoved();
   }
 
   talkingHandler.mouseMoved();
+  if (
+    talkingHandler.activeTalk === talkingHandler.empty2 &&
+    paper.ok === false &&
+    paper.name.length >= 1
+  ) {
+    paper.mouseMoved();
+  }
 }
 window.mouseMoved = mouseMoved;
 
@@ -25,6 +40,13 @@ function mouseClicked() {
     start.mouseClicked();
   }
   talkingHandler.mouseClicked();
+  if (
+    talkingHandler.activeTalk === talkingHandler.empty2 &&
+    paper.ok === false &&
+    paper.name.length >= 1
+  ) {
+    paper.mouseClicked();
+  }
 }
 window.mouseClicked = mouseClicked;
 
@@ -42,7 +64,8 @@ function draw() {
     talkingHandler.activeTalk === talkingHandler.mentorTalking2 ||
     talkingHandler.activeTalk === talkingHandler.mentorTalking3 ||
     talkingHandler.activeTalk === talkingHandler.mentorTalking4 ||
-    talkingHandler.activeTalk === talkingHandler.mentorTalking5
+    talkingHandler.activeTalk === talkingHandler.mentorTalking5 ||
+    talkingHandler.activeTalk === talkingHandler.empty1
   ) {
     fill(30, 30, 30);
     rect(10, 10, 1300, 600);
@@ -61,6 +84,13 @@ function draw() {
   }
 
   //Gegenstände
+  if (
+    talkingHandler.activeTalk === talkingHandler.empty2 &&
+    paper.ok === false
+  ) {
+    paper.draw();
+  }
+
   if (beamerButton.effect === true) {
     image(beamer, 639, 135, 240, 440);
   }
