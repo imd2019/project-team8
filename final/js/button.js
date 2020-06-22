@@ -1,9 +1,10 @@
 export default class Button {
-  constructor(x, y, width, height) {
+  constructor(x, y, width, height, name) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
+    this.name = name;
 
     this.triggert = false;
   }
@@ -12,11 +13,18 @@ export default class Button {
       stroke(200, 200, 200);
       strokeWeight(2);
     } else {
-      noStroke();
+      stroke(60, 60, 60);
+      strokeWeight(5);
     }
-
-    fill(100, 100, 100);
+    noFill();
+    // fill(100, 100, 100);
     rect(this.x, this.y, this.width, this.height);
+    if (this.effect === true) {
+      noStroke();
+      fill(220, 220, 220);
+      textAlign(CENTER);
+      text(this.name, this.x, this.y - 15, this.width, this.height);
+    }
   }
   hitTest(x, y) {
     if (

@@ -3,6 +3,8 @@ export default class Paper {
     this.name = [];
     this.ok = false;
     this.effect = false;
+    this.t = 0;
+    this.line = "|";
   }
 
   keyPressed() {
@@ -40,6 +42,13 @@ export default class Paper {
     }
   }
 
+  drawLine() {
+    this.t++;
+    if (this.t >= 30) {
+      this.t = 0;
+    }
+  }
+
   draw() {
     fill(220, 220, 220);
     stroke(30, 30, 30);
@@ -50,8 +59,14 @@ export default class Paper {
     noStroke();
     textSize(18);
     textAlign(LEFT);
+    this.drawLine();
     text("Name:", 470, 100);
-    text(this.name.join(""), 530, 100);
+    if (this.t <= 15) {
+      text(this.name.join("") + this.line, 530, 100);
+    } else {
+      text(this.name.join(""), 530, 100);
+    }
+
     if (this.effect === false) {
       fill(150, 150, 150);
     }

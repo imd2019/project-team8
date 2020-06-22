@@ -1,4 +1,8 @@
-import { laboratoryBackground, beamer } from "./p5setup.js";
+import {
+  laboratoryBackground,
+  messyRoomBackground,
+  beamer,
+} from "./p5setup.js";
 
 import Button from "./button.js";
 import Start from "./start.js";
@@ -7,12 +11,15 @@ import Paper from "./paper.js";
 
 //Buttons
 let start = new Start(562.5, 337.5, 185, 65);
-let phoneButton = new Button(1200, 630, 80, 100);
 let beamerButton = new Button(650, 210, 230, 370);
+let phone = new Button(700, 400, 50, 50, "Phone");
+let phoneButton = new Button(1200, 630, 80, 100);
+let windowButton = new Button(140, 120, 248, 270, "Window");
 
 let talkingHandler = new TalkingHandler();
 
 let paper = new Paper();
+let i = 0;
 
 function keyPressed() {
   paper.keyPressed();
@@ -36,6 +43,14 @@ function mouseMoved() {
   if (talkingHandler.activeTalk === talkingHandler.empty3) {
     beamerButton.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.empty5) {
+    if (phone.triggert === false) {
+      phone.mouseMoved();
+    } else {
+      phoneButton.mouseMoved();
+    }
+    windowButton.mouseMoved();
+  }
 }
 window.mouseMoved = mouseMoved;
 
@@ -56,6 +71,14 @@ function mouseClicked() {
   if (talkingHandler.activeTalk === talkingHandler.empty3) {
     beamerButton.mouseClicked();
   }
+  if (talkingHandler.activeTalk === talkingHandler.empty5) {
+    if (phone.triggert === false) {
+      phone.mouseClicked();
+    } else {
+      phoneButton.mouseClicked();
+    }
+    windowButton.mouseClicked();
+  }
 }
 window.mouseClicked = mouseClicked;
 
@@ -73,16 +96,10 @@ function draw() {
     talkingHandler.activeTalk === talkingHandler.mentorTalking3 ||
     talkingHandler.activeTalk === talkingHandler.mentorTalking4 ||
     talkingHandler.activeTalk === talkingHandler.mentorTalking5 ||
-    talkingHandler.activeTalk === talkingHandler.empty1 ||
-    talkingHandler.activeTalk === talkingHandler.empty4
+    talkingHandler.activeTalk === talkingHandler.empty1
   ) {
     fill(30, 30, 30);
     rect(10, 10, 1300, 600);
-    if (start.start === false) {
-      start.display();
-    } else {
-      talkingHandler.display();
-    }
   }
   switch (talkingHandler.activeTalk) {
     case talkingHandler.mentorTalking6:
@@ -154,6 +171,29 @@ function draw() {
     case talkingHandler.mentorTalking20:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
+    case talkingHandler.empty4:
+      i++;
+      if (i >= 10) {
+        talkingHandler.activeTalk = talkingHandler.empty5;
+      } else {
+        fill(220, 220, 220);
+        rect(15, 15, 1300, 600);
+      }
+      break;
+    case talkingHandler.empty5:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      if (phone.triggert === false) {
+        phone.display();
+      } else {
+        phoneButton.display();
+      }
+      windowButton.display();
+      break;
+  }
+  if (start.start === false) {
+    start.display();
+  } else {
+    talkingHandler.display();
   }
 
   //Umrandung

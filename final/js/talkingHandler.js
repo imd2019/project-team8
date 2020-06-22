@@ -7,6 +7,7 @@ export default class TalkingHandler {
     this.empty2 = new Talking();
     this.empty3 = new Talking();
     this.empty4 = new Talking();
+    this.empty5 = new Talking();
     //szene 1
 
     //Mentor Talking
