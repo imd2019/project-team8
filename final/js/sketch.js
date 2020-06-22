@@ -32,6 +32,9 @@ function mouseMoved() {
   ) {
     paper.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.empty3) {
+    beamerButton.mouseMoved();
+  }
 }
 window.mouseMoved = mouseMoved;
 
@@ -46,6 +49,9 @@ function mouseClicked() {
     paper.name.length >= 1
   ) {
     paper.mouseClicked();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.empty3) {
+    beamerButton.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -72,6 +78,8 @@ function draw() {
   } else {
     image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
   }
+
+  //hervorhebung beim Gespräch
   if (talkingHandler.activeTalk === talkingHandler.mentorTalking7) {
     image(beamer, 639, 135, 240, 440);
   }
@@ -82,6 +90,12 @@ function draw() {
   } else {
     talkingHandler.display();
   }
+  if (
+    paper.ok === true &&
+    talkingHandler.activeTalk === talkingHandler.empty2
+  ) {
+    talkingHandler.activeTalk = talkingHandler.mentorTalking20;
+  }
 
   //Gegenstände
   if (
@@ -91,7 +105,10 @@ function draw() {
     paper.draw();
   }
 
-  if (beamerButton.effect === true) {
+  if (
+    talkingHandler.activeTalk === talkingHandler.empty3 &&
+    beamerButton.effect === true
+  ) {
     image(beamer, 639, 135, 240, 440);
   }
 
