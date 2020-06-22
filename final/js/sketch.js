@@ -22,9 +22,10 @@ window.keyPressed = keyPressed;
 function mouseMoved() {
   if (start.start === false) {
     start.mouseMoved();
+  } else {
+    talkingHandler.mouseMoved();
   }
 
-  talkingHandler.mouseMoved();
   if (
     talkingHandler.activeTalk === talkingHandler.empty2 &&
     paper.ok === false &&
@@ -41,8 +42,10 @@ window.mouseMoved = mouseMoved;
 function mouseClicked() {
   if (start.start === false) {
     start.mouseClicked();
+  } else {
+    talkingHandler.mouseClicked();
   }
-  talkingHandler.mouseClicked();
+
   if (
     talkingHandler.activeTalk === talkingHandler.empty2 &&
     paper.ok === false &&
@@ -62,8 +65,7 @@ function draw() {
   fill(30, 30, 30);
   rect(10, 610, 1310, 130);
 
-  //Hintergründe
-  //schwarzer Hintergrund
+  //scene1
   if (
     start.start === false ||
     talkingHandler.activeTalk === talkingHandler.mentorTalking1 ||
@@ -71,45 +73,87 @@ function draw() {
     talkingHandler.activeTalk === talkingHandler.mentorTalking3 ||
     talkingHandler.activeTalk === talkingHandler.mentorTalking4 ||
     talkingHandler.activeTalk === talkingHandler.mentorTalking5 ||
-    talkingHandler.activeTalk === talkingHandler.empty1
+    talkingHandler.activeTalk === talkingHandler.empty1 ||
+    talkingHandler.activeTalk === talkingHandler.empty4
   ) {
     fill(30, 30, 30);
     rect(10, 10, 1300, 600);
-  } else {
-    image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+    if (start.start === false) {
+      start.display();
+    } else {
+      talkingHandler.display();
+    }
   }
-
-  //hervorhebung beim Gespräch
-  if (talkingHandler.activeTalk === talkingHandler.mentorTalking7) {
-    image(beamer, 639, 135, 240, 440);
-  }
-
-  //Button
-  if (start.start === false) {
-    start.display();
-  } else {
-    talkingHandler.display();
-  }
-  if (
-    paper.ok === true &&
-    talkingHandler.activeTalk === talkingHandler.empty2
-  ) {
-    talkingHandler.activeTalk = talkingHandler.mentorTalking20;
-  }
-
-  //Gegenstände
-  if (
-    talkingHandler.activeTalk === talkingHandler.empty2 &&
-    paper.ok === false
-  ) {
-    paper.draw();
-  }
-
-  if (
-    talkingHandler.activeTalk === talkingHandler.empty3 &&
-    beamerButton.effect === true
-  ) {
-    image(beamer, 639, 135, 240, 440);
+  switch (talkingHandler.activeTalk) {
+    case talkingHandler.mentorTalking6:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking7:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      image(beamer, 639, 135, 240, 440);
+      break;
+    case talkingHandler.mentorTalking8:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking9:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.talkingDecision1:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking10:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking11:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking12:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking13:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking14:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking15:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking16:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking17:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.talkingDecision2:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking18:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking19:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.empty2:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      if (paper.ok === false) {
+        paper.draw();
+      } else if (talkingHandler.activeTalk === talkingHandler.empty2) {
+        talkingHandler.activeTalk = talkingHandler.empty3;
+      }
+      break;
+    case talkingHandler.empty3:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      if (beamerButton.effect === true) {
+        image(beamer, 639, 135, 240, 440);
+      }
+      if (beamerButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.mentorTalking20;
+      }
+      break;
+    case talkingHandler.mentorTalking20:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
   }
 
   //Umrandung

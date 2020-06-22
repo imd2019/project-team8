@@ -6,6 +6,7 @@ export default class TalkingHandler {
     this.empty1 = new Talking();
     this.empty2 = new Talking();
     this.empty3 = new Talking();
+    this.empty4 = new Talking();
     //szene 1
 
     //Mentor Talking
@@ -216,7 +217,7 @@ export default class TalkingHandler {
     this.talkingDecision2.changeNext2(this.mentorTalking19, this);
     this.mentorTalking18.changeNext(this.mentorTalking12, this);
     this.mentorTalking19.changeNext(this.empty2, this);
-    this.mentorTalking20.changeNext(this.empty3, this);
+    this.mentorTalking20.changeNext(this.empty4, this);
   }
 
   mouseMoved() {

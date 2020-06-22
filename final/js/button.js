@@ -48,11 +48,11 @@ export default class Button {
   mouseClicked() {
     if (this.hitTest(mouseX, mouseY)) {
       this.clicked();
-      // if (this.triggert === false) {
-      //   this.triggert = true;
-      // } else {
-      //   this.triggert = false;
-      // }
+      if (this.triggert === false) {
+        this.triggert = true;
+      } else {
+        this.triggert = false;
+      }
     }
   }
 }
