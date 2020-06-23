@@ -4,6 +4,7 @@ let height = windowHeight;
 //Hintergünde
 let laboratoryBackground;
 let messyRoomBackground;
+let cityBackground;
 
 //Gegenstände
 let beamer;
@@ -16,6 +17,7 @@ function preload() {
   //Hintergründe
   laboratoryBackground = loadImage("png/laboratory.png");
   messyRoomBackground = loadImage("png/messyRoom.png");
+  cityBackground = loadImage("png/city.png");
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
@@ -37,7 +39,7 @@ function windowResized() {
 }
 window.addEventListener("resize", windowResized);
 
-export { laboratoryBackground, messyRoomBackground };
+export { laboratoryBackground, messyRoomBackground, cityBackground };
 export {
   beamer,
   characterButton,

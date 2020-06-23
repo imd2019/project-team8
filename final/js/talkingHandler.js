@@ -1,8 +1,11 @@
 import Talking from "./talking.js";
 import TalkingDecision from "./talkingDecision.js";
+import Hologram from "./hologram.js";
 
 export default class TalkingHandler {
-  constructor() {
+  constructor(name) {
+    this.name = name;
+
     this.empty1 = new Talking();
     this.empty2 = new Talking();
     this.empty3 = new Talking();
@@ -194,6 +197,24 @@ export default class TalkingHandler {
       " Ja, verstanden."
     );
 
+    //Szene 2
+    this.hologram1 = new Hologram(
+      360,
+      150,
+      "Hallo" +
+        this.name +
+        ",ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg."
+    );
+
+    this.selfSpeeche1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Wow, meine Wohnung habe ich gepflegter in Erinnerung… \nBevor ich losgehe, sollte ich das Handy einpacken."
+    );
+
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking2.changeNext(this.mentorTalking3, this);
@@ -219,6 +240,8 @@ export default class TalkingHandler {
     this.mentorTalking18.changeNext(this.mentorTalking12, this);
     this.mentorTalking19.changeNext(this.empty2, this);
     this.mentorTalking20.changeNext(this.empty4, this);
+    this.hologram1.changeNext(this.selfSpeeche1, this);
+    this.selfSpeeche1.changeNext(this.empty5, this);
   }
 
   mouseMoved() {
@@ -230,5 +253,9 @@ export default class TalkingHandler {
   }
   mouseClicked() {
     this.activeTalk.mouseClicked();
+  }
+  getName() {
+    this.name = this.name.name.join("");
+    return this.name;
   }
 }
