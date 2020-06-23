@@ -7,6 +7,10 @@ let messyRoomBackground;
 
 //Gegenstände
 let beamer;
+let characterButton;
+let phoneButtonImage;
+let characterButtonEffect;
+let phoneButtonImageEffect;
 
 function preload() {
   //Hintergründe
@@ -15,6 +19,10 @@ function preload() {
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
+  characterButton = loadImage("png/objects/character1.png");
+  phoneButtonImage = loadImage("png/objects/phone1.png");
+  characterButtonEffect = loadImage("png/objects/character2.png");
+  phoneButtonImageEffect = loadImage("png/objects/phone2.png");
 }
 window.preload = preload;
 
@@ -30,4 +38,10 @@ function windowResized() {
 window.addEventListener("resize", windowResized);
 
 export { laboratoryBackground, messyRoomBackground };
-export { beamer };
+export {
+  beamer,
+  characterButton,
+  phoneButtonImage,
+  characterButtonEffect,
+  phoneButtonImageEffect,
+};

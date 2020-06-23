@@ -26,4 +26,7 @@ function draw() {
   textAlign(CENTER);
   text(h, 200, 200);
   text(min, 200, 250);
+
+  stroke(100, 100, 100);
+  line(100, 100, 200, 100);
 }

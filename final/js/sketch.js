@@ -2,23 +2,30 @@ import {
   laboratoryBackground,
   messyRoomBackground,
   beamer,
+  characterButton,
+  characterButtonEffect,
+  phoneButtonImage,
+  phoneButtonImageEffect,
 } from "./p5setup.js";
 
 import Button from "./button.js";
 import Start from "./start.js";
 import TalkingHandler from "./talkingHandler.js";
 import Paper from "./paper.js";
+import CharacterOverview from "./characterOverview.js";
 
 //Buttons
 let start = new Start(562.5, 337.5, 185, 65);
-let beamerButton = new Button(650, 210, 230, 370);
-let phone = new Button(700, 400, 50, 50, "Phone");
-let phoneButton = new Button(1200, 630, 80, 100);
-let windowButton = new Button(140, 120, 248, 270, "Window");
+let beamerButton = new Button(650, 210, 230, 370, "Maschine");
+let paper = new Paper();
+let phone = new Button(700, 400, 50, 50, "Handy");
+let phoneButton = new Button(1245, 630, 65, 100);
+let character = new Button(20, 630, 100, 100);
+let windowButton = new Button(140, 120, 248, 270, "Fenster");
+let charakterOverview = new CharacterOverview(360, 150, paper);
 
 let talkingHandler = new TalkingHandler();
 
-let paper = new Paper();
 let i = 0;
 
 function keyPressed() {
@@ -44,12 +51,20 @@ function mouseMoved() {
     beamerButton.mouseMoved();
   }
   if (talkingHandler.activeTalk === talkingHandler.empty5) {
-    if (phone.triggert === false) {
-      phone.mouseMoved();
-    } else {
-      phoneButton.mouseMoved();
+    if (character.triggert === false) {
+      if (phone.triggert === false) {
+        phone.mouseMoved();
+      } else {
+        phoneButton.mouseMoved();
+      }
     }
-    windowButton.mouseMoved();
+
+    if (phoneButton.triggert === false && character.triggert === false) {
+      windowButton.mouseMoved();
+    }
+    if (phoneButton.triggert === false) {
+      character.mouseMoved();
+    }
   }
 }
 window.mouseMoved = mouseMoved;
@@ -72,12 +87,20 @@ function mouseClicked() {
     beamerButton.mouseClicked();
   }
   if (talkingHandler.activeTalk === talkingHandler.empty5) {
-    if (phone.triggert === false) {
-      phone.mouseClicked();
-    } else {
-      phoneButton.mouseClicked();
+    if (character.triggert === false) {
+      if (phone.triggert === false) {
+        phone.mouseClicked();
+      } else {
+        phoneButton.mouseClicked();
+      }
     }
-    windowButton.mouseClicked();
+
+    if (phoneButton.triggert === false && character.triggert === false) {
+      windowButton.mouseClicked();
+    }
+    if (phoneButton.triggert === false) {
+      character.mouseClicked();
+    }
   }
 }
 window.mouseClicked = mouseClicked;
@@ -185,9 +208,22 @@ function draw() {
       if (phone.triggert === false) {
         phone.display();
       } else {
-        phoneButton.display();
+        image(phoneButtonImage, 1245, 630, 65, 100);
+        if (phoneButton.effect === true) {
+          image(phoneButtonImageEffect, 1243, 628, 69, 104);
+        }
+      }
+      if (phoneButton.triggert === true) {
+        image(phoneButtonImage, 470, 25, 360, 580);
       }
       windowButton.display();
+      image(characterButton, 20, 630, 100, 100);
+      if (character.effect === true) {
+        image(characterButtonEffect, 18, 628, 104, 104);
+      }
+      if (character.triggert === true) {
+        charakterOverview.display();
+      }
       break;
   }
   if (start.start === false) {
