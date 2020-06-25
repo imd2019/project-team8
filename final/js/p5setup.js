@@ -57,3 +57,4 @@ export {
   characterButtonEffect,
   phoneButtonImageEffect,
 };
+export { myFont };
