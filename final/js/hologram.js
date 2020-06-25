@@ -34,7 +34,7 @@ export default class Hologramm extends Button {
       this.x + 540,
       this.y + 260,
       this.x + 500,
-      this.y
+      this.y + 260
     );
     stroke(0, 220, 240);
     strokeWeight(6);

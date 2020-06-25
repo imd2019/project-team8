@@ -25,7 +25,7 @@ let character = new Button(20, 630, 100, 100);
 let windowButton = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(15, 415, 1300, 200, "Fenster verlassen");
 let charakterOverview = new CharacterOverview(360, 150, paper);
-let doorButton = new Button(100, 100, 100, "Tür");
+let doorButton = new Button(1140, 120, 160, 400, "Tür");
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -61,6 +61,9 @@ function mouseMoved() {
         } else {
           phoneButton.mouseMoved();
         }
+        if (phoneButton.triggert === false) {
+          doorButton.mouseMoved();
+        }
       }
       if (phoneButton.triggert === false) {
         character.mouseMoved();
@@ -69,10 +72,10 @@ function mouseMoved() {
 
     if (phoneButton.triggert === false && character.triggert === false) {
       windowButton.mouseMoved();
-      if (windowButton.triggert === true) {
-        leaveScreen.mouseMoved();
-      }
     }
+  }
+  if (windowButton.triggert === true) {
+    leaveScreen.mouseMoved();
   }
 }
 window.mouseMoved = mouseMoved;
@@ -102,6 +105,9 @@ function mouseClicked() {
         } else {
           phoneButton.mouseClicked();
         }
+        if (phoneButton.triggert === false) {
+          doorButton.mouseClicked();
+        }
       }
       if (phoneButton.triggert === false) {
         character.mouseClicked();
@@ -110,10 +116,10 @@ function mouseClicked() {
 
     if (phoneButton.triggert === false && character.triggert === false) {
       windowButton.mouseClicked();
-      if (windowButton.triggert === true) {
-        leaveScreen.mouseClicked();
-      }
     }
+  }
+  if (windowButton.triggert === true) {
+    leaveScreen.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -151,7 +157,7 @@ function draw() {
     case talkingHandler.mentorTalking9:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
-    case talkingHandler.talkingDecision1:
+    case talkingHandler.talking2Decision1:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
     case talkingHandler.mentorTalking10:
@@ -178,7 +184,7 @@ function draw() {
     case talkingHandler.mentorTalking17:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
-    case talkingHandler.talkingDecision2:
+    case talkingHandler.talking2Decision2:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
     case talkingHandler.mentorTalking18:
@@ -226,6 +232,7 @@ function draw() {
       break;
     case talkingHandler.empty5:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      doorButton.display();
       if (phone.triggert === false) {
         phone.display();
       } else {
@@ -233,6 +240,12 @@ function draw() {
         if (phoneButton.effect === true) {
           image(phoneButtonImageEffect, 1243, 628, 69, 104);
         }
+      }
+      if (phone.triggert === false && doorButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.selfSpeeche3;
+      }
+      if (phone.triggert === true && doorButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.selfSpeeche4;
       }
       if (phoneButton.triggert === true) {
         image(phoneButtonImage, 470, 25, 360, 580);
@@ -246,13 +259,30 @@ function draw() {
         charakterOverview.display();
       }
       if (windowButton.triggert === true) {
-        image(cityBackground, 15, 15, 1300, 600, 1, 0, 5421, 2519);
-        leaveScreen.display();
-        if (leaveScreen.triggert === true) {
-          windowButton.triggert = false;
-          leaveScreen.triggert = false;
-        }
+        talkingHandler.activeTalk = talkingHandler.selfSpeeche2;
       }
+
+      break;
+    case talkingHandler.selfSpeeche2:
+      image(cityBackground, 15, 15, 1300, 600, 1, 0, 5421, 2519);
+      leaveScreen.display();
+      if (leaveScreen.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.empty5;
+        windowButton.triggert = false;
+        leaveScreen.triggert = false;
+      }
+      break;
+    case talkingHandler.selfSpeeche3:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      doorButton.triggert = false;
+      break;
+    case talkingHandler.selfSpeeche4:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      break;
+    case talkingHandler.talking3Decision1:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      break;
+    case talkingHandler.empty6:
       break;
   }
   if (start.start === false) {

@@ -33,7 +33,7 @@ export default class CharacterOverview {
       this.x + 540,
       this.y + 260,
       this.x + 500,
-      this.y
+      this.y + 260
     );
     stroke(180, 0, 125);
     strokeWeight(6);

@@ -1,16 +1,19 @@
 import Talking from "./talking.js";
-import TalkingDecision from "./talkingDecision.js";
+import Talking2Decision from "./talking2Decision.js";
+import talking3Decition from "./talking3Desition.js";
 import Hologram from "./hologram.js";
+import Paper from "./paper.js";
 
 export default class TalkingHandler {
   constructor(name) {
     this.name = name;
-
     this.empty1 = new Talking();
     this.empty2 = new Talking();
     this.empty3 = new Talking();
     this.empty4 = new Talking();
     this.empty5 = new Talking();
+    this.empty6 = new Talking();
+
     //szene 1
 
     //Mentor Talking
@@ -178,7 +181,7 @@ export default class TalkingHandler {
     );
 
     //Decitions
-    this.talkingDecision1 = new TalkingDecision(
+    this.talking2Decision1 = new Talking2Decision(
       305,
       630,
       340,
@@ -187,7 +190,7 @@ export default class TalkingHandler {
       "Tut mir Leid, das ist mir zu riskant.",
       "Ja, du kannst auf mich zählen."
     );
-    this.talkingDecision2 = new TalkingDecision(
+    this.talking2Decision2 = new Talking2Decision(
       305,
       630,
       340,
@@ -202,7 +205,7 @@ export default class TalkingHandler {
       360,
       150,
       "Hallo" +
-        this.name +
+        this.name.name.join(" ") +
         ",ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg."
     );
 
@@ -214,6 +217,45 @@ export default class TalkingHandler {
       "Ich",
       "Wow, meine Wohnung habe ich gepflegter in Erinnerung… \nBevor ich losgehe, sollte ich das Handy einpacken."
     );
+    this.selfSpeecheArray1 = [
+      "Die Stadt ist kaum noch wiederzuerkennen.",
+      " Ist es wirklich morgens? Es sieht so düster aus…",
+      "Es wohnen so viele Menschen auf einem Fleck.",
+    ];
+    this.selfSpeeche2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      random(this.selfSpeecheArray1)
+    );
+    this.selfSpeeche3 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Ich kann noch nicht rausgehen, ich brauche erst das Handy."
+    );
+    this.selfSpeeche4 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Wie möchte ich zum Bewerbungsgespräch fahren?"
+    );
+    this.talking3Decision1 = new talking3Decition(
+      305,
+      630,
+      220,
+      100,
+      "Ich",
+      " Fahrrad",
+      "Auto",
+      "Bahn"
+    );
 
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
@@ -224,9 +266,9 @@ export default class TalkingHandler {
     this.mentorTalking6.changeNext(this.mentorTalking7, this);
     this.mentorTalking7.changeNext(this.mentorTalking8, this);
     this.mentorTalking8.changeNext(this.mentorTalking9, this);
-    this.mentorTalking9.changeNext(this.talkingDecision1, this);
-    this.talkingDecision1.changeNext1(this.mentorTalking10, this);
-    this.talkingDecision1.changeNext2(this.mentorTalking11, this);
+    this.mentorTalking9.changeNext(this.talking2Decision1, this);
+    this.talking2Decision1.changeNext1(this.mentorTalking10, this);
+    this.talking2Decision1.changeNext2(this.mentorTalking11, this);
     this.mentorTalking10.changeNext(this.empty1, this);
     this.mentorTalking11.changeNext(this.mentorTalking12, this);
     this.mentorTalking12.changeNext(this.mentorTalking13, this);
@@ -234,14 +276,19 @@ export default class TalkingHandler {
     this.mentorTalking14.changeNext(this.mentorTalking15, this);
     this.mentorTalking15.changeNext(this.mentorTalking16, this);
     this.mentorTalking16.changeNext(this.mentorTalking17, this);
-    this.mentorTalking17.changeNext(this.talkingDecision2, this);
-    this.talkingDecision2.changeNext1(this.mentorTalking18, this);
-    this.talkingDecision2.changeNext2(this.mentorTalking19, this);
+    this.mentorTalking17.changeNext(this.talking2Decision2, this);
+    this.talking2Decision2.changeNext1(this.mentorTalking18, this);
+    this.talking2Decision2.changeNext2(this.mentorTalking19, this);
     this.mentorTalking18.changeNext(this.mentorTalking12, this);
     this.mentorTalking19.changeNext(this.empty2, this);
     this.mentorTalking20.changeNext(this.empty4, this);
     this.hologram1.changeNext(this.selfSpeeche1, this);
     this.selfSpeeche1.changeNext(this.empty5, this);
+    this.selfSpeeche3.changeNext(this.empty5, this);
+    this.selfSpeeche4.changeNext(this.talking3Decision1, this);
+    this.talking3Decision1.changeNext1(this.empty6, this);
+    this.talking3Decision1.changeNext2(this.empty6, this);
+    this.talking3Decision1.changeNext3(this.empty6, this);
   }
 
   mouseMoved() {
