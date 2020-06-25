@@ -4,6 +4,7 @@ import Talking3Decition from "./talking3Desition.js";
 import Talking4Desition from "./talking4Desition.js";
 import Hologram from "./hologram.js";
 
+
 export default class TalkingHandler {
   constructor(name) {
     this.name = name;
@@ -13,7 +14,7 @@ export default class TalkingHandler {
     this.empty4 = new Talking();
     this.empty5 = new Talking();
     this.empty6 = new Talking();
-
+    
     //szene 1
 
     //Mentor Talking

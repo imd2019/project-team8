@@ -14,6 +14,8 @@ let phoneButtonImage;
 let characterButtonEffect;
 let phoneButtonImageEffect;
 
+let myFont;
+
 function preload() {
   //Hintergründe
   laboratoryBackground = loadImage("png/laboratory.png");
@@ -33,6 +35,7 @@ window.preload = preload;
 function setup() {
   sketch.createCanvas(windowWidth, windowHeight);
   sketch.frameRate(30);
+  textFont(myFont);
 }
 window.setup = setup;
 

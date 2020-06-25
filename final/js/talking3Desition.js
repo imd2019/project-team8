@@ -11,13 +11,7 @@ export default class Talking3Decition {
     this.next = this;
     this.handler = null;
   }
-  preload() {
-    this.text = loadFont("https://use.typekit.net/dss7qvd.css");
-  }
-  setup() {
-    fill("black");
-    textFont(this.text);
-  }
+
   display() {
     fill(30, 30, 30, 180);
     stroke(180, 0, 125);
