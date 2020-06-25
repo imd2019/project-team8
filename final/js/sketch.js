@@ -333,12 +333,23 @@ function draw() {
       break;
     case talkingHandler.bossTalking1:
       image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.bossTalking2:
       image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.talking4Desition1:
       image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking3:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
       break;
   }
   if (start.start === false) {

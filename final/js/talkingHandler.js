@@ -4,7 +4,6 @@ import Talking3Decition from "./talking3Desition.js";
 import Talking4Desition from "./talking4Desition.js";
 import Hologram from "./hologram.js";
 
-
 export default class TalkingHandler {
   constructor(name) {
     this.name = name;
@@ -14,7 +13,7 @@ export default class TalkingHandler {
     this.empty4 = new Talking();
     this.empty5 = new Talking();
     this.empty6 = new Talking();
-    
+
     //szene 1
 
     //Mentor Talking
@@ -279,15 +278,33 @@ export default class TalkingHandler {
       "Chefin",
       "Was sind Ihre Stärken?"
     );
-    this.talking4Desition1 = new Talking4Desition(
-      285,
+    this.bossTalking3 = new Talking(
+      305,
       630,
-      355,
+      700,
+      100,
+      "Chefin",
+      "Was sind ihre Schwächen?"
+    );
+    this.talking4Desition1 = new Talking4Desition(
+      290,
+      630,
+      360,
       90,
       "Ich bin sehr leidenschaftlich.",
       " Ich arbeite sehr sorgfältig.",
       "Ich behalte immer einen kühlen Kopf.",
       "Ich weiß es nicht so genau…"
+    );
+    this.talking4Desition2 = new Talking4Desition(
+      290,
+      630,
+      360,
+      90,
+      "Ich lasse mich schnell ablenken.",
+      "Ich bin schnell frustriert, wenn etwas nicht klappt.",
+      "Ich überarbeite mich oft.",
+      "Schwer zu sagen…"
     );
 
     this.activeTalk = this.mentorTalking1;
@@ -324,6 +341,11 @@ export default class TalkingHandler {
     this.talking3Decision1.changeNext3(this.empty6, this);
     this._bossTalking1.changeNext(this.bossTalking2, this);
     this.bossTalking2.changeNext(this.talking4Desition1, this);
+    // this.talking4Decision1.changeNext1(this.bossTalking3, this);
+    // this.talking4Decision1.changeNext2(this.bossTalking3, this);
+    // this.talking4Decision1.changeNext3(this.bossTalking3, this);
+    // this.talking4Decision1.changeNext4(this.bossTalking3, this);
+    this.bossTalking3.changeNext(this.talking4Desition2, this);
   }
 
   get hologram1() {
