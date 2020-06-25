@@ -19,11 +19,11 @@ export default class Start extends Button {
 
     noStroke();
     fill(220, 220, 220);
-    textSize(25);
+    textSize(20);
     text(
-      "Spiel Starten",
-      this.x + 20,
-      this.y + 20,
+      "Spiel starten",
+      this.x + 50,
+      this.y + 5,
       this.width - 20,
       this.height - 20
     );

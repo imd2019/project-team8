@@ -216,7 +216,7 @@ export default class TalkingHandler {
       700,
       100,
       "Ich",
-      "Wow, meine Wohnung habe ich gepflegter in Erinnerung… \nBevor ich losgehe, sollte ich das Handy einpacken."
+      "Wow, meine Wohnung habe ich gepflegter in Erinnerung…          Bevor ich losgehe, sollte ich das Handy einpacken."
     );
     this.selfSpeecheArray1 = [
       "Die Stadt ist kaum noch wiederzuerkennen.",

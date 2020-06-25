@@ -27,8 +27,6 @@ export default class Talking extends Button {
     text(this.person, this.x + 15, this.y + 25);
     noStroke();
     textSize(18);
-    // textFont(myFont);
-    // textFont("Georgia");
     text(
       this.text,
       this.x + 15,

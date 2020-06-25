@@ -12,13 +12,13 @@ export default class Talking2Decision {
     this.next = this;
     this.handler = null;
   }
-  preload() {
-    this.text = loadFont("https://use.typekit.net/dss7qvd.css");
-  }
-  setup() {
-    fill("black");
-    textFont(this.text);
-  }
+  // preload() {
+  //   this.text = loadFont("https://use.typekit.net/dss7qvd.css");
+  // }
+  // setup() {
+  //   fill("black");
+  //   textFont(this.text);
+  // }
   display() {
     fill(30, 30, 30, 180);
     stroke(180, 0, 125);
