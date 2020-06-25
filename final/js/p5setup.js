@@ -14,6 +14,7 @@ let phoneButtonImage;
 let characterButtonEffect;
 let phoneButtonImageEffect;
 
+//Schriftart Hack
 let myFont;
 
 function preload() {
@@ -29,6 +30,7 @@ function preload() {
   phoneButtonImage = loadImage("png/objects/phone1.png");
   characterButtonEffect = loadImage("png/objects/character2.png");
   phoneButtonImageEffect = loadImage("png/objects/phone2.png");
+  myFont = loadFont("js/Hack-Regular.ttf");
 }
 window.preload = preload;
 
