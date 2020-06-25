@@ -286,25 +286,164 @@ export default class TalkingHandler {
       "Chefin",
       "Was sind ihre Schwächen?"
     );
-    this.talking4Decision1 = new Talking4Decision(
-      290,
+    this.bossTalking4 = new Talking(
+      305,
       630,
-      360,
+      700,
+      100,
+      "Chefin",
+      " Danke für ihre Ehrlichkeit."
+    );
+
+    this.bossTalking5 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Haben Sie denn Fragen an mich?"
+    );
+    this.bossTalking6 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Nun… Uns ist die Sicherheit der Allgemeinheit wichtig und wir tun alles, um diese zu gewährleisten."
+    );
+    this.bossTalking7 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Unsere Eingestellten sind unsere Vertreter, also müssen wir sicherstellen, dass all ihre Aktionen auch vertretbar sind. Und natürlich, dass sie effizient für unser Unternehmen sind."
+    );
+    this.bossTalking8 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Wir arbeiten daran das volle Potential des technologischen Fortschritts anzustreben. Dafür müssen wir sehr stark abwägen, was unser Unternehmen benachteiligen könnte."
+    );
+    this.bossTalking9 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Zuletzt bräuchten wir nur noch ihre ID, damit wir sie guten Gewissens einstellen können."
+    );
+    this.bossTalking10 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Sie scheinen wohl etwas verbergen zu wollen, in unserem Unternehmen ist Offenheit und Ehrlichkeit essentiell."
+    );
+    this.bossTalking11 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Wir können Ihnen hier leider keine Stelle anbieten, vielen Dank für Ihre Bewerbung."
+    );
+    this.bossTalking12 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Dankeschön, bitte warten Sie einen Moment."
+    );
+    this.bossTalking13 = new Talking(305, 630, 700, 100, "Chefin", "…");
+    this.bossTalkingArray = [1, 2, 3];
+    if (this.bossTalkingArray.random === 1) {
+      this.bossTalking14 = new Talking(
+        305,
+        630,
+        700,
+        100,
+        "Chefin",
+        " Wie bitte? Ich fasse es nicht!"
+      );
+      this.bossTalking15 = new Talking(
+        305,
+        630,
+        700,
+        100,
+        "Chefin",
+        "Tut mir leid, hiermit beende ich das Bewerbungsgespräch, versuchen Sie es woanders."
+      );
+    } else {
+      this.bossTalking14 = new Talking(
+        305,
+        630,
+        700,
+        100,
+        "Chefin",
+        "Alles klar, dann steht ihrer Einstellung in unserem Unternehmen nichts mehr im Weg."
+      );
+      this.bossTalking15 = new Talking(
+        305,
+        630,
+        700,
+        100,
+        "Chefin",
+        "Ich schicke Ihnen die nötigen Dokumente zu und wenn Sie sich für uns entscheiden, melden Sie sich bitte innerhalb der nächsten zwei Wochen. Auf Wiedersehen."
+      );
+    }
+
+    this.talking4Decision1 = new Talking4Decision(
+      250,
+      630,
+      400,
       90,
       "Ich bin sehr leidenschaftlich.",
       " Ich arbeite sehr sorgfältig.",
       "Ich behalte immer einen kühlen Kopf.",
-      "Ich weiß es nicht so genau…"
+      "Ich bin kompromissbereit."
     );
     this.talking4Decision2 = new Talking4Decision(
-      290,
+      250,
       630,
-      360,
+      400,
       90,
       "Ich lasse mich schnell ablenken.",
       "Ich bin schnell frustriert, wenn etwas nicht klappt.",
       "Ich überarbeite mich oft.",
-      "Schwer zu sagen…"
+      "Ich bin manchmal etwas stur."
+    );
+    this.talking4Decision3 = new Talking4Decision(
+      250,
+      630,
+      400,
+      90,
+      "Wie gehen sie mit den Daten ihrer Kunden um?",
+      "Wie sehr werden Ihre Arbeitnehmer kontrolliert?",
+      "Ist ihre Produktion auch für Ärmere zugänglich?",
+      "Ich habe keine Fragen."
+    );
+    this.talking2Decision3 = new Talking2Decision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      " Nein, ich will meine Privatsphäre behalten.",
+      "  Ja, ich habe nichts zu verbergen."
+    );
+
+    this.selfSpeeche5 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Übergebe ich ihr meine ID?"
     );
 
     this.activeTalk = this.mentorTalking1;
@@ -346,6 +485,27 @@ export default class TalkingHandler {
     this.talking4Decision1.changeNext3(this.bossTalking3, this);
     this.talking4Decision1.changeNext4(this.bossTalking3, this);
     this.bossTalking3.changeNext(this.talking4Decision2, this);
+    this.talking4Decision2.changeNext1(this.bossTalking4, this);
+    this.talking4Decision2.changeNext2(this.bossTalking4, this);
+    this.talking4Decision2.changeNext3(this.bossTalking4, this);
+    this.talking4Decision2.changeNext4(this.bossTalking4, this);
+    this.bossTalking4.changeNext(this.bossTalking5, this);
+    this.bossTalking5.changeNext(this.talking4Decision3, this);
+    this.talking4Decision3.changeNext1(this.bossTalking6, this);
+    this.talking4Decision3.changeNext2(this.bossTalking7, this);
+    this.talking4Decision3.changeNext3(this.bossTalking8, this);
+    this.talking4Decision3.changeNext4(this.bossTalking9, this);
+    this.bossTalking6.changeNext(this.bossTalking5, this);
+    this.bossTalking7.changeNext(this.bossTalking5, this);
+    this.bossTalking8.changeNext(this.bossTalking5, this);
+    this.bossTalking9.changeNext(this.selfSpeeche5, this);
+    this.selfSpeeche5.changeNext(this.talking2Decision3, this);
+    this.talking2Decision3.changeNext1(this.bossTalking10, this);
+    this.talking2Decision3.changeNext2(this.bossTalking12, this);
+    this.bossTalking10.changeNext(this.bossTalking11, this);
+    this.bossTalking12.changeNext(this.bossTalking13, this);
+    this.bossTalking13.changeNext(this.bossTalking14, this);
+    this.bossTalking14.changeNext(this.bossTalking15, this);
   }
 
   get hologram1() {
