@@ -343,7 +343,7 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
-    case talkingHandler.talking4Desision1:
+    case talkingHandler.talking4Decision1:
       image(officeBackground, 15, 15, 1300, 600);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);

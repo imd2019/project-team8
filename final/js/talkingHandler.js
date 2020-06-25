@@ -345,7 +345,7 @@ export default class TalkingHandler {
     this.talking4Decision1.changeNext2(this.bossTalking3, this);
     this.talking4Decision1.changeNext3(this.bossTalking3, this);
     this.talking4Decision1.changeNext4(this.bossTalking3, this);
-    this.bossTalking3.changeNext(this.talking4Desition2, this);
+    this.bossTalking3.changeNext(this.talking4Decision2, this);
   }
 
   get hologram1() {
