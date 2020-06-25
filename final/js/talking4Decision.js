@@ -23,7 +23,7 @@ export default class Talking4Decision {
     stroke(180, 0, 125);
     strokeWeight(3);
     rect(this.x, this.y, this.width, this.height / 2, 15);
-    rect(this.x + 370, this.y, this.width, this.height / 2, 15);
+    rect(this.x + 410, this.y, this.width, this.height / 2, 15);
     rect(
       this.x,
       this.y + this.height / 2 + 10,
@@ -32,7 +32,7 @@ export default class Talking4Decision {
       15
     );
     rect(
-      this.x + 370,
+      this.x + 410,
       this.y + this.height / 2 + 10,
       this.width,
       this.height / 2,
@@ -54,7 +54,7 @@ export default class Talking4Decision {
     );
     text(
       this.text2,
-      this.x + 385,
+      this.x + 425,
       this.y + 15,
       this.width - 15,
       this.height - 15
@@ -68,7 +68,7 @@ export default class Talking4Decision {
     );
     text(
       this.text4,
-      this.x + 385,
+      this.x + 415,
       this.y + this.height / 2 + 25,
       this.width - 15,
       this.height - 15
@@ -84,7 +84,7 @@ export default class Talking4Decision {
     } else {
       fill(220, 220, 220);
     }
-    text("weiter", this.x + 370, this.y + 25, this.width - 5, this.height + 15);
+    text("weiter", this.x + 410, this.y + 25, this.width - 5, this.height + 15);
     if (this.effect3 === false) {
       fill(100, 100, 100);
     } else {
@@ -104,7 +104,7 @@ export default class Talking4Decision {
     }
     text(
       "weiter",
-      this.x + 370,
+      this.x + 410,
       this.y + this.height / 2 + 35,
       this.width - 5,
       this.height + 15
@@ -124,8 +124,8 @@ export default class Talking4Decision {
   }
   hitTest2(x, y) {
     if (
-      x > this.x + 370 &&
-      x < this.x + 370 + this.width &&
+      x > this.x + 410 &&
+      x < this.x + 410 + this.width &&
       y > this.y &&
       y < this.y + this.height / 2
     ) {
@@ -148,8 +148,8 @@ export default class Talking4Decision {
   }
   hitTest4(x, y) {
     if (
-      x > this.x + 370 &&
-      x < this.x + 370 + this.width &&
+      x > this.x + 410 &&
+      x < this.x + 410 + this.width &&
       y > this.y + this.height / 2 + 10 &&
       y < this.y + this.height + 10
     ) {

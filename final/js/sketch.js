@@ -353,6 +353,86 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
+    case talkingHandler.bossTalking4:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.talking4Decision2:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking5:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.talking4Decision3:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking6:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking7:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking8:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking9:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.selfSpeeche5:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.talking2Decision3:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking10:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking11:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking12:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking13:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking14:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.bossTalking15:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
   }
   if (start.start === false) {
     start.display();
