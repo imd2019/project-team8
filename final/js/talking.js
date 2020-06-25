@@ -1,17 +1,5 @@
 import Button from "./button.js";
 
-// <style>
-//   @import url("https://use.typekit.net/dss7qvd.css");
-// </style>
-// function setup() {
-//   fill("black");
-//   textFont(text);
-// }
-// let text;
-// function preload() {
-//   text = loadFont("https://use.typekit.net/dss7qvd.css");
-// }
-
 export default class Talking extends Button {
   constructor(x, y, width, height, person, text) {
     super(x, y, width, height);
@@ -20,13 +8,12 @@ export default class Talking extends Button {
     this.next = this;
     this.handler = null;
   }
-  preload() {
-    this.text = loadFont("https://use.typekit.net/dss7qvd.css");
-  }
-  setup() {
-    fill("black");
-    textFont(this.text);
-  }
+  // preload() {
+  //   myFont = loadFont(`Hack-Regular.ttf`);
+  // }
+  // setup() {
+  //   textFont(myFont);
+  // }
   display() {
     fill(30, 30, 30, 180);
     stroke(180, 0, 125);
@@ -40,6 +27,8 @@ export default class Talking extends Button {
     text(this.person, this.x + 15, this.y + 25);
     noStroke();
     textSize(18);
+    // textFont(myFont);
+    // textFont("Georgia");
     text(
       this.text,
       this.x + 15,

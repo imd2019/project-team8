@@ -13,11 +13,14 @@ let phoneButtonImage;
 let characterButtonEffect;
 let phoneButtonImageEffect;
 
+let myFont;
+
 function preload() {
   //Hintergründe
   laboratoryBackground = loadImage("png/laboratory.png");
   messyRoomBackground = loadImage("png/messyRoom.png");
   cityBackground = loadImage("png/city.png");
+  myFont = loadFont(`js/Hack-Regular.ttf`);
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
@@ -31,6 +34,7 @@ window.preload = preload;
 function setup() {
   sketch.createCanvas(windowWidth, windowHeight);
   sketch.frameRate(30);
+  textFont(myFont);
 }
 window.setup = setup;
 
