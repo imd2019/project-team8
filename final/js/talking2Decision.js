@@ -1,6 +1,6 @@
 // import Button from "./button.js";
 
-export default class Talking2Decition {
+export default class Talking2Decision {
   constructor(x, y, width, height, person, text1, text2) {
     this.x = x;
     this.y = y;
