@@ -14,6 +14,9 @@ let phoneButtonImage;
 let characterButtonEffect;
 let phoneButtonImageEffect;
 
+//Charaktere
+let mentor;
+
 //Schriftart Hack
 let myFont;
 
@@ -30,6 +33,10 @@ function preload() {
   phoneButtonImage = loadImage("png/objects/phone1.png");
   characterButtonEffect = loadImage("png/objects/character2.png");
   phoneButtonImageEffect = loadImage("png/objects/phone2.png");
+
+  //Charaktere
+  mentor = loadImage("png/character/mentor.png");
+
   //Schriftart
   myFont = loadFont("font/Hack-Regular.ttf");
 }
@@ -61,3 +68,4 @@ export {
   phoneButtonImageEffect,
 };
 export { myFont };
+export { mentor };

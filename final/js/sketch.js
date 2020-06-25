@@ -8,6 +8,7 @@ import {
   characterButtonEffect,
   phoneButtonImage,
   phoneButtonImageEffect,
+  mentor,
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -164,6 +165,7 @@ function draw() {
   switch (talkingHandler.activeTalk) {
     case talkingHandler.mentorTalking6:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      image(mentor, 560, 260, 118, 350);
       break;
     case talkingHandler.mentorTalking7:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
