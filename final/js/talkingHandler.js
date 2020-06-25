@@ -1,8 +1,8 @@
 import Talking from "./talking.js";
 import Talking2Decision from "./talking2Decision.js";
 import Talking3Decition from "./talking3Desition.js";
+import Talking4Desition from "./talking4Desition.js";
 import Hologram from "./hologram.js";
-import Paper from "./paper.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -260,13 +260,33 @@ export default class TalkingHandler {
 
     //Szene 3
 
-    this.bossTalking1 = new Talking(
+    this._bossTalking1 = new Talking(
       305,
       630,
       700,
       100,
       "Chefin",
-      "Guten Tag, [Name]."
+      "Guten Tag, " +
+        this.name.name.join("") +
+        "\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt."
+    );
+    this.bossTalking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Was sind Ihre Stärken?"
+    );
+    this.talking4Desition1 = new Talking4Desition(
+      285,
+      630,
+      355,
+      90,
+      "Ich bin sehr leidenschaftlich.",
+      " Ich arbeite sehr sorgfältig.",
+      "Ich behalte immer einen kühlen Kopf.",
+      "Ich weiß es nicht so genau…"
     );
 
     this.activeTalk = this.mentorTalking1;
@@ -301,6 +321,8 @@ export default class TalkingHandler {
     this.talking3Decision1.changeNext1(this.empty6, this);
     this.talking3Decision1.changeNext2(this.empty6, this);
     this.talking3Decision1.changeNext3(this.empty6, this);
+    this._bossTalking1.changeNext(this.bossTalking2, this);
+    this.bossTalking2.changeNext(this.talking4Desition1, this);
   }
 
   get hologram1() {
@@ -310,6 +332,14 @@ export default class TalkingHandler {
       ", ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg.";
 
     return this._hologram1;
+  }
+  get bossTalking1() {
+    this._bossTalking1.text =
+      "Guten Tag, " +
+      this.name.name.join("") +
+      "\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt.";
+
+    return this._bossTalking1;
   }
 
   mouseMoved() {

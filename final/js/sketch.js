@@ -334,6 +334,12 @@ function draw() {
     case talkingHandler.bossTalking1:
       image(officeBackground, 15, 15, 1300, 600);
       break;
+    case talkingHandler.bossTalking2:
+      image(officeBackground, 15, 15, 1300, 600);
+      break;
+    case talkingHandler.talking4Desition1:
+      image(officeBackground, 15, 15, 1300, 600);
+      break;
   }
   if (start.start === false) {
     start.display();
