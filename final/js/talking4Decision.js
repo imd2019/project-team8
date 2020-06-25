@@ -1,52 +1,75 @@
-export default class Talking3Decition {
-  constructor(x, y, width, height, person, text1, text2, text3) {
+export default class Talking4Decision {
+  constructor(x, y, width, height, text1, text2, text3, text4) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
-    this.person = person;
     this.text1 = text1;
     this.text2 = text2;
     this.text3 = text3;
+    this.text4 = text4;
     this.next = this;
     this.handler = null;
   }
-
+  preload() {
+    this.text = loadFont("https://use.typekit.net/dss7qvd.css");
+  }
+  setup() {
+    fill("black");
+    textFont(this.text);
+  }
   display() {
     fill(30, 30, 30, 180);
     stroke(180, 0, 125);
     strokeWeight(3);
-    rect(this.x, this.y, this.width, this.height, 15);
-    rect(this.x + 240, this.y, this.width, this.height, 15);
-    rect(this.x + 480, this.y, this.width, this.height, 15);
+    rect(this.x, this.y, this.width, this.height / 2, 15);
+    rect(this.x + 370, this.y, this.width, this.height / 2, 15);
+    rect(
+      this.x,
+      this.y + this.height / 2 + 10,
+      this.width,
+      this.height / 2,
+      15
+    );
+    rect(
+      this.x + 370,
+      this.y + this.height / 2 + 10,
+      this.width,
+      this.height / 2,
+      15
+    );
     strokeWeight(1);
     textSize(16);
     textAlign(LEFT);
     // fill(180, 0, 125);
     fill(220, 220, 220);
-    text(this.person, this.x + 15, this.y + 25);
-    text(this.person, this.x + 255, this.y + 25);
-    text(this.person, this.x + 495, this.y + 25);
     noStroke();
     textSize(18);
     text(
       this.text1,
       this.x + 15,
-      this.y + 35,
+      this.y + 15,
       this.width - 15,
       this.height - 15
     );
     text(
       this.text2,
-      this.x + 255,
-      this.y + 35,
+      this.x + 385,
+      this.y + 15,
       this.width - 15,
       this.height - 15
     );
     text(
       this.text3,
-      this.x + 495,
-      this.y + 35,
+      this.x + 15,
+      this.y + this.height / 2 + 25,
+      this.width - 15,
+      this.height - 15
+    );
+    text(
+      this.text4,
+      this.x + 385,
+      this.y + this.height / 2 + 25,
       this.width - 15,
       this.height - 15
     );
@@ -55,26 +78,44 @@ export default class Talking3Decition {
       fill(100, 100, 100);
     }
     textAlign(RIGHT);
-    text("weiter", this.x, this.y + 80, this.width - 5, this.height + 15);
+    text("weiter", this.x, this.y + 25, this.width - 5, this.height + 15);
     if (this.effect2 === false) {
       fill(100, 100, 100);
     } else {
       fill(220, 220, 220);
     }
-    text("weiter", this.x + 240, this.y + 80, this.width - 5, this.height + 15);
+    text("weiter", this.x + 370, this.y + 25, this.width - 5, this.height + 15);
     if (this.effect3 === false) {
       fill(100, 100, 100);
     } else {
       fill(220, 220, 220);
     }
-    text("weiter", this.x + 480, this.y + 80, this.width - 5, this.height + 15);
+    text(
+      "weiter",
+      this.x,
+      this.y + this.height / 2 + 35,
+      this.width - 5,
+      this.height + 15
+    );
+    if (this.effect4 === false) {
+      fill(100, 100, 100);
+    } else {
+      fill(220, 220, 220);
+    }
+    text(
+      "weiter",
+      this.x + 370,
+      this.y + this.height / 2 + 35,
+      this.width - 5,
+      this.height + 15
+    );
   }
   hitTest1(x, y) {
     if (
       x > this.x &&
       x < this.x + this.width &&
       y > this.y &&
-      y < this.y + this.height
+      y < this.y + this.height / 2
     ) {
       return true;
     } else {
@@ -83,10 +124,10 @@ export default class Talking3Decition {
   }
   hitTest2(x, y) {
     if (
-      x > this.x + 240 &&
-      x < this.x + 240 + this.width &&
+      x > this.x + 370 &&
+      x < this.x + 370 + this.width &&
       y > this.y &&
-      y < this.y + this.height
+      y < this.y + this.height / 2
     ) {
       return true;
     } else {
@@ -95,16 +136,29 @@ export default class Talking3Decition {
   }
   hitTest3(x, y) {
     if (
-      x > this.x + 480 &&
-      x < this.x + 480 + this.width &&
-      y > this.y &&
-      y < this.y + this.height
+      x > this.x &&
+      x < this.x + this.width &&
+      y > this.y + this.height / 2 + 10 &&
+      y < this.y + this.height + 10
     ) {
       return true;
     } else {
       return false;
     }
   }
+  hitTest4(x, y) {
+    if (
+      x > this.x + 370 &&
+      x < this.x + 370 + this.width &&
+      y > this.y + this.height / 2 + 10 &&
+      y < this.y + this.height + 10
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   mouseMoved() {
     if (this.hitTest1(mouseX, mouseY)) {
       this.effect1 = true;
@@ -120,6 +174,11 @@ export default class Talking3Decition {
       this.effect3 = true;
     } else {
       this.effect3 = false;
+    }
+    if (this.hitTest4(mouseX, mouseY)) {
+      this.effect4 = true;
+    } else {
+      this.effect4 = false;
     }
   }
   mouseClicked() {
@@ -138,6 +197,11 @@ export default class Talking3Decition {
         this.handler3.activeTalk = this.next3;
       }
     }
+    if (this.hitTest4(mouseX, mouseY)) {
+      if (this.handler4 != null) {
+        this.handler4.activeTalk = this.next4;
+      }
+    }
   }
   changeNext1(next1, handler1) {
     this.next1 = next1;
@@ -150,5 +214,9 @@ export default class Talking3Decition {
   changeNext3(next3, handler3) {
     this.next3 = next3;
     this.handler3 = handler3;
+  }
+  changeNext4(next4, handler4) {
+    this.next4 = next4;
+    this.handler4 = handler4;
   }
 }

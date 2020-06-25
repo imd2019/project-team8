@@ -1,7 +1,7 @@
 import Talking from "./talking.js";
 import Talking2Decision from "./talking2Decision.js";
-import Talking3Decition from "./talking3Desition.js";
-import Talking4Desition from "./talking4Desition.js";
+import Talking3Decision from "./talking3Decision.js";
+import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
 
 export default class TalkingHandler {
@@ -247,7 +247,7 @@ export default class TalkingHandler {
       "Ich",
       "Wie möchte ich zum Bewerbungsgespräch fahren?"
     );
-    this.talking3Decision1 = new Talking3Decition(
+    this.talking3Decision1 = new Talking3Decision(
       305,
       630,
       220,
@@ -286,7 +286,7 @@ export default class TalkingHandler {
       "Chefin",
       "Was sind ihre Schwächen?"
     );
-    this.talking4Desition1 = new Talking4Desition(
+    this.talking4Decision1 = new Talking4Decision(
       290,
       630,
       360,
@@ -296,7 +296,7 @@ export default class TalkingHandler {
       "Ich behalte immer einen kühlen Kopf.",
       "Ich weiß es nicht so genau…"
     );
-    this.talking4Desition2 = new Talking4Desition(
+    this.talking4Decision2 = new Talking4Decision(
       290,
       630,
       360,
@@ -340,11 +340,11 @@ export default class TalkingHandler {
     this.talking3Decision1.changeNext2(this.empty6, this);
     this.talking3Decision1.changeNext3(this.empty6, this);
     this._bossTalking1.changeNext(this.bossTalking2, this);
-    this.bossTalking2.changeNext(this.talking4Desition1, this);
-    // this.talking4Decision1.changeNext1(this.bossTalking3, this);
-    // this.talking4Decision1.changeNext2(this.bossTalking3, this);
-    // this.talking4Decision1.changeNext3(this.bossTalking3, this);
-    // this.talking4Decision1.changeNext4(this.bossTalking3, this);
+    this.bossTalking2.changeNext(this.talking4Decision1, this);
+    this.talking4Decision1.changeNext1(this.bossTalking3, this);
+    this.talking4Decision1.changeNext2(this.bossTalking3, this);
+    this.talking4Decision1.changeNext3(this.bossTalking3, this);
+    this.talking4Decision1.changeNext4(this.bossTalking3, this);
     this.bossTalking3.changeNext(this.talking4Desition2, this);
   }
 
