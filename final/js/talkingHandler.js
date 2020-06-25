@@ -1,8 +1,8 @@
 import Talking from "./talking.js";
 import Talking2Decision from "./talking2Decision.js";
-import talking3Decition from "./talking3Desition.js";
+import Talking3Decition from "./talking3Desition.js";
+import Talking4Desition from "./talking4Desition.js";
 import Hologram from "./hologram.js";
-import Paper from "./paper.js";
 
 
 export default class TalkingHandler {
@@ -202,12 +202,13 @@ export default class TalkingHandler {
     );
 
     //Szene 2
-    this.hologram1 = new Hologram(
+
+    this._hologram1 = new Hologram(
       360,
       150,
-      "Hallo" +
-        this.name.name.join(" ") +
-        ",ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg."
+      "Hallo " +
+        this.name.name.join("") +
+        ", ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg."
     );
 
     this.selfSpeeche1 = new Talking(
@@ -247,7 +248,7 @@ export default class TalkingHandler {
       "Ich",
       "Wie möchte ich zum Bewerbungsgespräch fahren?"
     );
-    this.talking3Decision1 = new talking3Decition(
+    this.talking3Decision1 = new Talking3Decition(
       305,
       630,
       220,
@@ -256,6 +257,37 @@ export default class TalkingHandler {
       " Fahrrad",
       "Auto",
       "Bahn"
+    );
+
+    //Szene 3
+
+    this._bossTalking1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Guten Tag, " +
+        this.name.name.join("") +
+        "\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt."
+    );
+    this.bossTalking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Chefin",
+      "Was sind Ihre Stärken?"
+    );
+    this.talking4Desition1 = new Talking4Desition(
+      285,
+      630,
+      355,
+      90,
+      "Ich bin sehr leidenschaftlich.",
+      " Ich arbeite sehr sorgfältig.",
+      "Ich behalte immer einen kühlen Kopf.",
+      "Ich weiß es nicht so genau…"
     );
 
     this.activeTalk = this.mentorTalking1;
@@ -283,13 +315,32 @@ export default class TalkingHandler {
     this.mentorTalking18.changeNext(this.mentorTalking12, this);
     this.mentorTalking19.changeNext(this.empty2, this);
     this.mentorTalking20.changeNext(this.empty4, this);
-    this.hologram1.changeNext(this.selfSpeeche1, this);
+    this._hologram1.changeNext(this.selfSpeeche1, this);
     this.selfSpeeche1.changeNext(this.empty5, this);
     this.selfSpeeche3.changeNext(this.empty5, this);
     this.selfSpeeche4.changeNext(this.talking3Decision1, this);
     this.talking3Decision1.changeNext1(this.empty6, this);
     this.talking3Decision1.changeNext2(this.empty6, this);
     this.talking3Decision1.changeNext3(this.empty6, this);
+    this._bossTalking1.changeNext(this.bossTalking2, this);
+    this.bossTalking2.changeNext(this.talking4Desition1, this);
+  }
+
+  get hologram1() {
+    this._hologram1.text =
+      "Hallo " +
+      this.name.name.join("") +
+      ", ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg.";
+
+    return this._hologram1;
+  }
+  get bossTalking1() {
+    this._bossTalking1.text =
+      "Guten Tag, " +
+      this.name.name.join("") +
+      "\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt.";
+
+    return this._bossTalking1;
   }
 
   mouseMoved() {
