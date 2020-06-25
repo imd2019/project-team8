@@ -2,6 +2,7 @@ import {
   laboratoryBackground,
   messyRoomBackground,
   cityBackground,
+  officeBackground,
   beamer,
   characterButton,
   characterButtonEffect,
@@ -22,10 +23,13 @@ let paper = new Paper();
 let phone = new Button(700, 400, 50, 50, "Handy");
 let phoneButton = new Button(1245, 630, 65, 100);
 let character = new Button(20, 630, 100, 100);
-let windowButton = new Button(140, 120, 248, 270, "Fenster");
+let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(15, 415, 1300, 200, "Fenster verlassen");
 let charakterOverview = new CharacterOverview(360, 150, paper);
 let doorButton = new Button(1140, 120, 160, 400, "Tür");
+let bossButton = new Button(700, 220, 120, 160, "Chefin");
+let window2Button = new Button(20, 40, 300, 450, "Fenster");
+let cameraButton = new Button(360, 40, 70, 40, "Überwachungskamera");
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -54,7 +58,7 @@ function mouseMoved() {
     beamerButton.mouseMoved();
   }
   if (talkingHandler.activeTalk === talkingHandler.empty5) {
-    if (windowButton.triggert === false) {
+    if (window1Button.triggert === false) {
       if (character.triggert === false) {
         if (phone.triggert === false) {
           phone.mouseMoved();
@@ -71,11 +75,18 @@ function mouseMoved() {
     }
 
     if (phoneButton.triggert === false && character.triggert === false) {
-      windowButton.mouseMoved();
+      window1Button.mouseMoved();
     }
   }
-  if (windowButton.triggert === true) {
+  if (window1Button.triggert === true) {
     leaveScreen.mouseMoved();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.empty6) {
+    bossButton.mouseMoved();
+    window2Button.mouseMoved();
+    cameraButton.mouseMoved();
+    phoneButton.mouseMoved();
+    character.mouseMoved();
   }
 }
 window.mouseMoved = mouseMoved;
@@ -98,7 +109,7 @@ function mouseClicked() {
     beamerButton.mouseClicked();
   }
   if (talkingHandler.activeTalk === talkingHandler.empty5) {
-    if (windowButton.triggert === false) {
+    if (window1Button.triggert === false) {
       if (character.triggert === false) {
         if (phone.triggert === false) {
           phone.mouseClicked();
@@ -115,11 +126,18 @@ function mouseClicked() {
     }
 
     if (phoneButton.triggert === false && character.triggert === false) {
-      windowButton.mouseClicked();
+      window1Button.mouseClicked();
     }
   }
-  if (windowButton.triggert === true) {
+  if (window1Button.triggert === true) {
     leaveScreen.mouseClicked();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.empty6) {
+    bossButton.mouseClicked();
+    window2Button.mouseClicked();
+    cameraButton.mouseClicked();
+    phoneButton.mouseClicked();
+    character.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -219,6 +237,7 @@ function draw() {
         fill(220, 220, 220);
         rect(15, 15, 1300, 600);
       } else if (i >= 26) {
+        image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
         talkingHandler.activeTalk = talkingHandler.hologram1;
       } else {
         image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
@@ -226,9 +245,11 @@ function draw() {
       break;
     case talkingHandler.hologram1:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
       break;
     case talkingHandler.selfSpeeche1:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
       break;
     case talkingHandler.empty5:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
@@ -250,7 +271,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneButtonImage, 470, 25, 360, 580);
       }
-      windowButton.display();
+      window1Button.display();
       image(characterButton, 20, 630, 100, 100);
       if (character.effect === true) {
         image(characterButtonEffect, 18, 628, 104, 104);
@@ -258,17 +279,21 @@ function draw() {
       if (character.triggert === true) {
         charakterOverview.display();
       }
-      if (windowButton.triggert === true) {
+      if (window1Button.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche2;
       }
 
       break;
     case talkingHandler.selfSpeeche2:
       image(cityBackground, 15, 15, 1300, 600, 1, 0, 5421, 2519);
+      image(characterButton, 20, 630, 100, 100);
+      if (phone.triggert === true) {
+        image(phoneButtonImage, 1245, 630, 65, 100);
+      }
       leaveScreen.display();
       if (leaveScreen.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.empty5;
-        windowButton.triggert = false;
+        window1Button.triggert = false;
         leaveScreen.triggert = false;
       }
       break;
@@ -278,11 +303,36 @@ function draw() {
       break;
     case talkingHandler.selfSpeeche4:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.talking3Decision1:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.empty6:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      if (character.effect === true) {
+        image(characterButtonEffect, 18, 628, 104, 104);
+      }
+      if (character.triggert === true) {
+        charakterOverview.display();
+      }
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      if (phoneButton.effect === true) {
+        image(phoneButtonImageEffect, 1243, 628, 69, 104);
+      }
+      bossButton.display();
+      if (bossButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.bossTalking1;
+      }
+      window2Button.display();
+      cameraButton.display();
+      break;
+    case talkingHandler.bossTalking1:
+      image(officeBackground, 15, 15, 1300, 600);
       break;
   }
   if (start.start === false) {
