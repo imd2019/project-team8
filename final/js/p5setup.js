@@ -38,7 +38,7 @@ function preload() {
   // mentor = loadImage("png/character/mentor.png");
 
   //Schriftart
-  myFont = loadFont("font/Hack-Regular.ttf");
+  myFont = loadFont("font/Hack-Bold.ttf");
 }
 window.preload = preload;
 
