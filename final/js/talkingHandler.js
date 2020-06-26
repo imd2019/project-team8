@@ -36,7 +36,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Der technologische Fortschritt schleicht sich an, so dass einem gar nicht auffällt, dass all diese Science-Fiction-Filme gar nicht so weit von unserer Realität entfernt sind."
+      "Der technologische Fortschritt schleicht sich an, wodurch den meisten gar nicht auffällt, dass all diese Science-Fiction-Filme gar nicht so weit von unserer Realität entfernt sind."
     );
     // mentorTalking2.clicked = this.display;
     this.mentorTalking3 = new Talking(
@@ -45,7 +45,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Und aus diesem Grund wird uns gar nicht die Zeit gegeben, um darüber nachzudenken, was das tatsächlich für uns bedeutet."
+      "Somit wird uns gar nicht die Zeit gegeben, um darüber nachzudenken, was das tatsächlich für uns bedeutet."
     );
     this.mentorTalking4 = new Talking(
       305,
@@ -53,7 +53,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Aus diesem Grund brauche ich dich."
+      "Aus diesem Grund brauche ich dich!"
     );
     this.mentorTalking5 = new Talking(
       305,
@@ -77,7 +77,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Diese Maschine hier wird dich in ein paralleles Universum transportieren, das schon um einiges fortschrittlicher ist als unseres."
+      "Diese Maschine hier ist ein Teleporter, die dich in ein paralleles Universum transportieren wird, das schon um einiges fortschrittlicher ist als unseres."
     );
     this.mentorTalking8 = new Talking(
       305,
@@ -117,7 +117,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Sobald du in deiner Wohnung ankommst findest du dort Kontaktlinsen, über die ich dich kontaktieren werde."
+      "Hier sind Kontaktlinsen, über die ich dich kontaktieren werde."
     );
     this.mentorTalking13 = new Talking(
       305,
@@ -125,7 +125,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Darüber erhältst du Aufträge von mir, in denen du Entscheidungen treffen musst."
+      "Darüber erhältst du Aufträge von mir, bei denen du Entscheidungen treffen musst."
     );
     this.mentorTalking14 = new Talking(
       305,
@@ -133,7 +133,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Über dein Handy musst du dokumentieren, wie du dich in diesen Situationen fühlst"
+      "Du musst mit ihnen außerdem dokumentieren, wie du dich in diesen Situationen fühlst"
     );
     this.mentorTalking15 = new Talking(
       305,
@@ -141,7 +141,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Über dein Profil kannst du jederzeit sehen, was du tun musst und schon geschafft hast."
+      "Über dein Profil kannst du jederzeit sehen, was du tun sollst und schon geschafft hast."
     );
     this.mentorTalking16 = new Talking(
       305,
@@ -150,6 +150,14 @@ export default class TalkingHandler {
       100,
       "Mentor",
       "In dieser Welt besitzt du eine ID, die alle Informationen über dich zugänglich macht, also bitte geh vorsichtig damit um."
+    );
+    this.mentorTalking16_1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Der Teleporter funktioniert allerdings nur für 24 Stunden,  das bedeutet danach kann ich dich nicht mehr zurückholen."
     );
     this.mentorTalking17 = new Talking(
       305,
@@ -173,7 +181,15 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Sehr gut, bitte füll dieses Formular aus, dann kann es losgehen."
+      "Sehr gut, bitte unterschreibe dieses Formular, dann kann es losgehen."
+    );
+    this.mentorTalking19_1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Mentor",
+      "Gut, dann steht deiner Mission nichts mehr im Weg. Betritt die Kapsel, sobald du bereit bist."
     );
     this.mentorTalking20 = new Talking(
       305,
@@ -181,7 +197,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Ich wünsche dir viel Glück auf der Reise."
+      "Ich wünsche dir viel Glück auf deiner Reise."
     );
 
     //Decitions
@@ -666,12 +682,14 @@ export default class TalkingHandler {
     this.mentorTalking13.changeNext(this.mentorTalking14, this);
     this.mentorTalking14.changeNext(this.mentorTalking15, this);
     this.mentorTalking15.changeNext(this.mentorTalking16, this);
-    this.mentorTalking16.changeNext(this.mentorTalking17, this);
+    this.mentorTalking16.changeNext(this.mentorTalking16_1, this);
+    this.mentorTalking16_1.changeNext(this.mentorTalking17, this);
     this.mentorTalking17.changeNext(this.talking2Decision2, this);
     this.talking2Decision2.changeNext1(this.mentorTalking18, this);
     this.talking2Decision2.changeNext2(this.mentorTalking19, this);
     this.mentorTalking18.changeNext(this.mentorTalking12, this);
-    this.mentorTalking19.changeNext(this.empty2, this);
+    this.mentorTalking19.changeNext(this.mentorTalking19_1, this);
+    this.mentorTalking19_1.changeNext(this.empty2, this);
     this.mentorTalking20.changeNext(this.empty4, this);
     this._hologram1.changeNext(this.selfSpeeche1, this);
     this.selfSpeeche1.changeNext(this.empty5, this);
