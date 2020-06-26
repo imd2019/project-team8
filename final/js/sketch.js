@@ -458,6 +458,48 @@ function draw() {
       image(phoneButtonImage, 470, 25, 360, 580);
       talkingHandler.message1.display();
       break;
+    case talkingHandler.selfSpeeche7:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche8:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche9:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche10:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.talking2Decision5:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.partnerTalking1:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.partnerTalking2:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
   }
   if (start.start === false) {
     start.display();

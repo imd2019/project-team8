@@ -576,7 +576,7 @@ export default class TalkingHandler {
       700,
       100,
       "Partner",
-      "Warte, ich schau es mir kurz an."
+      "[Frau] und ich sind spontan in diese neue Bar gegangen und dann war da dieser Typ und hat mir ganz viele Drinks ausgegeben und ich war total betrunken und ich wusste selbst nicht mehr was genau ich da gemacht habe."
     );
 
     this.activeTalk = this.mentorTalking1;
@@ -651,6 +651,13 @@ export default class TalkingHandler {
     this.selfSpeeche10.changeNext(this.talking2Decision5, this);
     this.talking2Decision5.changeNext1(this.empty6, this);
     this.talking2Decision5.changeNext2(this._partnerTalking1, this);
+    this._partnerTalking1.changeNext(this.partnerTalking2, this);
+    this.partnerTalking2.changeNext(this.userTalking1, this);
+    this.userTalking1.changeNext(this.partnerTalking3, this);
+    this.partnerTalking3.changeNext(this.partnerTalking4, this);
+    this.partnerTalking4.changeNext(this.partnerTalking5, this);
+    this.partnerTalking5.changeNext(this.partnerTalking6, this);
+    this.partnerTalking6.changeNext(this.partnerTalking7, this);
   }
 
   get hologram1() {
