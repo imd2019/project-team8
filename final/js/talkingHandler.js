@@ -14,6 +14,8 @@ export default class TalkingHandler {
     this.empty4 = new Talking();
     this.empty5 = new Talking();
     this.empty6 = new Talking();
+    this.empty7 = new Talking();
+    this.empty8 = new Talking();
 
     //szene 1
 
@@ -576,9 +578,43 @@ export default class TalkingHandler {
       700,
       100,
       "Partner",
-      "[Frau] und ich sind spontan in diese neue Bar gegangen und dann war da dieser Typ und hat mir ganz viele Drinks ausgegeben und ich war total betrunken und ich wusste selbst nicht mehr was genau ich da gemacht habe."
+      "[Frau] und ich sind spontan in diese neue Bar gegangen und dann war da dieser Typ und hat mir ganz viele Drinks ausgegeben..."
     );
-
+    this.partnerTalking8 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "...und ich war total betrunken und ich wusste selbst nicht mehr was genau ich da gemacht habe."
+    );
+    this.talking2Decision6 = new Talking2Decision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      "Ich glaube dir. Sei in Zukunft bitte vorsichtiger.",
+      "Du sahst in dem Video ziemlich nüchtern aus."
+    );
+    this._partnerTalking9 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Danke für dein Verständnis, " +
+        this.name.name.join("") +
+        "!\nIch hoffe wir können es einfach vergessen."
+    );
+    this.partnerTalking10 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Willst du mir etwa vorwerfen, dass ich lüge?\nIch hatte mehr Vertrauen von dir erwartet!"
+    );
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking2.changeNext(this.mentorTalking3, this);
@@ -643,13 +679,13 @@ export default class TalkingHandler {
     this.hologram2.changeNext(this._message1, this);
     this._message1.changeNext(this.selfSpeeche6, this);
     this.selfSpeeche6.changeNext(this.talking2Decision4, this);
-    this.talking2Decision4.changeNext1(this.empty6, this);
+    this.talking2Decision4.changeNext1(this.empty7, this);
     this.talking2Decision4.changeNext2(this.selfSpeeche7, this);
     this.selfSpeeche7.changeNext(this.selfSpeeche8, this);
     this.selfSpeeche8.changeNext(this.selfSpeeche9, this);
     this.selfSpeeche9.changeNext(this.selfSpeeche10, this);
     this.selfSpeeche10.changeNext(this.talking2Decision5, this);
-    this.talking2Decision5.changeNext1(this.empty6, this);
+    this.talking2Decision5.changeNext1(this.empty7, this);
     this.talking2Decision5.changeNext2(this._partnerTalking1, this);
     this._partnerTalking1.changeNext(this.partnerTalking2, this);
     this.partnerTalking2.changeNext(this.userTalking1, this);
@@ -658,6 +694,12 @@ export default class TalkingHandler {
     this.partnerTalking4.changeNext(this.partnerTalking5, this);
     this.partnerTalking5.changeNext(this.partnerTalking6, this);
     this.partnerTalking6.changeNext(this.partnerTalking7, this);
+    this.partnerTalking7.changeNext(this.partnerTalking8, this);
+    this.partnerTalking7.changeNext(this.talking2Decision6, this);
+    this.talking2Decision6.changeNext1(this._partnerTalking9, this);
+    this.talking2Decision6.changeNext2(this.partnerTalking10, this);
+    this._partnerTalking9.changeNext(this.empty8, this);
+    this.partnerTalking10.changeNext(this.empty8, this);
   }
 
   get hologram1() {
@@ -690,6 +732,13 @@ export default class TalkingHandler {
       this.name.name.join("") +
       "! Du hast dich heute noch gar nicht gemeldet.";
     return this._partnerTalking1;
+  }
+  get partnerTalking9() {
+    this._partnerTalking9.text =
+      "Danke für dein Verständnis, " +
+      this.name.name.join("") +
+      "!\nIch hoffe wir können es einfach vergessen.";
+    return this._partnerTalking9;
   }
 
   mouseMoved() {

@@ -457,6 +457,17 @@ function draw() {
       image(phoneButtonImage, 470, 25, 360, 580);
       talkingHandler.message1.display();
       break;
+    case talkingHandler.empty7:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      noStroke();
+      fill(220, 220, 220);
+      textSize(17);
+      text("*ring*", 1250, 250);
+      break;
+
     case talkingHandler.selfSpeeche7:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
       image(characterButton, 20, 630, 100, 100);
@@ -534,6 +545,40 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.partnerTalking8:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.talking2Decision6:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.partnerTalking9:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.partnerTalking10:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.empty8:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      noStroke();
+      fill(220, 220, 220);
+      textSize(17);
+      text("*ring*", 1250, 250);
       break;
   }
   if (start.start === false) {
