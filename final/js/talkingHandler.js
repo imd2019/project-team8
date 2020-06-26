@@ -16,6 +16,7 @@ export default class TalkingHandler {
     this.empty6 = new Talking();
     this.empty7 = new Talking();
     this.empty8 = new Talking();
+    this.empty9 = new Talking();
 
     //szene 1
 
@@ -615,6 +616,38 @@ export default class TalkingHandler {
       "Partner",
       "Willst du mir etwa vorwerfen, dass ich lüge?\nIch hatte mehr Vertrauen von dir erwartet!"
     );
+    this.userTalking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Ich muss auflegen, es klingelt an der Tür."
+    );
+    this.userTalking3 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Ich muss auflegen, es klingelt an der Tür."
+    );
+    this.partnerTalking11 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Alles klar, vielleicht sprechen wir später weiter.\nBis dann!"
+    );
+    this.partnerTalking12 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Wie auch immer, Tschüss."
+    );
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking2.changeNext(this.mentorTalking3, this);
@@ -699,7 +732,9 @@ export default class TalkingHandler {
     this.talking2Decision6.changeNext1(this._partnerTalking9, this);
     this.talking2Decision6.changeNext2(this.partnerTalking10, this);
     this._partnerTalking9.changeNext(this.empty8, this);
-    this.partnerTalking10.changeNext(this.empty8, this);
+    this.partnerTalking10.changeNext(this.empty9, this);
+    this.userTalking2.changeNext(this.partnerTalking11, this);
+    this.userTalking3.changeNext(this.partnerTalking12, this);
   }
 
   get hologram1() {

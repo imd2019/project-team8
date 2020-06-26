@@ -34,6 +34,7 @@ let cameraButton = new Button(360, 40, 70, 40, "Überwachungskamera");
 let talkingHandler = new TalkingHandler(paper);
 
 let i = 0;
+let j = 0;
 
 function keyPressed() {
   paper.keyPressed();
@@ -579,6 +580,48 @@ function draw() {
       fill(220, 220, 220);
       textSize(17);
       text("*ring*", 1250, 250);
+      j++;
+      if (j >= 20) {
+        talkingHandler.activeTalk = talkingHandler.userTalking2;
+      }
+      break;
+    case talkingHandler.empty9:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      noStroke();
+      fill(220, 220, 220);
+      textSize(17);
+      text("*ring*", 1250, 250);
+      j++;
+      if (j >= 20) {
+        talkingHandler.activeTalk = talkingHandler.userTalking3;
+      }
+      break;
+    case talkingHandler.userTalking2:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.userTalking3:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.partnerTalking11:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.partnerTalking12:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
       break;
   }
   if (start.start === false) {
