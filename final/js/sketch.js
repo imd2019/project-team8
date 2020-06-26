@@ -150,19 +150,36 @@ function draw() {
   rect(10, 610, 1310, 130);
 
   //scene1
-  if (
-    start.start === false ||
-    talkingHandler.activeTalk === talkingHandler.mentorTalking1 ||
-    talkingHandler.activeTalk === talkingHandler.mentorTalking2 ||
-    talkingHandler.activeTalk === talkingHandler.mentorTalking3 ||
-    talkingHandler.activeTalk === talkingHandler.mentorTalking4 ||
-    talkingHandler.activeTalk === talkingHandler.mentorTalking5 ||
-    talkingHandler.activeTalk === talkingHandler.empty1
-  ) {
+  if (start.start === false) {
     fill(30, 30, 30);
     rect(10, 10, 1300, 600);
   }
   switch (talkingHandler.activeTalk) {
+    case talkingHandler.mentorTalking1:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
+      break;
+    case talkingHandler.mentorTalking2:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
+      break;
+    case talkingHandler.mentorTalking3:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
+      break;
+    case talkingHandler.mentorTalking4:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
+      break;
+    case talkingHandler.mentorTalking5:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
+      break;
+    case talkingHandler.empty1:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
+      break;
+
     case talkingHandler.mentorTalking6:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       // image(mentor, 560, 260, 118, 350);
@@ -258,6 +275,9 @@ function draw() {
       doorButton.display();
       if (phone.triggert === false) {
         phone.display();
+        //if (phone.effect===true){
+        // image();
+        // }
       } else {
         image(phoneButtonImage, 1245, 630, 65, 100);
         if (phoneButton.effect === true) {
