@@ -201,6 +201,9 @@ function draw() {
     case talkingHandler.mentorTalking16:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
+    case talkingHandler.mentorTalking16_1:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
     case talkingHandler.mentorTalking17:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
@@ -211,6 +214,9 @@ function draw() {
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
     case talkingHandler.mentorTalking19:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      break;
+    case talkingHandler.mentorTalking19_1:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
     case talkingHandler.empty2:
