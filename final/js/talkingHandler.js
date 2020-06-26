@@ -3,6 +3,7 @@ import Talking2Decision from "./talking2Decision.js";
 import Talking3Decision from "./talking3Decision.js";
 import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
+import Message from "./message.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -253,7 +254,7 @@ export default class TalkingHandler {
       220,
       100,
       "Ich",
-      " Fahrrad",
+      "Fahrrad",
       "Auto",
       "Bahn"
     );
@@ -292,7 +293,7 @@ export default class TalkingHandler {
       700,
       100,
       "Chefin",
-      " Danke für ihre Ehrlichkeit."
+      "Danke für ihre Ehrlichkeit."
     );
 
     this.bossTalking5 = new Talking(
@@ -368,7 +369,7 @@ export default class TalkingHandler {
         700,
         100,
         "Chefin",
-        " Wie bitte? Ich fasse es nicht!"
+        "Wie bitte? Ich fasse es nicht!"
       );
       this.bossTalking15 = new Talking(
         305,
@@ -403,7 +404,7 @@ export default class TalkingHandler {
       400,
       90,
       "Ich bin sehr leidenschaftlich.",
-      " Ich arbeite sehr sorgfältig.",
+      "Ich arbeite sehr sorgfältig.",
       "Ich behalte immer einen kühlen Kopf.",
       "Ich bin kompromissbereit."
     );
@@ -433,8 +434,8 @@ export default class TalkingHandler {
       340,
       100,
       "Ich",
-      " Nein, ich will meine Privatsphäre behalten.",
-      "  Ja, ich habe nichts zu verbergen."
+      "Nein, ich will meine Privatsphäre behalten.",
+      "Ja, ich habe nichts zu verbergen."
     );
 
     this.selfSpeeche5 = new Talking(
@@ -444,6 +445,138 @@ export default class TalkingHandler {
       100,
       "Ich",
       "Übergebe ich ihr meine ID?"
+    );
+
+    //scene 4
+
+    this.hologram2 = new Hologram(
+      360,
+      150,
+      "Hallo, ich bin es nochmal. Hoffentlich lief das Bewerbungsgespräch gut. Nicht, dass es für dich tatsächlich relevant wäre. Jedenfalls hast du eine Benachrichtigung auf deinem Handy erhalten. Du solltest sie öffnen."
+    );
+    this._message1 = new Message(
+      500,
+      150,
+      320,
+      300,
+      "Hallo [Name].\n\nDu hast [Partnerin] als deine Partnerin angegeben.\nWir haben sie in einem Video auf [Social Media] identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\n[Social Media]"
+    );
+    this.selfSpeeche6 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Möchte ich mir das Video ansehen?"
+    );
+    this.talking2Decision4 = new Talking2Decision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      "Nein, ich möchte nicht alles kontrollieren, was meine Freundin tut.",
+      "Ja, es ist doch nur ein Video"
+    );
+    this.selfSpeeche7 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "In dem Video sehe ich meine Freundin in einer Bar stehen mit einer Person, die ich nicht kenne."
+    );
+    this.selfSpeeche8 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Ich höre nicht, was sie sagen, aber ich sehe, wie sie sich immer näherkommen."
+    );
+    this.selfSpeeche9 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "War das etwa ein Kuss? Sie gehen gemeinsam aus der Bar raus…"
+    );
+    this.selfSpeeche10 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Rufe ich meine Freundin an?"
+    );
+    this.talking2Decision5 = new Talking2Decision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      "Nein, das ist nicht nötig.",
+      "Ja, ich möchte das mit ihr klären."
+    );
+    this._partnerTalking1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      " Hi " +
+        this.name.name.join("") +
+        "! Du hast dich heute noch gar nicht gemeldet."
+    );
+    this.partnerTalking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Ist alles in Ordnung? Warum rufst du an?"
+    );
+    this.userTalking1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      " [Social Media] hat mir gerade ein Video von dir in einer Bar geschickt."
+    );
+    this.partnerTalking3 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Was für ein Video? Kannst du es mir schicken?"
+    );
+    this.partnerTalking4 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Warte, ich schau es mir kurz an."
+    );
+    this.partnerTalking5 = new Talking(305, 630, 700, 100, "Partner", "...");
+    this.partnerTalking6 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Das- Äh, das ist nicht so wie es aussieht!"
+    );
+    this.partnerTalking7 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Partner",
+      "Warte, ich schau es mir kurz an."
     );
 
     this.activeTalk = this.mentorTalking1;
@@ -506,6 +639,18 @@ export default class TalkingHandler {
     this.bossTalking12.changeNext(this.bossTalking13, this);
     this.bossTalking13.changeNext(this.bossTalking14, this);
     this.bossTalking14.changeNext(this.bossTalking15, this);
+    this.bossTalking15.changeNext(this.hologram2, this);
+    this.hologram2.changeNext(this._message1, this);
+    this._message1.changeNext(this.selfSpeeche6, this);
+    this.selfSpeeche6.changeNext(this.talking2Decision4, this);
+    this.talking2Decision4.changeNext1(this.empty6, this);
+    this.talking2Decision4.changeNext2(this.selfSpeeche7, this);
+    this.selfSpeeche7.changeNext(this.selfSpeeche8, this);
+    this.selfSpeeche8.changeNext(this.selfSpeeche9, this);
+    this.selfSpeeche9.changeNext(this.selfSpeeche10, this);
+    this.selfSpeeche10.changeNext(this.talking2Decision5, this);
+    this.talking2Decision5.changeNext1(this.empty6, this);
+    this.talking2Decision5.changeNext2(this._partnerTalking1, this);
   }
 
   get hologram1() {
@@ -523,6 +668,21 @@ export default class TalkingHandler {
       "\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt.";
 
     return this._bossTalking1;
+  }
+
+  get message1() {
+    this._message1.text =
+      "Hallo " +
+      this.name.name.join("") +
+      ".\n\nDu hast [Partnerin] als deine Partnerin angegeben.\nWir haben sie in einem Video auf [Social Media] identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\n[Social Media]";
+    return this._message1;
+  }
+  get partnerTalking1() {
+    this._partnerTalking1.text =
+      " Hi " +
+      this.name.name.join("") +
+      "! Du hast dich heute noch gar nicht gemeldet.";
+    return this._partnerTalking1;
   }
 
   mouseMoved() {

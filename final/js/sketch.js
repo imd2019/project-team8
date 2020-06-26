@@ -433,6 +433,31 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
+    case talkingHandler.hologram2:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.message1:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche6:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      talkingHandler.message1.display();
+      break;
+    case talkingHandler.talking2Decision4:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      talkingHandler.message1.display();
+      break;
   }
   if (start.start === false) {
     start.display();
