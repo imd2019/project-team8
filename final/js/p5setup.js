@@ -6,6 +6,7 @@ let laboratoryBackground;
 let messyRoomBackground;
 let cityBackground;
 let officeBackground;
+let hirerBackground;
 
 //Gegenstände
 let beamer;
@@ -24,6 +25,7 @@ function preload() {
   //Hintergründe
   laboratoryBackground = loadImage("png/laboratory.png");
   messyRoomBackground = loadImage("png/messyRoom.png");
+  hirerBackground = loadImage("png/messyRoom-hirer.png");
   cityBackground = loadImage("png/city.png");
   officeBackground = loadImage("png/office-head.png");
 
@@ -57,6 +59,7 @@ window.addEventListener("resize", windowResized);
 export {
   laboratoryBackground,
   messyRoomBackground,
+  hirerBackground,
   cityBackground,
   officeBackground,
 };

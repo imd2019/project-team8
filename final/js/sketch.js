@@ -1,6 +1,7 @@
 import {
   laboratoryBackground,
   messyRoomBackground,
+  hirerBackground,
   cityBackground,
   officeBackground,
   beamer,
