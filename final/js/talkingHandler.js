@@ -683,6 +683,88 @@ export default class TalkingHandler {
       "Zero",
       "Mein Name ist Zero Amin. Ich komme im Auftrag der Alpha Wohnungszentrale."
     );
+    this.workerTalking3 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Vielleicht haben sie mitbekommen, dass es vor Kurzem wieder einen Einbruch in diesem Gebäude gab."
+    );
+    this.workerTalking4 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Aus diesem Grund sind wir rechtlich dazu verpflichtet, Ihnen bessere Sicherheitsmaßnahmen anzubieten."
+    );
+    this.workerTalking5 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Sie haben die Möglichkeit, eine neue Tür einbauen zu lassen. Die ist basically einbruchsicher, trust me."
+    );
+    this.workerTalking6 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Sie lässt sich nur noch elektronisch durch Gesichtserkennung öffnen, sie brauchen nicht mal mehr einen Schlüssel!"
+    );
+    this.workerTalking7 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Alpha beteiligt sich an den Kosten, das wird dann gar nicht teuer für Sie."
+    );
+    this.workerTalking8 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Also, wollen sie das Angebot annehmen?"
+    );
+    this.workerTalking9 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Amazing! Wir fangen gleich heute Abend an mit der Installation.\nSchönen Tag noch!"
+    );
+    this.workerTalking10 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "What a pity!"
+    );
+    this.workerTalking11 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Überlegen Sie sich es einfach nochmal und kommen Sie auf uns zu, wenn Sie Ihre Meinung ändern.\nGoodbye!"
+    );
+
+    this.talking2Decision7 = new Talking2Decision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      "Ja, das klingt super.",
+      "Nein, ich lehne fürs Erste ab."
+    );
     //scene1
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
@@ -780,6 +862,17 @@ export default class TalkingHandler {
     this.partnerTalking11.changeNext(this.empty10, this);
     this.partnerTalking12.changeNext(this.empty10, this);
     //scene5
+    this._workerTalking1.changeNext(this.workerTalking2, this);
+    this.workerTalking2.changeNext(this.workerTalking3, this);
+    this.workerTalking3.changeNext(this.workerTalking4, this);
+    this.workerTalking4.changeNext(this.workerTalking5, this);
+    this.workerTalking5.changeNext(this.workerTalking6, this);
+    this.workerTalking6.changeNext(this.workerTalking7, this);
+    this.workerTalking7.changeNext(this.workerTalking8, this);
+    this.workerTalking8.changeNext(this.talking2Decision7, this);
+    this.talking2Decision7.changeNext1(this.workerTalking9, this);
+    this.talking2Decision7.changeNext2(this.workerTalking10, this);
+    this.workerTalking10.changeNext(this.workerTalking11, this);
   }
 
   get hologram1() {
