@@ -25,7 +25,7 @@ function preload() {
   laboratoryBackground = loadImage("png/laboratory.png");
   messyRoomBackground = loadImage("png/messyRoom.png");
   cityBackground = loadImage("png/city.png");
-  officeBackground = loadImage("png/office.png");
+  officeBackground = loadImage("png/office-head.png");
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
