@@ -14,6 +14,8 @@ let characterButton;
 let phoneButtonImage;
 let characterButtonEffect;
 let phoneButtonImageEffect;
+let phoneImage;
+let phoneImageEffect;
 
 // Charaktere
 // let mentor;
@@ -35,6 +37,8 @@ function preload() {
   phoneButtonImage = loadImage("png/objects/phone1.png");
   characterButtonEffect = loadImage("png/objects/character2.png");
   phoneButtonImageEffect = loadImage("png/objects/phone2.png");
+  phoneImage=loadImage("png/objects/phonetable1.png");
+  phoneImageEffect=loadImage("png/objects/phonetable2.png");
 
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
@@ -69,6 +73,8 @@ export {
   phoneButtonImage,
   characterButtonEffect,
   phoneButtonImageEffect,
+  phoneImage,
+  phoneImageEffect,
 };
 export { myFont };
 // export { mentor };

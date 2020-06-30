@@ -9,6 +9,8 @@ import {
   characterButtonEffect,
   phoneButtonImage,
   phoneButtonImageEffect,
+  phoneImage,
+  phoneImageEffect,
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -21,7 +23,7 @@ import CharacterOverview from "./characterOverview.js";
 let start = new Start(562.5, 337.5, 185, 65);
 let beamerButton = new Button(650, 210, 230, 370, "Maschine");
 let paper = new Paper();
-let phone = new Button(700, 400, 50, 50, "Handy");
+let phone = new Button(800, 440, 70, 10, "Handy");
 let phoneButton = new Button(1245, 630, 65, 100);
 let character = new Button(20, 630, 100, 100);
 let window1Button = new Button(140, 120, 248, 270, "Fenster");
@@ -278,19 +280,25 @@ function draw() {
     case talkingHandler.hologram1:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
       image(characterButton, 20, 630, 100, 100);
+      image(phoneImage,800, 440, 70, 10);
+      
       break;
     case talkingHandler.selfSpeeche1:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
       image(characterButton, 20, 630, 100, 100);
+      image(phoneImage,800, 440, 70, 10);
       break;
     case talkingHandler.empty5:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
       doorButton.display();
+     
       if (phone.triggert === false) {
         phone.display();
-        //if (phone.effect===true){
-        // image();
-        // }
+         image(phoneImage,800, 440, 70, 10);
+        if (phone.effect===true){
+          image(phoneImageEffect,800, 440, 70, 10);
+          
+         }
       } else {
         image(phoneButtonImage, 1245, 630, 65, 100);
         if (phoneButton.effect === true) {
