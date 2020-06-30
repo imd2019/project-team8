@@ -17,6 +17,7 @@ export default class TalkingHandler {
     this.empty7 = new Talking();
     this.empty8 = new Talking();
     this.empty9 = new Talking();
+    this.empty10 = new Talking();
 
     //szene 1
 
@@ -381,7 +382,7 @@ export default class TalkingHandler {
     );
     this.bossTalking13 = new Talking(305, 630, 700, 100, "Chefin", "…");
     this.bossTalkingArray = [1, 2, 3];
-    if (this.bossTalkingArray.random === 1) {
+    if (random(this.bossTalkingArray) === 1) {
       this.bossTalking14 = new Talking(
         305,
         630,
@@ -664,6 +665,25 @@ export default class TalkingHandler {
       "Partner",
       "Wie auch immer, Tschüss."
     );
+
+    //scene5
+    this._workerTalking1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Sie sind" + this.name.name.join("") + ", right?"
+    );
+    this.workerTalking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Zero",
+      "Mein Name ist Zero Amin. Ich komme im Auftrag der Alpha Wohnungszentrale."
+    );
+    //scene1
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking2.changeNext(this.mentorTalking3, this);
@@ -691,6 +711,7 @@ export default class TalkingHandler {
     this.mentorTalking19.changeNext(this.mentorTalking19_1, this);
     this.mentorTalking19_1.changeNext(this.empty2, this);
     this.mentorTalking20.changeNext(this.empty4, this);
+    //scene2
     this._hologram1.changeNext(this.selfSpeeche1, this);
     this.selfSpeeche1.changeNext(this.empty5, this);
     this.selfSpeeche3.changeNext(this.empty5, this);
@@ -698,6 +719,7 @@ export default class TalkingHandler {
     this.talking3Decision1.changeNext1(this.empty6, this);
     this.talking3Decision1.changeNext2(this.empty6, this);
     this.talking3Decision1.changeNext3(this.empty6, this);
+    //scene3
     this._bossTalking1.changeNext(this.bossTalking2, this);
     this.bossTalking2.changeNext(this.talking4Decision1, this);
     this.talking4Decision1.changeNext1(this.bossTalking3, this);
@@ -723,10 +745,12 @@ export default class TalkingHandler {
     this.talking2Decision3.changeNext1(this.bossTalking10, this);
     this.talking2Decision3.changeNext2(this.bossTalking12, this);
     this.bossTalking10.changeNext(this.bossTalking11, this);
+    this.bossTalking11.changeNext(this.hologram2, this);
     this.bossTalking12.changeNext(this.bossTalking13, this);
     this.bossTalking13.changeNext(this.bossTalking14, this);
     this.bossTalking14.changeNext(this.bossTalking15, this);
     this.bossTalking15.changeNext(this.hologram2, this);
+    //scene4
     this.hologram2.changeNext(this._message1, this);
     this._message1.changeNext(this.selfSpeeche6, this);
     this.selfSpeeche6.changeNext(this.talking2Decision4, this);
@@ -753,6 +777,9 @@ export default class TalkingHandler {
     this.partnerTalking10.changeNext(this.empty9, this);
     this.userTalking2.changeNext(this.partnerTalking11, this);
     this.userTalking3.changeNext(this.partnerTalking12, this);
+    this.partnerTalking11.changeNext(this.empty10, this);
+    this.partnerTalking12.changeNext(this.empty10, this);
+    //scene5
   }
 
   get hologram1() {
@@ -792,6 +819,11 @@ export default class TalkingHandler {
       this.name.name.join("") +
       "!\nIch hoffe wir können es einfach vergessen.";
     return this._partnerTalking9;
+  }
+  get workerTalking1() {
+    this._workerTalking1.text =
+      "Sie sind" + this.name.name.join("") + ", right?";
+    return this._workerTalking1;
   }
 
   mouseMoved() {

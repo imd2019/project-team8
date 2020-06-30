@@ -58,7 +58,10 @@ function mouseMoved() {
   if (talkingHandler.activeTalk === talkingHandler.empty3) {
     beamerButton.mouseMoved();
   }
-  if (talkingHandler.activeTalk === talkingHandler.empty5) {
+  if (
+    talkingHandler.activeTalk === talkingHandler.empty5 ||
+    talkingHandler.activeTalk === talkingHandler.empty10
+  ) {
     if (window1Button.triggert === false) {
       if (character.triggert === false) {
         if (phone.triggert === false) {
@@ -109,7 +112,10 @@ function mouseClicked() {
   if (talkingHandler.activeTalk === talkingHandler.empty3) {
     beamerButton.mouseClicked();
   }
-  if (talkingHandler.activeTalk === talkingHandler.empty5) {
+  if (
+    talkingHandler.activeTalk === talkingHandler.empty5 ||
+    talkingHandler.activeTalk === talkingHandler.empty10
+  ) {
     if (window1Button.triggert === false) {
       if (character.triggert === false) {
         if (phone.triggert === false) {
@@ -648,6 +654,25 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.empty10:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      if (phoneButton.triggert === true) {
+        image(phoneButtonImage, 470, 25, 360, 580);
+      }
+      doorButton.display();
+      if (phoneButton.effect === true) {
+        image(phoneButtonImageEffect, 1243, 628, 69, 104);
+      }
+      image(characterButton, 20, 630, 100, 100);
+      if (character.effect === true) {
+        image(characterButtonEffect, 18, 628, 104, 104);
+      }
+      if (character.triggert === true) {
+        charakterOverview.display();
+      }
       break;
   }
   if (start.start === false) {
