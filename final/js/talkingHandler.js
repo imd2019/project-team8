@@ -237,11 +237,11 @@ export default class TalkingHandler {
       700,
       100,
       "Ich",
-      "Wow, meine Wohnung habe ich gepflegter in Erinnerung…          Bevor ich losgehe, sollte ich das Handy einpacken."
+      "Wow, meine Wohnung habe ich gepflegter in Erinnerung…\n\nBevor ich losgehe, sollte ich das Handy einpacken."
     );
     this.selfSpeecheArray1 = [
       "Die Stadt ist kaum noch wiederzuerkennen.",
-      " Ist es wirklich morgens? Es sieht so düster aus…",
+      "Ist es wirklich morgens? Es sieht so düster aus…",
       "Es wohnen so viele Menschen auf einem Fleck.",
     ];
     this.selfSpeeche2 = new Talking(
@@ -419,9 +419,9 @@ export default class TalkingHandler {
     }
 
     this.talking4Decision1 = new Talking4Decision(
-      250,
+      240,
       630,
-      400,
+      405,
       90,
       "Ich bin sehr leidenschaftlich.",
       "Ich arbeite sehr sorgfältig.",
@@ -887,7 +887,7 @@ export default class TalkingHandler {
     this._bossTalking1.text =
       "Guten Tag, " +
       this.name.name.join("") +
-      "\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt.";
+      "\n\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt.";
 
     return this._bossTalking1;
   }
