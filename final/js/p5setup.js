@@ -47,15 +47,9 @@ function preload() {
   phoneButtonImage = loadImage("png/objects/phone1.png");
   characterButtonEffect = loadImage("png/objects/character2.png");
   phoneButtonImageEffect = loadImage("png/objects/phone2.png");
-<<<<<<< HEAD
-  phoneImage=loadImage("png/objects/phonetable1.png");
-  phoneImageEffect=loadImage("png/objects/phonetable2.png");
-  hologram=loadImage("png/objects/hologram1.png");
-=======
   phoneImage = loadImage("png/objects/phonetable1.png");
   phoneImageEffect = loadImage("png/objects/phonetable2.png");
 
->>>>>>> 2f9d64c7f9d88f0e1d9b02a73124644f5e65b636
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 

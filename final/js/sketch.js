@@ -170,18 +170,13 @@ function draw() {
     case talkingHandler.mentorTalking1:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
-<<<<<<< HEAD
-      
-      
-=======
       gesprochenerText1.play();
 
->>>>>>> 2f9d64c7f9d88f0e1d9b02a73124644f5e65b636
       break;
     case talkingHandler.mentorTalking2:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
-      
+
       break;
     case talkingHandler.mentorTalking3:
       fill(30, 30, 30);
@@ -317,7 +312,7 @@ function draw() {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche4;
       }
       if (phoneButton.triggert === true) {
-        image(phoneButtonImage, 470, 25, 360, 580);//gesperter Bildschirm
+        image(phoneButtonImage, 470, 25, 360, 580); //gesperter Bildschirm
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
