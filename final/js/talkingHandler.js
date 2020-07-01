@@ -4,6 +4,7 @@ import Talking3Decision from "./talking3Decision.js";
 import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
 import Message from "./message.js";
+import {gesprochenerText1,} from "./p5setup.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -30,6 +31,9 @@ export default class TalkingHandler {
       "Mentor",
       "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
     );
+    if (this.activeTalk===this.mentorTalking1){
+      gesprochenerText1.play();
+    }
 
     this.mentorTalking2 = new Talking(
       305,

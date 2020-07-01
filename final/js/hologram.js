@@ -1,4 +1,5 @@
 import Button from "./button.js";
+import { hologram,} from "./p5setup.js";
 
 export default class Hologramm extends Button {
   constructor(x, y, text) {
@@ -6,39 +7,40 @@ export default class Hologramm extends Button {
     this.text = text;
   }
   display() {
-    noStroke();
-    fill(30, 30, 30, 240);
-    rect(this.x, this.y, 500, 300);
-    rect(this.x - 40, this.y + 40, 40, 220);
-    rect(this.x + 500, this.y + 40, 40, 220);
-    triangle(this.x, this.y, this.x - 40, this.y + 40, this.x, this.y + 40);
-    triangle(
-      this.x - 40,
-      this.y + 260,
-      this.x,
-      this.y + 300,
-      this.x,
-      this.y + 260
-    );
-    triangle(
-      this.x + 500,
-      this.y,
-      this.x + 540,
-      this.y + 40,
-      this.x + 500,
-      this.y + 40
-    );
-    triangle(
-      this.x + 500,
-      this.y + 300,
-      this.x + 540,
-      this.y + 260,
-      this.x + 500,
-      this.y + 260
-    );
-    stroke(0, 220, 240);
-    strokeWeight(6);
-    line(this.x, this.y, this.x + 500, this.y);
+   image(hologram, 100, 140, 70, 70);
+    // noStroke();
+    // fill(30, 30, 30, 240);
+    // rect(this.x, this.y, 500, 300);
+    // rect(this.x - 40, this.y + 40, 40, 220);
+    // rect(this.x + 500, this.y + 40, 40, 220);
+    // triangle(this.x, this.y, this.x - 40, this.y + 40, this.x, this.y + 40);
+    // triangle(
+    //   this.x - 40,
+    //   this.y + 260,
+    //   this.x,
+    //   this.y + 300,
+    //   this.x,
+    //   this.y + 260
+    // );
+    // triangle(
+    //   this.x + 500,
+    //   this.y,
+    //   this.x + 540,
+    //   this.y + 40,
+    //   this.x + 500,
+    //   this.y + 40
+    // );
+    // triangle(
+    //   this.x + 500,
+    //   this.y + 300,
+    //   this.x + 540,
+    //   this.y + 260,
+    //   this.x + 500,
+    //   this.y + 260
+    // );
+     stroke(0, 220, 240);
+     strokeWeight(6);
+     line(this.x, this.y, this.x + 500, this.y);
     line(this.x, this.y + 300, this.x + 500, this.y + 300);
     line(this.x - 40, this.y + 40, this.x - 40, this.y + 260);
     line(this.x + 540, this.y + 40, this.x + 540, this.y + 260);
