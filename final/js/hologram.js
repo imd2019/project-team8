@@ -7,7 +7,7 @@ export default class Hologramm extends Button {
     this.text = text;
   }
   display() {
-   image(hologram, 100, 140, 70, 70);
+   image(hologram, 298, 145, 719, 320);
     // noStroke();
     // fill(30, 30, 30, 240);
     // rect(this.x, this.y, 500, 300);
@@ -38,16 +38,16 @@ export default class Hologramm extends Button {
     //   this.x + 500,
     //   this.y + 260
     // );
-     stroke(0, 220, 240);
-     strokeWeight(6);
-     line(this.x, this.y, this.x + 500, this.y);
-    line(this.x, this.y + 300, this.x + 500, this.y + 300);
-    line(this.x - 40, this.y + 40, this.x - 40, this.y + 260);
-    line(this.x + 540, this.y + 40, this.x + 540, this.y + 260);
-    line(this.x, this.y, this.x - 40, this.y + 40);
-    line(this.x - 40, this.y + 260, this.x, this.y + 300);
-    line(this.x + 500, this.y, this.x + 540, this.y + 40);
-    line(this.x + 500, this.y + 300, this.x + 540, this.y + 260);
+    //  stroke(0, 220, 240);
+    //  strokeWeight(6);
+    //  line(this.x, this.y, this.x + 500, this.y);
+    // line(this.x, this.y + 300, this.x + 500, this.y + 300);
+    // line(this.x - 40, this.y + 40, this.x - 40, this.y + 260);
+    // line(this.x + 540, this.y + 40, this.x + 540, this.y + 260);
+    // line(this.x, this.y, this.x - 40, this.y + 40);
+    // line(this.x - 40, this.y + 260, this.x, this.y + 300);
+    // line(this.x + 500, this.y, this.x + 540, this.y + 40);
+    // line(this.x + 500, this.y + 300, this.x + 540, this.y + 260);
     noStroke();
     fill(220, 220, 220);
     textSize(15);
