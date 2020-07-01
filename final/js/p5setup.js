@@ -4,6 +4,8 @@ let height = windowHeight;
 //Hintergünde
 let laboratoryBackground;
 let messyRoomBackground;
+let messyRoomBackgrundWindow;
+let messyRoomBackgroundDoor;
 let cityBackground;
 let officeBackground;
 let hirerBackground;
@@ -33,6 +35,8 @@ function preload() {
   //Hintergründe
   laboratoryBackground = loadImage("png/laboratory.png");
   messyRoomBackground = loadImage("png/messyRoom.png");
+  messyRoomBackgrundWindow = loadImage("png/messyroom-window.png");
+  messyRoomBackgroundDoor = loadImage("png/messyroom-door.png");
   hirerBackground = loadImage("png/messyRoom-hirer.png");
   cityBackground = loadImage("png/city.png");
   officeBackground = loadImage("png/office-head.png");
@@ -43,9 +47,15 @@ function preload() {
   phoneButtonImage = loadImage("png/objects/phone1.png");
   characterButtonEffect = loadImage("png/objects/character2.png");
   phoneButtonImageEffect = loadImage("png/objects/phone2.png");
+<<<<<<< HEAD
   phoneImage=loadImage("png/objects/phonetable1.png");
   phoneImageEffect=loadImage("png/objects/phonetable2.png");
   hologram=loadImage("png/objects/hologram1.png");
+=======
+  phoneImage = loadImage("png/objects/phonetable1.png");
+  phoneImageEffect = loadImage("png/objects/phonetable2.png");
+
+>>>>>>> 2f9d64c7f9d88f0e1d9b02a73124644f5e65b636
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
@@ -74,6 +84,8 @@ window.addEventListener("resize", windowResized);
 export {
   laboratoryBackground,
   messyRoomBackground,
+  messyRoomBackgrundWindow,
+  messyRoomBackgroundDoor,
   hirerBackground,
   cityBackground,
   officeBackground,
