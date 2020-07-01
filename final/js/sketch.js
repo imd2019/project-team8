@@ -13,7 +13,7 @@ import {
   phoneButtonImageEffect,
   phoneImage,
   phoneImageEffect,
-  //mentorSound1,
+  mentorSound1,
   phoneBig,
   partnerFacetime,
   partnerVideo,
@@ -45,6 +45,20 @@ let talkingHandler = new TalkingHandler(paper);
 
 let i = 0;
 let j = 0;
+let s = 0;
+
+
+function sound(){
+  if (talkingHandler.activeTalk === talkingHandler.mentorTalking2) { //gehört aber eigentlich zu mentor Talking1
+    s++; 
+    if(s<=1){
+      mentorSound1.play();
+    }
+  }
+//   // if (talkingHandler.activeTalk === talkingHandler.mentorTalking2) {
+//   //     mentorSound1.play();
+//   // }
+ }
 
 function keyPressed() {
   paper.keyPressed();
@@ -168,21 +182,28 @@ function mouseClicked() {
 window.mouseClicked = mouseClicked;
 
 function draw() {
+  
   clear();
   //Balken untern im screen
   fill(30, 30, 30);
   rect(10, 610, 1310, 130);
 
+  sound();
+
   //scene1
   if (start.start === false) {
     fill(30, 30, 30);
     rect(10, 10, 1300, 600);
-  }
+    
+  } 
+  // if (start.start === true) {
+  //   talkingHandler.activeTalk = talkingHandler.mentorTalking1;
+  // }
   switch (talkingHandler.activeTalk) {
     case talkingHandler.mentorTalking1:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
-      // gesprochenerText1.play();
+      //mentorSound1.play();
       break;
     case talkingHandler.mentorTalking2:
       fill(30, 30, 30);
@@ -367,6 +388,8 @@ function draw() {
       break;
     case talkingHandler.selfSpeeche3:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneImage, 800, 440, 70, 10);
       doorButton.triggert = false;
       break;
     case talkingHandler.selfSpeeche4:

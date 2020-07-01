@@ -9,6 +9,7 @@ import { mentorSound1 } from "./p5setup.js";
 export default class TalkingHandler {
   constructor(name) {
     this.name = name;
+    this.start = new Talking();
     this.empty1 = new Talking();
     this.empty2 = new Talking();
     this.empty3 = new Talking();
@@ -30,7 +31,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
+      "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist.",
     );
     if (this.activeTalk === this.mentorTalking1) {
       mentorSound1.play();
@@ -44,6 +45,9 @@ export default class TalkingHandler {
       "Mentor",
       "Der technologische Fortschritt schleicht sich an, wodurch den meisten gar nicht auffällt, dass all diese Science-Fiction-Filme gar nicht so weit von unserer Realität entfernt sind."
     );
+    if (this.activeTalk === this.mentorTalking2) {
+      mentorSound1.play();
+    }
     // mentorTalking2.clicked = this.display;
     this.mentorTalking3 = new Talking(
       305,
@@ -823,6 +827,7 @@ export default class TalkingHandler {
     );
     this.fbi = new Talking();
     //scene1
+    this.activeTalk = this.start;
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking2.changeNext(this.mentorTalking3, this);

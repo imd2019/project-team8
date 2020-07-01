@@ -56,13 +56,13 @@ function preload() {
   hologram = loadImage("png/objects/hologram1.png");
   phoneBig = loadImage("png/objects/phonebig1.png");
   partnerFacetime = loadImage("png/objects/partnerfacetime.png");
-  partnerVideo = loadImage("png/objects/partnervidoe.png");
+  partnerVideo = loadImage("png/objects/partnervideo.png");
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
   //gesprochner Text
 
-  mentorSound1 = loadSound("sound/mentor/tur.mp3");
+  mentorSound1 = loadSound("sound/mentor/mentorsound1.mp3");
 
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
@@ -73,6 +73,7 @@ function setup() {
   sketch.createCanvas(windowWidth, windowHeight);
   sketch.frameRate(30);
   textFont(myFont);
+  //mentorSound1.play();
 }
 window.setup = setup;
 
