@@ -800,7 +800,7 @@ export default class TalkingHandler {
       700,
       100,
       "Finnick",
-      "Typisch. Naja dein Pech, dann verpasst du eben den ganzen Spaß.\nVielleicht bekommen wir dich ja das nächste Mal dazu, bis dann!"
+      "Typisch. Naja dein Pech, dann verpasst du eben den ganzen Spaß.\n\nVielleicht bekommen wir dich ja das nächste Mal dazu, bis dann!"
     );
     this.friend1Talking4 = new Talking(
       305,
@@ -822,6 +822,24 @@ export default class TalkingHandler {
       "Ich gehe nicht so gerne feiern."
     );
     this.fbi = new Talking();
+    this.selfSpeeche11 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Ich verbringe den Abend zu Hause, wenn auch nicht ganz so ruhig durch die Bauarbeiten im gesamten Gebäude."
+    );
+    this.selfSpeeche12 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Als nach einigen Stunden sind die Arbeiter der Alpha Wohnungszentrale endlich gegangen und ich schlafe langsam ein."
+    );
+    //scene7
+
     //scene1
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
@@ -933,11 +951,14 @@ export default class TalkingHandler {
     this.workerTalking10.changeNext(this.workerTalking11, this);
     this.workerTalking11.changeNext(this.hologram3, this);
     this.hologram3.changeNext(this.empty11, this);
+    //scene6
     this._friend1Talking1.changeNext(this.talking4Decision4, this);
     this.talking4Decision4.changeNext1(this.friend1Talking2, this);
     this.talking4Decision4.changeNext2(this.friend1Talking3, this);
     this.talking4Decision4.changeNext3(this.friend1Talking4, this);
     this.talking4Decision4.changeNext4(this.friend1Talking3, this);
+    this.friend1Talking3.changeNext(this.selfSpeeche11, this);
+    this.selfSpeeche11.changeNext(this.selfSpeeche12, this);
   }
 
   get hologram1() {
