@@ -27,7 +27,6 @@ let hologram;
 let gesprochenerText1;
 //let gesprochenerText2;
 
-
 //Schriftart Hack
 let myFont;
 
@@ -49,13 +48,13 @@ function preload() {
   phoneButtonImageEffect = loadImage("png/objects/phone2.png");
   phoneImage = loadImage("png/objects/phonetable1.png");
   phoneImageEffect = loadImage("png/objects/phonetable2.png");
-
+  hologram = loadImage("png/objects/hologram1.png");
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
   //gesprochner Text
-  
-  gesprochenerText1=loadSound("sound/mentor/tur.mp3");
+
+  gesprochenerText1 = loadSound("sound/mentor/tur.mp3");
 
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
@@ -66,7 +65,6 @@ function setup() {
   sketch.createCanvas(windowWidth, windowHeight);
   sketch.frameRate(30);
   textFont(myFont);
-  
 }
 window.setup = setup;
 
