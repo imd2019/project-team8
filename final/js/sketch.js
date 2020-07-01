@@ -710,7 +710,7 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.workerTalking3:
-      image(hirerBackgroundd, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(hirerBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
