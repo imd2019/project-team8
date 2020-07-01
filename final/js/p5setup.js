@@ -6,6 +6,7 @@ let laboratoryBackground;
 let messyRoomBackground;
 let cityBackground;
 let officeBackground;
+let hirerBackground;
 
 //Gegenstände
 let beamer;
@@ -13,6 +14,8 @@ let characterButton;
 let phoneButtonImage;
 let characterButtonEffect;
 let phoneButtonImageEffect;
+let phoneImage;
+let phoneImageEffect;
 
 // Charaktere
 // let mentor;
@@ -24,8 +27,9 @@ function preload() {
   //Hintergründe
   laboratoryBackground = loadImage("png/laboratory.png");
   messyRoomBackground = loadImage("png/messyRoom.png");
+  hirerBackground = loadImage("png/messyRoom-hirer.png");
   cityBackground = loadImage("png/city.png");
-  officeBackground = loadImage("png/office.png");
+  officeBackground = loadImage("png/office-head.png");
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
@@ -33,6 +37,8 @@ function preload() {
   phoneButtonImage = loadImage("png/objects/phone1.png");
   characterButtonEffect = loadImage("png/objects/character2.png");
   phoneButtonImageEffect = loadImage("png/objects/phone2.png");
+  phoneImage=loadImage("png/objects/phonetable1.png");
+  phoneImageEffect=loadImage("png/objects/phonetable2.png");
 
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
@@ -57,6 +63,7 @@ window.addEventListener("resize", windowResized);
 export {
   laboratoryBackground,
   messyRoomBackground,
+  hirerBackground,
   cityBackground,
   officeBackground,
 };
@@ -66,6 +73,8 @@ export {
   phoneButtonImage,
   characterButtonEffect,
   phoneButtonImageEffect,
+  phoneImage,
+  phoneImageEffect,
 };
 export { myFont };
 // export { mentor };
