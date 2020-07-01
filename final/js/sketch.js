@@ -654,6 +654,7 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneButtonImage, 470, 25, 360, 580);
+      doorButton.triggert = false;
       break;
     case talkingHandler.empty10:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
@@ -663,6 +664,9 @@ function draw() {
         image(phoneButtonImage, 470, 25, 360, 580);
       }
       doorButton.display();
+      if (doorButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.workerTalking1;
+      }
       if (phoneButton.effect === true) {
         image(phoneButtonImageEffect, 1243, 628, 69, 104);
       }
