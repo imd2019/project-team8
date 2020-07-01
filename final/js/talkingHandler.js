@@ -4,7 +4,7 @@ import Talking3Decision from "./talking3Decision.js";
 import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
 import Message from "./message.js";
-import { gesprochenerText1 } from "./p5setup.js";
+import { mentorSound1 } from "./p5setup.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -33,7 +33,7 @@ export default class TalkingHandler {
       "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
     );
     if (this.activeTalk === this.mentorTalking1) {
-      gesprochenerText1.play();
+      mentorSound1.play();
     }
 
     this.mentorTalking2 = new Talking(
@@ -821,6 +821,7 @@ export default class TalkingHandler {
       "Bombe, wir lassen es heute krachen!",
       "Ich gehe nicht so gerne feiern."
     );
+    this.fbi = new Talking();
     //scene1
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
@@ -928,6 +929,7 @@ export default class TalkingHandler {
     this.workerTalking8.changeNext(this.talking2Decision7, this);
     this.talking2Decision7.changeNext1(this.workerTalking9, this);
     this.talking2Decision7.changeNext2(this.workerTalking10, this);
+    this.workerTalking9.changeNext(this.hologram3, this);
     this.workerTalking10.changeNext(this.workerTalking11, this);
     this.workerTalking11.changeNext(this.hologram3, this);
     this.hologram3.changeNext(this.empty11, this);
