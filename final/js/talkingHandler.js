@@ -4,7 +4,7 @@ import Talking3Decision from "./talking3Decision.js";
 import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
 import Message from "./message.js";
-import {gesprochenerText1,} from "./p5setup.js";
+import { gesprochenerText1 } from "./p5setup.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -19,6 +19,7 @@ export default class TalkingHandler {
     this.empty8 = new Talking();
     this.empty9 = new Talking();
     this.empty10 = new Talking();
+    this.empty11 = new Talking();
 
     //szene 1
 
@@ -31,7 +32,7 @@ export default class TalkingHandler {
       "Mentor",
       "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
     );
-    if (this.activeTalk===this.mentorTalking1){
+    if (this.activeTalk === this.mentorTalking1) {
       gesprochenerText1.play();
     }
 
@@ -769,6 +770,57 @@ export default class TalkingHandler {
       "Ja, das klingt super.",
       "Nein, ich lehne fürs Erste ab."
     );
+    this.hologram3 = new Hologram(
+      360,
+      150,
+      " Hi! Hoffe alles ist gut bei dir. Du sollst den Abend am besten noch nutzen, um dir die Welt ein bisschen anzuschauen. Pass auf dich auf, wir sehen uns morgen!"
+    );
+    //scene 6
+    this._friend1Talking1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Hey " +
+        this.name.name.join("") +
+        ", was geht? Ich wollte fragen, ob du Bock hast feiern zu gehen."
+    );
+    this.friend1Talking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Nice, wir holen dich ab. Bis gleich!"
+    );
+    this.friend1Talking3 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Typisch. Naja dein Pech, dann verpasst du eben den ganzen Spaß.\nVielleicht bekommen wir dich ja das nächste Mal dazu, bis dann!"
+    );
+    this.friend1Talking4 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "That’s the spirit! Wir-"
+    );
+
+    this.talking4Decision4 = new Talking4Decision(
+      240,
+      630,
+      405,
+      90,
+      "Klar, ich bin dabei!",
+      "Sorry, ich bin heute echt müde…",
+      "Bombe, wir lassen es heute krachen!",
+      "Ich gehe nicht so gerne feiern."
+    );
     //scene1
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
@@ -877,6 +929,13 @@ export default class TalkingHandler {
     this.talking2Decision7.changeNext1(this.workerTalking9, this);
     this.talking2Decision7.changeNext2(this.workerTalking10, this);
     this.workerTalking10.changeNext(this.workerTalking11, this);
+    this.workerTalking11.changeNext(this.hologram3, this);
+    this.hologram3.changeNext(this.empty11, this);
+    this._friend1Talking1.changeNext(this.talking4Decision4, this);
+    this.talking4Decision4.changeNext1(this.friend1Talking2, this);
+    this.talking4Decision4.changeNext2(this.friend1Talking3, this);
+    this.talking4Decision4.changeNext3(this.friend1Talking4, this);
+    this.talking4Decision4.changeNext4(this.friend1Talking3, this);
   }
 
   get hologram1() {
@@ -921,6 +980,13 @@ export default class TalkingHandler {
     this._workerTalking1.text =
       "Sie sind " + this.name.name.join("") + ", right?";
     return this._workerTalking1;
+  }
+  get friend1Talking1() {
+    this._friend1Talking1.text =
+      "Hey " +
+      this.name.name.join("") +
+      ", was geht? Ich wollte fragen, ob du Bock hast feiern zu gehen.";
+    return this._friend1Talking1;
   }
 
   mouseMoved() {

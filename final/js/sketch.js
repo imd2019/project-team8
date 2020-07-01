@@ -98,6 +98,10 @@ function mouseMoved() {
     phoneButton.mouseMoved();
     character.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.empty11) {
+    character.mouseMoved();
+    phoneButton.mouseMoved();
+  }
 }
 window.mouseMoved = mouseMoved;
 
@@ -151,6 +155,10 @@ function mouseClicked() {
     cameraButton.mouseClicked();
     phoneButton.mouseClicked();
     character.mouseClicked();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.empty11) {
+    character.mouseClicked();
+    phoneButton.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -378,6 +386,9 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       if (phoneButton.effect === true) {
         image(phoneButtonImageEffect, 1243, 628, 69, 104);
+      }
+      if (phoneButton.triggert === true) {
+        image(phoneButtonImage, 470, 25, 360, 580); //gesperter Bildschirm
       }
       bossButton.display();
       if (bossButton.triggert === true) {
@@ -758,6 +769,29 @@ function draw() {
       image(hirerBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.hologram3:
+      image(hirerBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.empty11:
+      image(hirerBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      if (character.effect === true) {
+        image(characterButtonEffect, 18, 628, 104, 104);
+      }
+      if (character.triggert === true) {
+        charakterOverview.display();
+      }
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      if (phoneButton.effect === true) {
+        image(phoneButtonImageEffect, 1243, 628, 69, 104);
+      }
+      if (phoneButton.triggert === true) {
+        image(phoneButtonImage, 470, 25, 360, 580); //gesperter Bildschirm
+      }
       break;
   }
   if (start.start === false) {
