@@ -527,10 +527,17 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneButtonImage, 470, 25, 360, 580);
+
       noStroke();
       fill(220, 220, 220);
       textSize(17);
       text("*ring*", 1250, 250);
+      doorButton.triggert = false;
+      j++;
+      if (j >= 20) {
+        talkingHandler.activeTalk = talkingHandler.empty10;
+      }
+
       break;
 
     case talkingHandler.selfSpeeche7:
@@ -689,6 +696,7 @@ function draw() {
       doorButton.triggert = false;
       break;
     case talkingHandler.empty10:
+      j = 0;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
@@ -776,7 +784,7 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.empty11:
-      image(hirerBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       if (character.effect === true) {
@@ -791,6 +799,58 @@ function draw() {
       }
       if (phoneButton.triggert === true) {
         image(phoneButtonImage, 470, 25, 360, 580); //gesperter Bildschirm
+        talkingHandler.activeTalk = talkingHandler.friend1Talking1;
+      }
+      break;
+    case talkingHandler.friend1Talking1:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.talking4Decision4:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.friend1Talking2:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.friend1Talking3:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.friend1Talking4:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      j++;
+      if (j >= 20) {
+        talkingHandler.activeTalk = talkingHandler.fbi;
+      }
+      break;
+    case talkingHandler.fbi:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      j++;
+      if (j >= 50 && j <= 70) {
+        noStroke();
+        fill(220, 220, 220);
+        text("*KNOCK*\n\n  *KNOCK*", 1250, 250);
+      }
+      if (j >= 70 && j <= 120) {
+        noStroke();
+        fill(220, 220, 220);
+        textSize(70);
+        text("FBI,\n OPEN UP!", 600, 250);
       }
       break;
   }
