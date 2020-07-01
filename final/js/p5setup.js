@@ -19,6 +19,7 @@ let phoneButtonImageEffect;
 let phoneImage;
 let phoneImageEffect;
 let hologram;
+let phoneBig;
 
 // Charaktere
 // let mentor;
@@ -49,6 +50,7 @@ function preload() {
   phoneImage = loadImage("png/objects/phonetable1.png");
   phoneImageEffect = loadImage("png/objects/phonetable2.png");
   hologram = loadImage("png/objects/hologram1.png");
+  phoneBig = loadImage("png/objects/phonebig1.png");
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
@@ -92,6 +94,7 @@ export {
   phoneImageEffect,
   gesprochenerText1,
   hologram,
+  phoneBig,
 };
 export { myFont };
 // export { mentor };

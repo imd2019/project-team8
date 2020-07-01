@@ -14,6 +14,7 @@ import {
   phoneImage,
   phoneImageEffect,
   //gesprochenerText1,
+  phoneBig,
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -320,7 +321,7 @@ function draw() {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche4;
       }
       if (phoneButton.triggert === true) {
-        image(phoneButtonImage, 470, 25, 360, 580); //gesperter Bildschirm
+        image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
