@@ -13,10 +13,35 @@ import {
   phoneButtonImageEffect,
   phoneImage,
   phoneImageEffect,
-  mentorSound1,
   phoneBig,
   partnerFacetime,
   partnerVideo,
+  
+} from "./p5setup.js";
+import {
+  mentorSound1,
+  mentorSound2,
+  mentorSound3,
+  mentorSound4,
+  mentorSound5,
+  mentorSound6,
+  mentorSound7,
+  mentorSound8,
+  mentorSound9,
+  mentorSound10,
+  mentorSound11,
+  mentorSound12,
+  mentorSound13,
+  mentorSound14,
+  mentorSound15,
+  mentorSound16,
+  mentorSound17,
+  mentorSound18,
+  mentorSound19,
+  mentorSound20,
+  mentorSound21,
+  mentorSound22,
+  mentorSound23,
   
 } from "./p5setup.js";
 
@@ -46,6 +71,7 @@ let talkingHandler = new TalkingHandler(paper);
 let i = 0;
 let j = 0;
 let s = 0;
+let t= 0;
 
 
 function sound(){
@@ -55,9 +81,15 @@ function sound(){
       mentorSound1.play();
     }
   }
-//   // if (talkingHandler.activeTalk === talkingHandler.mentorTalking2) {
-//   //     mentorSound1.play();
-//   // }
+
+  if (talkingHandler.activeTalk === talkingHandler.mentorTalking3) { //gehört aber eigentlich zu mentor Talking1
+    //s =0;
+    t++; 
+    if(t<=1){
+      mentorSound1.stop();
+      mentorSound2.play();
+    }
+  }
  }
 
 function keyPressed() {
