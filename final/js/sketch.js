@@ -70,25 +70,20 @@ let talkingHandler = new TalkingHandler(paper);
 
 let i = 0;
 let j = 0;
+
 let s = 0;
-let t= 0;
 
 
 function sound(){
-  if (talkingHandler.activeTalk === talkingHandler.mentorTalking2) { //gehört aber eigentlich zu mentor Talking1
+  if (s===0 && talkingHandler.activeTalk === talkingHandler.mentorTalking2) { //gehört aber eigentlich zu mentor Talking1
     s++; 
-    if(s<=1){
       mentorSound1.play();
-    }
   }
 
-  if (talkingHandler.activeTalk === talkingHandler.mentorTalking3) { //gehört aber eigentlich zu mentor Talking1
-    //s =0;
-    t++; 
-    if(t<=1){
+  if (s===1 &&talkingHandler.activeTalk === talkingHandler.mentorTalking3) { //gehört aber eigentlich zu mentor Talking1
+      s++;
       mentorSound1.stop();
       mentorSound2.play();
-    }
   }
  }
 

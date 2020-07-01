@@ -848,6 +848,7 @@ export default class TalkingHandler {
     this.activeTalk = this.start;
     this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
+    this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking2.changeNext(this.mentorTalking3, this);
     this.mentorTalking3.changeNext(this.mentorTalking4, this);
     this.mentorTalking4.changeNext(this.mentorTalking5, this);
