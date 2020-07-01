@@ -13,7 +13,7 @@ import {
   phoneButtonImageEffect,
   phoneImage,
   phoneImageEffect,
-  gesprochenerText1,
+  //gesprochenerText1,
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -170,13 +170,24 @@ function draw() {
     case talkingHandler.mentorTalking1:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
-      // gesprochenerText1.play();
-
-      break;
-    case talkingHandler.mentorTalking2:
-      fill(30, 30, 30);
-      rect(10, 10, 1300, 600);
-      break;
+      <<<<<<< HEAD
+            // gesprochenerText1.play();
+      
+      =======
+      <<<<<<< HEAD
+            
+            
+      =======
+            gesprochenerText1.play();
+      
+      >>>>>>> 2f9d64c7f9d88f0e1d9b02a73124644f5e65b636
+      >>>>>>> c968d18b1608afc7a5732cf3a4e0fbf9aa2955bd
+            break;
+          case talkingHandler.mentorTalking2:
+            fill(30, 30, 30);
+            rect(10, 10, 1300, 600);
+            
+            break;
     case talkingHandler.mentorTalking3:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
@@ -281,6 +292,7 @@ function draw() {
         talkingHandler.activeTalk = talkingHandler.hologram1;
       } else {
         image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
+        image(phoneImage, 800, 440, 70, 10);
       }
       break;
     case talkingHandler.hologram1:
@@ -311,7 +323,7 @@ function draw() {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche4;
       }
       if (phoneButton.triggert === true) {
-        image(phoneButtonImage, 470, 25, 360, 580);
+        image(phoneButtonImage, 470, 25, 360, 580);//gesperter Bildschirm
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
