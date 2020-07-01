@@ -915,7 +915,7 @@ export default class TalkingHandler {
   }
   get workerTalking1() {
     this._workerTalking1.text =
-      "Sie sind" + this.name.name.join("") + ", right?";
+      "Sie sind " + this.name.name.join("") + ", right?";
     return this._workerTalking1;
   }
 

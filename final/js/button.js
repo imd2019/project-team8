@@ -22,8 +22,9 @@ export default class Button {
     if (this.effect === true) {
       noStroke();
       fill(220, 220, 220);
+      textSize(13);
       textAlign(CENTER);
-      text(this.name, this.x, this.y - 15, this.width, this.height);
+      text(this.name, this.x, this.y - 15, this.width, this.height + 5);
     }
   }
   hitTest(x, y) {
