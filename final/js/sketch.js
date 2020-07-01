@@ -1,6 +1,8 @@
 import {
   laboratoryBackground,
   messyRoomBackground,
+  messyRoomBackgrundWindow,
+  messyRoomBackgroundDoor,
   hirerBackground,
   cityBackground,
   officeBackground,
@@ -30,7 +32,7 @@ let character = new Button(20, 630, 100, 100);
 let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(15, 415, 1300, 200, "Fenster verlassen");
 let charakterOverview = new CharacterOverview(360, 150, paper);
-let doorButton = new Button(1140, 120, 160, 400, "Tür");
+let doorButton = new Button(1140, 118, 160, 402, "Tür");
 let bossButton = new Button(700, 220, 120, 160, "Chefin");
 let window2Button = new Button(20, 40, 300, 450, "Fenster");
 let cameraButton = new Button(360, 40, 70, 40, "Überwachungskamera");
@@ -294,20 +296,14 @@ function draw() {
       break;
     case talkingHandler.empty5:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 1000, 400);
-      doorButton.display();
 
-      if (phone.triggert === false) {
-        phone.display();
-        image(phoneImage, 800, 440, 70, 10);
-        if (phone.effect === true) {
-          image(phoneImageEffect, 800, 440, 70, 10);
-        }
-      } else {
-        image(phoneButtonImage, 1245, 630, 65, 100);
-        if (phoneButton.effect === true) {
-          image(phoneButtonImageEffect, 1243, 628, 69, 104);
-        }
+      if (window1Button.effect === true) {
+        image(messyRoomBackgrundWindow, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       }
+      if (doorButton.effect === true) {
+        image(messyRoomBackgroundDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
+      doorButton.display();
       if (phone.triggert === false && doorButton.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche3;
       }
@@ -327,6 +323,18 @@ function draw() {
       }
       if (window1Button.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche2;
+      }
+      if (phone.triggert === false) {
+        phone.display();
+        image(phoneImage, 800, 440, 70, 10);
+        if (phone.effect === true) {
+          image(phoneImageEffect, 800, 440, 70, 10);
+        }
+      } else {
+        image(phoneButtonImage, 1245, 630, 65, 100);
+        if (phoneButton.effect === true) {
+          image(phoneButtonImageEffect, 1243, 628, 69, 104);
+        }
       }
 
       break;

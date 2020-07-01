@@ -39,7 +39,7 @@ export default class Talking4Decision {
       15
     );
     strokeWeight(1);
-    textSize(16);
+    textSize(13);
     textAlign(LEFT);
     // fill(180, 0, 125);
     fill(220, 220, 220);

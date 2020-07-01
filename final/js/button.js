@@ -9,16 +9,16 @@ export default class Button {
     this.triggert = false;
   }
   display() {
-    if (this.effect === true) {
-      stroke(200, 200, 200);
-      strokeWeight(2);
-    } else {
-      stroke(60, 60, 60);
-      strokeWeight(5);
-    }
+    // if (this.effect === true) {
+    //   stroke(200, 200, 200);
+    //   strokeWeight(2);
+    // } else {
+    //   stroke(60, 60, 60);
+    //   strokeWeight(5);
+    // }
     noFill();
     // fill(100, 100, 100);
-    rect(this.x, this.y, this.width, this.height);
+    // rect(this.x, this.y, this.width, this.height);
     if (this.effect === true) {
       noStroke();
       fill(220, 220, 220);
