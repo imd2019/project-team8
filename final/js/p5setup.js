@@ -19,14 +19,18 @@ let phoneButtonImageEffect;
 let phoneImage;
 let phoneImageEffect;
 let hologram;
+
+//Handy_groß
 let phoneBig;
+let partnerFacetime;
+let partnerVideo;
 
 // Charaktere
 // let mentor;
 
 //gesprochener Text
-let gesprochenerText1;
-//let gesprochenerText2;
+let mentorSound1;
+
 
 //Schriftart Hack
 let myFont;
@@ -51,12 +55,14 @@ function preload() {
   phoneImageEffect = loadImage("png/objects/phonetable2.png");
   hologram = loadImage("png/objects/hologram1.png");
   phoneBig = loadImage("png/objects/phonebig1.png");
+  partnerFacetime = loadImage("png/objects/partnerfacetime.png");
+  partnerVideo = loadImage("png/objects/partnervidoe.png");
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
   //gesprochner Text
 
-  gesprochenerText1 = loadSound("sound/mentor/tur.mp3");
+  mentorSound1 = loadSound("sound/mentor/tur.mp3");
 
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
@@ -92,9 +98,12 @@ export {
   phoneButtonImageEffect,
   phoneImage,
   phoneImageEffect,
-  gesprochenerText1,
+
+  mentorSound1,
   hologram,
   phoneBig,
+  partnerFacetime,
+  partnerVideo,
 };
 export { myFont };
 // export { mentor };
