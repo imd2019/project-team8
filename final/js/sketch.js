@@ -13,6 +13,7 @@ import {
   phoneButtonImageEffect,
   phoneImage,
   phoneImageEffect,
+  gesprochenerText1,
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -169,6 +170,8 @@ function draw() {
     case talkingHandler.mentorTalking1:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
+      gesprochenerText1.play();
+      
       break;
     case talkingHandler.mentorTalking2:
       fill(30, 30, 30);
@@ -198,6 +201,7 @@ function draw() {
     case talkingHandler.mentorTalking7:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       image(beamer, 639, 135, 240, 440);
+      
       break;
     case talkingHandler.mentorTalking8:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);

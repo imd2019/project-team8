@@ -22,6 +22,11 @@ let phoneImageEffect;
 // Charaktere
 // let mentor;
 
+//gesprochener Text
+let gesprochenerText1;
+//let gesprochenerText2;
+
+
 //Schriftart Hack
 let myFont;
 
@@ -47,6 +52,10 @@ function preload() {
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
+  //gesprochner Text
+  
+  gesprochenerText1=loadSound("sound/mentor/tur.mp3");
+
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
 }
@@ -56,6 +65,7 @@ function setup() {
   sketch.createCanvas(windowWidth, windowHeight);
   sketch.frameRate(30);
   textFont(myFont);
+  
 }
 window.setup = setup;
 
@@ -81,6 +91,7 @@ export {
   phoneButtonImageEffect,
   phoneImage,
   phoneImageEffect,
+  gesprochenerText1,
 };
 export { myFont };
 // export { mentor };
