@@ -135,60 +135,93 @@ function sound() {
     mentorSound10.stop();
     mentorSound12.play();
   }
-  if (s === 10 && talkingHandler.activeTalk === talkingHandler.mentorTalking12) {
+  if (
+    s === 10 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking12
+  ) {
     s++;
     mentorSound12.stop();
     mentorSound13.play();
   }
-  if (s === 11 && talkingHandler.activeTalk === talkingHandler.mentorTalking13) {
+  if (
+    s === 11 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking13
+  ) {
     s++;
     mentorSound13.stop();
     mentorSound14.play();
   }
-  if (s === 12 && talkingHandler.activeTalk === talkingHandler.mentorTalking14) {
+  if (
+    s === 12 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking14
+  ) {
     s++;
     mentorSound14.stop();
     mentorSound15.play();
   }
-  if (s === 13 && talkingHandler.activeTalk === talkingHandler.mentorTalking15) {
+  if (
+    s === 13 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking15
+  ) {
     s++;
     mentorSound15.stop();
     mentorSound16.play();
   }
-  if (s === 14 && talkingHandler.activeTalk === talkingHandler.mentorTalking16) {
+  if (
+    s === 14 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking16
+  ) {
     s++;
     mentorSound16.stop();
     mentorSound17.play();
   }
-  if (s === 15 && talkingHandler.activeTalk === talkingHandler.mentorTalking16_1) {
+  if (
+    s === 15 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking16_1
+  ) {
     s++;
     mentorSound17.stop();
     mentorSound18.play();
   }
-  if (s === 16 && talkingHandler.activeTalk === talkingHandler.mentorTalking17) {
+  if (
+    s === 16 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking17
+  ) {
     s++;
     mentorSound18.stop();
     mentorSound19.play();
   }
 
   //
-  if (s === 17 && talkingHandler.activeTalk === talkingHandler.mentorTalking18) {
+  if (
+    s === 17 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking18
+  ) {
     s++;
     mentorSound19.stop();
     mentorSound20.play();
-    s=10;
+    s = 10;
   }
-  if (s === 17 && talkingHandler.activeTalk === talkingHandler.mentorTalking19) {
+  if (
+    s === 17 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking19
+  ) {
     s++;
     mentorSound20.stop();
     mentorSound21.play();
   }
-  if (s === 18 && talkingHandler.activeTalk === talkingHandler.mentorTalking19_1) {
+  if (
+    s === 18 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking19_1
+  ) {
     s++;
     mentorSound21.stop();
     mentorSound22.play();
   }
-  if (s === 19 && talkingHandler.activeTalk === talkingHandler.mentorTalking20) {
+  if (
+    s === 19 &&
+    talkingHandler.activeTalk === talkingHandler.mentorTalking20
+  ) {
     s++;
     mentorSound22.stop();
     mentorSound23.play();
@@ -473,7 +506,18 @@ function draw() {
       break;
     case talkingHandler.empty5:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
-
+      if (phone.triggert === false) {
+        phone.display();
+        image(phoneImage, 800, 440, 70, 10);
+        if (phone.effect === true) {
+          image(phoneImageEffect, 800, 440, 70, 10);
+        }
+      } else {
+        image(phoneButtonImage, 1245, 630, 65, 100);
+        if (phoneButton.effect === true) {
+          image(phoneButtonImageEffect, 1243, 628, 69, 104);
+        }
+      }
       if (window1Button.effect === true) {
         image(messyRoomBackgrundWindow, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       }
@@ -500,18 +544,6 @@ function draw() {
       }
       if (window1Button.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche2;
-      }
-      if (phone.triggert === false) {
-        phone.display();
-        image(phoneImage, 800, 440, 70, 10);
-        if (phone.effect === true) {
-          image(phoneImageEffect, 800, 440, 70, 10);
-        }
-      } else {
-        image(phoneButtonImage, 1245, 630, 65, 100);
-        if (phoneButton.effect === true) {
-          image(phoneButtonImageEffect, 1243, 628, 69, 104);
-        }
       }
 
       break;
@@ -1051,42 +1083,52 @@ function draw() {
       }
       break;
     case talkingHandler.friend1Talking5:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking1:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend3Talking1:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend1Talking6:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking2:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking3:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.talking2Decision8:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend3Talking2:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend1Talking7:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking5:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
