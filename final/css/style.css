@@ -3,3 +3,11 @@ html {
   padding: 0;
   margin: 0;
 }
+
+h1 {
+  /* color: white; */
+  top: 100px;
+  text-align: center;
+  font-size: 60px;
+  /* font-family: */
+}
