@@ -9,5 +9,12 @@ h1 {
   top: 100px;
   text-align: center;
   font-size: 60px;
-  /* font-family: */
+  font-family: Sneakers Script;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+}
+
+p {
+  top: 100px;
+  text-align: center;
+  font-size: 20px;
 }
