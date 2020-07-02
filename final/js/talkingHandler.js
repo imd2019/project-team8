@@ -21,6 +21,7 @@ export default class TalkingHandler {
     this.empty9 = new Talking();
     this.empty10 = new Talking();
     this.empty11 = new Talking();
+    this.empty12 = new Talking();
 
     //szene 1
 
@@ -865,7 +866,7 @@ export default class TalkingHandler {
       700,
       100,
       "Nova",
-      " Ach was, ihr versucht es einfach nicht genug, es gibt doch voll viele Möglichkeiten."
+      "Ach was, ihr versucht es einfach nicht genug, es gibt doch voll viele Möglichkeiten."
     );
     this.friend1Talking6 = new Talking(
       305,
@@ -899,6 +900,47 @@ export default class TalkingHandler {
       100,
       "Castiel",
       "Komm, ich geb Shots aus."
+    );
+    this.friend3Talking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Nova",
+      "Ugh, warum musst du so langweilig sein?"
+    );
+    this.friend1Talking7 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Halt’s Maul, Nova. Wir akzeptieren deine Entscheidung. Dann darfst du eben heute Abend Babysitter spielen."
+    );
+    this.friend2Talking5 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Castiel",
+      "Hahaha yeah! Go hard or go home!"
+    );
+    this.friend1Talking8 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Alright, let’s go!"
+    );
+    this.talking2Decision8 = new Talking2Decision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      "Nee, heute lieber nicht…",
+      "Da sag ich nicht Nein."
     );
 
     //scene1
@@ -1022,7 +1064,7 @@ export default class TalkingHandler {
     this.talking4Decision4.changeNext4(this.friend1Talking3, this);
     this.friend1Talking3.changeNext(this.selfSpeeche11, this);
     this.selfSpeeche11.changeNext(this.selfSpeeche12, this);
-    this.selfSpeeche2.changeNext(this.friend1Talking5, this);
+    this.selfSpeeche2.changeNext(this.empty12, this);
     //scene7
     this.friend1Talking5.changeNext(this.friend2Talking1, this);
     this.friend2Talking1.changeNext(this.friend3Talking1, this);
@@ -1030,6 +1072,10 @@ export default class TalkingHandler {
     this.friend1Talking6.changeNext(this.friend2Talking2, this);
     this.friend2Talking2.changeNext(this._friend2Talking3, this);
     this._friend2Talking3.changeNext(this.friend2Talking4, this);
+    this.talking2Decision8.changeNext1(this.friend3Talking2, this);
+    this.talking2Decision8.changeNext2(this.friend1Talking8, this);
+    this.friend3Talking2.changeNext(this.friend1Talking7, this);
+    this.friend1Talking7.changeNext(this.friend2Talking5, this);
   }
 
   get hologram1() {

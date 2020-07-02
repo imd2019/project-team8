@@ -51,7 +51,7 @@ import CharacterOverview from "./characterOverview.js";
 
 //Buttons
 let start = new Start(562.5, 337.5, 185, 65);
-let beamerButton = new Button(650, 210, 230, 370, "Maschine");
+let beamerButton = new Button(650, 205, 230, 370, "Teleporter");
 let paper = new Paper();
 let phone = new Button(797, 440, 75, 10, "Handy");
 let phoneButton = new Button(1245, 630, 65, 100);
@@ -60,9 +60,9 @@ let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(15, 415, 1300, 200, "Fenster verlassen");
 let charakterOverview = new CharacterOverview(360, 150, paper);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
-let bossButton = new Button(700, 220, 120, 160, "Chefin");
-let window2Button = new Button(20, 40, 300, 450, "Fenster");
-let cameraButton = new Button(360, 40, 70, 40, "Überwachungskamera");
+let bossButton = new Button(650, 270, 145, 220, "Chefin");
+let window2Button = new Button(15, 85, 220, 530, "Fenster");
+let cameraButton = new Button(290, 40, 75, 40, "Überwachungskamera");
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -321,6 +321,7 @@ function draw() {
       break;
     case talkingHandler.empty3:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
+      beamerButton.display();
       if (beamerButton.effect === true) {
         image(beamer, 639, 135, 240, 440);
       }
