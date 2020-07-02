@@ -9,6 +9,7 @@ let messyRoomBackgroundDoor;
 let cityBackground;
 let officeBackground;
 let hirerBackground;
+let clubBackground;
 
 //Gegenstände
 let beamer;
@@ -33,7 +34,7 @@ let mentorSound1;
 let mentorSound2;
 let mentorSound3;
 let mentorSound4;
-let mentorSound5;//andere version von 4
+let mentorSound5; //andere version von 4
 let mentorSound6;
 let mentorSound7;
 let mentorSound8;
@@ -65,6 +66,7 @@ function preload() {
   hirerBackground = loadImage("png/messyRoom-hirer.png");
   cityBackground = loadImage("png/city.png");
   officeBackground = loadImage("png/office-head.png");
+  clubBackground = loadImage("png/club.png");
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
@@ -133,6 +135,7 @@ export {
   hirerBackground,
   cityBackground,
   officeBackground,
+  clubBackground,
 };
 export {
   beamer,
@@ -142,7 +145,6 @@ export {
   phoneButtonImageEffect,
   phoneImage,
   phoneImageEffect,
-
   hologram,
   phoneBig,
   partnerFacetime,
@@ -157,7 +159,7 @@ export {
   mentorSound2,
   mentorSound3,
   mentorSound4,
-  mentorSound5,//andere version von 4
+  mentorSound5, //andere version von 4
   mentorSound6,
   mentorSound7,
   mentorSound8,
