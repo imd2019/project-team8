@@ -920,6 +920,10 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
+    case talkingHandler.empty12:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
   }
   if (start.start === false) {
     start.display();

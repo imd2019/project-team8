@@ -1022,7 +1022,7 @@ export default class TalkingHandler {
     this.talking4Decision4.changeNext4(this.friend1Talking3, this);
     this.friend1Talking3.changeNext(this.selfSpeeche11, this);
     this.selfSpeeche11.changeNext(this.selfSpeeche12, this);
-    this.selfSpeeche2.changeNext(this.friend1Talking5, this);
+    this.friend1Talking2.changeNext(this.friend1Talking5, this);
     //scene7
     this.friend1Talking5.changeNext(this.friend2Talking1, this);
     this.friend2Talking1.changeNext(this.friend3Talking1, this);
