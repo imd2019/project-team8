@@ -6,6 +6,7 @@ import {
   hirerBackground,
   cityBackground,
   officeBackground,
+  clubBackground,
   beamer,
   characterButton,
   characterButtonEffect,
