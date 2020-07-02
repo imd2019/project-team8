@@ -942,6 +942,38 @@ export default class TalkingHandler {
       "Nee, heute lieber nicht…",
       "Da sag ich nicht Nein."
     );
+    //scene8
+    this.selfSpeeche13 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Ich erinnere mich, wie wir gemeinsam zur Bar liefen und ich irgendwann nicht mehr mitzählen konnte, wie viele Shots mir in die Hand gedrückt wurden."
+    );
+    this.selfSpeeche14 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Der restliche Abend ist vollständig aus meinem Gedächtnis gestrichen worden. Ich bin überrascht, dass ich es nach Hause geschafft habe."
+    );
+    this.selfSpeeche15 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Irgendwie tut meine Schulter weh…"
+    );
+    this._message2 = new Message(
+      500,
+      150,
+      320,
+      300,
+      "Hallo [Name].\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
+    );
 
     //scene1
     this.activeTalk = this.start;
@@ -1077,6 +1109,7 @@ export default class TalkingHandler {
     this.talking2Decision8.changeNext2(this.friend1Talking8, this);
     this.friend3Talking2.changeNext(this.friend1Talking7, this);
     this.friend1Talking7.changeNext(this.friend2Talking5, this);
+    //scene8
   }
 
   get hologram1() {

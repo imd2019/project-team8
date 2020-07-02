@@ -506,7 +506,18 @@ function draw() {
       break;
     case talkingHandler.empty5:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
-
+      if (phone.triggert === false) {
+        phone.display();
+        image(phoneImage, 800, 440, 70, 10);
+        if (phone.effect === true) {
+          image(phoneImageEffect, 800, 440, 70, 10);
+        }
+      } else {
+        image(phoneButtonImage, 1245, 630, 65, 100);
+        if (phoneButton.effect === true) {
+          image(phoneButtonImageEffect, 1243, 628, 69, 104);
+        }
+      }
       if (window1Button.effect === true) {
         image(messyRoomBackgrundWindow, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       }
@@ -533,18 +544,6 @@ function draw() {
       }
       if (window1Button.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche2;
-      }
-      if (phone.triggert === false) {
-        phone.display();
-        image(phoneImage, 800, 440, 70, 10);
-        if (phone.effect === true) {
-          image(phoneImageEffect, 800, 440, 70, 10);
-        }
-      } else {
-        image(phoneButtonImage, 1245, 630, 65, 100);
-        if (phoneButton.effect === true) {
-          image(phoneButtonImageEffect, 1243, 628, 69, 104);
-        }
       }
 
       break;
@@ -1084,42 +1083,52 @@ function draw() {
       }
       break;
     case talkingHandler.friend1Talking5:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking1:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend3Talking1:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend1Talking6:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking2:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking3:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.talking2Decision8:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend3Talking2:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend1Talking7:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.friend2Talking5:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
