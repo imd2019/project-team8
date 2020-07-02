@@ -16,7 +16,6 @@ import {
   phoneBig,
   partnerFacetime,
   partnerVideo,
-  
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -42,7 +41,6 @@ import {
   mentorSound21,
   mentorSound22,
   mentorSound23,
-  
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -73,19 +71,20 @@ let j = 0;
 
 let s = 0;
 
-
-function sound(){
-  if (s===0 && talkingHandler.activeTalk === talkingHandler.mentorTalking2) { //gehört aber eigentlich zu mentor Talking1
-    s++; 
-      mentorSound1.play();
+function sound() {
+  if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
+    //gehört aber eigentlich zu mentor Talking1
+    s++;
+    mentorSound1.play();
   }
 
-  if (s===1 &&talkingHandler.activeTalk === talkingHandler.mentorTalking3) { //gehört aber eigentlich zu mentor Talking1
-      s++;
-      mentorSound1.stop();
-      mentorSound2.play();
+  if (s === 1 && talkingHandler.activeTalk === talkingHandler.mentorTalking2) {
+    //gehört aber eigentlich zu mentor Talking1
+    s++;
+    mentorSound1.stop();
+    mentorSound2.play();
   }
- }
+}
 
 function keyPressed() {
   paper.keyPressed();
@@ -209,7 +208,6 @@ function mouseClicked() {
 window.mouseClicked = mouseClicked;
 
 function draw() {
-  
   clear();
   //Balken untern im screen
   fill(30, 30, 30);
@@ -221,12 +219,14 @@ function draw() {
   if (start.start === false) {
     fill(30, 30, 30);
     rect(10, 10, 1300, 600);
-    
-  } 
-  // if (start.start === true) {
-  //   talkingHandler.activeTalk = talkingHandler.mentorTalking1;
-  // }
+  }
+
   switch (talkingHandler.activeTalk) {
+    case talkingHandler.start:
+      if (start.start === true) {
+        talkingHandler.activeTalk = talkingHandler.mentorTalking1;
+      }
+      break;
     case talkingHandler.mentorTalking1:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
@@ -366,7 +366,6 @@ function draw() {
       }
       doorButton.display();
       if (phone.triggert === false && doorButton.triggert === true) {
-       
         talkingHandler.activeTalk = talkingHandler.selfSpeeche3;
       }
       if (phone.triggert === true && doorButton.triggert === true) {
@@ -853,7 +852,6 @@ function draw() {
         image(phoneButtonImageEffect, 1243, 628, 69, 104);
       }
       if (phoneButton.triggert === true) {
-
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
 
         image(phoneButtonImage, 470, 25, 360, 580); //gesperter Bildschirm
@@ -909,7 +907,6 @@ function draw() {
         fill(220, 220, 220);
         textSize(70);
         text("FBI,\n OPEN UP!", 600, 250);
-
       }
       break;
     case talkingHandler.selfSpeeche11:

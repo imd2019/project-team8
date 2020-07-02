@@ -31,7 +31,7 @@ export default class TalkingHandler {
       700,
       100,
       "Mentor",
-      "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist.",
+      "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
     );
     if (this.activeTalk === this.mentorTalking1) {
       mentorSound1.play();
@@ -843,10 +843,67 @@ export default class TalkingHandler {
       "Als nach einigen Stunden sind die Arbeiter der Alpha Wohnungszentrale endlich gegangen und ich schlafe langsam ein."
     );
     //scene7
+    this.friend1Talking5 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Es fühlt sich so gut an mal wieder unter Menschen zu sein. So in real life mein ich."
+    );
+    this.friend2Talking1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Castiel",
+      "Ohne Mist, das ist gefühlt der letzte Ort, an dem man noch so richtig offline kommuniziert."
+    );
+    this.friend3Talking1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Nova",
+      " Ach was, ihr versucht es einfach nicht genug, es gibt doch voll viele Möglichkeiten."
+    );
+    this.friend1Talking6 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Finnick",
+      "Die meisten sind doch kaum noch offen dafür sich zu unterhalten, wenn sie auch online sein können."
+    );
+    this.friend2Talking2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Castiel",
+      "Deswegen sind wir ja hier!"
+    );
+    this._friend2Talking3 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Castiel",
+      "Ich feier es total, dass du heute mal dabei bist, " +
+        this.name.name.join("")
+    );
+    this.friend2Talking4 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Castiel",
+      "Komm, ich geb Shots aus."
+    );
 
     //scene1
     this.activeTalk = this.start;
-    this.activeTalk = this.mentorTalking1;
+    // this.activeTalk = this.mentorTalking1;
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking1.changeNext(this.mentorTalking2, this);
     this.mentorTalking2.changeNext(this.mentorTalking3, this);
@@ -965,6 +1022,14 @@ export default class TalkingHandler {
     this.talking4Decision4.changeNext4(this.friend1Talking3, this);
     this.friend1Talking3.changeNext(this.selfSpeeche11, this);
     this.selfSpeeche11.changeNext(this.selfSpeeche12, this);
+    this.selfSpeeche2.changeNext(this.friend1Talking5, this);
+    //scene7
+    this.friend1Talking5.changeNext(this.friend2Talking1, this);
+    this.friend2Talking1.changeNext(this.friend3Talking1, this);
+    this.friend3Talking1.changeNext(this.friend1Talking6, this);
+    this.friend1Talking6.changeNext(this.friend2Talking2, this);
+    this.friend2Talking2.changeNext(this._friend2Talking3, this);
+    this._friend2Talking3.changeNext(this.friend2Talking4, this);
   }
 
   get hologram1() {
@@ -1016,6 +1081,12 @@ export default class TalkingHandler {
       this.name.name.join("") +
       ", was geht? Ich wollte fragen, ob du Bock hast feiern zu gehen.";
     return this._friend1Talking1;
+  }
+  get friend2Talking3() {
+    this._friend2Talking3.text =
+      "Ich feier es total, dass du heute mal dabei bist, " +
+      this.name.name.join("");
+    return this._friend2Talking3;
   }
 
   mouseMoved() {
