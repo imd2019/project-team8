@@ -64,6 +64,7 @@ let doorButton = new Button(1140, 118, 160, 402, "Tür");
 let bossButton = new Button(650, 270, 145, 220, "Chefin");
 let window2Button = new Button(15, 85, 220, 530, "Fenster");
 let cameraButton = new Button(290, 40, 75, 40, "Überwachungskamera");
+let friendsButton = new Button(780, 230, 220, 320, "Freunde");
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -147,6 +148,9 @@ function mouseMoved() {
     character.mouseMoved();
     phoneButton.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.empty12) {
+    friendsButton.mouseMoved();
+  }
 }
 window.mouseMoved = mouseMoved;
 
@@ -204,6 +208,9 @@ function mouseClicked() {
   if (talkingHandler.activeTalk === talkingHandler.empty11) {
     character.mouseClicked();
     phoneButton.mouseClicked();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.empty12) {
+    friendsButton.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -925,6 +932,51 @@ function draw() {
       image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      friendsButton.display();
+      if (friendsButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.friend1Talking5;
+      }
+      break;
+    case talkingHandler.friend1Talking5:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend2Talking1:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend3Talking1:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend1Talking6:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend2Talking2:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend2Talking3:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.talking2Decision8:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend3Talking2:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend1Talking7:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.friend2Talking5:
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
   }
   if (start.start === false) {
     start.display();
