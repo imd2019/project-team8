@@ -23,7 +23,7 @@ import {
   mentorSound2,
   mentorSound3,
   mentorSound4,
-  mentorSound5,
+  //mentorSound5,
   mentorSound6,
   mentorSound7,
   mentorSound8,
@@ -69,21 +69,126 @@ let talkingHandler = new TalkingHandler(paper);
 
 let i = 0;
 let j = 0;
-
 let s = 0;
 
 function sound() {
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
-    //gehört aber eigentlich zu mentor Talking1
     s++;
     mentorSound1.play();
   }
 
   if (s === 1 && talkingHandler.activeTalk === talkingHandler.mentorTalking2) {
-    //gehört aber eigentlich zu mentor Talking1
     s++;
     mentorSound1.stop();
     mentorSound2.play();
+  }
+  if (s === 2 && talkingHandler.activeTalk === talkingHandler.mentorTalking3) {
+    s++;
+    mentorSound2.stop();
+    mentorSound3.play();
+  }
+  if (s === 3 && talkingHandler.activeTalk === talkingHandler.mentorTalking4) {
+    s++;
+    mentorSound3.stop();
+    mentorSound4.play();
+  }
+  // if (s === 3 && talkingHandler.activeTalk === talkingHandler.mentorTalking4) { //andere version von sound4
+  //   s++;
+  //   mentorSound3.stop();
+  //   mentorSound5.play();
+  // }
+  if (s === 4 && talkingHandler.activeTalk === talkingHandler.mentorTalking5) {
+    s++;
+    mentorSound4.stop();
+    mentorSound6.play();
+  }
+  if (s === 5 && talkingHandler.activeTalk === talkingHandler.mentorTalking6) {
+    s++;
+    mentorSound6.stop();
+    mentorSound7.play();
+  }
+  if (s === 6 && talkingHandler.activeTalk === talkingHandler.mentorTalking7) {
+    s++;
+    mentorSound7.stop();
+    mentorSound8.play();
+  }
+  if (s === 7 && talkingHandler.activeTalk === talkingHandler.mentorTalking8) {
+    s++;
+    mentorSound8.stop();
+    mentorSound9.play();
+  }
+  if (s === 8 && talkingHandler.activeTalk === talkingHandler.mentorTalking9) {
+    s++;
+    mentorSound9.stop();
+    mentorSound10.play();
+  }
+  if (s === 9 && talkingHandler.activeTalk === talkingHandler.mentorTalking10) {
+    s++;
+    mentorSound10.stop();
+    mentorSound11.play();
+  }
+  if (s === 9 && talkingHandler.activeTalk === talkingHandler.mentorTalking11) {
+    s++;
+    mentorSound10.stop();
+    mentorSound12.play();
+  }
+  if (s === 10 && talkingHandler.activeTalk === talkingHandler.mentorTalking12) {
+    s++;
+    mentorSound12.stop();
+    mentorSound13.play();
+  }
+  if (s === 11 && talkingHandler.activeTalk === talkingHandler.mentorTalking13) {
+    s++;
+    mentorSound13.stop();
+    mentorSound14.play();
+  }
+  if (s === 12 && talkingHandler.activeTalk === talkingHandler.mentorTalking14) {
+    s++;
+    mentorSound14.stop();
+    mentorSound15.play();
+  }
+  if (s === 13 && talkingHandler.activeTalk === talkingHandler.mentorTalking15) {
+    s++;
+    mentorSound15.stop();
+    mentorSound16.play();
+  }
+  if (s === 14 && talkingHandler.activeTalk === talkingHandler.mentorTalking16) {
+    s++;
+    mentorSound16.stop();
+    mentorSound17.play();
+  }
+  if (s === 15 && talkingHandler.activeTalk === talkingHandler.mentorTalking16_1) {
+    s++;
+    mentorSound17.stop();
+    mentorSound18.play();
+  }
+  if (s === 16 && talkingHandler.activeTalk === talkingHandler.mentorTalking17) {
+    s++;
+    mentorSound18.stop();
+    mentorSound19.play();
+  }
+
+  //
+  if (s === 17 && talkingHandler.activeTalk === talkingHandler.mentorTalking18) {
+    s++;
+    mentorSound19.stop();
+    mentorSound20.play();
+    s=10;
+  }
+  if (s === 17 && talkingHandler.activeTalk === talkingHandler.mentorTalking19) {
+    s++;
+    mentorSound20.stop();
+    mentorSound21.play();
+  }
+  if (s === 18 && talkingHandler.activeTalk === talkingHandler.mentorTalking19_1) {
+    s++;
+    mentorSound21.stop();
+    mentorSound22.play();
+  }
+  if (s === 19 && talkingHandler.activeTalk === talkingHandler.mentorTalking20) {
+    s++;
+    mentorSound22.stop();
+    mentorSound23.play();
   }
 }
 
