@@ -948,7 +948,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Finnick",
+      "Ich",
       "Ich erinnere mich, wie wir gemeinsam zur Bar liefen und ich irgendwann nicht mehr mitzählen konnte, wie viele Shots mir in die Hand gedrückt wurden."
     );
     this.selfSpeeche14 = new Talking(
@@ -956,7 +956,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Finnick",
+      "Ich",
       "Der restliche Abend ist vollständig aus meinem Gedächtnis gestrichen worden. Ich bin überrascht, dass ich es nach Hause geschafft habe."
     );
     this.selfSpeeche15 = new Talking(
@@ -964,7 +964,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Finnick",
+      "Ich",
       "Irgendwie tut meine Schulter weh…"
     );
     this._message2 = new Message(
@@ -973,6 +973,56 @@ export default class TalkingHandler {
       320,
       300,
       "Hallo [Name].\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
+    );
+    this.selfSpeeche16 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Oh nein. Das Video zeigt mich, wie ich auf der Theke stehe und lauthals zur Musik mitschreie."
+    );
+    this.selfSpeeche17 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Scheinbar hielt ich es für eine gute Idee, der Menge eine Tanzperformance zu liefern."
+    );
+    this.selfSpeeche18 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Kurz darauf liege ich auf dem Boden. Das erklärt dann wohl die Schulterschmerzen."
+    );
+    this.selfSpeeche19 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "… Na super, das Video hat schon 2 Millionen Views."
+    );
+    this.selfSpeeche20 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Hier wurde eingebrochen! Ich hätte die Sicherheitstür installieren lassen sollen…"
+    );
+    this.hologram4 = new Hologram(
+      360,
+      150,
+      "Guten Morgen. Ich hoffe du bist schon wach, denn die Zeit läuft bald ab.\nIch habe fürs Erste genug Informationen gesammelt.\nHier, ich schicke sie dir."
+    );
+    this.hologram5 = new Hologram(
+      360,
+      150,
+      "Es war nötig dir diese Informationen zu geben, denn ich habe eine wichtige Frage an dich.\n\nMöchtest du zu unserer Welt zurückkehren?"
     );
 
     //scene1
@@ -1110,6 +1160,10 @@ export default class TalkingHandler {
     this.friend3Talking2.changeNext(this.friend1Talking7, this);
     this.friend1Talking7.changeNext(this.friend2Talking5, this);
     //scene8
+    this.friend1Talking8.changeNext(this.selfSpeeche13, this);
+    this.selfSpeeche13.changeNext(this.selfSpeeche14, this);
+    this.selfSpeeche14.changeNext(this.selfSpeeche15, this);
+    this.selfSpeeche15.changeNext(this._message2, this);
   }
 
   get hologram1() {
@@ -1167,6 +1221,13 @@ export default class TalkingHandler {
       "Ich feier es total, dass du heute mal dabei bist, " +
       this.name.name.join("");
     return this._friend2Talking3;
+  }
+  get message2() {
+    this._message2.text =
+      "Hallo " +
+      this.name.name.join("") +
+      ".\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect";
+    return this._message2;
   }
 
   mouseMoved() {

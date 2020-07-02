@@ -12,6 +12,7 @@ let hirerBackground;
 let clubBackground;
 let officewindow;
 let officecamera;
+let officeBoss;
 
 //Gegenstände
 let beamer;
@@ -71,6 +72,7 @@ function preload() {
   officeBackground = loadImage("png/office-head.png");
   officewindow = loadImage("png/office-window.png");
   officecamera = loadImage("png/office-camera.png");
+  officeBoss = loadImage("png/office-lady.png");
   clubBackground = loadImage("png/club.png");
 
   //Gegenstände
@@ -85,7 +87,7 @@ function preload() {
   phoneBig = loadImage("png/objects/phonebig1.png");
   partnerFacetime = loadImage("png/objects/partnerfacetime.png");
   partnerVideo = loadImage("png/objects/partnervideo.png");
-  characteroverview =loadImage("png/objects/characteroverview1.png");
+  characteroverview = loadImage("png/objects/characteroverview1.png");
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
@@ -144,6 +146,7 @@ export {
   clubBackground,
   officecamera,
   officewindow,
+  officeBoss,
 };
 export {
   beamer,
