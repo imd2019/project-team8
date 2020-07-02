@@ -4,7 +4,6 @@ import Talking3Decision from "./talking3Decision.js";
 import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
 import Message from "./message.js";
-import { mentorSound1 } from "./p5setup.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -22,6 +21,7 @@ export default class TalkingHandler {
     this.empty10 = new Talking();
     this.empty11 = new Talking();
     this.empty12 = new Talking();
+    this.end = new Talking();
 
     //szene 1
 
@@ -34,9 +34,6 @@ export default class TalkingHandler {
       "Mentor",
       "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
     );
-    if (this.activeTalk === this.mentorTalking1) {
-      mentorSound1.play();
-    }
 
     this.mentorTalking2 = new Talking(
       305,
@@ -1014,6 +1011,22 @@ export default class TalkingHandler {
       "Ich",
       "Hier wurde eingebrochen! Ich hätte die Sicherheitstür installieren lassen sollen…"
     );
+    this.selfSpeeche21 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Sie haben recht. Ich verbringe den Abend damit, meine Freunde von Dummheiten abzuhalten und nach einigen Stunden gehe ich endlich erschöpft nach Hause. "
+    );
+    this.selfSpeeche22 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Ich schaffe es nicht mal mich umzuziehen bevor ich einschlafe."
+    );
     this.hologram4 = new Hologram(
       360,
       150,
@@ -1023,6 +1036,20 @@ export default class TalkingHandler {
       360,
       150,
       "Es war nötig dir diese Informationen zu geben, denn ich habe eine wichtige Frage an dich.\n\nMöchtest du zu unserer Welt zurückkehren?"
+    );
+    this.talking2Decision9 = new Talking2Decision(
+      305,
+      630,
+      340,
+      100,
+      "Ich",
+      "Ja, bitte bring mich zurück.",
+      "Nein, ich möchte Teil dieser Welt sein."
+    );
+    this.hologram6 = new Hologram(
+      360,
+      150,
+      "Verstanden. Vielen Dank für deine Teilnahme an der Mission."
     );
 
     //scene1
@@ -1164,6 +1191,21 @@ export default class TalkingHandler {
     this.selfSpeeche13.changeNext(this.selfSpeeche14, this);
     this.selfSpeeche14.changeNext(this.selfSpeeche15, this);
     this.selfSpeeche15.changeNext(this._message2, this);
+    this._message2.changeNext(this.selfSpeeche16, this);
+    this.selfSpeeche16.changeNext(this.selfSpeeche17, this);
+    this.selfSpeeche17.changeNext(this.selfSpeeche18, this);
+    this.selfSpeeche18.changeNext(this.selfSpeeche19, this);
+    this.selfSpeeche19.changeNext(this.selfSpeeche20, this);
+    this.selfSpeeche20.changeNext(this.hologram4, this);
+    this.hologram4.changeNext(this.hologram5, this);
+    this.friend1Talking7.changeNext(this.selfSpeeche21, this);
+    this.selfSpeeche21.changeNext(this.selfSpeeche22, this);
+    this.selfSpeeche22.changeNext(this.hologram4, this);
+    this.hologram5.changeNext(this.talking2Decision9, this);
+    this.talking2Decision9.changeNext1(this.hologram6, this);
+    this.talking2Decision9.changeNext2(this.hologram6, this);
+    this.hologram6.changeNext(this.end, this);
+    this.selfSpeeche12.changeNext(this.hologram4, this);
   }
 
   get hologram1() {
