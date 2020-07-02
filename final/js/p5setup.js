@@ -23,6 +23,7 @@ let phoneImage;
 let phoneImageEffect;
 let hologram;
 let characteroverview;
+let form;
 
 //Handy_groß
 let phoneBig;
@@ -85,7 +86,8 @@ function preload() {
   phoneBig = loadImage("png/objects/phonebig1.png");
   partnerFacetime = loadImage("png/objects/partnerfacetime.png");
   partnerVideo = loadImage("png/objects/partnervideo.png");
-  characteroverview =loadImage("png/objects/characteroverview1.png");
+  characteroverview = loadImage("png/objects/characteroverview1.png");
+  form = loadImage("png/objects/form.png");
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
@@ -158,6 +160,7 @@ export {
   phoneBig,
   partnerFacetime,
   partnerVideo,
+  form,
 };
 export { myFont };
 // export { mentor };
