@@ -10,6 +10,8 @@ let cityBackground;
 let officeBackground;
 let hirerBackground;
 let clubBackground;
+let officewindow;
+let officecamera;
 
 //Gegenstände
 let beamer;
@@ -66,6 +68,8 @@ function preload() {
   hirerBackground = loadImage("png/messyRoom-hirer.png");
   cityBackground = loadImage("png/city.png");
   officeBackground = loadImage("png/office-head.png");
+  officewindow = loadImage("png/office-window.png");
+  officecamera = loadImage("png/office-camera.png");
   clubBackground = loadImage("png/club.png");
 
   //Gegenstände
@@ -136,6 +140,8 @@ export {
   cityBackground,
   officeBackground,
   clubBackground,
+  officecamera,
+  officewindow,
 };
 export {
   beamer,

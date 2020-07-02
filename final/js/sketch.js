@@ -6,6 +6,8 @@ import {
   hirerBackground,
   cityBackground,
   officeBackground,
+  officewindow,
+  officecamera,
   clubBackground,
   beamer,
   characterButton,
@@ -451,7 +453,13 @@ function draw() {
         talkingHandler.activeTalk = talkingHandler.bossTalking1;
       }
       window2Button.display();
+      if (window2Button.effect === true) {
+        image(officewindow, 15, 15, 1300, 600);
+      }
       cameraButton.display();
+      if (cameraButton.effect === true) {
+        image(officecamera, 15, 15, 1300, 600);
+      }
       break;
     case talkingHandler.bossTalking1:
       image(officeBackground, 15, 15, 1300, 600);
