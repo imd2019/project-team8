@@ -12,6 +12,7 @@ let hirerBackground;
 let clubBackground;
 let officewindow;
 let officecamera;
+let officeBoss;
 
 //Gegenstände
 let beamer;
@@ -72,6 +73,7 @@ function preload() {
   officeBackground = loadImage("png/office-head.png");
   officewindow = loadImage("png/office-window.png");
   officecamera = loadImage("png/office-camera.png");
+  officeBoss = loadImage("png/office-lady.png");
   clubBackground = loadImage("png/club.png");
 
   //Gegenstände
@@ -146,6 +148,7 @@ export {
   clubBackground,
   officecamera,
   officewindow,
+  officeBoss,
 };
 export {
   beamer,
