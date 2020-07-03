@@ -1,3 +1,4 @@
+import { form } from "./p5setup.js";
 export default class Paper {
   constructor() {
     this.name = [];
@@ -50,26 +51,28 @@ export default class Paper {
   }
 
   draw() {
-    fill(220, 220, 220);
-    stroke(30, 30, 30);
-    strokeWeight(3);
-    rect(455, 50, 400, 550);
+    // fill(220, 220, 220);
+    // stroke(30, 30, 30);
+    // strokeWeight(3);
+    // rect(455, 50, 400, 550);
     // rect(800, 565, 40, 30);
+    image(form, 400, 15, 500, 700);
     fill(30, 30, 30);
     noStroke();
     textSize(18);
     textAlign(LEFT);
     this.drawLine();
-    text("Name:", 470, 100);
+    // text("Name:", 470, 100);
     if (this.t <= 15) {
-      text(this.name.join("") + this.line, 530, 100);
+      text(this.name.join("") + this.line, 600, 490);
     } else {
-      text(this.name.join(""), 530, 100);
+      text(this.name.join(""), 600, 490);
     }
 
     if (this.effect === false) {
       fill(150, 150, 150);
     }
     text("OK", 805, 585);
+    //770,550
   }
 }
