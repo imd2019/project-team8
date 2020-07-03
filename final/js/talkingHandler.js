@@ -1079,8 +1079,8 @@ export default class TalkingHandler {
     this.talking2Decision2.changeNext1(this.mentorTalking18, this);
     this.talking2Decision2.changeNext2(this.mentorTalking19, this);
     this.mentorTalking18.changeNext(this.mentorTalking12, this);
-    this.mentorTalking19.changeNext(this.mentorTalking19_1, this);
-    this.mentorTalking19_1.changeNext(this.empty2, this);
+    this.mentorTalking19.changeNext(this.empty2, this);
+    this.mentorTalking19_1.changeNext(this.empty3, this);
     this.mentorTalking20.changeNext(this.empty4, this);
     //scene2
     this._hologram1.changeNext(this.selfSpeeche1, this);

@@ -62,7 +62,13 @@ let phoneButton = new Button(1245, 630, 65, 100);
 let character = new Button(20, 630, 100, 100);
 let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(15, 415, 1300, 200, "Fenster verlassen");
-let charakterOverview = new CharacterOverview(360, 150, paper);
+let xCharacterButton = new Button(1000, 145, 25, 25);
+let characterOverview = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton
+);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
 let bossButton = new Button(650, 285, 145, 240, "Chefin");
 let window2Button = new Button(15, 80, 230, 530, "Fenster");
@@ -279,11 +285,17 @@ function mouseMoved() {
     leaveScreen.mouseMoved();
   }
   if (talkingHandler.activeTalk === talkingHandler.empty6) {
-    bossButton.mouseMoved();
-    window2Button.mouseMoved();
-    cameraButton.mouseMoved();
-    phoneButton.mouseMoved();
-    character.mouseMoved();
+    if (phoneButton.triggert === false && character.triggert === false) {
+      bossButton.mouseMoved();
+      window2Button.mouseMoved();
+      cameraButton.mouseMoved();
+    }
+    if (character.triggert === false) {
+      phoneButton.mouseMoved();
+    }
+    if (phoneButton.triggert === false) {
+      character.mouseMoved();
+    }
   }
   if (talkingHandler.activeTalk === talkingHandler.empty11) {
     character.mouseMoved();
@@ -291,6 +303,9 @@ function mouseMoved() {
   }
   if (talkingHandler.activeTalk === talkingHandler.empty12) {
     friendsButton.mouseMoved();
+  }
+  if (character.triggert === true) {
+    xCharacterButton.mouseMoved();
   }
 }
 window.mouseMoved = mouseMoved;
@@ -340,11 +355,17 @@ function mouseClicked() {
     leaveScreen.mouseClicked();
   }
   if (talkingHandler.activeTalk === talkingHandler.empty6) {
-    bossButton.mouseClicked();
-    window2Button.mouseClicked();
-    cameraButton.mouseClicked();
-    phoneButton.mouseClicked();
-    character.mouseClicked();
+    if (phoneButton.triggert === false && character.triggert === false) {
+      bossButton.mouseClicked();
+      window2Button.mouseClicked();
+      cameraButton.mouseClicked();
+    }
+    if (phoneButton.triggert === false) {
+      character.mouseClicked();
+    }
+    if (character.triggert === false) {
+      phoneButton.mouseClicked();
+    }
   }
   if (talkingHandler.activeTalk === talkingHandler.empty11) {
     character.mouseClicked();
@@ -352,6 +373,9 @@ function mouseClicked() {
   }
   if (talkingHandler.activeTalk === talkingHandler.empty12) {
     friendsButton.mouseClicked();
+  }
+  if (character.triggert === true) {
+    xCharacterButton.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -456,16 +480,16 @@ function draw() {
     case talkingHandler.mentorTalking19:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
-    case talkingHandler.mentorTalking19_1:
-      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
-      break;
     case talkingHandler.empty2:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       if (paper.ok === false) {
         paper.draw();
-      } else if (talkingHandler.activeTalk === talkingHandler.empty2) {
-        talkingHandler.activeTalk = talkingHandler.empty3;
+      } else {
+        talkingHandler.activeTalk = talkingHandler.mentorTalking19_1;
       }
+      break;
+    case talkingHandler.mentorTalking19_1:
+      image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       break;
     case talkingHandler.empty3:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
@@ -541,7 +565,12 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggert === true) {
-        charakterOverview.display();
+        characterOverview.display();
+        xCharacterButton.display();
+        if (xCharacterButton.triggert === true) {
+          character.triggert = false;
+          xCharacterButton.triggert = false;
+        }
       }
       if (window1Button.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche2;
@@ -584,7 +613,12 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggert === true) {
-        charakterOverview.display();
+        characterOverview.display();
+        xCharacterButton.display();
+        if (xCharacterButton.triggert === true) {
+          character.triggert = false;
+          xCharacterButton.triggert = false;
+        }
       }
       image(phoneButtonImage, 1245, 630, 65, 100);
       if (phoneButton.effect === true) {
@@ -925,7 +959,12 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggert === true) {
-        charakterOverview.display();
+        characterOverview.display();
+        xCharacterButton.display();
+        if (xCharacterButton.triggert === true) {
+          character.triggert = false;
+          xCharacterButton.triggert = false;
+        }
       }
       break;
     case talkingHandler.workerTalking1:
@@ -1001,7 +1040,12 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggert === true) {
-        charakterOverview.display();
+        characterOverview.display();
+        xCharacterButton.display();
+        if (xCharacterButton.triggert === true) {
+          character.triggert = false;
+          xCharacterButton.triggert = false;
+        }
       }
       image(phoneButtonImage, 1245, 630, 65, 100);
       if (phoneButton.effect === true) {
@@ -1062,7 +1106,7 @@ function draw() {
         noStroke();
         fill(220, 220, 220);
         textSize(70);
-        text("FBI,\n OPEN UP!", 800, 250);
+        text("FBI,\n OPEN UP!", 1000, 250);
       }
       break;
     case talkingHandler.selfSpeeche11:
