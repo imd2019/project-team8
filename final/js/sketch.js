@@ -62,7 +62,7 @@ let phone = new Button(797, 440, 75, 10, "Handy");
 let phoneButton = new Button(1245, 630, 65, 100);
 let character = new Button(20, 630, 100, 100);
 let window1Button = new Button(140, 120, 248, 270, "Fenster");
-let leaveScreen = new Button(15, 415, 1300, 200, "Fenster verlassen");
+let leaveScreen = new Button(305, 630, 700, 100);
 let xCharacterButton = new Button(1000, 145, 25, 25);
 let characterOverview = new CharacterOverview(
   360,
@@ -578,7 +578,7 @@ function draw() {
       }
 
       break;
-    case talkingHandler.selfSpeeche2:
+    case talkingHandler._selfSpeeche2:
       image(cityBackground, 15, 15, 1300, 600, 1, 0, 5421, 2519);
       image(characterButton, 20, 630, 100, 100);
       if (phone.triggert === true) {
@@ -1107,7 +1107,11 @@ function draw() {
         noStroke();
         fill(220, 220, 220);
         textSize(70);
-        text("FBI,\n OPEN UP!", 1000, 250);
+        textAlign(CENTER);
+        text("FBI,\n OPEN UP!", 1130, 250);
+      }
+      if (j >= 120) {
+        talkingHandler.activeTalk = talkingHandler.end;
       }
       break;
     case talkingHandler.selfSpeeche11:

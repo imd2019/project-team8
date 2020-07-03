@@ -34,7 +34,6 @@ export default class TalkingHandler {
       "Mentor",
       "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
     );
-
     this.mentorTalking2 = new Talking(
       305,
       630,
@@ -43,10 +42,6 @@ export default class TalkingHandler {
       "Mentor",
       "Der technologische Fortschritt schleicht sich an, wodurch den meisten gar nicht auffällt, dass all diese Science-Fiction-Filme gar nicht so weit von unserer Realität entfernt sind."
     );
-    if (this.activeTalk === this.mentorTalking2) {
-      mentorSound1.play();
-    }
-    // mentorTalking2.clicked = this.display;
     this.mentorTalking3 = new Talking(
       305,
       630,
@@ -229,7 +224,6 @@ export default class TalkingHandler {
     );
 
     //Szene 2
-
     this._hologram1 = new Hologram(
       360,
       150,
@@ -251,7 +245,7 @@ export default class TalkingHandler {
       "Ist es wirklich morgens? Es sieht so düster aus…",
       "Es wohnen so viele Menschen auf einem Fleck.",
     ];
-    this.selfSpeeche2 = new Talking(
+    this._selfSpeeche2 = new Talking(
       305,
       630,
       700,
@@ -1086,6 +1080,7 @@ export default class TalkingHandler {
     this._hologram1.changeNext(this.selfSpeeche1, this);
     this.selfSpeeche1.changeNext(this.empty5, this);
     this.selfSpeeche3.changeNext(this.empty5, this);
+    // this._selfSpeeche2.changeNext(this.empty5, this);
     this.selfSpeeche4.changeNext(this.talking3Decision1, this);
     this.talking3Decision1.changeNext1(this.empty6, this);
     this.talking3Decision1.changeNext2(this.empty6, this);
@@ -1208,6 +1203,12 @@ export default class TalkingHandler {
     this.selfSpeeche12.changeNext(this.hologram4, this);
   }
 
+  get selfSpeeche2() {
+    if (this.activeTalk != this._selfSpeeche2) {
+      this._selfSpeeche2.text = random(this.selfSpeecheArray1);
+      return this._selfSpeeche2;
+    }
+  }
   get hologram1() {
     this._hologram1.text =
       "Hallo " +
