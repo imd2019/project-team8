@@ -426,9 +426,9 @@ export default class TalkingHandler {
     }
 
     this.talking4Decision1 = new Talking4Decision(
-      240,
+      140,
       630,
-      405,
+      540,
       90,
       "Ich bin sehr leidenschaftlich.",
       "Ich arbeite sehr sorgfältig.",
@@ -436,9 +436,9 @@ export default class TalkingHandler {
       "Ich bin kompromissbereit."
     );
     this.talking4Decision2 = new Talking4Decision(
-      250,
+      140,
       630,
-      400,
+      540,
       90,
       "Ich lasse mich schnell ablenken.",
       "Ich bin schnell frustriert, wenn etwas nicht klappt.",
@@ -446,9 +446,9 @@ export default class TalkingHandler {
       "Ich bin manchmal etwas stur."
     );
     this.talking4Decision3 = new Talking4Decision(
-      250,
+      140,
       630,
-      400,
+      540,
       90,
       "Wie gehen sie mit den Daten ihrer Kunden um?",
       "Wie sehr werden Ihre Arbeitnehmer kontrolliert?",
@@ -814,9 +814,9 @@ export default class TalkingHandler {
     );
 
     this.talking4Decision4 = new Talking4Decision(
-      240,
+      140,
       630,
-      405,
+      540,
       90,
       "Klar, ich bin dabei!",
       "Sorry, ich bin heute echt müde…",
