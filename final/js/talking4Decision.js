@@ -38,8 +38,8 @@ export default class Talking4Decision {
       this.height / 2,
       15
     );
-    strokeWeight(1);
-    textSize(10);
+    // strokeWeight(1);
+    // textSize(10);
     textAlign(LEFT);
     // fill(180, 0, 125);
     fill(220, 220, 220);

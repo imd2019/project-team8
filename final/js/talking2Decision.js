@@ -30,21 +30,21 @@ export default class Talking2Decision {
     textAlign(LEFT);
     // fill(180, 0, 125);
     fill(220, 220, 220);
-    text(this.person, this.x + 15, this.y + 25);
-    text(this.person, this.x + 375, this.y + 25);
+    // text(this.person, this.x + 15, this.y + 25);
+    // text(this.person, this.x + 375, this.y + 25);
     noStroke();
-    textSize(18);
+    textSize(16);
     text(
       this.text1,
       this.x + 15,
-      this.y + 35,
+      this.y + 25,
       this.width - 15,
       this.height - 15
     );
     text(
       this.text2,
       this.x + 375,
-      this.y + 35,
+      this.y + 25,
       this.width - 15,
       this.height - 15
     );
