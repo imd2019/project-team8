@@ -74,6 +74,8 @@ let bossButton = new Button(650, 285, 145, 240, "Chefin");
 let window2Button = new Button(15, 80, 230, 530, "Fenster");
 let cameraButton = new Button(300, 40, 75, 40, "Überwachungskamera");
 let friendsButton = new Button(780, 230, 220, 320, "Freunde");
+let monitoringDesk = new Button(1050, 400, 220, 200, "Mischpult");
+let peopleButton = new Button(150, 200, 550, 400, "Menschen");
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -305,9 +307,19 @@ function mouseMoved() {
   }
   if (talkingHandler.activeTalk === talkingHandler.empty12) {
     friendsButton.mouseMoved();
+    monitoringDesk.mouseMoved();
+    peopleButton.mouseMoved();
   }
   if (character.triggert === true) {
     xCharacterButton.mouseMoved();
+  }
+  if (
+    window2Button.triggert === true ||
+    cameraButton.triggert === true ||
+    monitoringDesk.triggert === true ||
+    peopleButton.triggert === true
+  ) {
+    leaveScreen.mouseMoved();
   }
 }
 window.mouseMoved = mouseMoved;
@@ -375,9 +387,19 @@ function mouseClicked() {
   }
   if (talkingHandler.activeTalk === talkingHandler.empty12) {
     friendsButton.mouseClicked();
+    monitoringDesk.mouseClicked();
+    peopleButton.mouseClicked();
   }
   if (character.triggert === true) {
     xCharacterButton.mouseClicked();
+  }
+  if (
+    window2Button.triggert === true ||
+    cameraButton.triggert === true ||
+    monitoringDesk.triggert === true ||
+    peopleButton.triggert === true
+  ) {
+    leaveScreen.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -640,10 +662,38 @@ function draw() {
         image(officewindow, 15, 15, 1300, 600);
       }
       window2Button.display();
+      if (window2Button.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.selfSpeeche23;
+      }
       if (cameraButton.effect === true) {
         image(officecamera, 15, 15, 1300, 600);
       }
       cameraButton.display();
+      if (cameraButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.selfSpeeche24;
+      }
+      break;
+    case talkingHandler.selfSpeeche23:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      leaveScreen.display();
+      if (leaveScreen.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.empty6;
+        window2Button.triggert = false;
+        leaveScreen.triggert = false;
+      }
+      break;
+    case talkingHandler.selfSpeeche24:
+      image(officeBackground, 15, 15, 1300, 600);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      leaveScreen.display();
+      if (leaveScreen.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.empty6;
+        cameraButton.triggert = false;
+        leaveScreen.triggert = false;
+      }
       break;
     case talkingHandler.bossTalking1:
       image(officeBackground, 15, 15, 1300, 600);
@@ -1132,6 +1182,36 @@ function draw() {
       friendsButton.display();
       if (friendsButton.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.friend1Talking5;
+      }
+      monitoringDesk.display();
+      if (monitoringDesk.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.selfSpeeche25;
+      }
+      peopleButton.display();
+      if (peopleButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.selfSpeeche26;
+      }
+      break;
+    case talkingHandler.selfSpeeche25:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      leaveScreen.display();
+      if (leaveScreen.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.empty12;
+        monitoringDesk.triggert = false;
+        leaveScreen.triggert = false;
+      }
+      break;
+    case talkingHandler.selfSpeeche26:
+      image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      leaveScreen.display();
+      if (leaveScreen.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.empty12;
+        peopleButton.triggert = false;
+        leaveScreen.triggert = false;
       }
       break;
     case talkingHandler.friend1Talking5:

@@ -281,6 +281,22 @@ export default class TalkingHandler {
     );
 
     //Szene 3
+    this.selfSpeeche23 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Dieses Viertel ist deutlich besser erhalten als meine Wohngegend."
+    );
+    this.selfSpeeche24 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Erstaunlich, dass sie selbst eine Kamera in ihrem Büro hat. Ist das nicht total unangenehm?"
+    );
 
     this._bossTalking1 = new Talking(
       305,
@@ -772,6 +788,22 @@ export default class TalkingHandler {
       " Hi! Hoffe alles ist gut bei dir. Du sollst den Abend am besten noch nutzen, um dir die Welt ein bisschen anzuschauen. Pass auf dich auf, wir sehen uns morgen!"
     );
     //scene 6
+    this.selfSpeeche25 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Die Musik hier klingt total anders als bei uns. Läuft das hier in den Charts?"
+    );
+    this.selfSpeeche26 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Ich",
+      "Es ist total befremdlich, wie die Menschen hier rumlaufen. Die Klamotten, die Modifikationen und so viele Tattoos!"
+    );
     this._friend1Talking1 = new Talking(
       305,
       630,
