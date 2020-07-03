@@ -64,9 +64,9 @@ let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(15, 415, 1300, 200, "Fenster verlassen");
 let charakterOverview = new CharacterOverview(360, 150, paper);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
-let bossButton = new Button(650, 270, 145, 220, "Chefin");
-let window2Button = new Button(15, 85, 220, 530, "Fenster");
-let cameraButton = new Button(290, 40, 75, 40, "Überwachungskamera");
+let bossButton = new Button(650, 285, 145, 240, "Chefin");
+let window2Button = new Button(15, 80, 230, 530, "Fenster");
+let cameraButton = new Button(300, 40, 75, 40, "Überwachungskamera");
 let friendsButton = new Button(780, 230, 220, 320, "Freunde");
 
 let talkingHandler = new TalkingHandler(paper);
@@ -372,6 +372,8 @@ function draw() {
 
   switch (talkingHandler.activeTalk) {
     case talkingHandler.start:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
       if (start.start === true) {
         talkingHandler.activeTalk = talkingHandler.mentorTalking1;
       }
@@ -379,12 +381,10 @@ function draw() {
     case talkingHandler.mentorTalking1:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
-      //mentorSound1.play();
       break;
     case talkingHandler.mentorTalking2:
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
-
       break;
     case talkingHandler.mentorTalking3:
       fill(30, 30, 30);
@@ -410,7 +410,6 @@ function draw() {
     case talkingHandler.mentorTalking7:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
       image(beamer, 639, 135, 240, 440);
-
       break;
     case talkingHandler.mentorTalking8:
       image(laboratoryBackground, 15, 15, 1300, 600, 150, 0, 6500, 3000);
@@ -750,9 +749,7 @@ function draw() {
       if (j >= 20) {
         talkingHandler.activeTalk = talkingHandler.empty10;
       }
-
       break;
-
     case talkingHandler.selfSpeeche7:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
@@ -1065,7 +1062,7 @@ function draw() {
         noStroke();
         fill(220, 220, 220);
         textSize(70);
-        text("FBI,\n OPEN UP!", 600, 250);
+        text("FBI,\n OPEN UP!", 800, 250);
       }
       break;
     case talkingHandler.selfSpeeche11:
@@ -1167,6 +1164,74 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche16:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche17:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche18:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche19:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(phoneButtonImage, 470, 25, 360, 580);
+      break;
+    case talkingHandler.selfSpeeche20:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+
+      break;
+    case talkingHandler.selfSpeeche21:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.selfSpeeche22:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.hologram4:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.hologram5:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.talking2Decision9:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.hologram6:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.end:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
+      textSize(100);
+      textAlign(CENTER);
+      fill(220, 220, 220);
+      text("ENDE", 650, 300);
       break;
   }
   if (start.start === false) {
