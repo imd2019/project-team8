@@ -11,7 +11,6 @@ import {
   officeBoss,
   clubBackground,
   beamer,
-  form,
   characterButton,
   characterButtonEffect,
   phoneButtonImage,
@@ -216,7 +215,7 @@ function sound() {
     talkingHandler.activeTalk === talkingHandler.mentorTalking19
   ) {
     s++;
-    mentorSound19.stop(); 
+    mentorSound19.stop();
     mentorSound20.stop();
     mentorSound21.play();
   }
