@@ -8,7 +8,7 @@ export default class CharacterOverview {
     this.button = button;
   }
   display() {
-    image(characteroverview, 298, 145, 719, 320);
+    image(characteroverview, 331, 159, 654, 292);
     // noStroke();
     // fill(30, 30, 30, 240);
     // rect(this.x, this.y, 500, 300);

@@ -196,6 +196,7 @@ function sound() {
     talkingHandler.activeTalk === talkingHandler.mentorTalking17
   ) {
     s++;
+    mentorSound17.stop();
     mentorSound18.stop();
     mentorSound19.play();
   }
@@ -215,6 +216,7 @@ function sound() {
     talkingHandler.activeTalk === talkingHandler.mentorTalking19
   ) {
     s++;
+    mentorSound19.stop(); 
     mentorSound20.stop();
     mentorSound21.play();
   }
@@ -558,7 +560,7 @@ function draw() {
         }
       }
       if (phoneButton.triggert === true) {
-        image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
+        image(phoneBig, 510, 30, 300, 570); //gesperter Bildschirm
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
