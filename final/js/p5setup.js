@@ -1,4 +1,3 @@
-
 let sketch = new p5();
 let width = windowWidth;
 let height = windowHeight;
@@ -26,11 +25,17 @@ let phoneImageEffect;
 let hologram;
 let characteroverview;
 let form;
+let smiley;
+let phoneText;
+let phoneTextEffect;
 
 //Handy_groß
 let phoneBig;
+let phoneBigclear;
 let partnerFacetime;
 let partnerVideo;
+let friend;
+let party;
 
 // Charaktere
 // let mentor;
@@ -87,10 +92,16 @@ function preload() {
   phoneImageEffect = loadImage("png/objects/phonetable2.png");
   hologram = loadImage("png/objects/hologram1.png");
   phoneBig = loadImage("png/objects/phonebig1.png");
+  phoneBigclear = loadImage("png/objects/phonebig2.png");
   partnerFacetime = loadImage("png/objects/partnerfacetime.png");
   partnerVideo = loadImage("png/objects/partnervideo.png");
   characteroverview = loadImage("png/objects/characteroverview1.png");
   form = loadImage("png/objects/form.png");
+  friend = loadImage("png/objects/freund.png");
+  party = loadImage("png/objects/party.png");
+  smiley = loadImage("png/objects/smiley1.png");
+  phoneText = loadImage("png/objects/nachricht1.png");
+  phoneTextEffect = loadImage("png/objects/nachricht2.png");
   // //Charaktere
   // mentor = loadImage("png/character/mentor.png");
 
@@ -165,6 +176,12 @@ export {
   partnerFacetime,
   partnerVideo,
   form,
+  smiley,
+  phoneText,
+  phoneTextEffect,
+  friend,
+  party,
+  phoneBigclear,
 };
 export { myFont };
 // export { mentor };

@@ -8,6 +8,7 @@ export default class HologramEmotion {
   }
   display() {
     image(hologram, 331, 159, 654, 292);
+    image(smiley , 402, 315, 511, 96);
     noStroke();
     fill(220, 220, 220);
     textSize(15);

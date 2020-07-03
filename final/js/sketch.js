@@ -20,6 +20,12 @@ import {
   phoneBig,
   partnerFacetime,
   partnerVideo,
+  smiley,
+  phoneText,
+  phoneTextEffect,
+  friend,
+  party,
+  phoneBigclear,
 } from "./p5setup.js";
 import {
   mentorSound1,
