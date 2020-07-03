@@ -11,6 +11,7 @@ import {
   officeBoss,
   clubBackground,
   beamer,
+  form,
   characterButton,
   characterButtonEffect,
   phoneButtonImage,
