@@ -89,6 +89,11 @@ let i = 0;
 let j = 0;
 let s = 0;
 
+function relode() {
+  window.location.reload();  
+}
+
+
 function sound() {
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
     s++;
@@ -1369,8 +1374,9 @@ function draw() {
       textAlign(CENTER);
       fill(220, 220, 220);
       text("ENDE", 650, 300);
+      relode();
       break;
-      //window.location.reload();
+     
   }
   if (start.start === false) {
     start.display();
