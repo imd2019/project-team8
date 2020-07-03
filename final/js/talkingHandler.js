@@ -1091,7 +1091,7 @@ export default class TalkingHandler {
     this.mentorTalking7.changeNext(this.mentorTalking8, this);
     this.mentorTalking8.changeNext(this.mentorTalking9, this);
     this.mentorTalking9.changeNext(this.talking2Decision1, this);
-    this.talking2Decision1.changeNext1(this.mentorTalking10, this);
+    this.talking2Decision1.changeNext1(this.mentorTalking10, this); // window.location.reload();
     this.talking2Decision1.changeNext2(this.mentorTalking11, this);
     this.mentorTalking10.changeNext(this.empty1, this);
     this.mentorTalking11.changeNext(this.mentorTalking12, this);
