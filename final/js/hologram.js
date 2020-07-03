@@ -7,7 +7,7 @@ export default class Hologramm extends Button {
     this.text = text;
   }
   display() {
-   image(hologram, 298, 145, 719, 320);
+   image(hologram, 331, 159, 654, 292);
     // noStroke();
     // fill(30, 30, 30, 240);
     // rect(this.x, this.y, 500, 300);
