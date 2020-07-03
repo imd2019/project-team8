@@ -23,7 +23,7 @@ export default class Talking4Decision {
     stroke(180, 0, 125);
     strokeWeight(3);
     rect(this.x, this.y, this.width, this.height / 2, 15);
-    rect(this.x + 410, this.y, this.width, this.height / 2, 15);
+    rect(this.x + 550, this.y, this.width, this.height / 2, 15);
     rect(
       this.x,
       this.y + this.height / 2 + 10,
@@ -32,19 +32,19 @@ export default class Talking4Decision {
       15
     );
     rect(
-      this.x + 410,
+      this.x + 550,
       this.y + this.height / 2 + 10,
       this.width,
       this.height / 2,
       15
     );
     strokeWeight(1);
-    textSize(13);
+    textSize(10);
     textAlign(LEFT);
     // fill(180, 0, 125);
     fill(220, 220, 220);
     noStroke();
-    textSize(18);
+    textSize(16);
     text(
       this.text1,
       this.x + 15,
@@ -54,7 +54,7 @@ export default class Talking4Decision {
     );
     text(
       this.text2,
-      this.x + 425,
+      this.x + 565,
       this.y + 15,
       this.width - 15,
       this.height - 15
@@ -68,12 +68,12 @@ export default class Talking4Decision {
     );
     text(
       this.text4,
-      this.x + 415,
+      this.x + 565,
       this.y + this.height / 2 + 25,
       this.width - 15,
       this.height - 15
     );
-    textSize(14);
+    textSize(10);
     if (this.effect1 === false) {
       fill(100, 100, 100);
     }
@@ -84,7 +84,7 @@ export default class Talking4Decision {
     } else {
       fill(220, 220, 220);
     }
-    text("weiter", this.x + 410, this.y + 25, this.width - 5, this.height + 15);
+    text("weiter", this.x + 550, this.y + 25, this.width - 5, this.height + 15);
     if (this.effect3 === false) {
       fill(100, 100, 100);
     } else {
@@ -104,7 +104,7 @@ export default class Talking4Decision {
     }
     text(
       "weiter",
-      this.x + 410,
+      this.x + 550,
       this.y + this.height / 2 + 35,
       this.width - 5,
       this.height + 15
@@ -124,8 +124,8 @@ export default class Talking4Decision {
   }
   hitTest2(x, y) {
     if (
-      x > this.x + 410 &&
-      x < this.x + 410 + this.width &&
+      x > this.x + 550 &&
+      x < this.x + 550 + this.width &&
       y > this.y &&
       y < this.y + this.height / 2
     ) {
@@ -148,8 +148,8 @@ export default class Talking4Decision {
   }
   hitTest4(x, y) {
     if (
-      x > this.x + 410 &&
-      x < this.x + 410 + this.width &&
+      x > this.x + 550 &&
+      x < this.x + 550 + this.width &&
       y > this.y + this.height / 2 + 10 &&
       y < this.y + this.height + 10
     ) {
