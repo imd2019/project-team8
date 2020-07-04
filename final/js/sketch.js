@@ -79,6 +79,7 @@ let characterOverview = new CharacterOverview(
   paper,
   xCharacterButton
 );
+let xPhoneButton = new Button(300, 200, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
 let bossButton = new Button(650, 285, 145, 240, "Chefin");
 let window2Button = new Button(15, 80, 230, 530, "Fenster");
@@ -344,6 +345,9 @@ function mouseMoved() {
   if (character.triggert === true) {
     xCharacterButton.mouseMoved();
   }
+  if (phoneButton.triggert === true) {
+    xPhoneButton.mouseMoved();
+  }
   if (
     window2Button.triggert === true ||
     cameraButton.triggert === true ||
@@ -442,6 +446,9 @@ function mouseClicked() {
   }
   if (character.triggert === true) {
     xCharacterButton.mouseClicked();
+  }
+  if (phoneButton.triggert === true) {
+    xPhoneButton.mouseClicked();
   }
   if (
     window2Button.triggert === true ||
@@ -873,11 +880,36 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
       image(smiley, 402, 315, 511, 96);
-      happyButton.display();
-      surprisedButton.display();
-      neutralButton.display();
-      sadButton.display();
-      angryButton.display();
+      if (happyButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(451, 363, 98, 98);
+      }
+      if (surprisedButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(555, 363, 98, 98);
+      }
+      if (neutralButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(659, 363, 98, 98);
+      }
+      if (sadButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(763, 363, 98, 98);
+      }
+      if (angryButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(865, 363, 98, 98);
+      }
       if (happyButton.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
