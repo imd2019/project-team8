@@ -657,7 +657,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 30, 300, 570); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
@@ -731,7 +731,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
@@ -1137,7 +1137,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580);
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
@@ -1250,13 +1250,13 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
         text("17:00", 660, 200);
 
-        image(phoneButtonImage, 470, 25, 360, 580); 
+        image(phoneButtonImage, 470, 25, 360, 580);
         talkingHandler.activeTalk = talkingHandler.friend1Talking1;
       }
       break;
@@ -1369,7 +1369,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
