@@ -29,6 +29,8 @@ import {
   party,
   phoneBigclear,
   clubBackgroundPeople,
+  hologram,
+  smiley,
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -88,6 +90,8 @@ let peopleButton = new Button(150, 200, 550, 400, "Menschen");
 let happyButton = new Button(402, 315, 95, 95);
 let surprisedButton = new Button(507, 315, 95, 95);
 let neutralButton = new Button(611, 315, 95, 95);
+let sadButton = new Button(715, 315, 95, 95);
+let angryButton = new Button(819, 315, 95, 95);
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -353,6 +357,8 @@ function mouseMoved() {
     happyButton.mouseMoved();
     surprisedButton.mouseMoved();
     neutralButton.mouseMoved();
+    sadButton.mouseMoved();
+    angryButton.mouseMoved();
   }
 }
 window.mouseMoved = mouseMoved;
@@ -450,6 +456,8 @@ function mouseClicked() {
     happyButton.mouseClicked();
     surprisedButton.mouseClicked();
     neutralButton.mouseClicked();
+    sadButton.mouseClicked();
+    angryButton.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -864,9 +872,13 @@ function draw() {
       image(officeBackground, 15, 15, 1300, 600);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      image(hologram, 331, 159, 654, 292);
+      image(smiley, 402, 315, 511, 96);
       happyButton.display();
       surprisedButton.display();
       neutralButton.display();
+      sadButton.display();
+      angryButton.display();
       if (happyButton.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
@@ -874,6 +886,12 @@ function draw() {
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
       if (neutralButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram2;
+      }
+      if (sadButton.triggert === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram2;
+      }
+      if (angryButton.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
       break;
