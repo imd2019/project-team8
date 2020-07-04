@@ -654,7 +654,7 @@ function draw() {
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
-        text("06:00", 660, 200);
+        text("09:00", 660, 200);
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
@@ -728,7 +728,7 @@ function draw() {
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
-        text("09:00", 660, 200);
+        text("11:00", 660, 200);
       }
       if (bossButton.effect === true) {
         image(officeBoss, 15, 15, 1300, 600);
@@ -1109,7 +1109,7 @@ function draw() {
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
-        text("12:00", 660, 200);
+        text("14:00", 660, 200);
       }
       doorButton.display();
       if (doorButton.triggert === true) {
