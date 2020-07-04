@@ -20,6 +20,8 @@ import {
   phoneBig,
   partnerFacetime,
   partnerVideo,
+  clubBackgroundFriends,
+  clubBackgroundDesk,
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -74,7 +76,7 @@ let bossButton = new Button(650, 285, 145, 240, "Chefin");
 let window2Button = new Button(15, 80, 230, 530, "Fenster");
 let cameraButton = new Button(300, 40, 75, 40, "Überwachungskamera");
 let friendsButton = new Button(780, 230, 220, 320, "Freunde");
-let monitoringDesk = new Button(1050, 400, 220, 200, "Mischpult");
+let monitoringDesk = new Button(1050, 320, 220, 280, "Mischpult");
 let peopleButton = new Button(150, 200, 550, 400, "Menschen");
 
 let talkingHandler = new TalkingHandler(paper);
@@ -302,13 +304,23 @@ function mouseMoved() {
     }
   }
   if (talkingHandler.activeTalk === talkingHandler.empty11) {
-    character.mouseMoved();
-    phoneButton.mouseMoved();
+    if (character.triggert === false) {
+      phoneButton.mouseMoved();
+    }
+    if (phoneButton.triggert === false) {
+      character.mouseMoved();
+    }
   }
   if (talkingHandler.activeTalk === talkingHandler.empty12) {
     friendsButton.mouseMoved();
     monitoringDesk.mouseMoved();
     peopleButton.mouseMoved();
+    if (character.triggert === false) {
+      phoneButton.mouseMoved();
+    }
+    if (phoneButton.triggert === false) {
+      character.mouseMoved();
+    }
   }
   if (character.triggert === true) {
     xCharacterButton.mouseMoved();
@@ -382,13 +394,23 @@ function mouseClicked() {
     }
   }
   if (talkingHandler.activeTalk === talkingHandler.empty11) {
-    character.mouseClicked();
-    phoneButton.mouseClicked();
+    if (phoneButton.triggert === false) {
+      character.mouseClicked();
+    }
+    if (character.triggert === false) {
+      phoneButton.mouseClicked();
+    }
   }
   if (talkingHandler.activeTalk === talkingHandler.empty12) {
     friendsButton.mouseClicked();
     monitoringDesk.mouseClicked();
     peopleButton.mouseClicked();
+    if (phoneButton.triggert === false) {
+      character.mouseClicked();
+    }
+    if (character.triggert === false) {
+      phoneButton.mouseClicked();
+    }
   }
   if (character.triggert === true) {
     xCharacterButton.mouseClicked();
@@ -1179,17 +1201,41 @@ function draw() {
       image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      friendsButton.display();
+      if (friendsButton.effect === true) {
+        image(clubBackgroundFriends, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       if (friendsButton.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.friend1Talking5;
       }
-      monitoringDesk.display();
+      friendsButton.display();
+      if (monitoringDesk.effect === true) {
+        image(clubBackgroundDesk, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       if (monitoringDesk.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche25;
       }
-      peopleButton.display();
+      monitoringDesk.display();
       if (peopleButton.triggert === true) {
         talkingHandler.activeTalk = talkingHandler.selfSpeeche26;
+      }
+      peopleButton.display();
+      if (character.effect === true) {
+        image(characterButtonEffect, 18, 628, 104, 104);
+      }
+      if (character.triggert === true) {
+        characterOverview.display();
+        xCharacterButton.display();
+        if (xCharacterButton.triggert === true) {
+          character.triggert = false;
+          xCharacterButton.triggert = false;
+        }
+      }
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      if (phoneButton.effect === true) {
+        image(phoneButtonImageEffect, 1243, 628, 69, 104);
+      }
+      if (phoneButton.triggert === true) {
+        image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
       }
       break;
     case talkingHandler.selfSpeeche25:

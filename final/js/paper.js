@@ -23,7 +23,7 @@ export default class Paper {
     }
   }
   hitTest(x, y) {
-    if (x > 800 && x < 840 && y > 565 && y < 595) {
+    if (x > 750 && x < 780 && y > 530 && y < 560) {
       return true;
     } else {
       return false;
@@ -64,15 +64,15 @@ export default class Paper {
     this.drawLine();
     // text("Name:", 470, 100);
     if (this.t <= 15) {
-      text(this.name.join("") + this.line, 600, 490);
+      text(this.name.join("") + this.line, 580, 492);
     } else {
-      text(this.name.join(""), 600, 490);
+      text(this.name.join(""), 580, 492);
     }
 
     if (this.effect === false) {
       fill(150, 150, 150);
     }
-    text("OK", 805, 585);
+    text("OK", 760, 545);
     //770,550
   }
 }

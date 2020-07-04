@@ -1,4 +1,3 @@
-
 let sketch = new p5();
 let width = windowWidth;
 let height = windowHeight;
@@ -11,6 +10,8 @@ let cityBackground;
 let officeBackground;
 let hirerBackground;
 let clubBackground;
+let clubBackgroundFriends;
+let clubBackgroundDesk;
 let officewindow;
 let officecamera;
 let officeBoss;
@@ -76,6 +77,8 @@ function preload() {
   officecamera = loadImage("png/office-camera.png");
   officeBoss = loadImage("png/office-lady.png");
   clubBackground = loadImage("png/club.png");
+  clubBackgroundFriends = loadImage("png/club-friends.png");
+  clubBackgroundDesk = loadImage("png/club-djconsole.png");
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
@@ -147,6 +150,8 @@ export {
   cityBackground,
   officeBackground,
   clubBackground,
+  clubBackgroundFriends,
+  clubBackgroundDesk,
   officecamera,
   officewindow,
   officeBoss,
