@@ -3,6 +3,7 @@ import Talking2Decision from "./talking2Decision.js";
 import Talking3Decision from "./talking3Decision.js";
 import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
+import HologramEmotion from "./hologramEmotion.js";
 import Message from "./message.js";
 
 export default class TalkingHandler {
@@ -21,6 +22,7 @@ export default class TalkingHandler {
     this.empty10 = new Talking();
     this.empty11 = new Talking();
     this.empty12 = new Talking();
+    //this.hologramAnimation1-n=new Talking();
     this.end = new Talking();
 
     //szene 1
@@ -483,6 +485,11 @@ export default class TalkingHandler {
       "Ich",
       "Übergebe ich ihr meine ID?"
     );
+    this.hologramEmotion1 = new HologramEmotion(
+      360,
+      150,
+      "Wie hast du dich gefühlt?"
+    );
 
     //scene 4
 
@@ -492,11 +499,11 @@ export default class TalkingHandler {
       "Hallo, ich bin es nochmal. Hoffentlich lief das Bewerbungsgespräch gut. Nicht, dass es für dich tatsächlich relevant wäre. Jedenfalls hast du eine Benachrichtigung auf deinem Handy erhalten. Du solltest sie öffnen."
     );
     this._message1 = new Message(
-      500,
+      520,
       150,
-      320,
-      300,
-      "Hallo [Name].\n\nDu hast [Partnerin] als deine Partnerin angegeben.\nWir haben sie in einem Video auf [Social Media] identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\n[Social Media]"
+      280,
+      250,
+      "Hallo [Name].\n\nDu hast Pastell als deine Partnerin angegeben.\nWir haben sie in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
     this.selfSpeeche6 = new Talking(
       305,
@@ -991,10 +998,10 @@ export default class TalkingHandler {
       "Irgendwie tut meine Schulter weh…"
     );
     this._message2 = new Message(
-      500,
+      520,
       150,
-      320,
-      300,
+      280,
+      250,
       "Hallo [Name].\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
     this.selfSpeeche16 = new Talking(
@@ -1093,7 +1100,7 @@ export default class TalkingHandler {
     this.mentorTalking9.changeNext(this.talking2Decision1, this);
     this.talking2Decision1.changeNext1(this.mentorTalking10, this); // window.location.reload();
     this.talking2Decision1.changeNext2(this.mentorTalking11, this);
-    this.mentorTalking10.changeNext(this.empty1, this);
+    this.mentorTalking10.changeNext(this.end, this);
     this.mentorTalking11.changeNext(this.mentorTalking12, this);
     this.mentorTalking12.changeNext(this.mentorTalking13, this);
     this.mentorTalking13.changeNext(this.mentorTalking14, this);
@@ -1143,11 +1150,11 @@ export default class TalkingHandler {
     this.talking2Decision3.changeNext1(this.bossTalking10, this);
     this.talking2Decision3.changeNext2(this.bossTalking12, this);
     this.bossTalking10.changeNext(this.bossTalking11, this);
-    this.bossTalking11.changeNext(this.hologram2, this);
+    this.bossTalking11.changeNext(this.hologram2, this); //hologramAnimation2
     this.bossTalking12.changeNext(this.bossTalking13, this);
     this.bossTalking13.changeNext(this.bossTalking14, this);
     this.bossTalking14.changeNext(this.bossTalking15, this);
-    this.bossTalking15.changeNext(this.hologram2, this);
+    this.bossTalking15.changeNext(this.hologramEmotion1, this);
     //scene4
     this.hologram2.changeNext(this._message1, this);
     this._message1.changeNext(this.selfSpeeche6, this);
@@ -1262,7 +1269,7 @@ export default class TalkingHandler {
     this._message1.text =
       "Hallo " +
       this.name.name.join("") +
-      ".\n\nDu hast [Partnerin] als deine Partnerin angegeben.\nWir haben sie in einem Video auf [Social Media] identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\n[Social Media]";
+      ".\n\nDu hast Pastell als deine Partnerin angegeben.\nWir haben sie in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect";
     return this._message1;
   }
   get partnerTalking1() {

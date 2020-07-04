@@ -1,13 +1,13 @@
 import Button from "./button.js";
-import { hologram, smiley,} from "./p5setup.js";
+import { hologram, smiley } from "./p5setup.js";
 
 export default class Hologramm extends Button {
   constructor(x, y, text) {
-    super(x, y, 500, 380);
+    super(x - 30, y, 635, 280);
     this.text = text;
   }
   display() {
-   image(hologram, 331, 159, 654, 292);
+    image(hologram, 331, 159, 654, 292);
     // noStroke();
     // fill(30, 30, 30, 240);
     // rect(this.x, this.y, 500, 300);
@@ -50,15 +50,15 @@ export default class Hologramm extends Button {
     // line(this.x + 500, this.y + 300, this.x + 540, this.y + 260);
     noStroke();
     fill(220, 220, 220);
-    textSize(15);
+    textSize(18);
     textAlign(LEFT);
-    text(this.text, this.x, this.y + 40, 500, 220);
+    text(this.text, this.x + 30, this.y + 55, 620, 230);
     textSize(14);
     if (this.effect === false) {
       fill(100, 100, 100);
     }
     textAlign(RIGHT);
-    text("weiter", this.x, this.y + 275, 500, 295);
+    text("weiter", this.x, this.y + 265, 590, 240);
   }
 
   clicked() {
