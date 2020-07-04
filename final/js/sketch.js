@@ -30,7 +30,6 @@ import {
   phoneBigclear,
   clubBackgroundPeople,
   hologram,
-  smiley,
 } from "./p5setup.js";
 import {
   mentorSound1,
