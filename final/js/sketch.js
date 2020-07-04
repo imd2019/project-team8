@@ -656,11 +656,12 @@ function draw() {
       }
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 30, 300, 570); //gesperter Bildschirm
-        //fill();
-        //textSize();
-        //nostroke();
-        //textAlign(CENTER);
-        //text("9:00",650,y);
+        fill(30, 30, 30);
+        strokeWeight(3)
+        textSize(50);
+        textAlign(CENTER);
+        fill(220, 220, 220);
+        text("09:00", 660, 200);
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
@@ -729,6 +730,12 @@ function draw() {
       }
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
+        fill(30, 30, 30);
+        strokeWeight(3)
+        textSize(50);
+        textAlign(CENTER);
+        fill(220, 220, 220);
+        text("11:00", 660, 200);
       }
       if (bossButton.effect === true) {
         image(officeBoss, 15, 15, 1300, 600);
@@ -1129,6 +1136,12 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580);
+        fill(30, 30, 30);
+        strokeWeight(3)
+        textSize(50);
+        textAlign(CENTER);
+        fill(220, 220, 220);
+        text("14:00", 660, 200);
       }
       doorButton.display();
       if (doorButton.triggert === true) {
@@ -1236,8 +1249,14 @@ function draw() {
       }
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
+        fill(30, 30, 30);
+        strokeWeight(3)
+        textSize(50);
+        textAlign(CENTER);
+        fill(220, 220, 220);
+        text("17:00", 660, 200);
 
-        image(phoneButtonImage, 470, 25, 360, 580); //gesperter Bildschirm
+        image(phoneButtonImage, 470, 25, 360, 580); 
         talkingHandler.activeTalk = talkingHandler.friend1Talking1;
       }
       break;
@@ -1349,6 +1368,12 @@ function draw() {
       }
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
+        fill(30, 30, 30);
+        strokeWeight(3)
+        textSize(50);
+        textAlign(CENTER);
+        fill(220, 220, 220);
+        text("22:00", 660, 200);
       }
       break;
     case talkingHandler.selfSpeeche25:
