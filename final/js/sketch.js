@@ -79,6 +79,7 @@ let characterOverview = new CharacterOverview(
   paper,
   xCharacterButton
 );
+let xPhoneButton = new Button(300, 200, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
 let bossButton = new Button(650, 285, 145, 240, "Chefin");
 let window2Button = new Button(15, 80, 230, 530, "Fenster");
@@ -344,6 +345,9 @@ function mouseMoved() {
   if (character.triggered === true) {
     xCharacterButton.mouseMoved();
   }
+  if (phoneButton.triggert === true) {
+    xPhoneButton.mouseMoved();
+  }
   if (
     window2Button.triggered === true ||
     cameraButton.triggered === true ||
@@ -442,6 +446,9 @@ function mouseClicked() {
   }
   if (character.triggered === true) {
     xCharacterButton.mouseClicked();
+  }
+  if (phoneButton.triggert === true) {
+    xPhoneButton.mouseClicked();
   }
   if (
     window2Button.triggered === true ||
@@ -654,7 +661,7 @@ function draw() {
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
-        text("06:00", 660, 200);
+        text("09:00", 660, 200);
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
@@ -728,7 +735,7 @@ function draw() {
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
-        text("09:00", 660, 200);
+        text("11:00", 660, 200);
       }
       if (bossButton.effect === true) {
         image(officeBoss, 15, 15, 1300, 600);
@@ -895,6 +902,37 @@ function draw() {
       neutralButton.display();
       sadButton.display();
       angryButton.display();
+      if (happyButton.triggered === true) {
+      if (happyButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(451, 363, 98, 98);
+      }
+      if (surprisedButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(555, 363, 98, 98);
+      }
+      if (neutralButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(659, 363, 98, 98);
+      }
+      if (sadButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(763, 363, 98, 98);
+      }
+      if (angryButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(865, 363, 98, 98);
+      }
       if (happyButton.triggered === true) {
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
@@ -1119,7 +1157,7 @@ function draw() {
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
-        text("12:00", 660, 200);
+        text("14:00", 660, 200);
       }
       doorButton.display();
       if (doorButton.triggered === true) {
