@@ -1,5 +1,5 @@
 import Button from "./button.js";
-import { hologram,} from "./p5setup.js";
+import { hologram, smiley,} from "./p5setup.js";
 
 export default class Hologramm extends Button {
   constructor(x, y, text) {
