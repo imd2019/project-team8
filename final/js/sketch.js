@@ -1350,31 +1350,31 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneButtonImage, 470, 25, 360, 580);
+      image(phoneBigclear, 510, 35, 300, 580);
       break;
     case talkingHandler.selfSpeeche16:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneButtonImage, 470, 25, 360, 580);
+      image(party, 510, 35, 300, 580);
       break;
     case talkingHandler.selfSpeeche17:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneButtonImage, 470, 25, 360, 580);
+      image(party, 510, 35, 300, 580);
       break;
     case talkingHandler.selfSpeeche18:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneButtonImage, 470, 25, 360, 580);
+      image(party, 510, 35, 300, 580);
       break;
     case talkingHandler.selfSpeeche19:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneButtonImage, 470, 25, 360, 580);
+      image(party, 510, 35, 300, 580);
       break;
     case talkingHandler.selfSpeeche20:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
