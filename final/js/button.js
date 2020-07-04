@@ -6,7 +6,7 @@ export default class Button {
     this.height = height;
     this.name = name;
 
-    this.triggert = false;
+    this.triggered = false;
   }
   display() {
     noFill();
@@ -58,10 +58,10 @@ export default class Button {
   mouseClicked() {
     if (this.hitTest(mouseX, mouseY)) {
       this.clicked();
-      if (this.triggert === false) {
-        this.triggert = true;
+      if (this.triggered === false) {
+        this.triggered = true;
       } else {
-        this.triggert = false;
+        this.triggered = false;
       }
     }
   }

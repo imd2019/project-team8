@@ -4,7 +4,7 @@ let height = windowHeight;
 //Hintergünde
 let laboratoryBackground;
 let messyRoomBackground;
-let messyRoomBackgrundWindow;
+let messyRoomBackgroundWindow;
 let messyRoomBackgroundDoor;
 let cityBackground;
 let officeBackground;
@@ -75,7 +75,7 @@ function preload() {
   //Hintergründe
   laboratoryBackground = loadImage("png/laboratory.png");
   messyRoomBackground = loadImage("png/messyRoom.png");
-  messyRoomBackgrundWindow = loadImage("png/messyroom-window.png");
+  messyRoomBackgroundWindow = loadImage("png/messyroom-window.png");
   messyRoomBackgroundDoor = loadImage("png/messyroom-door.png");
   hirerBackground = loadImage("png/messyRoom-hirer.png");
   cityBackground = loadImage("png/city.png");
@@ -158,7 +158,7 @@ window.addEventListener("resize", windowResized);
 export {
   laboratoryBackground,
   messyRoomBackground,
-  messyRoomBackgrundWindow,
+  messyRoomBackgroundWindow,
   messyRoomBackgroundDoor,
   hirerBackground,
   cityBackground,
