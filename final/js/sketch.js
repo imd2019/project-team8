@@ -1714,6 +1714,7 @@ function draw() {
       rect(10, 615, 1310, 130);
       fill(60, 60, 60);
       rect(0, 745, 1310, 1000);
+      rect(0, 0, 1310, 10);
       end.display();
       if (end.end === true) {
         relode();

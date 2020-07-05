@@ -13,7 +13,7 @@ export default class Credits {
     fill(220, 220, 220);
     noStroke();
     text("EYE TO EYE", this.x, this.y - 300);
-    text("Hochschule Darmstadt", this.x - 50, this.y - 100);
+    text("Hochschule Darmstadt", this.x + 50, this.y - 100);
     text("TECHNIK & DESIGN", this.x, this.y + 400);
     text("MUSIC & SOUND", this.x, this.y + 150);
     text("BILDER & ILLUSTRATIONEN", this.x, this.y + 700);
@@ -21,7 +21,7 @@ export default class Credits {
     //Untertitel
     textSize(20);
     text("Interactive Media Design", this.x + 50, this.y - 50);
-    text("2020", this.x + 150, this.y);
+    text("2020", this.x + 50, this.y);
     text("Youtube", this.x, this.y + 200);
     text("https://incompetech.filmmusic.io/", this.x, this.y + 250);
     text("Eva Haugrund", this.x, this.y + 450);
