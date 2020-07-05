@@ -33,6 +33,9 @@ let smiley;
 let phoneText;
 let phoneTextEffect;
 
+//Logo
+let logo;
+
 //Handy_groß
 let phoneBig;
 let phoneBigclear;
@@ -40,9 +43,6 @@ let partnerFacetime;
 let partnerVideo;
 let friend;
 let party;
-
-// Charaktere
-// let mentor;
 
 //gesprochener Text
 let mentorSound1;
@@ -113,8 +113,9 @@ function preload() {
   smiley = loadImage("png/objects/smiley1.png");
   phoneText = loadImage("png/objects/nachricht1.png");
   phoneTextEffect = loadImage("png/objects/nachricht2.png");
-  // //Charaktere
-  // mentor = loadImage("png/character/mentor.png");
+
+  //Logo
+  logo = loadImage("png/objects/logo.png");
 
   //gesprochner Text
 
@@ -200,6 +201,7 @@ export {
   party,
   phoneBigclear,
 };
+export { logo };
 export { myFont };
 // export { mentor };
 
