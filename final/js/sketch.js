@@ -79,7 +79,7 @@ let characterOverview = new CharacterOverview(
   paper,
   xCharacterButton
 );
-let xPhoneButton = new Button(300, 200, 25, 25);
+let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
 let bossButton = new Button(650, 285, 145, 240, "Chefin");
 let window2Button = new Button(15, 80, 230, 530, "Fenster");
@@ -657,11 +657,16 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 30, 300, 570); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
         text("09:00", 660, 200);
+        xPhoneButton.display();
+        textSize(15);
+        noStroke();
+        fill(220, 220, 220);
+        text("x", 790, 48);
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
@@ -731,7 +736,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
@@ -1137,7 +1142,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580);
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
@@ -1250,13 +1255,13 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
         text("17:00", 660, 200);
 
-        image(phoneButtonImage, 470, 25, 360, 580); 
+        image(phoneButtonImage, 470, 25, 360, 580);
         talkingHandler.activeTalk = talkingHandler.friend1Talking1;
       }
       break;
@@ -1369,7 +1374,7 @@ function draw() {
       if (phoneButton.triggert === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
         fill(30, 30, 30);
-        strokeWeight(3)
+        strokeWeight(3);
         textSize(50);
         textAlign(CENTER);
         fill(220, 220, 220);
