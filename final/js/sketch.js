@@ -55,6 +55,7 @@ import {
   mentorSound21,
   mentorSound22,
   mentorSound23,
+  music1,
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -111,6 +112,10 @@ function relode() {
 }
 
 function sound() {
+
+// music1.play();
+
+
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
     s++;
     mentorSound1.play();
