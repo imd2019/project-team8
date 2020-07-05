@@ -59,12 +59,14 @@ import {
 
 import Button from "./button.js";
 import Start from "./start.js";
+import End from "./end.js";
 import TalkingHandler from "./talkingHandler.js";
 import Paper from "./paper.js";
 import CharacterOverview from "./characterOverview.js";
 
 //Buttons
 let start = new Start(562.5, 337.5, 185, 65);
+let end = new End (562.5, 637.5, 185, 65);
 let beamerButton = new Button(650, 205, 230, 370, "Teleporter");
 let paper = new Paper();
 let phone = new Button(797, 440, 75, 10, "Handy");
@@ -270,6 +272,10 @@ function mouseMoved() {
   } else {
     talkingHandler.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.end) {
+    end.mouseMoved();
+  } 
+
 
   if (
     talkingHandler.activeTalk === talkingHandler.empty2 &&
@@ -372,6 +378,9 @@ function mouseClicked() {
   } else {
     talkingHandler.mouseClicked();
   }
+  if (talkingHandler.activeTalk === talkingHandler.end) {
+    end.mouseClicked();
+  } 
 
   if (
     talkingHandler.activeTalk === talkingHandler.empty2 &&
@@ -1559,16 +1568,26 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
+     
     case talkingHandler.end:
+     
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
       textSize(100);
       textAlign(CENTER);
       fill(220, 220, 220);
       text("ENDE", 650, 300);
-      relode();
-      break;
+     // relode(); 
+      // fill(30, 30, 30);
+      // rect(10, 10, 1300, 600);
+      end.display();
+       if (end.end === true) {
+        relode();
+      } 
+      break; 
   }
+ 
+  
   if (start.start === false) {
     start.display();
   } else {
