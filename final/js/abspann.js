@@ -10,6 +10,7 @@ class Abspann {
     this.y = y;
   }
   display() {
+    //Titel
     textSize(30);
     fill(220, 220, 220);
     text("EYE TO EYE", this.x + 50, this.y - 300);
@@ -18,6 +19,7 @@ class Abspann {
     text("MUSIC & SOUND", this.x, this.y + 150);
     text("BILDER & ILLUSTRATIONEN", this.x, this.y + 700);
     text("DANKE!", this.x + 100, this.y + 1000);
+    //Untertitel
     textSize(20);
     text("Interactive Media Design", this.x + 50, this.y - 50);
     text("2020", this.x + 150, this.y);
@@ -34,8 +36,9 @@ class Abspann {
 hdaAbspann = new Abspann(100, 600);
 
 function draw() {
-  background(60, 60, 60);
-  abspann();
+  // background(60, 60, 60);
+  // abspann();
+  hdaAbspann.display();
   this.y = this.y - 3;
   // i++;
   if (i <= 5 && i >= 2) {
