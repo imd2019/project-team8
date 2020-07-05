@@ -39,7 +39,7 @@ p {
   top: 100px;
   text-align: center;
   font-size: 30px;
-  font-family: Sneakers Script;
+  font-family: Hack;
   src: url ("https://use.typekit.net/dss7qvd.css");
 }
 
@@ -51,5 +51,4 @@ img {
   width: 30%;
   height: 30%;
   margin-left: 466px;
-  
 }

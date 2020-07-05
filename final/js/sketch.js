@@ -59,12 +59,15 @@ import {
 
 import Button from "./button.js";
 import Start from "./start.js";
+import End from "./end.js";
 import TalkingHandler from "./talkingHandler.js";
 import Paper from "./paper.js";
 import CharacterOverview from "./characterOverview.js";
+import Credits from "./credits.js";
 
 //Buttons
 let start = new Start(562.5, 337.5, 185, 65);
+let end = new End(562.5, 637.5, 185, 65);
 let beamerButton = new Button(650, 205, 230, 370, "Teleporter");
 let paper = new Paper();
 let phone = new Button(797, 440, 75, 10, "Handy");
@@ -98,6 +101,10 @@ let talkingHandler = new TalkingHandler(paper);
 let i = 0;
 let j = 0;
 let s = 0;
+let e = 0;
+
+//Abspann
+let credits = new Credits(700, 600);
 
 function relode() {
   window.location.reload();
@@ -270,6 +277,9 @@ function mouseMoved() {
   } else {
     talkingHandler.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.end) {
+    end.mouseMoved();
+  }
 
   if (
     talkingHandler.activeTalk === talkingHandler.empty2 &&
@@ -371,6 +381,9 @@ function mouseClicked() {
     start.mouseClicked();
   } else {
     talkingHandler.mouseClicked();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.end) {
+    end.mouseClicked();
   }
 
   if (
@@ -1680,17 +1693,35 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
+
     case talkingHandler.end:
+      e++;
       fill(30, 30, 30);
       rect(10, 10, 1300, 600);
-      textSize(100);
-      textAlign(CENTER);
-      fill(220, 220, 220);
-      text("ENDE", 650, 300);
-      relode();
+      if (e <= 30) {
+        textSize(100);
+        textAlign(CENTER);
+        fill(220, 220, 220);
+        text("ENDE", 650, 300);
+      } else if (e >= 30) {
+        credits.display();
+        credits.y--;
+        // // creditsY + 0, 2;
+        // creditsY = creditsY-3;
+      }
+      // relode();
+      fill(30, 30, 30);
+      rect(10, 615, 1310, 130);
+      fill(60, 60, 60);
+      rect(0, 745, 1310, 1000);
+      end.display();
+      if (end.end === true) {
+        relode();
+      }
       break;
     // case Abspann:
   }
+
   if (start.start === false) {
     start.display();
   } else {
