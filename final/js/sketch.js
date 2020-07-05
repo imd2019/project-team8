@@ -126,6 +126,7 @@ let surprisedButton = new Button(507, 315, 95, 95);
 let neutralButton = new Button(611, 315, 95, 95);
 let sadButton = new Button(715, 315, 95, 95);
 let angryButton = new Button(819, 315, 95, 95);
+let evaluationButton = new Button(335, 160, 650, 290);
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -149,6 +150,8 @@ function relode() {
 }
 
 function sound() {
+  // music1.play();
+
   if (m === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
     m++;
     music1.play();
@@ -427,6 +430,9 @@ function mouseMoved() {
     sadButton.mouseMoved();
     angryButton.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
+    evaluationButton.mouseMoved();
+  }
 }
 window.mouseMoved = mouseMoved;
 
@@ -535,6 +541,9 @@ function mouseClicked() {
     neutralButton.mouseClicked();
     sadButton.mouseClicked();
     angryButton.mouseClicked();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
+    evaluationButton.mouseClicked();
   }
 }
 window.mouseClicked = mouseClicked;
@@ -1821,8 +1830,23 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
+      evaluationButton.display();
+      noStroke();
+      fill(220, 220, 220);
+      textAlign(LEFT);
+      textSize(16);
+      text("Deine Ausgewählten Emotionen:", 300, 300);
+      fill(100, 100, 100);
+      if (evaluationButton.effect === true) {
+        fill(220, 220, 220);
+      }
+      text("weiter", 400, 600);
+      if (evaluationButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram5;
+      }
       break;
     case talkingHandler.hologram5:
+      evaluationButton.triggered = false;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);

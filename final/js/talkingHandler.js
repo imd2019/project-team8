@@ -1088,7 +1088,7 @@ export default class TalkingHandler {
       150,
       "Guten Morgen. Ich hoffe, du bist schon wach, denn die Zeit läuft bald ab.\n\nIch habe fürs Erste genug Informationen gesammelt.\nHier, ich schicke sie dir."
     );
-    this.hologramEvaluation = new Hologram();
+    this.hologramEvaluation = new Talking();
     this.hologram5 = new Hologram(
       360,
       150,
