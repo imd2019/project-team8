@@ -61,6 +61,6 @@ export default class CharacterOverview {
     textSize(15);
     textAlign(LEFT);
     fill(220, 220, 220);
-    text(this.name.name.join(""), this.x + 40, this.y + 40);
+    text("Name: " + this.name.name.join(""), this.x + 40, this.y + 40);
   }
 }

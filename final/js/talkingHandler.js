@@ -1107,6 +1107,11 @@ export default class TalkingHandler {
       150,
       "Verstanden. Vielen Dank für deine Teilnahme an der Mission."
     );
+    this.hologramEmotion3 = new HologramEmotion(
+      360,
+      150,
+      "Wie hast du dich gefühlt?"
+    );
 
     //scene1
     this.activeTalk = this.start;
@@ -1255,16 +1260,16 @@ export default class TalkingHandler {
     this.selfSpeech17.changeNext(this.selfSpeech18, this);
     this.selfSpeech18.changeNext(this.selfSpeech19, this);
     this.selfSpeech19.changeNext(this.selfSpeech20, this);
-    this.selfSpeech20.changeNext(this.hologram4, this);
+    this.selfSpeech20.changeNext(this.hologramEmotion3, this);
     this.hologram4.changeNext(this.hologram5, this);
     this.friend1Talking7.changeNext(this.selfSpeech21, this);
     this.selfSpeech21.changeNext(this.selfSpeech22, this);
-    this.selfSpeech22.changeNext(this.hologram4, this);
+    this.selfSpeech22.changeNext(this.hologramEmotion3, this);
     this.hologram5.changeNext(this.talking2Decision9, this);
     this.talking2Decision9.changeNext1(this.hologram6, this);
     this.talking2Decision9.changeNext2(this.hologram6, this);
     this.hologram6.changeNext(this.end, this);
-    this.selfSpeech12.changeNext(this.hologram4, this);
+    this.selfSpeech12.changeNext(this.hologramEmotion3, this);
   }
 
   get selfSpeech2() {
