@@ -16,14 +16,14 @@ export default class Selfspeech extends Button {
   // }
   display() {
     fill(30, 30, 30, 180);
-    stroke(180, 0, 125);
-    strokeWeight(3);
+    stroke(130, 0, 140);
+    strokeWeight(5);
     rect(this.x, this.y, this.width, this.height, 15);
     strokeWeight(1);
     textSize(16);
     textAlign(LEFT);
     // fill(180, 0, 125);
-    fill(130, 0, 140);
+    fill(220, 220, 220);
     text(this.person, this.x + 15, this.y + 25);
     noStroke();
     textSize(16);
