@@ -366,7 +366,11 @@ function mouseMoved() {
   ) {
     leaveScreen.mouseMoved();
   }
-  if (talkingHandler.activeTalk === talkingHandler.hologramEmotion1) {
+  if (
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion1 ||
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion2 ||
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion3
+  ) {
     happyButton.mouseMoved();
     surprisedButton.mouseMoved();
     neutralButton.mouseMoved();
@@ -473,7 +477,8 @@ function mouseClicked() {
   }
   if (
     talkingHandler.activeTalk === talkingHandler.hologramEmotion1 ||
-    talkingHandler.activeTalk === talkingHandler.hologramEmotion2
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion2 ||
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion3
   ) {
     happyButton.mouseClicked();
     surprisedButton.mouseClicked();
@@ -701,6 +706,10 @@ function draw() {
       if (character.triggered === true) {
         characterOverview.display();
         xCharacterButton.display();
+        //fill();
+        //noStroke();
+        //textSize();
+        //text();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
           xCharacterButton.triggered = false;
@@ -995,6 +1004,11 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      happyButton.triggered = false;
+      surprisedButton.triggered = false;
+      neutralButton.triggered = false;
+      sadButton.triggered = false;
+      angryButton.triggered = false;
       break;
     case talkingHandler.message1:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1246,6 +1260,11 @@ function draw() {
       break;
     case talkingHandler.empty10:
       j = 0;
+      happyButton.triggered = false;
+      surprisedButton.triggered = false;
+      neutralButton.triggered = false;
+      sadButton.triggered = false;
+      angryButton.triggered = false;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
@@ -1672,6 +1691,63 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.hologramEmotion3:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(hologram, 331, 159, 654, 292);
+      image(smiley, 402, 315, 511, 96);
+      happyButton.display();
+      surprisedButton.display();
+      neutralButton.display();
+      sadButton.display();
+      angryButton.display();
+      if (happyButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(451, 363, 98, 98);
+      }
+      if (surprisedButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(555, 363, 98, 98);
+      }
+      if (neutralButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(659, 363, 98, 98);
+      }
+      if (sadButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(763, 363, 98, 98);
+      }
+      if (angryButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(865, 363, 98, 98);
+      }
+      if (happyButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram4;
+      }
+      if (surprisedButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram4;
+      }
+      if (neutralButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram4;
+      }
+      if (sadButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram4;
+      }
+      if (angryButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram4;
+      }
       break;
     case talkingHandler.hologram4:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
