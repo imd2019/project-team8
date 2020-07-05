@@ -16,6 +16,7 @@ let clubBackgroundPeople;
 let officewindow;
 let officecamera;
 let officeBoss;
+let hdaAbspann;
 
 //Gegenstände
 let beamer;
@@ -87,6 +88,7 @@ function preload() {
   clubBackgroundFriends = loadImage("png/club-friends.png");
   clubBackgroundDesk = loadImage("png/club-djconsole.png");
   clubBackgroundPeople = loadImage("png/club-partypeople.png");
+  hdaAbspann = loadImage("png/hda.png");
 
   //Gegenstände
   beamer = loadImage("png/objects/beamer.png");
@@ -170,6 +172,7 @@ export {
   officecamera,
   officewindow,
   officeBoss,
+  hdaAbspann,
 };
 export {
   beamer,

@@ -5,7 +5,7 @@ import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
 import HologramEmotion from "./hologramEmotion.js";
 import Message from "./message.js";
-// import Selfspeech from "./selfspeech.js";
+import Selfspeech from "./selfspeech.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -235,7 +235,7 @@ export default class TalkingHandler {
         ", ich hoffe, du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch bei NanoGen Corporation. Bitte mach dich auf den Weg."
     );
 
-    this.selfSpeech1 = new Talking(
+    this.selfSpeech1 = new Selfspeech(
       305,
       630,
       700,
@@ -256,7 +256,7 @@ export default class TalkingHandler {
       "Ich",
       random(this.selfSpeechArray1)
     );
-    this.selfSpeech3 = new Talking(
+    this.selfSpeech3 = new Selfspeech(
       305,
       630,
       700,
@@ -264,7 +264,7 @@ export default class TalkingHandler {
       "Ich",
       "Ich kann noch nicht rausgehen, ich brauche erst das Handy."
     );
-    this.selfSpeech4 = new Talking(
+    this.selfSpeech4 = new Selfspeech(
       305,
       630,
       700,
@@ -284,7 +284,7 @@ export default class TalkingHandler {
     );
 
     //Szene 3
-    this.selfSpeech23 = new Talking(
+    this.selfSpeech23 = new Selfspeech(
       305,
       630,
       700,
@@ -292,7 +292,7 @@ export default class TalkingHandler {
       "Ich",
       "Dieses Viertel ist deutlich besser erhalten als meine Wohngegend."
     );
-    this.selfSpeech24 = new Talking(
+    this.selfSpeech24 = new Selfspeech(
       305,
       630,
       700,
@@ -494,7 +494,7 @@ export default class TalkingHandler {
       "Ja, ich habe nichts zu verbergen."
     );
 
-    this.selfSpeech5 = new Talking(
+    this.selfSpeech5 = new Selfspeech(
       305,
       630,
       700,
@@ -522,7 +522,7 @@ export default class TalkingHandler {
       250,
       "Hallo [Name].\n\nDu hast Pastell als deine Partnerin angegeben.\nWir haben sie in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
-    this.selfSpeech6 = new Talking(
+    this.selfSpeech6 = new Selfspeech(
       305,
       630,
       700,
@@ -539,7 +539,7 @@ export default class TalkingHandler {
       "Nein, ich möchte nicht alles kontrollieren, was meine Freundin tut.",
       "Ja, es ist doch nur ein Video"
     );
-    this.selfSpeech7 = new Talking(
+    this.selfSpeech7 = new Selfspeech(
       305,
       630,
       700,
@@ -547,7 +547,7 @@ export default class TalkingHandler {
       "Ich",
       "In dem Video sehe ich meine Freundin in einer Bar stehen mit einer Person, die ich nicht kenne."
     );
-    this.selfSpeech8 = new Talking(
+    this.selfSpeech8 = new Selfspeech(
       305,
       630,
       700,
@@ -555,7 +555,7 @@ export default class TalkingHandler {
       "Ich",
       "Ich höre nicht, was sie sagen, aber ich sehe, wie sie sich immer näherkommen."
     );
-    this.selfSpeech9 = new Talking(
+    this.selfSpeech9 = new Selfspeech(
       305,
       630,
       700,
@@ -563,7 +563,7 @@ export default class TalkingHandler {
       "Ich",
       "War das etwa ein Kuss? Sie gehen gemeinsam aus der Bar raus…"
     );
-    this.selfSpeech10 = new Talking(
+    this.selfSpeech10 = new Selfspeech(
       305,
       630,
       700,
@@ -812,7 +812,7 @@ export default class TalkingHandler {
       " Hi! Hoffe alles ist gut bei dir. Du sollst den Abend am besten noch nutzen, um dir die Welt ein bisschen anzuschauen. Pass auf dich auf, wir sehen uns morgen!"
     );
     //scene 6
-    this.selfSpeech25 = new Talking(
+    this.selfSpeech25 = new Selfspeech(
       305,
       630,
       700,
@@ -820,7 +820,7 @@ export default class TalkingHandler {
       "Ich",
       "Die Musik hier klingt total anders als bei uns. Läuft das hier in den Charts?"
     );
-    this.selfSpeech26 = new Talking(
+    this.selfSpeech26 = new Selfspeech(
       305,
       630,
       700,
@@ -882,7 +882,7 @@ export default class TalkingHandler {
       "Ich",
       "Ich verbringe den Abend zu Hause, wenn auch nicht ganz so ruhig durch die Bauarbeiten im gesamten Gebäude."
     );
-    this.selfSpeech12 = new Talking(
+    this.selfSpeech12 = new Selfspeech(
       305,
       630,
       700,
@@ -990,7 +990,7 @@ export default class TalkingHandler {
       "Da sag ich nicht Nein."
     );
     //scene8
-    this.selfSpeech13 = new Talking(
+    this.selfSpeech13 = new Selfspeech(
       305,
       630,
       700,
@@ -998,7 +998,7 @@ export default class TalkingHandler {
       "Ich",
       "Ich erinnere mich, wie wir gemeinsam zur Bar liefen und ich irgendwann nicht mehr mitzählen konnte, wie viele Shots mir in die Hand gedrückt wurden."
     );
-    this.selfSpeech14 = new Talking(
+    this.selfSpeech14 = new Selfspeech(
       305,
       630,
       700,
@@ -1006,7 +1006,7 @@ export default class TalkingHandler {
       "Ich",
       "Der restliche Abend ist vollständig aus meinem Gedächtnis gestrichen worden. Ich bin überrascht, dass ich es nach Hause geschafft habe."
     );
-    this.selfSpeech15 = new Talking(
+    this.selfSpeech15 = new Selfspeech(
       305,
       630,
       700,
@@ -1021,7 +1021,7 @@ export default class TalkingHandler {
       250,
       "Hallo [Name].\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
-    this.selfSpeech16 = new Talking(
+    this.selfSpeech16 = new Selfspeech(
       305,
       630,
       700,
@@ -1029,7 +1029,7 @@ export default class TalkingHandler {
       "Ich",
       "Oh nein. Das Video zeigt mich, wie ich auf einem Tisch stehe und lauthals zur Musik mitschreie."
     );
-    this.selfSpeech17 = new Talking(
+    this.selfSpeech17 = new Selfspeech(
       305,
       630,
       700,
@@ -1037,7 +1037,7 @@ export default class TalkingHandler {
       "Ich",
       "Scheinbar hielt ich es für eine gute Idee, der Menge eine Tanzperformance zu liefern."
     );
-    this.selfSpeech18 = new Talking(
+    this.selfSpeech18 = new Selfspeech(
       305,
       630,
       700,
@@ -1045,7 +1045,7 @@ export default class TalkingHandler {
       "Ich",
       "Kurz darauf liege ich auf dem Boden. Das erklärt dann wohl die Schulterschmerzen."
     );
-    this.selfSpeech19 = new Talking(
+    this.selfSpeech19 = new Selfspeech(
       305,
       630,
       700,
@@ -1053,7 +1053,7 @@ export default class TalkingHandler {
       "Ich",
       "… Na super, das Video hat schon 2 Millionen Views."
     );
-    this.selfSpeech20 = new Talking(
+    this.selfSpeech20 = new Selfspeech(
       305,
       630,
       700,
@@ -1061,7 +1061,7 @@ export default class TalkingHandler {
       "Ich",
       "Hier wurde eingebrochen! Ich hätte die Sicherheitstür installieren lassen sollen…"
     );
-    this.selfSpeech21 = new Talking(
+    this.selfSpeech21 = new Selfspeech(
       305,
       630,
       700,
@@ -1069,7 +1069,7 @@ export default class TalkingHandler {
       "Ich",
       "Sie haben recht. Ich verbringe den Abend damit, meine Freunde von Dummheiten abzuhalten und nach einigen Stunden gehe ich endlich erschöpft nach Hause. "
     );
-    this.selfSpeech22 = new Talking(
+    this.selfSpeech22 = new Selfspeech(
       305,
       630,
       700,
