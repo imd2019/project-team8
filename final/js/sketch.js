@@ -78,11 +78,40 @@ let character = new Button(20, 630, 100, 100);
 let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(305, 630, 700, 100);
 let xCharacterButton = new Button(958, 160, 25, 25);
-let characterOverview = new CharacterOverview(
+let characterOverview1 = new CharacterOverview(
   360,
   150,
   paper,
-  xCharacterButton
+  xCharacterButton,
+  "Fahre zum Bewebungsgespräch"
+);
+let characterOverview2 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Möchtest du deine ID preisgeben um den Job zu bekommen?"
+);
+let characterOverview3 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Vertraust du deiner Freundin?"
+);
+let characterOverview4 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Trinkst du Shots mit deinen Freunden?"
+);
+let characterOverview5 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Entscheide dich ob du mit Feiern gehst"
 );
 let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
@@ -120,24 +149,21 @@ function relode() {
 }
 
 function sound() {
-
-
-if (m === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1){
-  m++;
-  music1.play();
-  music1.loop();
-}
-if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2){
-  m++;
-  music1.stop();
-  music2.play();
-  music2.loop();
-}
+  if (m === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
+    m++;
+    music1.play();
+    music1.loop();
+  }
+  if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2) {
+    m++;
+    music1.stop();
+    music2.play();
+    music2.loop();
+  }
 
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
     s++;
     mentorSound1.play();
-    
   }
 
   if (s === 1 && talkingHandler.activeTalk === talkingHandler.mentorTalking2) {
@@ -728,12 +754,9 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview1.display();
         xCharacterButton.display();
-        //fill();
-        //noStroke();
-        //textSize();
-        //text();
+        this.text = "Gehe zum Bewerbungsgespräch";
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
           xCharacterButton.triggered = false;
@@ -780,7 +803,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview2.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
@@ -1336,7 +1359,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview3.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
@@ -1417,7 +1440,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview4.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
@@ -1549,7 +1572,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview5.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
