@@ -5,6 +5,7 @@ import Talking4Decision from "./talking4Decision.js";
 import Hologram from "./hologram.js";
 import HologramEmotion from "./hologramEmotion.js";
 import Message from "./message.js";
+// import Selfspeech from "./selfspeech.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -33,7 +34,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
     );
     this.mentorTalking2 = new Talking(
@@ -41,7 +42,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Der technologische Fortschritt schleicht sich an, wodurch den meisten gar nicht auffällt, dass all diese Science-Fiction-Filme gar nicht so weit von unserer Realität entfernt sind."
     );
     this.mentorTalking3 = new Talking(
@@ -49,7 +50,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Somit wird uns gar nicht die Zeit gegeben, um darüber nachzudenken, was das tatsächlich für uns bedeutet."
     );
     this.mentorTalking4 = new Talking(
@@ -57,7 +58,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Aus diesem Grund brauche ich dich!"
     );
     this.mentorTalking5 = new Talking(
@@ -65,7 +66,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Sag mal, wieso ist es eigentlich so dunkel hier drin?"
     );
     this.mentorTalking6 = new Talking(
@@ -73,15 +74,15 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
-      "Also, nochmal zum Thema zurück, unser Unternehmen ist dabei wirklich drastische Entscheidungen zu treffen und das bereitet mir Sorgen."
+      "Dr. Merton",
+      "Also, nochmal zum Thema zurück, unser Unternehmen ist dabei, wirklich drastische Entscheidungen zu treffen und das bereitet mir Sorgen."
     );
     this.mentorTalking7 = new Talking(
       305,
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Diese Maschine hier ist ein Teleporter, die dich in ein paralleles Universum transportieren wird, das schon um einiges fortschrittlicher ist als unseres."
     );
     this.mentorTalking8 = new Talking(
@@ -89,7 +90,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Ob das ungefährlich ist? Natürlich! Zumindest soweit ich weiß, hehe…"
     );
     this.mentorTalking9 = new Talking(
@@ -97,7 +98,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Also! Bevor wir anfangen muss ich dich noch einmal fragen, ob du diese Mission wirklich antreten möchtest. Bist du dabei?"
     );
     this.mentorTalking10 = new Talking(
@@ -105,7 +106,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "*seufz* Na gut, trotzdem danke, dass du hergekommen bist, dann muss ich mir wohl jemanden anderes suchen…"
     );
     this.mentorTalking11 = new Talking(
@@ -113,7 +114,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Fantastisch! Dann erkläre ich dir noch einmal kurz die wichtigsten Dinge."
     );
     this.mentorTalking12 = new Talking(
@@ -121,7 +122,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Hier sind Kontaktlinsen, über die ich dich kontaktieren werde."
     );
     this.mentorTalking13 = new Talking(
@@ -129,7 +130,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Darüber erhältst du Aufträge von mir, bei denen du Entscheidungen treffen musst."
     );
     this.mentorTalking14 = new Talking(
@@ -137,15 +138,15 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
-      "Du musst mit ihnen außerdem dokumentieren, wie du dich in diesen Situationen fühlst"
+      "Dr. Merton",
+      "Du musst mit ihnen außerdem dokumentieren, wie du dich in diesen Situationen fühlst."
     );
     this.mentorTalking15 = new Talking(
       305,
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Über dein Profil kannst du jederzeit sehen, was du tun sollst und schon geschafft hast."
     );
     this.mentorTalking16 = new Talking(
@@ -153,7 +154,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "In dieser Welt besitzt du eine ID, die alle Informationen über dich zugänglich macht, also bitte geh vorsichtig damit um."
     );
     this.mentorTalking16_1 = new Talking(
@@ -161,7 +162,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Der Teleporter funktioniert allerdings nur für 24 Stunden,  das bedeutet danach kann ich dich nicht mehr zurückholen."
     );
     this.mentorTalking17 = new Talking(
@@ -169,7 +170,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Alles verstanden?"
     );
     this.mentorTalking18 = new Talking(
@@ -177,7 +178,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Kein Problem."
     );
     this.mentorTalking19 = new Talking(
@@ -185,7 +186,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Sehr gut, bitte unterschreibe dieses Formular, dann kann es losgehen."
     );
     this.mentorTalking19_1 = new Talking(
@@ -193,7 +194,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Gut, dann steht deiner Mission nichts mehr im Weg. Betritt die Kapsel, sobald du bereit bist."
     );
     this.mentorTalking20 = new Talking(
@@ -201,7 +202,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Mentor",
+      "Dr. Merton",
       "Ich wünsche dir viel Glück auf deiner Reise."
     );
 
@@ -211,7 +212,7 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Tut mir Leid, das ist mir zu riskant.",
       "Ja, du kannst auf mich zählen."
     );
@@ -220,7 +221,7 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       " Nein, wiederhol das bitte.",
       " Ja, verstanden."
     );
@@ -231,10 +232,10 @@ export default class TalkingHandler {
       150,
       "Hallo " +
         this.name.name.join("") +
-        ", ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg."
+        ", ich hoffe, du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch bei NanoGen Corporation. Bitte mach dich auf den Weg."
     );
 
-    this.selfSpeeche1 = new Talking(
+    this.selfSpeech1 = new Talking(
       305,
       630,
       700,
@@ -242,20 +243,20 @@ export default class TalkingHandler {
       "Ich",
       "Wow, meine Wohnung habe ich gepflegter in Erinnerung…\n\nBevor ich losgehe, sollte ich das Handy einpacken."
     );
-    this.selfSpeecheArray1 = [
+    this.selfSpeechArray1 = [
       "Die Stadt ist kaum noch wiederzuerkennen.",
       "Ist es wirklich morgens? Es sieht so düster aus…",
       "Es wohnen so viele Menschen auf einem Fleck.",
     ];
-    this._selfSpeeche2 = new Talking(
+    this._selfSpeech2 = new Talking(
       305,
       630,
       700,
       100,
       "Ich",
-      random(this.selfSpeecheArray1)
+      random(this.selfSpeechArray1)
     );
-    this.selfSpeeche3 = new Talking(
+    this.selfSpeech3 = new Talking(
       305,
       630,
       700,
@@ -263,7 +264,7 @@ export default class TalkingHandler {
       "Ich",
       "Ich kann noch nicht rausgehen, ich brauche erst das Handy."
     );
-    this.selfSpeeche4 = new Talking(
+    this.selfSpeech4 = new Talking(
       305,
       630,
       700,
@@ -276,14 +277,14 @@ export default class TalkingHandler {
       630,
       220,
       100,
-      "Ich",
+      "",
       "Fahrrad",
       "Auto",
       "Bahn"
     );
 
     //Szene 3
-    this.selfSpeeche23 = new Talking(
+    this.selfSpeech23 = new Talking(
       305,
       630,
       700,
@@ -291,7 +292,7 @@ export default class TalkingHandler {
       "Ich",
       "Dieses Viertel ist deutlich besser erhalten als meine Wohngegend."
     );
-    this.selfSpeeche24 = new Talking(
+    this.selfSpeech24 = new Talking(
       305,
       630,
       700,
@@ -305,34 +306,50 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Guten Tag, " +
         this.name.name.join("") +
-        "\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt."
+        "\nIch bin Venus Lee, freut mich Sie kennenzulernen."
+    );
+    this.bossTalking1_1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Venus",
+      "Ich hoffe, Sie haben gut hierher gefunden. Am besten wir beginnen direkt."
     );
     this.bossTalking2 = new Talking(
       305,
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Was sind Ihre Stärken?"
+    );
+    this.bossTalking2_1 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "Venus",
+      "Das klingt toll, denn das sehen wir bei NanoGen als wichtige Qualität an."
     );
     this.bossTalking3 = new Talking(
       305,
       630,
       700,
       100,
-      "Chefin",
-      "Was sind ihre Schwächen?"
+      "Venus",
+      "Was sind Ihre Schwächen?"
     );
     this.bossTalking4 = new Talking(
       305,
       630,
       700,
       100,
-      "Chefin",
-      "Danke für ihre Ehrlichkeit."
+      "Venus",
+      "Danke für Ihre Ehrlichkeit."
     );
 
     this.bossTalking5 = new Talking(
@@ -340,7 +357,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Haben Sie denn Fragen an mich?"
     );
     this.bossTalking6 = new Talking(
@@ -348,7 +365,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Nun… Uns ist die Sicherheit der Allgemeinheit wichtig und wir tun alles, um diese zu gewährleisten."
     );
     this.bossTalking7 = new Talking(
@@ -356,7 +373,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Unsere Eingestellten sind unsere Vertreter, also müssen wir sicherstellen, dass all ihre Aktionen auch vertretbar sind. Und natürlich, dass sie effizient für unser Unternehmen sind."
     );
     this.bossTalking8 = new Talking(
@@ -364,23 +381,23 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Chefin",
-      "Wir arbeiten daran das volle Potential des technologischen Fortschritts anzustreben. Dafür müssen wir sehr stark abwägen, was unser Unternehmen benachteiligen könnte."
+      "Venus",
+      "Wir arbeiten daran, das volle Potential des technologischen Fortschritts anzustreben. Dafür müssen wir sehr stark abwägen, was unser Unternehmen benachteiligen könnte."
     );
     this.bossTalking9 = new Talking(
       305,
       630,
       700,
       100,
-      "Chefin",
-      "Zuletzt bräuchten wir nur noch ihre ID, damit wir sie guten Gewissens einstellen können."
+      "Venus",
+      "Zuletzt bräuchten wir nur noch Ihre ID, damit wir Sie guten Gewissens einstellen können."
     );
     this.bossTalking10 = new Talking(
       305,
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Sie scheinen wohl etwas verbergen zu wollen, in unserem Unternehmen ist Offenheit und Ehrlichkeit essentiell."
     );
     this.bossTalking11 = new Talking(
@@ -388,7 +405,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Wir können Ihnen hier leider keine Stelle anbieten, vielen Dank für Ihre Bewerbung."
     );
     this.bossTalking12 = new Talking(
@@ -396,10 +413,10 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Chefin",
+      "Venus",
       "Dankeschön, bitte warten Sie einen Moment."
     );
-    this.bossTalking13 = new Talking(305, 630, 700, 100, "Chefin", "…");
+    this.bossTalking13 = new Talking(305, 630, 700, 100, "Venus", "…");
     this.bossTalkingArray = [1, 2, 3];
     if (random(this.bossTalkingArray) === 1) {
       this.bossTalking14 = new Talking(
@@ -407,7 +424,7 @@ export default class TalkingHandler {
         630,
         700,
         100,
-        "Chefin",
+        "Venus",
         "Wie bitte? Ich fasse es nicht!"
       );
       this.bossTalking15 = new Talking(
@@ -415,7 +432,7 @@ export default class TalkingHandler {
         630,
         700,
         100,
-        "Chefin",
+        "Venus",
         "Tut mir leid, hiermit beende ich das Bewerbungsgespräch, versuchen Sie es woanders."
       );
     } else {
@@ -424,15 +441,15 @@ export default class TalkingHandler {
         630,
         700,
         100,
-        "Chefin",
-        "Alles klar, dann steht ihrer Einstellung in unserem Unternehmen nichts mehr im Weg."
+        "Venus",
+        "Alles klar, dann steht Ihrer Einstellung in unserem Unternehmen nichts mehr im Weg."
       );
       this.bossTalking15 = new Talking(
         305,
         630,
         700,
         100,
-        "Chefin",
+        "Venus",
         "Ich schicke Ihnen die nötigen Dokumente zu und wenn Sie sich für uns entscheiden, melden Sie sich bitte innerhalb der nächsten zwei Wochen. Auf Wiedersehen."
       );
     }
@@ -453,7 +470,7 @@ export default class TalkingHandler {
       540,
       90,
       "Ich lasse mich schnell ablenken.",
-      "Ich bin schnell frustriert, wenn etwas nicht klappt.",
+      "Ich bin zu perfektionistisch.",
       "Ich überarbeite mich oft.",
       "Ich bin manchmal etwas stur."
     );
@@ -462,9 +479,9 @@ export default class TalkingHandler {
       630,
       540,
       90,
-      "Wie gehen sie mit den Daten ihrer Kunden um?",
+      "Wie gehen Sie mit den Daten Ihrer Kunden um?",
       "Wie sehr werden Ihre Arbeitnehmer kontrolliert?",
-      "Ist ihre Produktion auch für Ärmere zugänglich?",
+      "Ist Ihre Produktion auch für Ärmere zugänglich?",
       "Ich habe keine Fragen."
     );
     this.talking2Decision3 = new Talking2Decision(
@@ -472,12 +489,12 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Nein, ich will meine Privatsphäre behalten.",
       "Ja, ich habe nichts zu verbergen."
     );
 
-    this.selfSpeeche5 = new Talking(
+    this.selfSpeech5 = new Talking(
       305,
       630,
       700,
@@ -505,7 +522,7 @@ export default class TalkingHandler {
       250,
       "Hallo [Name].\n\nDu hast Pastell als deine Partnerin angegeben.\nWir haben sie in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
-    this.selfSpeeche6 = new Talking(
+    this.selfSpeech6 = new Talking(
       305,
       630,
       700,
@@ -518,11 +535,11 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Nein, ich möchte nicht alles kontrollieren, was meine Freundin tut.",
       "Ja, es ist doch nur ein Video"
     );
-    this.selfSpeeche7 = new Talking(
+    this.selfSpeech7 = new Talking(
       305,
       630,
       700,
@@ -530,7 +547,7 @@ export default class TalkingHandler {
       "Ich",
       "In dem Video sehe ich meine Freundin in einer Bar stehen mit einer Person, die ich nicht kenne."
     );
-    this.selfSpeeche8 = new Talking(
+    this.selfSpeech8 = new Talking(
       305,
       630,
       700,
@@ -538,7 +555,7 @@ export default class TalkingHandler {
       "Ich",
       "Ich höre nicht, was sie sagen, aber ich sehe, wie sie sich immer näherkommen."
     );
-    this.selfSpeeche9 = new Talking(
+    this.selfSpeech9 = new Talking(
       305,
       630,
       700,
@@ -546,7 +563,7 @@ export default class TalkingHandler {
       "Ich",
       "War das etwa ein Kuss? Sie gehen gemeinsam aus der Bar raus…"
     );
-    this.selfSpeeche10 = new Talking(
+    this.selfSpeech10 = new Talking(
       305,
       630,
       700,
@@ -559,7 +576,7 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Nein, das ist nicht nötig.",
       "Ja, ich möchte das mit ihr klären."
     );
@@ -568,7 +585,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       " Hi " +
         this.name.name.join("") +
         "! Du hast dich heute noch gar nicht gemeldet."
@@ -578,7 +595,7 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       "Ist alles in Ordnung? Warum rufst du an?"
     );
     this.userTalking1 = new Talking(
@@ -587,14 +604,14 @@ export default class TalkingHandler {
       700,
       100,
       "Ich",
-      " [Social Media] hat mir gerade ein Video von dir in einer Bar geschickt."
+      "Insta Connect hat mir gerade ein Video von dir in einer Bar geschickt."
     );
     this.partnerTalking3 = new Talking(
       305,
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       "Was für ein Video? Kannst du es mir schicken?"
     );
     this.partnerTalking4 = new Talking(
@@ -602,16 +619,16 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       "Warte, ich schau es mir kurz an."
     );
-    this.partnerTalking5 = new Talking(305, 630, 700, 100, "Partner", "...");
+    this.partnerTalking5 = new Talking(305, 630, 700, 100, "Pastell", "...");
     this.partnerTalking6 = new Talking(
       305,
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       "Das- Äh, das ist nicht so wie es aussieht!"
     );
     this.partnerTalking7 = new Talking(
@@ -619,15 +636,15 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Partner",
-      "[Frau] und ich sind spontan in diese neue Bar gegangen und dann war da dieser Typ und hat mir ganz viele Drinks ausgegeben..."
+      "Pastell",
+      "Solar und ich sind spontan in diese neue Bar gegangen und dann war da dieser Typ und hat mir ganz viele Drinks ausgegeben..."
     );
     this.partnerTalking8 = new Talking(
       305,
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       "...und ich war total betrunken und ich wusste selbst nicht mehr was genau ich da gemacht habe."
     );
     this.talking2Decision6 = new Talking2Decision(
@@ -635,7 +652,7 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Ich glaube dir. Sei in Zukunft bitte vorsichtiger.",
       "Du sahst in dem Video ziemlich nüchtern aus."
     );
@@ -644,18 +661,18 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       "Danke für dein Verständnis, " +
         this.name.name.join("") +
-        "!\nIch hoffe wir können es einfach vergessen."
+        "!\n\nIch hoffe, wir können es einfach vergessen."
     );
     this.partnerTalking10 = new Talking(
       305,
       630,
       700,
       100,
-      "Partner",
-      "Willst du mir etwa vorwerfen, dass ich lüge?\nIch hatte mehr Vertrauen von dir erwartet!"
+      "Pastell",
+      "Willst du mir etwa vorwerfen, dass ich lüge?\n\nIch hatte mehr Vertrauen von dir erwartet!"
     );
     this.userTalking2 = new Talking(
       305,
@@ -678,15 +695,15 @@ export default class TalkingHandler {
       630,
       700,
       100,
-      "Partner",
-      "Alles klar, vielleicht sprechen wir später weiter.\nBis dann!"
+      "Pastell",
+      "Alles klar, vielleicht sprechen wir später weiter.\n\nBis dann!"
     );
     this.partnerTalking12 = new Talking(
       305,
       630,
       700,
       100,
-      "Partner",
+      "Pastell",
       "Wie auch immer, Tschüss."
     );
 
@@ -713,7 +730,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Vielleicht haben sie mitbekommen, dass es vor Kurzem wieder einen Einbruch in diesem Gebäude gab."
+      "Vielleicht haben Sie mitbekommen, dass es vor Kurzem wieder einen Einbruch in diesem Gebäude gab."
     );
     this.workerTalking4 = new Talking(
       305,
@@ -737,7 +754,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Sie lässt sich nur noch elektronisch durch Gesichtserkennung öffnen, sie brauchen nicht mal mehr einen Schlüssel!"
+      "Sie lässt sich nur noch elektronisch durch Gesichtserkennung öffnen, Sie brauchen nicht mal mehr einen Schlüssel!"
     );
     this.workerTalking7 = new Talking(
       305,
@@ -753,7 +770,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Also, wollen sie das Angebot annehmen?"
+      "Also, wollen Sie das Angebot annehmen?"
     );
     this.workerTalking9 = new Talking(
       305,
@@ -761,7 +778,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Amazing! Wir fangen gleich heute Abend an mit der Installation.\nSchönen Tag noch!"
+      "Amazing! Wir fangen gleich heute Abend an mit der Installation.\n\nGoodbye!"
     );
     this.workerTalking10 = new Talking(
       305,
@@ -785,7 +802,7 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Ja, das klingt super.",
       "Nein, ich lehne fürs Erste ab."
     );
@@ -795,7 +812,7 @@ export default class TalkingHandler {
       " Hi! Hoffe alles ist gut bei dir. Du sollst den Abend am besten noch nutzen, um dir die Welt ein bisschen anzuschauen. Pass auf dich auf, wir sehen uns morgen!"
     );
     //scene 6
-    this.selfSpeeche25 = new Talking(
+    this.selfSpeech25 = new Talking(
       305,
       630,
       700,
@@ -803,13 +820,13 @@ export default class TalkingHandler {
       "Ich",
       "Die Musik hier klingt total anders als bei uns. Läuft das hier in den Charts?"
     );
-    this.selfSpeeche26 = new Talking(
+    this.selfSpeech26 = new Talking(
       305,
       630,
       700,
       100,
       "Ich",
-      "Es ist total befremdlich, wie die Menschen hier rumlaufen. Die Klamotten, die Modifikationen und so viele Tattoos!"
+      "Die meisten sind wohl alleine gekommen. Vermutlich sind Freunde im echten Leben hier nicht mehr ganz so üblich."
     );
     this._friend1Talking1 = new Talking(
       305,
@@ -857,7 +874,7 @@ export default class TalkingHandler {
       "Ich gehe nicht so gerne feiern."
     );
     this.fbi = new Talking();
-    this.selfSpeeche11 = new Talking(
+    this.selfSpeech11 = new Talking(
       305,
       630,
       700,
@@ -865,13 +882,13 @@ export default class TalkingHandler {
       "Ich",
       "Ich verbringe den Abend zu Hause, wenn auch nicht ganz so ruhig durch die Bauarbeiten im gesamten Gebäude."
     );
-    this.selfSpeeche12 = new Talking(
+    this.selfSpeech12 = new Talking(
       305,
       630,
       700,
       100,
       "Ich",
-      "Als nach einigen Stunden sind die Arbeiter der Alpha Wohnungszentrale endlich gegangen und ich schlafe langsam ein."
+      "Als die Arbeiter der Alpha Wohnungszentrale nach einigen Stunden endlich gegangen sind, schlafe ich langsam ein."
     );
     //scene7
     this.friend1Talking5 = new Talking(
@@ -968,12 +985,12 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Nee, heute lieber nicht…",
       "Da sag ich nicht Nein."
     );
     //scene8
-    this.selfSpeeche13 = new Talking(
+    this.selfSpeech13 = new Talking(
       305,
       630,
       700,
@@ -981,7 +998,7 @@ export default class TalkingHandler {
       "Ich",
       "Ich erinnere mich, wie wir gemeinsam zur Bar liefen und ich irgendwann nicht mehr mitzählen konnte, wie viele Shots mir in die Hand gedrückt wurden."
     );
-    this.selfSpeeche14 = new Talking(
+    this.selfSpeech14 = new Talking(
       305,
       630,
       700,
@@ -989,7 +1006,7 @@ export default class TalkingHandler {
       "Ich",
       "Der restliche Abend ist vollständig aus meinem Gedächtnis gestrichen worden. Ich bin überrascht, dass ich es nach Hause geschafft habe."
     );
-    this.selfSpeeche15 = new Talking(
+    this.selfSpeech15 = new Talking(
       305,
       630,
       700,
@@ -1004,15 +1021,15 @@ export default class TalkingHandler {
       250,
       "Hallo [Name].\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
-    this.selfSpeeche16 = new Talking(
+    this.selfSpeech16 = new Talking(
       305,
       630,
       700,
       100,
       "Ich",
-      "Oh nein. Das Video zeigt mich, wie ich auf der Theke stehe und lauthals zur Musik mitschreie."
+      "Oh nein. Das Video zeigt mich, wie ich auf einem Tisch stehe und lauthals zur Musik mitschreie."
     );
-    this.selfSpeeche17 = new Talking(
+    this.selfSpeech17 = new Talking(
       305,
       630,
       700,
@@ -1020,7 +1037,7 @@ export default class TalkingHandler {
       "Ich",
       "Scheinbar hielt ich es für eine gute Idee, der Menge eine Tanzperformance zu liefern."
     );
-    this.selfSpeeche18 = new Talking(
+    this.selfSpeech18 = new Talking(
       305,
       630,
       700,
@@ -1028,7 +1045,7 @@ export default class TalkingHandler {
       "Ich",
       "Kurz darauf liege ich auf dem Boden. Das erklärt dann wohl die Schulterschmerzen."
     );
-    this.selfSpeeche19 = new Talking(
+    this.selfSpeech19 = new Talking(
       305,
       630,
       700,
@@ -1036,7 +1053,7 @@ export default class TalkingHandler {
       "Ich",
       "… Na super, das Video hat schon 2 Millionen Views."
     );
-    this.selfSpeeche20 = new Talking(
+    this.selfSpeech20 = new Talking(
       305,
       630,
       700,
@@ -1044,7 +1061,7 @@ export default class TalkingHandler {
       "Ich",
       "Hier wurde eingebrochen! Ich hätte die Sicherheitstür installieren lassen sollen…"
     );
-    this.selfSpeeche21 = new Talking(
+    this.selfSpeech21 = new Talking(
       305,
       630,
       700,
@@ -1052,18 +1069,18 @@ export default class TalkingHandler {
       "Ich",
       "Sie haben recht. Ich verbringe den Abend damit, meine Freunde von Dummheiten abzuhalten und nach einigen Stunden gehe ich endlich erschöpft nach Hause. "
     );
-    this.selfSpeeche22 = new Talking(
+    this.selfSpeech22 = new Talking(
       305,
       630,
       700,
       100,
       "Ich",
-      "Ich schaffe es nicht mal mich umzuziehen bevor ich einschlafe."
+      "Ich schaffe es nicht mal, mich umzuziehen bevor ich einschlafe."
     );
     this.hologram4 = new Hologram(
       360,
       150,
-      "Guten Morgen. Ich hoffe du bist schon wach, denn die Zeit läuft bald ab.\nIch habe fürs Erste genug Informationen gesammelt.\nHier, ich schicke sie dir."
+      "Guten Morgen. Ich hoffe, du bist schon wach, denn die Zeit läuft bald ab.\n\nIch habe fürs Erste genug Informationen gesammelt.\nHier, ich schicke sie dir."
     );
     this.hologram5 = new Hologram(
       360,
@@ -1075,7 +1092,7 @@ export default class TalkingHandler {
       630,
       340,
       100,
-      "Ich",
+      "",
       "Ja, bitte bring mich zurück.",
       "Nein, ich möchte Teil dieser Welt sein."
     );
@@ -1116,21 +1133,23 @@ export default class TalkingHandler {
     this.mentorTalking19_1.changeNext(this.empty3, this);
     this.mentorTalking20.changeNext(this.empty4, this);
     //scene2
-    this._hologram1.changeNext(this.selfSpeeche1, this);
-    this.selfSpeeche1.changeNext(this.empty5, this);
-    this.selfSpeeche3.changeNext(this.empty5, this);
-    // this._selfSpeeche2.changeNext(this.empty5, this);
-    this.selfSpeeche4.changeNext(this.talking3Decision1, this);
+    this._hologram1.changeNext(this.selfSpeech1, this);
+    this.selfSpeech1.changeNext(this.empty5, this);
+    this.selfSpeech3.changeNext(this.empty5, this);
+    // this._selfSpeech2.changeNext(this.empty5, this);
+    this.selfSpeech4.changeNext(this.talking3Decision1, this);
     this.talking3Decision1.changeNext1(this.empty6, this);
     this.talking3Decision1.changeNext2(this.empty6, this);
     this.talking3Decision1.changeNext3(this.empty6, this);
     //scene3
-    this._bossTalking1.changeNext(this.bossTalking2, this);
+    this._bossTalking1.changeNext(this.bossTalking1_1, this);
+    this.bossTalking1_1.changeNext(this.bossTalking2, this);
     this.bossTalking2.changeNext(this.talking4Decision1, this);
-    this.talking4Decision1.changeNext1(this.bossTalking3, this);
-    this.talking4Decision1.changeNext2(this.bossTalking3, this);
-    this.talking4Decision1.changeNext3(this.bossTalking3, this);
-    this.talking4Decision1.changeNext4(this.bossTalking3, this);
+    this.talking4Decision1.changeNext1(this.bossTalking2_1, this);
+    this.talking4Decision1.changeNext2(this.bossTalking2_1, this);
+    this.talking4Decision1.changeNext3(this.bossTalking2_1, this);
+    this.talking4Decision1.changeNext4(this.bossTalking2_1, this);
+    this.bossTalking2_1.changeNext(this.bossTalking3, this);
     this.bossTalking3.changeNext(this.talking4Decision2, this);
     this.talking4Decision2.changeNext1(this.bossTalking4, this);
     this.talking4Decision2.changeNext2(this.bossTalking4, this);
@@ -1145,8 +1164,8 @@ export default class TalkingHandler {
     this.bossTalking6.changeNext(this.bossTalking5, this);
     this.bossTalking7.changeNext(this.bossTalking5, this);
     this.bossTalking8.changeNext(this.bossTalking5, this);
-    this.bossTalking9.changeNext(this.selfSpeeche5, this);
-    this.selfSpeeche5.changeNext(this.talking2Decision3, this);
+    this.bossTalking9.changeNext(this.selfSpeech5, this);
+    this.selfSpeech5.changeNext(this.talking2Decision3, this);
     this.talking2Decision3.changeNext1(this.bossTalking10, this);
     this.talking2Decision3.changeNext2(this.bossTalking12, this);
     this.bossTalking10.changeNext(this.bossTalking11, this);
@@ -1157,14 +1176,14 @@ export default class TalkingHandler {
     this.bossTalking15.changeNext(this.hologramEmotion1, this);
     //scene4
     this.hologram2.changeNext(this._message1, this);
-    this._message1.changeNext(this.selfSpeeche6, this);
-    this.selfSpeeche6.changeNext(this.talking2Decision4, this);
+    this._message1.changeNext(this.selfSpeech6, this);
+    this.selfSpeech6.changeNext(this.talking2Decision4, this);
     this.talking2Decision4.changeNext1(this.empty7, this);
-    this.talking2Decision4.changeNext2(this.selfSpeeche7, this);
-    this.selfSpeeche7.changeNext(this.selfSpeeche8, this);
-    this.selfSpeeche8.changeNext(this.selfSpeeche9, this);
-    this.selfSpeeche9.changeNext(this.selfSpeeche10, this);
-    this.selfSpeeche10.changeNext(this.talking2Decision5, this);
+    this.talking2Decision4.changeNext2(this.selfSpeech7, this);
+    this.selfSpeech7.changeNext(this.selfSpeech8, this);
+    this.selfSpeech8.changeNext(this.selfSpeech9, this);
+    this.selfSpeech9.changeNext(this.selfSpeech10, this);
+    this.selfSpeech10.changeNext(this.talking2Decision5, this);
     this.talking2Decision5.changeNext1(this.empty7, this);
     this.talking2Decision5.changeNext2(this._partnerTalking1, this);
     this._partnerTalking1.changeNext(this.partnerTalking2, this);
@@ -1205,8 +1224,8 @@ export default class TalkingHandler {
     this.talking4Decision4.changeNext2(this.friend1Talking3, this);
     this.talking4Decision4.changeNext3(this.friend1Talking4, this);
     this.talking4Decision4.changeNext4(this.friend1Talking3, this);
-    this.friend1Talking3.changeNext(this.selfSpeeche11, this);
-    this.selfSpeeche11.changeNext(this.selfSpeeche12, this);
+    this.friend1Talking3.changeNext(this.selfSpeech11, this);
+    this.selfSpeech11.changeNext(this.selfSpeech12, this);
     this.friend1Talking2.changeNext(this.empty12, this);
     //scene7
     this.friend1Talking5.changeNext(this.friend2Talking1, this);
@@ -1221,38 +1240,38 @@ export default class TalkingHandler {
     this.friend3Talking2.changeNext(this.friend1Talking7, this);
     this.friend1Talking7.changeNext(this.friend2Talking5, this);
     //scene8
-    this.friend1Talking8.changeNext(this.selfSpeeche13, this);
-    this.selfSpeeche13.changeNext(this.selfSpeeche14, this);
-    this.selfSpeeche14.changeNext(this.selfSpeeche15, this);
-    this.selfSpeeche15.changeNext(this._message2, this);
-    this._message2.changeNext(this.selfSpeeche16, this);
-    this.selfSpeeche16.changeNext(this.selfSpeeche17, this);
-    this.selfSpeeche17.changeNext(this.selfSpeeche18, this);
-    this.selfSpeeche18.changeNext(this.selfSpeeche19, this);
-    this.selfSpeeche19.changeNext(this.selfSpeeche20, this);
-    this.selfSpeeche20.changeNext(this.hologram4, this);
+    this.friend1Talking8.changeNext(this.selfSpeech13, this);
+    this.selfSpeech13.changeNext(this.selfSpeech14, this);
+    this.selfSpeech14.changeNext(this.selfSpeech15, this);
+    this.selfSpeech15.changeNext(this._message2, this);
+    this._message2.changeNext(this.selfSpeech16, this);
+    this.selfSpeech16.changeNext(this.selfSpeech17, this);
+    this.selfSpeech17.changeNext(this.selfSpeech18, this);
+    this.selfSpeech18.changeNext(this.selfSpeech19, this);
+    this.selfSpeech19.changeNext(this.selfSpeech20, this);
+    this.selfSpeech20.changeNext(this.hologram4, this);
     this.hologram4.changeNext(this.hologram5, this);
-    this.friend1Talking7.changeNext(this.selfSpeeche21, this);
-    this.selfSpeeche21.changeNext(this.selfSpeeche22, this);
-    this.selfSpeeche22.changeNext(this.hologram4, this);
+    this.friend1Talking7.changeNext(this.selfSpeech21, this);
+    this.selfSpeech21.changeNext(this.selfSpeech22, this);
+    this.selfSpeech22.changeNext(this.hologram4, this);
     this.hologram5.changeNext(this.talking2Decision9, this);
     this.talking2Decision9.changeNext1(this.hologram6, this);
     this.talking2Decision9.changeNext2(this.hologram6, this);
     this.hologram6.changeNext(this.end, this);
-    this.selfSpeeche12.changeNext(this.hologram4, this);
+    this.selfSpeech12.changeNext(this.hologram4, this);
   }
 
-  get selfSpeeche2() {
-    if (this.activeTalk != this._selfSpeeche2) {
-      this._selfSpeeche2.text = random(this.selfSpeecheArray1);
-      return this._selfSpeeche2;
+  get selfSpeech2() {
+    if (this.activeTalk != this._selfSpeech2) {
+      this._selfSpeech2.text = random(this.selfSpeechArray1);
+      return this._selfSpeech2;
     }
   }
   get hologram1() {
     this._hologram1.text =
       "Hallo " +
       this.name.name.join("") +
-      ", ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch im [Gebäude?]. Bitte mach dich auf den Weg.";
+      ", ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch bei NanoGen Corporation. Bitte mach dich auf den Weg.";
 
     return this._hologram1;
   }
@@ -1260,7 +1279,7 @@ export default class TalkingHandler {
     this._bossTalking1.text =
       "Guten Tag, " +
       this.name.name.join("") +
-      "\n\nIch hoffe Sie haben gut hierher gefunden. Am besten wir beginnen direkt.";
+      ".\n\nIch bin Venus Lee, freut mich Sie kennenzulernen.";
 
     return this._bossTalking1;
   }
@@ -1283,7 +1302,7 @@ export default class TalkingHandler {
     this._partnerTalking9.text =
       "Danke für dein Verständnis, " +
       this.name.name.join("") +
-      "!\nIch hoffe wir können es einfach vergessen.";
+      "!\nIch hoffe, wir können es einfach vergessen.";
     return this._partnerTalking9;
   }
   get workerTalking1() {
