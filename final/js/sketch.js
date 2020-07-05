@@ -72,7 +72,7 @@ let phoneButton = new Button(1245, 630, 65, 100);
 let character = new Button(20, 630, 100, 100);
 let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(305, 630, 700, 100);
-let xCharacterButton = new Button(1000, 145, 25, 25);
+let xCharacterButton = new Button(958, 160, 25, 25);
 let characterOverview = new CharacterOverview(
   360,
   150,
@@ -345,7 +345,7 @@ function mouseMoved() {
   if (character.triggered === true) {
     xCharacterButton.mouseMoved();
   }
-  if (phoneButton.triggert === true) {
+  if (phoneButton.triggered === true) {
     xPhoneButton.mouseMoved();
   }
   if (
@@ -447,7 +447,7 @@ function mouseClicked() {
   if (character.triggered === true) {
     xCharacterButton.mouseClicked();
   }
-  if (phoneButton.triggert === true) {
+  if (phoneButton.triggered === true) {
     xPhoneButton.mouseClicked();
   }
   if (
@@ -663,10 +663,19 @@ function draw() {
         fill(220, 220, 220);
         text("09:00", 660, 200);
         xPhoneButton.display();
-        textSize(15);
+
+        if (xPhoneButton.triggered === true) {
+          phoneButton.triggered = false;
+          xPhoneButton.triggered = false;
+        }
+        textSize(14);
         noStroke();
-        fill(220, 220, 220);
-        text("x", 790, 48);
+        if (xPhoneButton.effect === true) {
+          fill(220, 220, 220);
+        } else {
+          fill(100, 100, 100);
+        }
+        text("x", 791.7, 46.3);
       }
       window1Button.display();
       image(characterButton, 20, 630, 100, 100);
@@ -741,6 +750,19 @@ function draw() {
         textAlign(CENTER);
         fill(220, 220, 220);
         text("11:00", 660, 200);
+        xPhoneButton.display();
+        if (xPhoneButton.triggered === true) {
+          phoneButton.triggered = false;
+          xPhoneButton.triggered = false;
+        }
+        textSize(14);
+        noStroke();
+        if (xPhoneButton.effect === true) {
+          fill(220, 220, 220);
+        } else {
+          fill(100, 100, 100);
+        }
+        text("x", 791.7, 46.3);
       }
       if (bossButton.effect === true) {
         image(officeBoss, 15, 15, 1300, 600);
@@ -1162,6 +1184,19 @@ function draw() {
         textAlign(CENTER);
         fill(220, 220, 220);
         text("14:00", 660, 200);
+        xPhoneButton.display();
+        if (xPhoneButton.triggered === true) {
+          phoneButton.triggered = false;
+          xPhoneButton.triggered = false;
+        }
+        textSize(14);
+        noStroke();
+        if (xPhoneButton.effect === true) {
+          fill(220, 220, 220);
+        } else {
+          fill(100, 100, 100);
+        }
+        text("x", 791.7, 46.3);
       }
       doorButton.display();
       if (doorButton.triggered === true) {
@@ -1275,6 +1310,19 @@ function draw() {
         textAlign(CENTER);
         fill(220, 220, 220);
         text("17:00", 660, 200);
+        xPhoneButton.display();
+        if (xPhoneButton.triggered === true) {
+          phoneButton.triggered = false;
+          xPhoneButton.triggered = false;
+        }
+        textSize(14);
+        noStroke();
+        if (xPhoneButton.effect === true) {
+          fill(220, 220, 220);
+        } else {
+          fill(100, 100, 100);
+        }
+        text("x", 791.7, 46.3);
 
         image(phoneButtonImage, 470, 25, 360, 580);
         talkingHandler.activeTalk = talkingHandler.friend1Talking1;
@@ -1394,6 +1442,19 @@ function draw() {
         textAlign(CENTER);
         fill(220, 220, 220);
         text("22:00", 660, 200);
+        xPhoneButton.display();
+        if (xPhoneButton.triggered === true) {
+          phoneButton.triggered = false;
+          xPhoneButton.triggered = false;
+        }
+        textSize(14);
+        noStroke();
+        if (xPhoneButton.effect === true) {
+          fill(220, 220, 220);
+        } else {
+          fill(100, 100, 100);
+        }
+        text("x", 791.7, 46.3);
       }
       break;
     case talkingHandler.selfSpeech25:
