@@ -471,7 +471,10 @@ function mouseClicked() {
   ) {
     leaveScreen.mouseClicked();
   }
-  if (talkingHandler.activeTalk === talkingHandler.hologramEmotion1) {
+  if (
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion1 ||
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion2
+  ) {
     happyButton.mouseClicked();
     surprisedButton.mouseClicked();
     neutralButton.mouseClicked();
@@ -1184,6 +1187,63 @@ function draw() {
       image(partnerFacetime, 510, 35, 300, 580);
       doorButton.triggered = false;
       break;
+    case talkingHandler.hologramEmotion2:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(hologram, 331, 159, 654, 292);
+      image(smiley, 402, 315, 511, 96);
+      happyButton.display();
+      surprisedButton.display();
+      neutralButton.display();
+      sadButton.display();
+      angryButton.display();
+      if (happyButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(451, 363, 98, 98);
+      }
+      if (surprisedButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(555, 363, 98, 98);
+      }
+      if (neutralButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(659, 363, 98, 98);
+      }
+      if (sadButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(763, 363, 98, 98);
+      }
+      if (angryButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(865, 363, 98, 98);
+      }
+      if (happyButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.empty10;
+      }
+      if (surprisedButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.empty10;
+      }
+      if (neutralButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.empty10;
+      }
+      if (sadButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.empty10;
+      }
+      if (angryButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.empty10;
+      }
+      break;
     case talkingHandler.empty10:
       j = 0;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1659,6 +1719,7 @@ function draw() {
         relode();
       }
       break;
+    // case Abspann:
   }
 
   if (start.start === false) {

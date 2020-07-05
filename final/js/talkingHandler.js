@@ -563,6 +563,7 @@ export default class TalkingHandler {
       "Ich",
       "War das etwa ein Kuss? Sie gehen gemeinsam aus der Bar raus…"
     );
+
     this.selfSpeech10 = new Selfspeech(
       305,
       630,
@@ -705,6 +706,11 @@ export default class TalkingHandler {
       100,
       "Pastell",
       "Wie auch immer, Tschüss."
+    );
+    this.hologramEmotion2 = new HologramEmotion(
+      360,
+      150,
+      "Wie hast du dich gefühlt?"
     );
 
     //scene5
@@ -1201,8 +1207,8 @@ export default class TalkingHandler {
     this.partnerTalking10.changeNext(this.empty9, this);
     this.userTalking2.changeNext(this.partnerTalking11, this);
     this.userTalking3.changeNext(this.partnerTalking12, this);
-    this.partnerTalking11.changeNext(this.empty10, this);
-    this.partnerTalking12.changeNext(this.empty10, this);
+    this.partnerTalking11.changeNext(this.hologramEmotion2, this);
+    this.partnerTalking12.changeNext(this.hologramEmotion2, this);
     //scene5
     this._workerTalking1.changeNext(this.workerTalking2, this);
     this.workerTalking2.changeNext(this.workerTalking3, this);
