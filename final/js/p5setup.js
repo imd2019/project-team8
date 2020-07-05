@@ -70,6 +70,7 @@ let mentorSound22;
 let mentorSound23;
 
 let music1;
+let music2;
 
 //Schriftart Hack
 let myFont;
@@ -140,7 +141,9 @@ function preload() {
   mentorSound21 = loadSound("sound/mentor/mentorsound21.mp3");
   mentorSound22 = loadSound("sound/mentor/mentorsound22.mp3");
   mentorSound23 = loadSound("sound/mentor/mentorsound23.mp3");
-  music1 =loadSound("sound/musik1.mp3");
+  music1 =loadSound("sound/music1.mp3");
+  music2 =loadSound("sound/music2.mp3");
+
 
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
@@ -227,4 +230,5 @@ export {
   mentorSound22,
   mentorSound23,
   music1,
+  music2,
 };

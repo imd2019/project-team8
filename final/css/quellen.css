@@ -12,8 +12,8 @@ html {
   /* top, right/left, bottom */
   /* margin: 30px 50px 75px; */
   /*  justify-content: center;
- align-items: center; 
-  background-size: cover;*/
+   align-items: center; 
+    background-size: cover;*/
 }
 
 body {
@@ -25,26 +25,6 @@ body {
   margin: 0 auto;
   margin-top: 25px;
 }
-
-h1 {
-  /* color: white; */
-  top: 100px;
-  text-align: center;
-  font-size: 60px;
-  font-family: Sneakers Script;
-  src: url ("https://use.typekit.net/dss7qvd.css");
-}
-
-p {
-  top: 100px;
-  text-align: center;
-  font-size: 30px;
-  font-family: hack, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  src: url ("https://use.typekit.net/dss7qvd.css");
-}
-
 img {
   align-items: center;
   background-position: center;
@@ -55,15 +35,11 @@ img {
   margin-left: 466px;
 }
 
-.Credits {
-  /* color: rgb(220, 220, 220); */
-  align-items: center;
+h1 {
+  /* color: white; */
+  top: 100px;
   text-align: center;
-  width: 100%;
-  height: 100%;
-  font-size: 30px;
-  font-family: hack, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-size: 60px;
+  font-family: Hack;
   src: url ("https://use.typekit.net/dss7qvd.css");
 }
