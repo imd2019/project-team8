@@ -55,12 +55,14 @@ export default class CharacterOverview {
     } else {
       fill(100, 100, 100);
     }
-    textSize(15);
+    textSize(20);
     textAlign(CENTER);
     text("x", this.x + 613, this.y + 25);
     textSize(15);
     textAlign(LEFT);
     fill(220, 220, 220);
     text("Name: " + this.name.name.join(""), this.x + 40, this.y + 40);
+    text("Freundin: Pastell", this.x + 40, this.y + 100);
+    // this.text()
   }
 }
