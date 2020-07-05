@@ -43,28 +43,26 @@ h1 {
   font-family: Hack;
   src: url ("https://use.typekit.net/dss7qvd.css");
 }
+p {
+  color: navy;
+  text-indent: 30px;
+  text-transform: uppercase;
+}
 
-.quellen {
-  /* color: white; */
+/* .quellen {
   top: 100px;
   text-align: center;
   font-size: 10px;
   font-family: Hack;
   src: url ("https://use.typekit.net/dss7qvd.css");
-}
+} */
 
 /* p {
-    color: navy;
-    text-indent: 30px;
-    text-transform: uppercase;
-  } */
-
-  p {
-    top: 100px;
-    text-align: center;
-    font-size: 30px;
-    font-family: hack, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    src: url ("https://use.typekit.net/dss7qvd.css");
-  }
+  top: 100px;
+  text-align: center;
+  font-size: 30px;
+  font-family: hack, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+} */
