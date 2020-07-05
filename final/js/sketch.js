@@ -111,7 +111,7 @@ let characterOverview5 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Entscheide dich ob du mit Feiern gehst"
+  "Entscheide dich ob du Teil dieser Welt werden möchtest"
 );
 let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
@@ -1873,7 +1873,7 @@ function draw() {
         text("ENDE", 650, 300);
       } else if (e >= 30) {
         credits.display();
-        credits.y--;
+        credits.y -= 3;
         // // creditsY + 0, 2;
         // creditsY = creditsY-3;
       }

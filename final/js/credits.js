@@ -30,7 +30,7 @@ export default class Credits {
     text("Marie-Lou Weymann", this.x, this.y + 600);
     text("Freepik", this.x, this.y + 750);
     //Timer
-    if (this.i >= 1000) {
+    if (this.i >= 700) {
       image(hdaAbspann, 15, 15, 1300, 600, 0, 0, 1920, 900);
     }
   }
