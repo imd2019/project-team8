@@ -1088,6 +1088,7 @@ export default class TalkingHandler {
       150,
       "Guten Morgen. Ich hoffe, du bist schon wach, denn die Zeit läuft bald ab.\n\nIch habe fürs Erste genug Informationen gesammelt.\nHier, ich schicke sie dir."
     );
+    this.hologramEvaluation = new Hologram();
     this.hologram5 = new Hologram(
       360,
       150,
@@ -1261,7 +1262,8 @@ export default class TalkingHandler {
     this.selfSpeech18.changeNext(this.selfSpeech19, this);
     this.selfSpeech19.changeNext(this.selfSpeech20, this);
     this.selfSpeech20.changeNext(this.hologramEmotion3, this);
-    this.hologram4.changeNext(this.hologram5, this);
+    this.hologram4.changeNext(this.hologramEvaluation, this);
+    this.hologramEvaluation.changeNext(this.hologram5, this);
     this.friend1Talking7.changeNext(this.selfSpeech21, this);
     this.selfSpeech21.changeNext(this.selfSpeech22, this);
     this.selfSpeech22.changeNext(this.hologramEmotion3, this);

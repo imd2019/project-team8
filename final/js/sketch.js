@@ -103,6 +103,12 @@ let j = 0;
 let s = 0;
 let e = 0;
 
+let happy = 0;
+let surprised = 0;
+let neutral = 0;
+let sad = 0;
+let angry = 0;
+
 //Abspann
 let credits = new Credits(700, 600);
 
@@ -985,18 +991,23 @@ function draw() {
         ellipse(865, 363, 98, 98);
       }
       if (happyButton.triggered === true) {
+        happy += 1;
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
       if (surprisedButton.triggered === true) {
+        surprised += 1;
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
       if (neutralButton.triggered === true) {
+        neutral += 1;
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
       if (sadButton.triggered === true) {
+        sad += 1;
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
       if (angryButton.triggered === true) {
+        angry += 1;
         talkingHandler.activeTalk = talkingHandler.hologram2;
       }
       break;
@@ -1243,18 +1254,23 @@ function draw() {
         ellipse(865, 363, 98, 98);
       }
       if (happyButton.triggered === true) {
+        happy += 1;
         talkingHandler.activeTalk = talkingHandler.empty10;
       }
       if (surprisedButton.triggered === true) {
+        surprised += 1;
         talkingHandler.activeTalk = talkingHandler.empty10;
       }
       if (neutralButton.triggered === true) {
+        neutral += 1;
         talkingHandler.activeTalk = talkingHandler.empty10;
       }
       if (sadButton.triggered === true) {
+        sad += 1;
         talkingHandler.activeTalk = talkingHandler.empty10;
       }
       if (angryButton.triggered === true) {
+        angry += 1;
         talkingHandler.activeTalk = talkingHandler.empty10;
       }
       break;
@@ -1734,18 +1750,23 @@ function draw() {
         ellipse(865, 363, 98, 98);
       }
       if (happyButton.triggered === true) {
+        happy += 1;
         talkingHandler.activeTalk = talkingHandler.hologram4;
       }
       if (surprisedButton.triggered === true) {
+        surprised += 1;
         talkingHandler.activeTalk = talkingHandler.hologram4;
       }
       if (neutralButton.triggered === true) {
+        neutral += 1;
         talkingHandler.activeTalk = talkingHandler.hologram4;
       }
       if (sadButton.triggered === true) {
+        sad += 1;
         talkingHandler.activeTalk = talkingHandler.hologram4;
       }
       if (angryButton.triggered === true) {
+        angry += 1;
         talkingHandler.activeTalk = talkingHandler.hologram4;
       }
       break;
@@ -1753,6 +1774,12 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.hologramEvaluation:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(hologram, 331, 159, 654, 292);
       break;
     case talkingHandler.hologram5:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
