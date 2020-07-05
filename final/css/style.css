@@ -39,7 +39,9 @@ p {
   top: 100px;
   text-align: center;
   font-size: 30px;
-  font-family: Hack;
+  font-family: hack, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   src: url ("https://use.typekit.net/dss7qvd.css");
 }
 
