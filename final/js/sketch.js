@@ -1568,6 +1568,7 @@ function draw() {
       text("ENDE", 650, 300);
       relode();
       break;
+      // case Abspann:
   }
   if (start.start === false) {
     start.display();
