@@ -56,6 +56,7 @@ import {
   mentorSound22,
   mentorSound23,
   music1,
+  music2,
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -103,6 +104,7 @@ let i = 0;
 let j = 0;
 let s = 0;
 let e = 0;
+let m = 0;
 
 let happy = 0;
 let surprised = 0;
@@ -119,12 +121,23 @@ function relode() {
 
 function sound() {
 
-// music1.play();
 
+if (m === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1){
+  m++;
+  music1.play();
+  music1.loop();
+}
+if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2){
+  m++;
+  music1.stop();
+  music2.play();
+  music2.loop();
+}
 
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
     s++;
     mentorSound1.play();
+    
   }
 
   if (s === 1 && talkingHandler.activeTalk === talkingHandler.mentorTalking2) {
