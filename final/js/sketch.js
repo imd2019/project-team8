@@ -907,7 +907,6 @@ function draw() {
       neutralButton.display();
       sadButton.display();
       angryButton.display();
-      if (happyButton.triggered === true) {
       if (happyButton.effect === true) {
         stroke(220, 220, 220);
         noFill();
