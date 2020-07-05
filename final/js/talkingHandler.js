@@ -519,7 +519,7 @@ export default class TalkingHandler {
       520,
       150,
       280,
-      250,
+      450,
       "Hallo [Name].\n\nDu hast Pastell als deine Partnerin angegeben.\nWir haben sie in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
     this.selfSpeech6 = new Selfspeech(
@@ -1018,7 +1018,7 @@ export default class TalkingHandler {
       520,
       150,
       280,
-      250,
+      450,
       "Hallo [Name].\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect"
     );
     this.selfSpeech16 = new Selfspeech(
