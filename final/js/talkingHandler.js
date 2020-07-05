@@ -248,7 +248,7 @@ export default class TalkingHandler {
       "Ist es wirklich morgens? Es sieht so düster aus…",
       "Es wohnen so viele Menschen auf einem Fleck.",
     ];
-    this._selfSpeech2 = new Talking(
+    this._selfSpeech2 = new Selfspeech(
       305,
       630,
       700,
