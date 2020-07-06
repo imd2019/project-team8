@@ -158,7 +158,7 @@ function preload() {
   mentorSound23 = loadSound("sound/mentor/mentorsound23.mp3");
   music1 = loadSound("sound/theend.mp3");
   music2 = loadSound("sound/cyberpunk.mp3");
-  music3 = loadSound("sound/mentor/mentorsound11.mp3");
+  music3 = loadSound("sound/nightcrawler.mp3");
   music4 = loadSound("sound/cassettetape.mp3");
   music5 = loadSound("sound/outro.mp3");
   soundEffekt1 = loadSound("sound/teleport.mp3"); //wusch
