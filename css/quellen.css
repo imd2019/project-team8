@@ -57,15 +57,15 @@ h2 {
   src: url ("https://use.typekit.net/dss7qvd.css");
 }
 
-/* h3 {
+h3 {
   align-items: center;
   position: relative;
-  top: 300px;
+  /* top: 300px; */
   text-align: center;
   font-size: 30px;
   font-family: Hack;
   src: url ("https://use.typekit.net/dss7qvd.css");
-} */
+}
 
 p {
   align-items: center;
@@ -76,5 +76,9 @@ p {
   /* font-weight: 700; */
   font-style: normal;
   src: url ("https://use.typekit.net/dss7qvd.css");
+  color: #dcdcdc;
+}
+
+a {
   color: #dcdcdc;
 }

@@ -11,10 +11,12 @@ export default class Button {
   display() {
     noFill();
     if (this.effect === true) {
-      stroke(200, 200, 200);
+      //stroke(200, 200, 200);
+      noStroke();
       strokeWeight(2);
     } else {
-      stroke(60, 60, 60);
+      noStroke();
+      //stroke(60, 60, 60);
       strokeWeight(5);
     }
 
