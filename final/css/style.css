@@ -30,9 +30,13 @@ h1 {
   /* color: white; */
   top: 100px;
   text-align: center;
-  font-size: 60px;
-  font-family: Sneakers Script;
+  font-size: 20px;
+  font-family: hack, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   src: url ("https://use.typekit.net/dss7qvd.css");
+  /* font-family: Sneakers Script;
+  src: url ("https://use.typekit.net/dss7qvd.css"); */
 }
 
 p {
