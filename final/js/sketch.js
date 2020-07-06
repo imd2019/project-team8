@@ -798,10 +798,10 @@ function draw() {
       break;
     case talkingHandler.empty4:
       i++;
-      if (i <= 10) {
+      if (i <= 20) {
         fill(220, 220, 220);
         rect(15, 15, 1300, 600);
-      } else if (i >= 26) {
+      } else if (i >= 36) {
         image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
         talkingHandler.activeTalk = talkingHandler.hologram1; //hologramAnimation1
       } else {
