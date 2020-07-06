@@ -33,6 +33,7 @@ let form;
 let smiley;
 let phoneText;
 let phoneTextEffect;
+let vibration;
 
 //Logo
 let logo;
@@ -123,6 +124,7 @@ function preload() {
   smiley = loadImage("png/objects/smiley1.png");
   phoneText = loadImage("png/objects/nachricht1.png");
   phoneTextEffect = loadImage("png/objects/nachricht2.png");
+  vibration = loadImage("png/objects/vibration.png");
 
   //Logo
   logo = loadImage("png/objects/logo.png");
@@ -218,6 +220,7 @@ export {
   friend,
   party,
   phoneBigclear,
+  vibration,
 };
 export { logo };
 export { myFont };

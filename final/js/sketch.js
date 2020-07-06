@@ -177,7 +177,6 @@ function sound() {
     a++;
     soundEffekt1.play();
   }
-  
   if (a === 1 && talkingHandler.activeTalk === talkingHandler.empty10) {
     a++;
     soundEffekt2.play();
