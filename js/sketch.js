@@ -2107,9 +2107,9 @@ function draw() {
       textAlign(LEFT);
       textSize(16);
       text(
-        "Du wurdest zu " +
+        "Durch deine Entscheidungen wurdest du zu " +
           surveilScore +
-          "% während deinem Aufenthalt überwacht",
+          "% während deines Aufenthalt überwacht",
         380,
         250
       );
