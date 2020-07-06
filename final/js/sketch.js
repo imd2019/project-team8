@@ -84,14 +84,14 @@ let characterOverview1 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Fahre zum Bewebungsgespräch"
+  "Fahre zum Bewebungsgespräch."
 );
 let characterOverview2 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Möchtest du deine ID preisgeben um den Job zu bekommen?"
+  "Möchtest du deine ID preisgeben, um den Job zu bekommen?"
 );
 let characterOverview3 = new CharacterOverview(
   360,
@@ -112,7 +112,7 @@ let characterOverview5 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Entscheide dich ob du Teil dieser Welt werden möchtest"
+  "Entscheide dich, ob du Teil dieser Welt werden möchtest."
 );
 let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
@@ -1948,11 +1948,13 @@ function draw() {
       textAlign(LEFT);
       textSize(16);
       text(
-        "Du wurdest " + surveilScore + "% während deinem Aufenthalt überwacht",
+        "Du wurdest zu " +
+          surveilScore +
+          "% während deinem Aufenthalt überwacht",
         380,
         250
       );
-      text("Deine Ausgewählten Emotionen:", 380, 315);
+      text("Deine ausgewählten Emotionen:", 380, 315);
       text(happy + "x", 435, 335);
       text(surprised + "x", 545, 335);
       text(neutral + "x", 650, 335);
