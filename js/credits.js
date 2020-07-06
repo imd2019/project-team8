@@ -29,6 +29,11 @@ export default class Credits {
     text("Afeni Sodatonou", this.x, this.y + 550);
     text("Marie-Lou Weymann", this.x, this.y + 600);
     text("Freepik", this.x, this.y + 750);
+    text("upklayk", this.x, this.y + 780);
+    text("vectorpocket", this.x, this.y + 780);
+    text("pch.vector", this.x, this.y + 780);
+    text("vectorpouch", this.x, this.y + 780);
+    // text("", this.x, this.y + 780);
     //Timer
     if (this.i >= 700) {
       image(hdaAbspann, 15, 15, 1300, 600, 0, 0, 1920, 900);
