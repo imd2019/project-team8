@@ -121,7 +121,7 @@ function preload() {
   form = loadImage("png/objects/form.png");
   friend = loadImage("png/objects/freund.png");
   party = loadImage("png/objects/party.png");
-  smiley = loadImage("png/objects/smiley1.png");
+  smiley = loadImage("png/objects/smiley.png");
   phoneText = loadImage("png/objects/nachricht1.png");
   phoneTextEffect = loadImage("png/objects/nachricht2.png");
   vibration = loadImage("png/objects/vibration.png");
