@@ -161,6 +161,7 @@ let surprised = 0;
 let neutral = 0;
 let sad = 0;
 let angry = 0;
+let securityDoor = false;
 
 //Abspann
 let credits = new Credits(700, 600);
@@ -1158,11 +1159,6 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
       image(smiley, 402, 315, 511, 96);
-      happyButton.display();
-      surprisedButton.display();
-      neutralButton.display();
-      sadButton.display();
-      angryButton.display();
       if (happyButton.effect === true) {
         stroke(220, 220, 220);
         noFill();
@@ -1432,11 +1428,6 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
       image(smiley, 402, 315, 511, 96);
-      happyButton.display();
-      surprisedButton.display();
-      neutralButton.display();
-      sadButton.display();
-      angryButton.display();
       if (happyButton.effect === true) {
         stroke(220, 220, 220);
         noFill();
@@ -1585,6 +1576,7 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       if (decision1.triggered === true) {
+        securityDoor = true;
         surveilScore += 12.5;
         talkingHandler.activeTalk = talkingHandler.workerTalking9;
         decision1.triggered = false;
