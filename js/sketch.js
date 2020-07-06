@@ -173,6 +173,7 @@ function sound() {
   if (a === 0 && talkingHandler.activeTalk === talkingHandler.empty4) {
     a++;
     soundEffekt1.play();
+    mentorSound23.stop();
   }
   if (a === 1 && talkingHandler.activeTalk === talkingHandler.empty10) {
     a++;
