@@ -2109,9 +2109,9 @@ function draw() {
       text(
         "Durch deine Entscheidungen wurdest du zu " +
           surveilScore +
-          "% während deines Aufenthalts überwacht.",
+          "% während \ndeines Aufenthalts überwacht.",
         380,
-        250
+        230
       );
       text("Deine ausgewählten Emotionen:", 380, 315);
       text(happy + "x", 435, 335);
