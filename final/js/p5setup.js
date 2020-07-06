@@ -158,7 +158,7 @@ function preload() {
   music2 = loadSound("sound/cyberpunk.mp3");
   music3 = loadSound("sound/mentor/mentorsound11.mp3");
   music4 = loadSound("sound/cassettetape.mp3");
-  music5 = loadSound("sound/mentor/mentorsound3.mp3");
+  music5 = loadSound("sound/outro.mp3");
   soundEffekt1 = loadSound("sound/music2.mp3"); //wusch
   soundEffekt2 = loadSound("sound/mentor/mentorsound2.mp3"); //handyklinglen
   soundEffekt3 = loadSound("sound/mentor/mentorsound21.mp3"); //fbi
