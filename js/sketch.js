@@ -31,7 +31,6 @@ import {
   clubBackgroundPeople,
   hologram,
   evaluationSmiley,
-  
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -66,7 +65,6 @@ import {
   soundEffekt2,
   soundEffekt3,
   soundEffekt4,
-
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -170,7 +168,6 @@ function relode() {
 }
 
 function sound() {
-
   //Effekte
   //wusch
   if (a === 0 && talkingHandler.activeTalk === talkingHandler.empty4) {
@@ -184,9 +181,8 @@ function sound() {
   }
   if (a >= 1 && talkingHandler.activeTalk === talkingHandler.workerTalking1) {
     a++;
-   soundEffekt2.stop();
+    soundEffekt2.stop();
   }
-
 
   if (a === 2 && talkingHandler.activeTalk === talkingHandler.empty11) {
     a++;
@@ -194,7 +190,7 @@ function sound() {
   }
   if (a >= 2 && talkingHandler.activeTalk === talkingHandler.friend1Talking1) {
     a++;
-   soundEffekt3.stop();
+    soundEffekt3.stop();
   }
 
   if (a === 3 && talkingHandler.activeTalk === talkingHandler.fbi) {
@@ -202,10 +198,9 @@ function sound() {
     soundEffekt4.play();
   }
 
-
   //music
 
-  if (m === 0 && talkingHandler.activeTalk ===  talkingHandler.hologram1) {
+  if (m === 0 && talkingHandler.activeTalk === talkingHandler.hologram1) {
     m++;
     soundEffekt1.stop();
     music1.play();
@@ -213,7 +208,7 @@ function sound() {
   }
   if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2) {
     m++;
-    
+
     music1.stop();
     music2.play();
     music2.loop();
@@ -225,23 +220,23 @@ function sound() {
     music3.loop();
   }
 
-  if (m === 3 &&  talkingHandler.activeTalk === talkingHandler.selfSpeech13 ) {
+  if (m === 3 && talkingHandler.activeTalk === talkingHandler.selfSpeech13) {
     m++;
-    music2.stop();// muss immer drin bleiben
+    music2.stop(); // muss immer drin bleiben
     music3.stop();
     music4.play();
     music4.loop();
   }
-  if (m === 3 &&  talkingHandler.activeTalk === talkingHandler.selfSpeech20 ) {
+  if (m === 3 && talkingHandler.activeTalk === talkingHandler.selfSpeech20) {
     m++;
-    music2.stop();// muss immer drin bleiben
+    music2.stop(); // muss immer drin bleiben
     music3.stop();
     music4.play();
     music4.loop();
   }
-  if (m === 3 &&  talkingHandler.activeTalk === talkingHandler.selfSpeech21 ) {
+  if (m === 3 && talkingHandler.activeTalk === talkingHandler.selfSpeech21) {
     m++;
-    music2.stop();// muss immer drin bleiben
+    music2.stop(); // muss immer drin bleiben
     music3.stop();
     music4.play();
     music4.loop();
@@ -249,12 +244,11 @@ function sound() {
   if (m <= 4 && talkingHandler.activeTalk === talkingHandler.end) {
     m++;
     soundEffekt4.stop();
-    music2.stop();// muss immer drin bleiben
+    music2.stop(); // muss immer drin bleiben
     music4.stop();
     music5.play();
     music5.loop();
   }
-
 
   //Mentor
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
@@ -639,7 +633,7 @@ function mouseClicked() {
   }
   if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
     c++;
-    if (c >= 2) {
+    if (c >= 3) {
       evaluationButton.mouseClicked();
       c = 0;
     }
@@ -1231,7 +1225,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneBigclear,510, 30, 300, 570);
+      image(phoneBigclear, 510, 30, 300, 570);
       break;
     case talkingHandler.selfSpeech6:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1262,7 +1256,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneBigclear,510, 30, 300, 570);
+      image(phoneBigclear, 510, 30, 300, 570);
 
       noStroke();
       fill(220, 220, 220);
@@ -1699,7 +1693,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(friend,510, 30, 300, 570);
+      image(friend, 510, 30, 300, 570);
       j++;
       if (j >= 20) {
         talkingHandler.activeTalk = talkingHandler.fbi;
@@ -2027,7 +2021,13 @@ function draw() {
       image(hologram, 331, 159, 654, 292);
       evaluationButton.display();
       image(evaluationSmiley, 402, 340, 511, 80);
+      strokeWeight(2);
+      stroke(0, 220, 240);
+      noFill();
+      rect(400, 270, 500, 20, 5);
       noStroke();
+      fill(0, 220, 240);
+      rect(400, 270, surveilScore * 5, 20, 5);
       fill(220, 220, 220);
       textAlign(LEFT);
       textSize(16);
@@ -2052,6 +2052,7 @@ function draw() {
       if (evaluationButton.triggered === true) {
         talkingHandler.activeTalk = talkingHandler.hologram5;
       }
+
       break;
     case talkingHandler.hologram5:
       evaluationButton.triggered = false;
@@ -2095,7 +2096,7 @@ function draw() {
       rect(10, 745, 1310, 1000);
       rect(10, 0, 1310, 10);
       end.display();
-      
+
       break;
     // case Abspann:
   }
