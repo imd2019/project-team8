@@ -72,6 +72,13 @@ let mentorSound23;
 
 let music1;
 let music2;
+let music3;
+let music4;
+let music5;
+
+let soundEffekt1;
+let soundEffekt2;
+let soundEffekt3;
 
 //Schriftart Hack
 let myFont;
@@ -146,6 +153,12 @@ function preload() {
   mentorSound23 = loadSound("sound/mentor/mentorsound23.mp3");
   music1 = loadSound("sound/music1.mp3");
   music2 = loadSound("sound/music2.mp3");
+  music3 = loadSound("sound/mentor/mentorsound11.mp3");
+  music4 = loadSound("sound/mentor/mentorsound23.mp3");
+  music5 = loadSound("sound/mentor/mentorsound3.mp3");
+  soundEffekt1 =loadSound("sound/music2.mp3");
+  soundEffekt2 =loadSound("sound/mentor/mentorsound2.mp3");
+  soundEffekt3=loadSound("sound/mentor/mentorsound21.mp3");
 
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
@@ -235,4 +248,10 @@ export {
   mentorSound23,
   music1,
   music2,
+  music3,
+  music4,
+  music5,
+  soundEffekt1,
+  soundEffekt2,
+  soundEffekt3,
 };
