@@ -800,7 +800,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Überlegen Sie sich es einfach nochmal und kommen Sie auf uns zu, wenn Sie Ihre Meinung ändern.\nGoodbye!"
+      "Überlegen Sie sich es einfach nochmal und kommen Sie auf uns zu, wenn Sie Ihre Meinung ändern.\n\nGoodbye!"
     );
 
     this.talking2Decision7 = new Talking2Decision(
