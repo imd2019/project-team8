@@ -1947,7 +1947,7 @@ function draw() {
       fill(220, 220, 220);
       textAlign(LEFT);
       textSize(16);
-      text("Deine Ausgewählten Emotionen:", 380, 315);
+      text("Deine ausgewählten Emotionen:", 380, 315);
       text(happy + "x", 435, 335);
       text(surprised + "x", 545, 335);
       text(neutral + "x", 650, 335);

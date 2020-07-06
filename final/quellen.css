@@ -43,19 +43,14 @@ h1 {
   font-family: Hack;
   src: url ("https://use.typekit.net/dss7qvd.css");
 }
-p {
-  color: navy;
-  text-indent: 30px;
-  text-transform: uppercase;
-}
 
-/* .quellen {
+.quellen {
   top: 100px;
   text-align: center;
   font-size: 10px;
   font-family: Hack;
   src: url ("https://use.typekit.net/dss7qvd.css");
-} */
+}
 
 /* p {
   top: 100px;
@@ -66,3 +61,11 @@ p {
   font-style: normal;
   src: url ("https://use.typekit.net/dss7qvd.css");
 } */
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
