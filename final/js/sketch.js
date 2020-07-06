@@ -31,9 +31,7 @@ import {
   clubBackgroundPeople,
   hologram,
   evaluationSmiley,
-  soundEffekt1,
-  soundEffekt2,
-  soundEffekt3,
+  
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -64,6 +62,10 @@ import {
   music3,
   music4,
   music5,
+  soundEffekt1,
+  soundEffekt2,
+  soundEffekt3,
+  soundEffekt4,
 
 } from "./p5setup.js";
 
@@ -170,10 +172,12 @@ function relode() {
 function sound() {
 
   //Effekte
+  //wusch
   if (a === 0 && talkingHandler.activeTalk === talkingHandler.empty4) {
     a++;
     soundEffekt1.play();
   }
+  
   if (a === 1 && talkingHandler.activeTalk === talkingHandler.empty10) {
     a++;
     soundEffekt2.play();
