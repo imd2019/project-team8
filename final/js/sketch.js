@@ -136,7 +136,7 @@ let carButton = new Button(545, 630, 220, 100);
 let trainButton = new Button(785, 630, 220, 100);
 let decision1 = new Button(305, 630, 340, 100);
 let decision2 = new Button(665, 630, 340, 100);
-let partyButton = new Button(140, 630, 540, 90);
+let partyButton = new Button(140, 630, 540, 50);
 
 let i = 0;
 let j = 0;
@@ -574,6 +574,7 @@ function mouseClicked() {
   if (
     talkingHandler.activeTalk === talkingHandler.talking2Decision3 ||
     talkingHandler.activeTalk === talkingHandler.talking2Decision4 ||
+    talkingHandler.activeTalk === talkingHandler.talking2Decision7 ||
     talkingHandler.activeTalk === talkingHandler.talking2Decision8
   ) {
     c++;
@@ -1592,9 +1593,10 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(friend, 510, 35, 300, 580);
       partyButton.display();
-      if (partyButton.triggert === true) {
+      if (partyButton.triggered === true) {
         surveilScore += 6.25;
         talkingHandler.activeTalk = talkingHandler.friend1Talking2;
+        partyButton.triggered = false;
       }
       break;
     case talkingHandler.friend1Talking2:
