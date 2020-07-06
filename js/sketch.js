@@ -166,7 +166,7 @@ let angry = 0;
 let securityDoor = false;
 
 //Abspann
-let credits = new Credits(700, 600);
+let credits = new Credits(650, 600);
 
 function relode() {
   window.location.reload();
