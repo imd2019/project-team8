@@ -2109,7 +2109,7 @@ function draw() {
       text(
         "Durch deine Entscheidungen wurdest du zu " +
           surveilScore +
-          "% während deines Aufenthalt überwacht",
+          "% während deines Aufenthalts überwacht.",
         380,
         250
       );
