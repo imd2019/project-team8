@@ -154,15 +154,15 @@ function preload() {
   mentorSound21 = loadSound("sound/mentor/mentorsound21.mp3");
   mentorSound22 = loadSound("sound/mentor/mentorsound22.mp3");
   mentorSound23 = loadSound("sound/mentor/mentorsound23.mp3");
-  music1 = loadSound("sound/music1.mp3");
-  music2 = loadSound("sound/music2.mp3");
+  music1 = loadSound("sound/theend.mp3");
+  music2 = loadSound("sound/cyberpunk.mp3");
   music3 = loadSound("sound/mentor/mentorsound11.mp3");
-  music4 = loadSound("sound/mentor/mentorsound23.mp3");
+  music4 = loadSound("sound/cassettetape.mp3");
   music5 = loadSound("sound/mentor/mentorsound3.mp3");
-  soundEffekt1 =loadSound("sound/music2.mp3"); //wusch
-  soundEffekt2 =loadSound("sound/mentor/mentorsound2.mp3");//handyklinglen
-  soundEffekt3=loadSound("sound/mentor/mentorsound21.mp3");//fbi
-  soundEffekt4=loadSound("sound/mentor/mentorsound21.mp3");//klingel
+  soundEffekt1 = loadSound("sound/music2.mp3"); //wusch
+  soundEffekt2 = loadSound("sound/mentor/mentorsound2.mp3"); //handyklinglen
+  soundEffekt3 = loadSound("sound/mentor/mentorsound21.mp3"); //fbi
+  soundEffekt4 = loadSound("sound/mentor/mentorsound21.mp3"); //klingel
 
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
