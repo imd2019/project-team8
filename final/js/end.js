@@ -11,6 +11,7 @@ export default class End extends Button {
       stroke(220, 220, 220);
       strokeWeight(6);
       rect(this.x, this.y, this.width, this.height, 15);
+      
     }
     fill(30, 30, 30, 180);
     stroke(180, 0, 125);
