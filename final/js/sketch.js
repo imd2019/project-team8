@@ -31,10 +31,7 @@ import {
   clubBackgroundPeople,
   hologram,
   evaluationSmiley,
-  vibration,
-  soundEffekt1,
-  soundEffekt2,
-  soundEffekt3,
+  
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -65,6 +62,11 @@ import {
   music3,
   music4,
   music5,
+  soundEffekt1,
+  soundEffekt2,
+  soundEffekt3,
+  soundEffekt4,
+
 } from "./p5setup.js";
 
 import Button from "./button.js";
@@ -151,7 +153,6 @@ let s = 0;
 let e = 0;
 let m = 0;
 let c = 0;
-let v = 0;
 let a = 0;
 
 let surveilScore = 0;
@@ -169,7 +170,9 @@ function relode() {
 }
 
 function sound() {
+
   //Effekte
+  //wusch
   if (a === 0 && talkingHandler.activeTalk === talkingHandler.empty4) {
     a++;
     soundEffekt1.play();
@@ -181,8 +184,9 @@ function sound() {
   }
   if (a >= 1 && talkingHandler.activeTalk === talkingHandler.workerTalking1) {
     a++;
-    soundEffekt2.stop();
+   soundEffekt2.stop();
   }
+
 
   if (a === 2 && talkingHandler.activeTalk === talkingHandler.empty11) {
     a++;
@@ -190,7 +194,7 @@ function sound() {
   }
   if (a >= 2 && talkingHandler.activeTalk === talkingHandler.friend1Talking1) {
     a++;
-    soundEffekt3.stop();
+   soundEffekt3.stop();
   }
 
   if (a === 3 && talkingHandler.activeTalk === talkingHandler.fbi) {
@@ -198,9 +202,10 @@ function sound() {
     soundEffekt4.play();
   }
 
+
   //music
 
-  if (m === 0 && talkingHandler.activeTalk === talkingHandler.hologram1) {
+  if (m === 0 && talkingHandler.activeTalk ===  talkingHandler.hologram1) {
     m++;
     soundEffekt1.stop();
     music1.play();
@@ -208,7 +213,7 @@ function sound() {
   }
   if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2) {
     m++;
-
+    
     music1.stop();
     music2.play();
     music2.loop();
@@ -220,23 +225,23 @@ function sound() {
     music3.loop();
   }
 
-  if (m === 3 && talkingHandler.activeTalk === talkingHandler.selfSpeech13) {
+  if (m === 3 &&  talkingHandler.activeTalk === talkingHandler.selfSpeech13 ) {
     m++;
-    music2.stop(); // muss immer drin bleiben
+    music2.stop();// muss immer drin bleiben
     music3.stop();
     music4.play();
     music4.loop();
   }
-  if (m === 3 && talkingHandler.activeTalk === talkingHandler.selfSpeech20) {
+  if (m === 3 &&  talkingHandler.activeTalk === talkingHandler.selfSpeech20 ) {
     m++;
-    music2.stop(); // muss immer drin bleiben
+    music2.stop();// muss immer drin bleiben
     music3.stop();
     music4.play();
     music4.loop();
   }
-  if (m === 3 && talkingHandler.activeTalk === talkingHandler.selfSpeech21) {
+  if (m === 3 &&  talkingHandler.activeTalk === talkingHandler.selfSpeech21 ) {
     m++;
-    music2.stop(); // muss immer drin bleiben
+    music2.stop();// muss immer drin bleiben
     music3.stop();
     music4.play();
     music4.loop();
@@ -244,11 +249,12 @@ function sound() {
   if (m <= 4 && talkingHandler.activeTalk === talkingHandler.end) {
     m++;
     soundEffekt4.stop();
-    music2.stop(); // muss immer drin bleiben
+    music2.stop();// muss immer drin bleiben
     music4.stop();
     music5.play();
     music5.loop();
   }
+
 
   //Mentor
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
@@ -633,7 +639,7 @@ function mouseClicked() {
   }
   if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
     c++;
-    if (c >= 3) {
+    if (c >= 2) {
       evaluationButton.mouseClicked();
       c = 0;
     }
@@ -1225,7 +1231,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneBigclear, 510, 30, 300, 570);
+      image(phoneBigclear,510, 30, 300, 570);
       break;
     case talkingHandler.selfSpeech6:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1256,7 +1262,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(phoneBigclear, 510, 30, 300, 570);
+      image(phoneBigclear,510, 30, 300, 570);
 
       noStroke();
       fill(220, 220, 220);
@@ -1613,7 +1619,6 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.empty11:
-      v++;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
@@ -1632,13 +1637,6 @@ function draw() {
       if (phoneButton.effect === true) {
         image(phoneTextEffect, 1243, 628, 69, 104);
       }
-      if (v >= 10) {
-        image(vibration, 1233, 618, 88, 123);
-      }
-      if (v >= 20) {
-        v = 0;
-      }
-
       if (phoneButton.triggered === true) {
         image(phoneBig, 510, 30, 300, 570); //gesperter Bildschirm
         fill(30, 30, 30);
@@ -1701,7 +1699,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      image(friend, 510, 30, 300, 570);
+      image(friend,510, 30, 300, 570);
       j++;
       if (j >= 20) {
         talkingHandler.activeTalk = talkingHandler.fbi;
@@ -2020,7 +2018,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      evaluationButton.triggered = false;
+      evaluationButton.effect = false;
       break;
     case talkingHandler.hologramEvaluation:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -2097,7 +2095,7 @@ function draw() {
       rect(10, 745, 1310, 1000);
       rect(10, 0, 1310, 10);
       end.display();
-
+      
       break;
     // case Abspann:
   }
@@ -2112,10 +2110,7 @@ function draw() {
   noFill();
   stroke(30, 30, 30);
   strokeWeight(10);
-  line(10, 10, 1320, 10);
-  line(10, 10, 10, 610);
-  line(1320, 10, 1320, 610);
-  // rect(10, 10, 1310, 740);
+  rect(10, 10, 1310, 610);
 }
 
 window.draw = draw;
