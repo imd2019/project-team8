@@ -68,7 +68,7 @@ import CharacterOverview from "./characterOverview.js";
 import Credits from "./credits.js";
 
 //Buttons
-let start = new Start(562.5, 337.5, 185, 65);
+let start = new Start(562.5, 450, 185, 65);
 let end = new End(562.5, 637.5, 185, 65);
 let beamerButton = new Button(650, 205, 230, 370, "Teleporter");
 let paper = new Paper();

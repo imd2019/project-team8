@@ -33,6 +33,9 @@ let smiley;
 let phoneText;
 let phoneTextEffect;
 
+//Logo
+let logo;
+
 //Handy_groß
 let phoneBig;
 let phoneBigclear;
@@ -40,9 +43,6 @@ let partnerFacetime;
 let partnerVideo;
 let friend;
 let party;
-
-// Charaktere
-// let mentor;
 
 //gesprochener Text
 let mentorSound1;
@@ -89,8 +89,8 @@ function preload() {
   officeBoss = loadImage("png/office-lady.png");
   clubBackground = loadImage("png/club.png");
   clubBackgroundFriends = loadImage("png/club-friends.png");
-  clubBackgroundDesk = loadImage("png/club-djconsole.png");
-  clubBackgroundPeople = loadImage("png/club-partypeople.png");
+  clubBackgroundDesk = loadImage("png/club-djane.png");
+  clubBackgroundPeople = loadImage("png/club-people.png");
   hdaAbspann = loadImage("png/hda.png");
 
   //Gegenstände
@@ -113,8 +113,9 @@ function preload() {
   smiley = loadImage("png/objects/smiley1.png");
   phoneText = loadImage("png/objects/nachricht1.png");
   phoneTextEffect = loadImage("png/objects/nachricht2.png");
-  // //Charaktere
-  // mentor = loadImage("png/character/mentor.png");
+
+  //Logo
+  logo = loadImage("png/objects/logo.png");
 
   //gesprochner Text
 
@@ -141,9 +142,8 @@ function preload() {
   mentorSound21 = loadSound("sound/mentor/mentorsound21.mp3");
   mentorSound22 = loadSound("sound/mentor/mentorsound22.mp3");
   mentorSound23 = loadSound("sound/mentor/mentorsound23.mp3");
-  music1 =loadSound("sound/music1.mp3");
-  music2 =loadSound("sound/music2.mp3");
-
+  music1 = loadSound("sound/music1.mp3");
+  music2 = loadSound("sound/music2.mp3");
 
   //Schriftart
   myFont = loadFont("font/Hack-Bold.ttf");
@@ -201,6 +201,7 @@ export {
   party,
   phoneBigclear,
 };
+export { logo };
 export { myFont };
 // export { mentor };
 
