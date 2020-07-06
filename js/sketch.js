@@ -32,6 +32,7 @@ import {
   hologram,
   evaluationSmiley,
   vibration,
+  newDoor,
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -136,6 +137,7 @@ let neutralButton = new Button(611, 315, 95, 95);
 let sadButton = new Button(715, 315, 95, 95);
 let angryButton = new Button(819, 315, 95, 95);
 let evaluationButton = new Button(335, 160, 650, 290);
+let swichScreen = new Button(305, 630, 700, 100);
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -186,7 +188,7 @@ function sound() {
   if (a >= 1 && talkingHandler.activeTalk === talkingHandler.workerTalking1) {
     a++;
     soundEffekt2.stop();
-    a=2;
+    a = 2;
   }
 
   if (a === 2 && talkingHandler.activeTalk === talkingHandler.empty11) {
@@ -197,7 +199,7 @@ function sound() {
   if (a >= 2 && talkingHandler.activeTalk === talkingHandler.friend1Talking1) {
     a++;
     soundEffekt3.stop();
-    a=3;
+    a = 3;
   }
 
   if (a === 3 && talkingHandler.activeTalk === talkingHandler.fbi) {
@@ -673,6 +675,16 @@ function mouseClicked() {
     c++;
     if (c >= 2) {
       partyButton.mouseClicked();
+      c = 0;
+    }
+  }
+  if (
+    talkingHandler.activeTalk === talkingHandler.selfSpeech19 ||
+    talkingHandler.activeTalk === talkingHandler.selfSpeech22
+  ) {
+    c++;
+    if (c >= 2) {
+      swichScreen.mouseClicked();
       c = 0;
     }
   }
@@ -1893,67 +1905,118 @@ function draw() {
       break;
     case talkingHandler.selfSpeech13:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.selfSpeech14:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.selfSpeech15:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.message2:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneBigclear, 510, 30, 300, 570);
       break;
     case talkingHandler.selfSpeech16:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(party, 510, 30, 300, 570);
       break;
     case talkingHandler.selfSpeech17:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(party, 510, 30, 300, 570);
       break;
     case talkingHandler.selfSpeech18:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(party, 510, 30, 300, 570);
       break;
     case talkingHandler.selfSpeech19:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(party, 510, 30, 300, 570);
+      if (swichScreen.triggered) {
+        if (securityDoor === true) {
+          talkingHandler.activeTalk = talkingHandler.hologram4;
+        } else {
+          talkingHandler.activeTalk = talkingHandler.selfSpeech20;
+        }
+      }
+
       break;
     case talkingHandler.selfSpeech20:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
 
       break;
     case talkingHandler.selfSpeech21:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.selfSpeech22:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
+      if (swichScreen.triggered) {
+        if (securityDoor === true) {
+          talkingHandler.activeTalk = talkingHandler.hologram4;
+        } else {
+          talkingHandler.activeTalk = talkingHandler.selfSpeech20;
+        }
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.hologramEmotion3:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
@@ -2016,12 +2079,18 @@ function draw() {
       break;
     case talkingHandler.hologram4:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       evaluationButton.triggered = false;
       break;
     case talkingHandler.hologramEvaluation:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
@@ -2063,16 +2132,25 @@ function draw() {
     case talkingHandler.hologram5:
       evaluationButton.triggered = false;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.talking2Decision9:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.hologram6:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;

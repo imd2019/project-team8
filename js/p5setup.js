@@ -16,6 +16,7 @@ let clubBackgroundPeople;
 let officewindow;
 let officecamera;
 let officeBoss;
+let newDoor;
 let hdaAbspann;
 
 //Gegenstände
@@ -101,6 +102,7 @@ function preload() {
   clubBackgroundFriends = loadImage("png/club-friends.png");
   clubBackgroundDesk = loadImage("png/club-djane.png");
   clubBackgroundPeople = loadImage("png/club-people.png");
+  newDoor = loadImage("png/messyRoom-newdoor-01.png");
   hdaAbspann = loadImage("png/hda.png");
 
   //Gegenstände
@@ -197,6 +199,7 @@ export {
   officecamera,
   officewindow,
   officeBoss,
+  newDoor,
   hdaAbspann,
 };
 export {
