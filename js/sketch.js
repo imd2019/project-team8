@@ -185,20 +185,24 @@ function sound() {
   if (a >= 1 && talkingHandler.activeTalk === talkingHandler.workerTalking1) {
     a++;
     soundEffekt2.stop();
+    a=2;
   }
 
   if (a === 2 && talkingHandler.activeTalk === talkingHandler.empty11) {
     a++;
     soundEffekt3.play();
+    soundEffekt3.loop();
   }
   if (a >= 2 && talkingHandler.activeTalk === talkingHandler.friend1Talking1) {
     a++;
     soundEffekt3.stop();
+    a=3;
   }
 
   if (a === 3 && talkingHandler.activeTalk === talkingHandler.fbi) {
     a++;
     soundEffekt4.play();
+    music4.stop();
   }
 
   //music
