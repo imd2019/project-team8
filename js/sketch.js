@@ -1,3 +1,4 @@
+//Import Hinterrgünde & Gegenstände
 import {
   laboratoryBackground,
   messyRoomBackground,
@@ -34,6 +35,7 @@ import {
   vibration,
   newDoor,
 } from "./p5setup.js";
+// Import Sounddateien
 import {
   mentorSound1,
   mentorSound2,
