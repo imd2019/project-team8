@@ -30,6 +30,7 @@ import {
   phoneBigclear,
   clubBackgroundPeople,
   hologram,
+  evaluationSmiley,
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -68,7 +69,7 @@ import CharacterOverview from "./characterOverview.js";
 import Credits from "./credits.js";
 
 //Buttons
-let start = new Start(562.5, 337.5, 185, 65);
+let start = new Start(562.5, 450, 185, 65);
 let end = new End(562.5, 637.5, 185, 65);
 let beamerButton = new Button(650, 205, 230, 370, "Teleporter");
 let paper = new Paper();
@@ -78,11 +79,40 @@ let character = new Button(20, 630, 100, 100);
 let window1Button = new Button(140, 120, 248, 270, "Fenster");
 let leaveScreen = new Button(305, 630, 700, 100);
 let xCharacterButton = new Button(958, 160, 25, 25);
-let characterOverview = new CharacterOverview(
+let characterOverview1 = new CharacterOverview(
   360,
   150,
   paper,
-  xCharacterButton
+  xCharacterButton,
+  "Fahre zum Bewebungsgespräch"
+);
+let characterOverview2 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Möchtest du deine ID preisgeben um den Job zu bekommen?"
+);
+let characterOverview3 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Vertraust du deiner Freundin?"
+);
+let characterOverview4 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Trinkst du Shots mit deinen Freunden?"
+);
+let characterOverview5 = new CharacterOverview(
+  360,
+  150,
+  paper,
+  xCharacterButton,
+  "Entscheide dich ob du Teil dieser Welt werden möchtest"
 );
 let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
@@ -97,6 +127,7 @@ let surprisedButton = new Button(507, 315, 95, 95);
 let neutralButton = new Button(611, 315, 95, 95);
 let sadButton = new Button(715, 315, 95, 95);
 let angryButton = new Button(819, 315, 95, 95);
+let evaluationButton = new Button(335, 160, 650, 290);
 
 let talkingHandler = new TalkingHandler(paper);
 
@@ -105,6 +136,7 @@ let j = 0;
 let s = 0;
 let e = 0;
 let m = 0;
+let c = 0;
 
 let happy = 0;
 let surprised = 0;
@@ -120,24 +152,23 @@ function relode() {
 }
 
 function sound() {
+  // music1.play();
 
-
-if (m === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1){
-  m++;
-  music1.play();
-  music1.loop();
-}
-if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2){
-  m++;
-  music1.stop();
-  music2.play();
-  music2.loop();
-}
+  if (m === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
+    m++;
+    music1.play();
+    music1.loop();
+  }
+  if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2) {
+    m++;
+    music1.stop();
+    music2.play();
+    music2.loop();
+  }
 
   if (s === 0 && talkingHandler.activeTalk === talkingHandler.mentorTalking1) {
     s++;
     mentorSound1.play();
-    
   }
 
   if (s === 1 && talkingHandler.activeTalk === talkingHandler.mentorTalking2) {
@@ -291,7 +322,9 @@ if (m === 1 && talkingHandler.activeTalk === talkingHandler.hologram2){
 }
 
 function keyPressed() {
-  paper.keyPressed();
+  if (talkingHandler.activeTalk === talkingHandler.empty2) {
+    paper.keyPressed();
+  }
 }
 window.keyPressed = keyPressed;
 
@@ -401,6 +434,9 @@ function mouseMoved() {
     sadButton.mouseMoved();
     angryButton.mouseMoved();
   }
+  if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
+    evaluationButton.mouseMoved();
+  }
 }
 window.mouseMoved = mouseMoved;
 
@@ -509,6 +545,12 @@ function mouseClicked() {
     neutralButton.mouseClicked();
     sadButton.mouseClicked();
     angryButton.mouseClicked();
+  }
+  if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
+    c++;
+    if (c >= 2) {
+      evaluationButton.mouseClicked();
+    }
   }
 }
 window.mouseClicked = mouseClicked;
@@ -728,12 +770,9 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview1.display();
         xCharacterButton.display();
-        //fill();
-        //noStroke();
-        //textSize();
-        //text();
+        // this.text = "Gehe zum Bewerbungsgespräch";
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
           xCharacterButton.triggered = false;
@@ -780,7 +819,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview2.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
@@ -1336,7 +1375,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview3.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
@@ -1417,7 +1456,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview4.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
@@ -1549,7 +1588,7 @@ function draw() {
         image(characterButtonEffect, 18, 628, 104, 104);
       }
       if (character.triggered === true) {
-        characterOverview.display();
+        characterOverview5.display();
         xCharacterButton.display();
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
@@ -1792,14 +1831,36 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      evaluationButton.effect = false;
       break;
     case talkingHandler.hologramEvaluation:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
+      evaluationButton.display();
+      image(evaluationSmiley, 402, 340, 511, 80);
+      noStroke();
+      fill(220, 220, 220);
+      textAlign(LEFT);
+      textSize(16);
+      text("Deine Ausgewählten Emotionen:", 380, 315);
+      text(happy + "x", 435, 335);
+      text(surprised + "x", 545, 335);
+      text(neutral + "x", 650, 335);
+      text(sad + "x", 760, 335);
+      text(angry + "x", 868, 335);
+      fill(100, 100, 100);
+      if (evaluationButton.effect === true) {
+        fill(220, 220, 220);
+      }
+      text("weiter", 878, 440);
+      if (evaluationButton.triggered === true) {
+        talkingHandler.activeTalk = talkingHandler.hologram5;
+      }
       break;
     case talkingHandler.hologram5:
+      evaluationButton.triggered = false;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
@@ -1826,7 +1887,7 @@ function draw() {
         text("ENDE", 650, 300);
       } else if (e >= 30) {
         credits.display();
-        credits.y--;
+        credits.y -= 3;
         // // creditsY + 0, 2;
         // creditsY = creditsY-3;
       }

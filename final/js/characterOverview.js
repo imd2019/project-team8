@@ -1,11 +1,12 @@
 import { characteroverview } from "./p5setup.js";
 
 export default class CharacterOverview {
-  constructor(x, y, name, button) {
+  constructor(x, y, name, button, text) {
     this.x = x;
     this.y = y;
     this.name = name;
     this.button = button;
+    this.text = text;
   }
   display() {
     image(characteroverview, 331, 159, 654, 292);
@@ -55,12 +56,14 @@ export default class CharacterOverview {
     } else {
       fill(100, 100, 100);
     }
-    textSize(15);
+    textSize(20);
     textAlign(CENTER);
     text("x", this.x + 613, this.y + 25);
     textSize(15);
     textAlign(LEFT);
     fill(220, 220, 220);
-    text("Name: " + this.name.name.join(""), this.x + 40, this.y + 40);
+    text("Name: " + this.name.name.join(""), this.x + 40, this.y + 80);
+    text("Freundin: Pastell", this.x + 40, this.y + 150);
+    text("Aktuelle Aufgabe:\n\n" + this.text, this.x + 40, this.y + 220);
   }
 }
