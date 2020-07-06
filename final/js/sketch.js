@@ -1505,7 +1505,7 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       if (decision1.triggered === true) {
-        surveilScore += 25;
+        surveilScore += 12.5;
         talkingHandler.activeTalk = talkingHandler.workerTalking9;
         decision1.triggered = false;
       }
@@ -1947,6 +1947,11 @@ function draw() {
       fill(220, 220, 220);
       textAlign(LEFT);
       textSize(16);
+      text(
+        "Du wurdest " + surveilScore + "% während deinem Aufenthalt überwacht",
+        380,
+        250
+      );
       text("Deine Ausgewählten Emotionen:", 380, 315);
       text(happy + "x", 435, 335);
       text(surprised + "x", 545, 335);
