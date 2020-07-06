@@ -31,6 +31,7 @@ import {
   clubBackgroundPeople,
   hologram,
   evaluationSmiley,
+  vibration,
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -144,6 +145,7 @@ let s = 0;
 let e = 0;
 let m = 0;
 let c = 0;
+let v = 0;
 
 let surveilScore = 0;
 let happy = 0;
@@ -556,7 +558,7 @@ function mouseClicked() {
   }
   if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
     c++;
-    if (c >= 2) {
+    if (c >= 3) {
       evaluationButton.mouseClicked();
       c = 0;
     }
@@ -1536,6 +1538,7 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.empty11:
+      v++;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
@@ -1554,6 +1557,13 @@ function draw() {
       if (phoneButton.effect === true) {
         image(phoneTextEffect, 1243, 628, 69, 104);
       }
+      if (v >= 10) {
+        image(vibration, 1233, 618, 88, 123);
+      }
+      if (v >= 20) {
+        v = 0;
+      }
+
       if (phoneButton.triggered === true) {
         image(phoneBig, 510, 35, 300, 580); //gesperter Bildschirm
         fill(30, 30, 30);
@@ -1934,7 +1944,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
-      evaluationButton.effect = false;
+      evaluationButton.triggered = false;
       break;
     case talkingHandler.hologramEvaluation:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -2023,7 +2033,10 @@ function draw() {
   noFill();
   stroke(30, 30, 30);
   strokeWeight(10);
-  rect(10, 10, 1310, 610);
+  line(10, 10, 1320, 10);
+  line(10, 10, 10, 610);
+  line(1320, 10, 1320, 610);
+  // rect(10, 10, 1310, 740);
 }
 
 window.draw = draw;
