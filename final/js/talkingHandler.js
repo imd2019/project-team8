@@ -1263,7 +1263,7 @@ export default class TalkingHandler {
     this.selfSpeech19.changeNext(this.selfSpeech20, this);
     this.selfSpeech20.changeNext(this.hologramEmotion3, this);
     this.hologram4.changeNext(this.hologramEvaluation, this);
-    this.hologramEvaluation.changeNext(this.hologram5, this);
+    // this.hologramEvaluation.changeNext(this.hologram5, this);
     this.friend1Talking7.changeNext(this.selfSpeech21, this);
     this.selfSpeech21.changeNext(this.selfSpeech22, this);
     this.selfSpeech22.changeNext(this.hologramEmotion3, this);

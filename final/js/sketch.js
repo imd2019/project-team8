@@ -30,6 +30,7 @@ import {
   phoneBigclear,
   clubBackgroundPeople,
   hologram,
+  evaluationSmiley,
 } from "./p5setup.js";
 import {
   mentorSound1,
@@ -135,6 +136,7 @@ let j = 0;
 let s = 0;
 let e = 0;
 let m = 0;
+let c = 0;
 
 let happy = 0;
 let surprised = 0;
@@ -320,7 +322,9 @@ function sound() {
 }
 
 function keyPressed() {
-  paper.keyPressed();
+  if (talkingHandler.activeTalk === talkingHandler.empty2) {
+    paper.keyPressed();
+  }
 }
 window.keyPressed = keyPressed;
 
@@ -543,7 +547,10 @@ function mouseClicked() {
     angryButton.mouseClicked();
   }
   if (talkingHandler.activeTalk === talkingHandler.hologramEvaluation) {
-    evaluationButton.mouseClicked();
+    c++;
+    if (c >= 2) {
+      evaluationButton.mouseClicked();
+    }
   }
 }
 window.mouseClicked = mouseClicked;
@@ -765,7 +772,7 @@ function draw() {
       if (character.triggered === true) {
         characterOverview1.display();
         xCharacterButton.display();
-        this.text = "Gehe zum Bewerbungsgespräch";
+        // this.text = "Gehe zum Bewerbungsgespräch";
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
           xCharacterButton.triggered = false;
@@ -1824,6 +1831,7 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      evaluationButton.effect = false;
       break;
     case talkingHandler.hologramEvaluation:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1831,16 +1839,22 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
       evaluationButton.display();
+      image(evaluationSmiley, 402, 340, 511, 80);
       noStroke();
       fill(220, 220, 220);
       textAlign(LEFT);
       textSize(16);
-      text("Deine Ausgewählten Emotionen:", 300, 300);
+      text("Deine Ausgewählten Emotionen:", 380, 315);
+      text(happy + "x", 435, 335);
+      text(surprised + "x", 545, 335);
+      text(neutral + "x", 650, 335);
+      text(sad + "x", 760, 335);
+      text(angry + "x", 868, 335);
       fill(100, 100, 100);
       if (evaluationButton.effect === true) {
         fill(220, 220, 220);
       }
-      text("weiter", 400, 600);
+      text("weiter", 878, 440);
       if (evaluationButton.triggered === true) {
         talkingHandler.activeTalk = talkingHandler.hologram5;
       }

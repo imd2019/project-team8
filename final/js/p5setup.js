@@ -28,6 +28,7 @@ let phoneImage;
 let phoneImageEffect;
 let hologram;
 let characteroverview;
+let evaluationSmiley;
 let form;
 let smiley;
 let phoneText;
@@ -107,6 +108,7 @@ function preload() {
   partnerFacetime = loadImage("png/objects/partnerfacetime.png");
   partnerVideo = loadImage("png/objects/partnervideo.png");
   characteroverview = loadImage("png/objects/characteroverview1.png");
+  evaluationSmiley = loadImage("png/objects/evaluationSmiley.png");
   form = loadImage("png/objects/form.png");
   friend = loadImage("png/objects/freund.png");
   party = loadImage("png/objects/party.png");
@@ -190,6 +192,7 @@ export {
   phoneImageEffect,
   hologram,
   characteroverview,
+  evaluationSmiley,
   phoneBig,
   partnerFacetime,
   partnerVideo,
