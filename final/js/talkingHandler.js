@@ -1150,9 +1150,9 @@ export default class TalkingHandler {
     this.selfSpeech3.changeNext(this.empty5, this);
     // this._selfSpeech2.changeNext(this.empty5, this);
     this.selfSpeech4.changeNext(this.talking3Decision1, this);
-    this.talking3Decision1.changeNext1(this.empty6, this);
-    this.talking3Decision1.changeNext2(this.empty6, this);
-    this.talking3Decision1.changeNext3(this.empty6, this);
+    // this.talking3Decision1.changeNext1(this.empty6, this);
+    // this.talking3Decision1.changeNext2(this.empty6, this);
+    // this.talking3Decision1.changeNext3(this.empty6, this);
     //scene3
     this._bossTalking1.changeNext(this.bossTalking1_1, this);
     this.bossTalking1_1.changeNext(this.bossTalking2, this);
@@ -1178,8 +1178,8 @@ export default class TalkingHandler {
     this.bossTalking8.changeNext(this.bossTalking5, this);
     this.bossTalking9.changeNext(this.selfSpeech5, this);
     this.selfSpeech5.changeNext(this.talking2Decision3, this);
-    this.talking2Decision3.changeNext1(this.bossTalking10, this);
-    this.talking2Decision3.changeNext2(this.bossTalking12, this);
+    // this.talking2Decision3.changeNext1(this.bossTalking10, this);
+    // this.talking2Decision3.changeNext2(this.bossTalking12, this);
     this.bossTalking10.changeNext(this.bossTalking11, this);
     this.bossTalking11.changeNext(this.hologram2, this); //hologramAnimation2
     this.bossTalking12.changeNext(this.bossTalking13, this);
@@ -1190,8 +1190,8 @@ export default class TalkingHandler {
     this.hologram2.changeNext(this._message1, this);
     this._message1.changeNext(this.selfSpeech6, this);
     this.selfSpeech6.changeNext(this.talking2Decision4, this);
-    this.talking2Decision4.changeNext1(this.empty7, this);
-    this.talking2Decision4.changeNext2(this.selfSpeech7, this);
+    // this.talking2Decision4.changeNext1(this.empty7, this);
+    // this.talking2Decision4.changeNext2(this.selfSpeech7, this);
     this.selfSpeech7.changeNext(this.selfSpeech8, this);
     this.selfSpeech8.changeNext(this.selfSpeech9, this);
     this.selfSpeech9.changeNext(this.selfSpeech10, this);
@@ -1224,15 +1224,15 @@ export default class TalkingHandler {
     this.workerTalking6.changeNext(this.workerTalking7, this);
     this.workerTalking7.changeNext(this.workerTalking8, this);
     this.workerTalking8.changeNext(this.talking2Decision7, this);
-    this.talking2Decision7.changeNext1(this.workerTalking9, this);
-    this.talking2Decision7.changeNext2(this.workerTalking10, this);
+    // this.talking2Decision7.changeNext1(this.workerTalking9, this);
+    // this.talking2Decision7.changeNext2(this.workerTalking10, this);
     this.workerTalking9.changeNext(this.hologram3, this);
     this.workerTalking10.changeNext(this.workerTalking11, this);
     this.workerTalking11.changeNext(this.hologram3, this);
     this.hologram3.changeNext(this.empty11, this);
     //scene6
     this._friend1Talking1.changeNext(this.talking4Decision4, this);
-    this.talking4Decision4.changeNext1(this.friend1Talking2, this);
+    // this.talking4Decision4.changeNext1(this.friend1Talking2, this);
     this.talking4Decision4.changeNext2(this.friend1Talking3, this);
     this.talking4Decision4.changeNext3(this.friend1Talking4, this);
     this.talking4Decision4.changeNext4(this.friend1Talking3, this);
@@ -1247,8 +1247,8 @@ export default class TalkingHandler {
     this.friend2Talking2.changeNext(this._friend2Talking3, this);
     this._friend2Talking3.changeNext(this.friend2Talking4, this);
     this.friend2Talking4.changeNext(this.talking2Decision8, this);
-    this.talking2Decision8.changeNext1(this.friend3Talking2, this);
-    this.talking2Decision8.changeNext2(this.friend1Talking8, this);
+    // this.talking2Decision8.changeNext1(this.friend3Talking2, this);
+    // this.talking2Decision8.changeNext2(this.friend1Talking8, this);
     this.friend3Talking2.changeNext(this.friend1Talking7, this);
     this.friend1Talking7.changeNext(this.friend2Talking5, this);
     //scene8

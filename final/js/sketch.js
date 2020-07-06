@@ -91,14 +91,14 @@ let characterOverview1 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Fahre zum Bewebungsgespräch"
+  "Fahre zum Bewebungsgespräch."
 );
 let characterOverview2 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Möchtest du deine ID preisgeben um den Job zu bekommen?"
+  "Möchtest du deine ID preisgeben, um den Job zu bekommen?"
 );
 let characterOverview3 = new CharacterOverview(
   360,
@@ -119,7 +119,7 @@ let characterOverview5 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Entscheide dich ob du Teil dieser Welt werden möchtest"
+  "Entscheide dich, ob du Teil dieser Welt werden möchtest."
 );
 let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
@@ -138,6 +138,13 @@ let evaluationButton = new Button(335, 160, 650, 290);
 
 let talkingHandler = new TalkingHandler(paper);
 
+let bikeButton = new Button(305, 630, 220, 100);
+let carButton = new Button(545, 630, 220, 100);
+let trainButton = new Button(785, 630, 220, 100);
+let decision1 = new Button(305, 630, 340, 100);
+let decision2 = new Button(665, 630, 340, 100);
+let partyButton = new Button(140, 630, 540, 50);
+
 let i = 0;
 let j = 0;
 let s = 0;
@@ -146,6 +153,7 @@ let m = 0;
 let c = 0;
 let a = 0;
 
+let surveilScore = 0;
 let happy = 0;
 let surprised = 0;
 let neutral = 0;
@@ -630,6 +638,37 @@ function mouseClicked() {
     c++;
     if (c >= 2) {
       evaluationButton.mouseClicked();
+      c = 0;
+    }
+  }
+
+  if (talkingHandler.activeTalk === talkingHandler.talking3Decision1) {
+    c++;
+    if (c >= 2) {
+      bikeButton.mouseClicked();
+      carButton.mouseClicked();
+      trainButton.mouseClicked();
+      c = 0;
+    }
+  }
+  if (
+    talkingHandler.activeTalk === talkingHandler.talking2Decision3 ||
+    talkingHandler.activeTalk === talkingHandler.talking2Decision4 ||
+    talkingHandler.activeTalk === talkingHandler.talking2Decision7 ||
+    talkingHandler.activeTalk === talkingHandler.talking2Decision8
+  ) {
+    c++;
+    if (c >= 2) {
+      decision1.mouseClicked();
+      decision2.mouseClicked();
+      c = 0;
+    }
+  }
+  if (talkingHandler.activeTalk === talkingHandler.talking4Decision4) {
+    c++;
+    if (c >= 2) {
+      partyButton.mouseClicked();
+      c = 0;
     }
   }
 }
@@ -891,6 +930,21 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      bikeButton.display();
+      carButton.display();
+      trainButton.display();
+      if (bikeButton.triggered === true) {
+        surveilScore += 6.25;
+        talkingHandler.activeTalk = talkingHandler.empty6;
+      }
+      if (carButton.triggered === true) {
+        surveilScore += 12.5;
+        talkingHandler.activeTalk = talkingHandler.empty6;
+      }
+      if (trainButton.triggered === true) {
+        surveilScore += 18.75;
+        talkingHandler.activeTalk = talkingHandler.empty6;
+      }
       break;
     case talkingHandler.empty6:
       image(officeBackground, 15, 15, 1300, 600);
@@ -1055,6 +1109,18 @@ function draw() {
       image(officeBackground, 15, 15, 1300, 600);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      decision1.display();
+      decision2.display();
+      if (decision1.triggered === true) {
+        surveilScore += 0;
+        talkingHandler.activeTalk = talkingHandler.bossTalking10;
+        decision1.triggered = false;
+      }
+      if (decision2.triggered === true) {
+        surveilScore += 25;
+        talkingHandler.activeTalk = talkingHandler.bossTalking12;
+        decision2.triggered = false;
+      }
       break;
     case talkingHandler.bossTalking10:
       image(officeBackground, 15, 15, 1300, 600);
@@ -1170,6 +1236,7 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneBigclear, 510, 30, 300, 570);
       talkingHandler.message1.display();
+
       break;
     case talkingHandler.talking2Decision4:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1177,6 +1244,16 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(phoneBigclear, 510, 30, 300, 570);
       talkingHandler.message1.display();
+      if (decision1.triggered === true) {
+        surveilScore += 0;
+        talkingHandler.activeTalk = talkingHandler.empty7;
+        decision1.triggered = false;
+      }
+      if (decision2.triggered === true) {
+        surveilScore += 12.5;
+        talkingHandler.activeTalk = talkingHandler.selfSpeech7;
+        decision2.triggered = false;
+      }
       break;
     case talkingHandler.empty7:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1507,6 +1584,16 @@ function draw() {
       image(hirerBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      if (decision1.triggered === true) {
+        surveilScore += 12.5;
+        talkingHandler.activeTalk = talkingHandler.workerTalking9;
+        decision1.triggered = false;
+      }
+      if (decision2.triggered === true) {
+        surveilScore += 0;
+        talkingHandler.activeTalk = talkingHandler.workerTalking10;
+        decision2.triggered = false;
+      }
       break;
     case talkingHandler.workerTalking9:
       image(hirerBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1585,6 +1672,13 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(friend, 510, 30, 300, 570);
+      image(friend, 510, 35, 300, 580);
+      partyButton.display();
+      if (partyButton.triggered === true) {
+        surveilScore += 6.25;
+        talkingHandler.activeTalk = talkingHandler.friend1Talking2;
+        partyButton.triggered = false;
+      }
       break;
     case talkingHandler.friend1Talking2:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1763,6 +1857,16 @@ function draw() {
       image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      if (decision1.triggered === true) {
+        surveilScore += 0;
+        talkingHandler.activeTalk = talkingHandler.friend3Talking2;
+        decision1.triggered = false;
+      }
+      if (decision2.triggered === true) {
+        surveilScore += 25;
+        talkingHandler.activeTalk = talkingHandler.friend1Talking8;
+        decision2.triggered = false;
+      }
       break;
     case talkingHandler.friend3Talking2:
       image(clubBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -1924,7 +2028,14 @@ function draw() {
       fill(220, 220, 220);
       textAlign(LEFT);
       textSize(16);
-      text("Deine Ausgewählten Emotionen:", 380, 315);
+      text(
+        "Du wurdest zu " +
+          surveilScore +
+          "% während deinem Aufenthalt überwacht",
+        380,
+        250
+      );
+      text("Deine ausgewählten Emotionen:", 380, 315);
       text(happy + "x", 435, 335);
       text(surprised + "x", 545, 335);
       text(neutral + "x", 650, 335);
@@ -1991,7 +2102,7 @@ function draw() {
   } else {
     talkingHandler.display();
   }
-
+  console.log(surveilScore);
   //Umrandung
   noFill();
   stroke(30, 30, 30);
