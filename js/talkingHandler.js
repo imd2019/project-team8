@@ -1181,7 +1181,7 @@ export default class TalkingHandler {
     // this.talking2Decision3.changeNext1(this.bossTalking10, this);
     // this.talking2Decision3.changeNext2(this.bossTalking12, this);
     this.bossTalking10.changeNext(this.bossTalking11, this);
-    this.bossTalking11.changeNext(this.hologram2, this); //hologramAnimation2
+    this.bossTalking11.changeNext(this.hologramEmotion1, this); //hologramAnimation2
     this.bossTalking12.changeNext(this.bossTalking13, this);
     this.bossTalking13.changeNext(this.bossTalking14, this);
     this.bossTalking14.changeNext(this.bossTalking15, this);

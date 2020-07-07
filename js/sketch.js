@@ -1505,6 +1505,9 @@ function draw() {
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      if (doorButton.effect === true) {
+        image(messyRoomBackgroundDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
       if (phoneButton.triggered === true) {
         image(phoneBig, 510, 30, 300, 570);
         fill(30, 30, 30);
@@ -2107,7 +2110,7 @@ function draw() {
       textAlign(LEFT);
       textSize(16);
       text(
-        "Durch deine Entscheidungen wurdest du zu " +
+        "Durch deine Entscheidungen wurdest du zu\n\n" +
           surveilScore +
           "% während deines Aufenthalt überwacht",
         380,
