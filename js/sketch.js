@@ -1498,6 +1498,7 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
       image(smiley, 402, 315, 511, 96);
+      doorButton.triggered = false;
       if (happyButton.effect === true) {
         stroke(220, 220, 220);
         noFill();
@@ -2327,19 +2328,19 @@ function draw() {
 
   if (start.start === false) {
     start.display();
-    image(logo, 355, 100, 600, 310);
+    image(logo, 357, 100, 600, 310);
     l++;
 
-    if (l >= 20) {
-      image(logohalb, 355, 100, 600, 310);
-    }
     if (l >= 25) {
-      image(logozu, 355, 100, 600, 310);
+      image(logohalb, 357, 100, 600, 310);
     }
     if (l >= 30) {
-      image(logohalb, 355, 100, 600, 310);
+      image(logozu, 357, 100, 600, 310);
     }
     if (l >= 35) {
+      image(logohalb, 357, 100, 600, 310);
+    }
+    if (l >= 40) {
       l = 0;
     }
   } else {
