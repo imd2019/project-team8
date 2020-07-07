@@ -182,7 +182,7 @@ function preload() {
 window.preload = preload;
 
 function setup() {
-  sketch.createCanvas(1315, 740);
+  sketch.createCanvas(1330, 750);
   sketch.frameRate(30);
   textFont(myFont);
   //mentorSound1.play();
@@ -190,7 +190,7 @@ function setup() {
 window.setup = setup;
 
 function windowResized() {
-  sketch.resizeCanvas(1315, 740);
+  sketch.resizeCanvas(1330, 750);
 }
 window.addEventListener("resize", windowResized);
 
