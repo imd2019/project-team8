@@ -1315,7 +1315,7 @@ export default class TalkingHandler {
     this._partnerTalking9.text =
       "Danke für dein Verständnis, " +
       this.name.name.join("") +
-      "!\nIch hoffe, wir können es einfach vergessen.";
+      "!\n\nIch hoffe, wir können es einfach vergessen.";
     return this._partnerTalking9;
   }
   get workerTalking1() {
