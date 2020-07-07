@@ -41,6 +41,8 @@ let bikeAnimation;
 
 //Logo
 let logo;
+let logohalb;
+let logozu;
 
 //Handy_groß
 let phoneBig;
@@ -130,12 +132,14 @@ function preload() {
   phoneText = loadImage("png/objects/nachricht1.png");
   phoneTextEffect = loadImage("png/objects/nachricht2.png");
   vibration = loadImage("png/objects/vibration.png");
-  carAnimation =loadImage("png/objects/car.png");
-  trainAnimation =loadImage("png/objects/car.png");
-  bikeAnimation =loadImage("png/objects/car.png");
+  carAnimation = loadImage("png/objects/car.png");
+  trainAnimation = loadImage("png/objects/car.png");
+  bikeAnimation = loadImage("png/objects/car.png");
 
   //Logo
   logo = loadImage("png/objects/logo.png");
+  logohalb = loadImage("png/objects/logo-halb.png");
+  logozu = loadImage("png/objects/logo-zu.png");
 
   //gesprochner Text
 
@@ -234,7 +238,7 @@ export {
   trainAnimation,
   bikeAnimation,
 };
-export { logo };
+export { logo, logohalb, logozu };
 export { myFont };
 // export { mentor };
 

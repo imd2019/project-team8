@@ -34,7 +34,6 @@ import {
   evaluationSmiley,
   vibration,
   newDoor,
- 
 } from "./p5setup.js";
 // Import Sounddateien
 import {
@@ -71,6 +70,9 @@ import {
   soundEffekt3,
   soundEffekt4,
 } from "./p5setup.js";
+
+//Import Logo
+import { logo, logohalb, logozu } from "./p5setup.js";
 
 import Button from "./button.js";
 import Start from "./start.js";
@@ -163,6 +165,7 @@ let c = 0;
 let a = 0;
 let v = 0;
 let k = 0;
+let l = 0;
 
 let surveilScore = 0;
 let happy = 0;
@@ -176,9 +179,9 @@ let securityDoor = false;
 let credits = new Credits(650, 600);
 
 //Animation
-let car = new Car (10,410);
-let train = new Train (10,410);
-let bike = new Bike (10,410);
+let car = new Car(10, 410);
+let train = new Train(10, 410);
+let bike = new Bike(10, 410);
 
 function relode() {
   window.location.reload();
@@ -967,7 +970,7 @@ function draw() {
         if (k <= 55) {
           bike.display();
           bike.x += 15;
-        } else if(k >= 100) {
+        } else if (k >= 100) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
@@ -977,7 +980,7 @@ function draw() {
         if (k <= 55) {
           car.display();
           car.x += 15;
-        } else if(k >= 100) {
+        } else if (k >= 100) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
@@ -987,7 +990,7 @@ function draw() {
         if (k <= 55) {
           train.display();
           train.x += 15;
-        } else if(k >= 100) {
+        } else if (k >= 100) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
@@ -2302,6 +2305,25 @@ function draw() {
 
   if (start.start === false) {
     start.display();
+    image(logo, 355, 100, 600, 330);
+    l++;
+
+    if (l >= 15) {
+      image(logo, 355, 100, 600, 330);
+    }
+    if (l >= 20) {
+      image(logohalb, 355, 100, 600, 330);
+    }
+    if (l >= 25) {
+      image(logozu, 355, 100, 600, 330);
+    }
+    if (l >= 30) {
+      image(logohalb, 355, 100, 600, 330);
+    }
+    if (l >= 35) {
+      l = 0;
+    }
+    console.log(l);
   } else {
     talkingHandler.display();
   }

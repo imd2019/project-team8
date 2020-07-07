@@ -382,7 +382,7 @@ export default class TalkingHandler {
       700,
       100,
       "Venus",
-      "Wir arbeiten daran das volle Potenzial des technischen Fortschritts auszuschöpfen. Dafür müssen wir sehr stark abwägen, was unser Unternehmen benachteiligen könnte."
+      "Wir arbeiten daran, das volle Potenzial des technischen Fortschritts auszuschöpfen. Dafür müssen wir sehr stark abwägen, was unser Unternehmen benachteiligen könnte."
     );
     this.bossTalking9 = new Talking(
       305,
@@ -481,7 +481,7 @@ export default class TalkingHandler {
       90,
       "Wie gehen Sie mit den Daten Ihrer Kunden um?",
       "Wie sehr werden Ihre Arbeitnehmer kontrolliert?",
-      "Ist Ihre Produktion auch für Ärmere zugänglich?",
+      "Sind Ihre Produkte auch für Ärmere zugänglich?",
       "Ich habe keine Fragen."
     );
     this.talking2Decision3 = new Talking2Decision(

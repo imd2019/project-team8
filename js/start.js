@@ -1,5 +1,4 @@
 import Button from "./button.js";
-import { logo } from "./p5setup.js";
 
 export default class Start extends Button {
   constructor(x, y, width, height) {
@@ -7,7 +6,6 @@ export default class Start extends Button {
     this.start = false;
   }
   display() {
-    image(logo, 355, 100, 600, 330);
     if (this.effect === true) {
       noFill();
       stroke(220, 220, 220);
