@@ -965,8 +965,10 @@ function draw() {
       carButton.display();
       trainButton.display();
       if (bikeButton.triggered === true) {
-        surveilScore += 6.25;
         k++;
+        if (k <= 1) {
+          surveilScore += 6.25;
+        }
         if (k <= 55) {
           bike.display();
           bike.x += 15;
@@ -975,8 +977,11 @@ function draw() {
         }
       }
       if (carButton.triggered === true) {
-        surveilScore += 12.5;
         k++;
+        if (k <= 1) {
+          surveilScore += 12.5;
+        }
+
         if (k <= 55) {
           car.display();
           car.x += 15;
@@ -985,8 +990,10 @@ function draw() {
         }
       }
       if (trainButton.triggered === true) {
-        surveilScore += 18.75;
         k++;
+        if (k <= 1) {
+          surveilScore += 18.75;
+        }
         if (k <= 55) {
           train.display();
           train.x += 15;
@@ -2323,7 +2330,6 @@ function draw() {
     if (l >= 35) {
       l = 0;
     }
-    console.log(l);
   } else {
     talkingHandler.display();
   }
