@@ -187,7 +187,7 @@ let car = new Car(10, 410);
 let train = new Train(0, 450);
 let bike = new Bike(10, 410);
 
-function relode() {
+function reload() {
   window.location.reload();
 }
 
@@ -971,7 +971,7 @@ function draw() {
       if (bikeButton.triggered === true && bikebuttonPressed === false) {
         carbuttonPressed = true;
         trainbuttonPressed = true;
-        
+
         k++;
         if (k <= 1) {
           surveilScore += 6.25;
@@ -987,7 +987,6 @@ function draw() {
       if (carButton.triggered === true && carbuttonPressed === false) {
         bikebuttonPressed = true;
         trainbuttonPressed = true;
-        
 
         k++;
         if (k <= 1) {
@@ -1004,7 +1003,7 @@ function draw() {
       if (trainButton.triggered === true && trainbuttonPressed === false) {
         bikebuttonPressed = true;
         carbuttonPressed = true;
-        
+
         k++;
         if (k <= 1) {
           surveilScore += 18.75;
@@ -2323,9 +2322,9 @@ function draw() {
         // creditsY = creditsY-3;
       }
       if (end.end === true) {
-        relode();
+        reload();
       }
-      // relode();
+      // reload();
       fill(30, 30, 30);
       rect(10, 615, 1310, 130);
       fill(60, 60, 60);
