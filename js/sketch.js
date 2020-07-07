@@ -108,28 +108,28 @@ let characterOverview2 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Setze dich im Berwebungsgespräch durch"
+  "Versuche das Bewebungsgespräch erfolgreich zu bestehen."
 );
 let characterOverview3 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Vertraust du deiner Freundin?"
+  "Öffne die Tür!"
 );
 let characterOverview4 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Trinkst du Shots mit deinen Freunden?"
+  "Gehe ans Handy, ein Freund versucht dich zu erreichen."
 );
 let characterOverview5 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Entscheide dich, ob du Teil dieser Welt werden möchtest."
+  "Versuche neue Kontakte zu knüpfen und unterhalte dich mit den Personen auf der Party."
 );
 let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");

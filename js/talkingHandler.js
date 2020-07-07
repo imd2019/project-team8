@@ -784,7 +784,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Amazing! Wir fangen gleich heute Abend mit der Installation an. \n\n Goodbye!"
+      "Amazing! Wir fangen gleich heute Abend mit der Installation an. \n\nGoodbye!"
     );
     this.workerTalking10 = new Talking(
       305,
