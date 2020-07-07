@@ -2334,9 +2334,9 @@ function draw() {
   noFill();
   stroke(30, 30, 30);
   strokeWeight(10);
-  line(10, 10, 1320, 10);
+  line(10, 10, 1310, 10);
   line(10, 10, 10, 750);
-  line(1320, 10, 1320, 750);
+  line(1310, 10, 1310, 750);
 }
 
 window.draw = draw;
