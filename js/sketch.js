@@ -102,7 +102,7 @@ let characterOverview2 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Möchtest du deine ID preisgeben, um den Job zu bekommen?"
+  "Setze dich im Berwebungsgespräch durch"
 );
 let characterOverview3 = new CharacterOverview(
   360,
