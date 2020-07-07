@@ -34,7 +34,6 @@ import {
   evaluationSmiley,
   vibration,
   newDoor,
- 
 } from "./p5setup.js";
 // Import Sounddateien
 import {
@@ -106,28 +105,28 @@ let characterOverview2 = new CharacterOverview(
   150,
   paper,
   xCharacterButton,
-  "Setze dich im Berwebungsgespräch durch"
+  "Versuche das Bewebungsgespräch erfolgreich zu bestehen."
 );
 let characterOverview3 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Vertraust du deiner Freundin?"
+  "Öffne die Tür!"
 );
 let characterOverview4 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Trinkst du Shots mit deinen Freunden?"
+  "Gehe ans Handy, ein Freund versucht dich zu erreichen."
 );
 let characterOverview5 = new CharacterOverview(
   360,
   150,
   paper,
   xCharacterButton,
-  "Entscheide dich, ob du Teil dieser Welt werden möchtest."
+  "Versuche neue Kontakte zu knüpfen und unterhalte dich mit den Personen auf der Party."
 );
 let xPhoneButton = new Button(777, 30, 25, 25);
 let doorButton = new Button(1140, 118, 160, 402, "Tür");
@@ -176,9 +175,9 @@ let securityDoor = false;
 let credits = new Credits(650, 600);
 
 //Animation
-let car = new Car (10,410);
-let train = new Train (10,410);
-let bike = new Bike (10,410);
+let car = new Car(10, 410);
+let train = new Train(10, 410);
+let bike = new Bike(10, 410);
 
 function relode() {
   window.location.reload();
@@ -967,7 +966,7 @@ function draw() {
         if (k <= 55) {
           bike.display();
           bike.x += 15;
-        } else if(k >= 100) {
+        } else if (k >= 100) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
@@ -977,7 +976,7 @@ function draw() {
         if (k <= 55) {
           car.display();
           car.x += 15;
-        } else if(k >= 100) {
+        } else if (k >= 100) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
@@ -987,7 +986,7 @@ function draw() {
         if (k <= 55) {
           train.display();
           train.x += 15;
-        } else if(k >= 100) {
+        } else if (k >= 100) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
