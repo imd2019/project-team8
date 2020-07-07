@@ -1745,7 +1745,6 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(friend, 510, 30, 300, 570);
-      image(friend, 510, 35, 300, 580);
       partyButton.display();
       if (partyButton.triggered === true) {
         surveilScore += 6.25;
