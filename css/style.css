@@ -178,6 +178,15 @@ img {
   100% {
     transform: rotate(360deg);
     opacity: 0;
+    /* 
+    #rectangle{
+    width:200px;
+    height:100px;
+    background:blue;
+    } 
+    width: 300px;
+    height: 300px;
+    color: #037ca9; */
   }
 }
 
