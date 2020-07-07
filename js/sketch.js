@@ -175,6 +175,10 @@ let sad = 0;
 let angry = 0;
 let securityDoor = false;
 
+let carbuttonPressed = false;
+let bikebuttonPressed = false;
+let trainbuttonPressed = false;
+
 //Abspann
 let credits = new Credits(650, 600);
 
@@ -964,19 +968,27 @@ function draw() {
       bikeButton.display();
       carButton.display();
       trainButton.display();
-      if (bikeButton.triggered === true) {
+      if (bikeButton.triggered === true && bikebuttonPressed === false) {
+        carbuttonPressed = true;
+        trainbuttonPressed = true;
+        
         k++;
         if (k <= 1) {
           surveilScore += 6.25;
         }
-        if (k <= 55) {
+        if (k <= 48) {
           bike.display();
           bike.x += 15;
         } else if (k >= 70) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
-      if (carButton.triggered === true) {
+
+      if (carButton.triggered === true && carbuttonPressed === false) {
+        bikebuttonPressed = true;
+        trainbuttonPressed = true;
+        
+
         k++;
         if (k <= 1) {
           surveilScore += 12.5;
@@ -985,19 +997,22 @@ function draw() {
         if (k <= 48) {
           car.display();
           car.x += 15;
-        } else if (k >= 63) {
+        } else if (k >= 70) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
-      if (trainButton.triggered === true) {
+      if (trainButton.triggered === true && trainbuttonPressed === false) {
+        bikebuttonPressed = true;
+        carbuttonPressed = true;
+        
         k++;
         if (k <= 1) {
           surveilScore += 18.75;
         }
-        if (k <= 40) {
+        if (k <= 48) {
           train.display();
           train.x += 15;
-        } else if (k >= 55) {
+        } else if (k >= 70) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
