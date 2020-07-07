@@ -37,6 +37,13 @@ nav {
   background-color: #1e1e1e;
   padding: 15px;
   text-align: right;
+  color: #dcdcdc;
+  text-align: right;
+  font-size: 15px;
+  font-family: hack, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: url ("https://use.typekit.net/dss7qvd.css");
 }
 
 a {
