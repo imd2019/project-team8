@@ -1778,8 +1778,12 @@ function draw() {
         text("FBI,\n OPEN UP!", 1130, 250);
       }
       if (j >= 120) {
-        talkingHandler.activeTalk = talkingHandler.end;
+        talkingHandler.activeTalk = talkingHandler.fbi2;
       }
+      break;
+    case talkingHandler.fbi2:
+      fill(30, 30, 30);
+      rect(10, 10, 1300, 600);
       break;
     case talkingHandler.selfSpeech11:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -2211,6 +2215,14 @@ function draw() {
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
       evaluationButton.triggered = false;
+      break;
+    case talkingHandler.hologram4_1:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
       break;
     case talkingHandler.hologramEvaluation:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);

@@ -6,6 +6,7 @@ import Hologram from "./hologram.js";
 import HologramEmotion from "./hologramEmotion.js";
 import Message from "./message.js";
 import Selfspeech from "./selfspeech.js";
+import Hologramm from "./hologram.js";
 
 export default class TalkingHandler {
   constructor(name) {
@@ -880,6 +881,14 @@ export default class TalkingHandler {
       "Ich gehe nicht so gerne feiern."
     );
     this.fbi = new Talking();
+    this.fbi2 = new Talking(
+      305,
+      630,
+      700,
+      100,
+      "FBI",
+      "Wir nehmen sie fest wegen einer Bombenwahnung!"
+    );
     this.selfSpeech11 = new Selfspeech(
       305,
       630,
@@ -1088,6 +1097,11 @@ export default class TalkingHandler {
       150,
       "Guten Morgen. Ich hoffe, du bist schon wach, denn die Zeit läuft bald ab.\n\nIch habe fürs Erste genug Informationen gesammelt.\nHier, ich schicke sie dir."
     );
+    this.hologram4_1 = new Hologramm(
+      360,
+      150,
+      "Währen deines Aufenhalts habe ich überwacht wie du dich in welcher Situation verhalten hast durch dein Verhalten ist das das Ergebnis:"
+    );
     this.hologramEvaluation = new Talking();
     this.hologram5 = new Hologram(
       360,
@@ -1244,6 +1258,7 @@ export default class TalkingHandler {
     this.friend1Talking3.changeNext(this.selfSpeech11, this);
     this.selfSpeech11.changeNext(this.selfSpeech12, this);
     this.friend1Talking2.changeNext(this.empty12, this);
+    this.fbi2.changeNext(this.end, this);
     //scene7
     this.friend1Talking5.changeNext(this.friend2Talking1, this);
     this.friend2Talking1.changeNext(this.friend3Talking1, this);
@@ -1267,7 +1282,8 @@ export default class TalkingHandler {
     this.selfSpeech18.changeNext(this.selfSpeech19, this);
     this.selfSpeech19.changeNext(this.hologramEmotion3, this);
     this.selfSpeech20.changeNext(this.hologramEmotion4, this);
-    this.hologram4.changeNext(this.hologramEvaluation, this);
+    this.hologram4.changeNext(this.hologram4_1, this);
+    this.hologram4_1.changeNext(this.hologramEvaluation, this);
     // this.hologramEvaluation.changeNext(this.hologram5, this);
     this.friend1Talking7.changeNext(this.selfSpeech21, this);
     this.selfSpeech21.changeNext(this.selfSpeech22, this);
