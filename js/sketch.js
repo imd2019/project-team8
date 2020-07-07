@@ -1,3 +1,4 @@
+//Import Hinterrgünde & Gegenstände
 import {
   laboratoryBackground,
   messyRoomBackground,
@@ -34,6 +35,7 @@ import {
   vibration,
   newDoor,
 } from "./p5setup.js";
+// Import Sounddateien
 import {
   mentorSound1,
   mentorSound2,
@@ -166,7 +168,7 @@ let angry = 0;
 let securityDoor = false;
 
 //Abspann
-let credits = new Credits(700, 600);
+let credits = new Credits(650, 600);
 
 function relode() {
   window.location.reload();
@@ -2112,9 +2114,9 @@ function draw() {
       text(
         "Durch deine Entscheidungen wurdest du zu\n\n" +
           surveilScore +
-          "% während deines Aufenthalt überwacht",
+          "% während \ndeines Aufenthalts überwacht.",
         380,
-        250
+        230
       );
       text("Deine ausgewählten Emotionen:", 380, 315);
       text(happy + "x", 435, 335);

@@ -35,7 +35,7 @@ export default class TalkingHandler {
       700,
       100,
       "Dr. Merton",
-      "Die Welt entwickelt sich sehr viel schneller weiter, als dir bewusst ist."
+      "Die Welt entwickelt sich sehr viel schneller weiter als dir bewusst ist."
     );
     this.mentorTalking2 = new Talking(
       305,
@@ -75,7 +75,7 @@ export default class TalkingHandler {
       700,
       100,
       "Dr. Merton",
-      "Also, nochmal zum Thema zurück, unser Unternehmen ist dabei, wirklich drastische Entscheidungen zu treffen und das bereitet mir Sorgen."
+      "Also, nochmal zum Thema zurück: Unser Unternehmen ist dabei, wirklich drastische Entscheidungen zu treffen und das bereitet mir Sorgen."
     );
     this.mentorTalking7 = new Talking(
       305,
@@ -107,7 +107,7 @@ export default class TalkingHandler {
       700,
       100,
       "Dr. Merton",
-      "*seufz* Na gut, trotzdem danke, dass du hergekommen bist, dann muss ich mir wohl jemanden anderes suchen…"
+      "*seufz* Na gut. Trotzdem danke, dass du hergekommen bist. Dann muss ich mir wohl jemand anderen suchen…"
     );
     this.mentorTalking11 = new Talking(
       305,
@@ -155,7 +155,7 @@ export default class TalkingHandler {
       700,
       100,
       "Dr. Merton",
-      "In dieser Welt besitzt du eine ID, die alle Informationen über dich zugänglich macht, also bitte geh vorsichtig damit um."
+      "In dieser Welt besitzt du eine ID, die alle Informationen über dich zugänglich macht. Also bitte geh vorsichtig damit um!"
     );
     this.mentorTalking16_1 = new Talking(
       305,
@@ -187,7 +187,7 @@ export default class TalkingHandler {
       700,
       100,
       "Dr. Merton",
-      "Sehr gut, bitte unterschreibe dieses Formular, dann kann es losgehen."
+      "Sehr gut! Bitte unterschreibe dieses Formular, dann kann es losgehen."
     );
     this.mentorTalking19_1 = new Talking(
       305,
@@ -374,7 +374,7 @@ export default class TalkingHandler {
       700,
       100,
       "Venus",
-      "Unsere Eingestellten sind unsere Vertreter, also müssen wir sicherstellen, dass all ihre Aktionen auch vertretbar sind. Und natürlich, dass sie effizient für unser Unternehmen sind."
+      "Unsere Angestellten sind unsere Vertreter, also müssen wir sicherstellen, dass all ihre Aktionen auch vertretbar sind. Und natürlich, dass sie effizient für unser Unternehmen sind."
     );
     this.bossTalking8 = new Talking(
       305,
@@ -382,7 +382,7 @@ export default class TalkingHandler {
       700,
       100,
       "Venus",
-      "Wir arbeiten daran, das volle Potential des technologischen Fortschritts anzustreben. Dafür müssen wir sehr stark abwägen, was unser Unternehmen benachteiligen könnte."
+      "Wir arbeiten daran das volle Potenzial des technischen Fortschritts auszuschöpfen. Dafür müssen wir sehr stark abwägen, was unser Unternehmen benachteiligen könnte."
     );
     this.bossTalking9 = new Talking(
       305,
@@ -433,7 +433,7 @@ export default class TalkingHandler {
         700,
         100,
         "Venus",
-        "Tut mir leid, hiermit beende ich das Bewerbungsgespräch, versuchen Sie es woanders."
+        "Tut mir leid, hiermit beende ich das Bewerbungsgespräch! Versuchen sie es woanders!"
       );
     } else {
       this.bossTalking14 = new Talking(
@@ -545,7 +545,7 @@ export default class TalkingHandler {
       700,
       100,
       "Ich",
-      "In dem Video sehe ich meine Freundin in einer Bar stehen mit einer Person, die ich nicht kenne."
+      "Im Video sehe ich meine Freundin mit einer Person, die ich nicht kenne, in einer Bar stehen."
     );
     this.selfSpeech8 = new Selfspeech(
       305,
@@ -784,7 +784,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Amazing! Wir fangen gleich heute Abend an mit der Installation.\n\nGoodbye!"
+      "Amazing! Wir fangen gleich heute Abend mit der Installation an. \n\n Goodbye!"
     );
     this.workerTalking10 = new Talking(
       305,
@@ -800,7 +800,7 @@ export default class TalkingHandler {
       700,
       100,
       "Zero",
-      "Überlegen Sie sich es einfach nochmal und kommen Sie auf uns zu, wenn Sie Ihre Meinung ändern.\n\nGoodbye!"
+      "Überlegen Sie es sich einfach nochmal und kommen Sie auf uns zu, wenn Sie Ihre Meinung ändern.\n\nGoodbye!"
     );
 
     this.talking2Decision7 = new Talking2Decision(
@@ -858,7 +858,7 @@ export default class TalkingHandler {
       700,
       100,
       "Finnick",
-      "Typisch. Naja dein Pech, dann verpasst du eben den ganzen Spaß.\n\nVielleicht bekommen wir dich ja das nächste Mal dazu, bis dann!"
+      "Typisch. Naja, dein Pech! Dann verpasst du eben den ganzen Spaß. \n\nVielleicht bekommen wir dich ja das nächste Mal dazu, bis dann!"
     );
     this.friend1Talking4 = new Talking(
       305,
@@ -1315,7 +1315,7 @@ export default class TalkingHandler {
     this._partnerTalking9.text =
       "Danke für dein Verständnis, " +
       this.name.name.join("") +
-      "!\nIch hoffe, wir können es einfach vergessen.";
+      "!\n\nIch hoffe, wir können es einfach vergessen.";
     return this._partnerTalking9;
   }
   get workerTalking1() {
