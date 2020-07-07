@@ -7,7 +7,7 @@ export default class Train {
   }
 
    display() {
-      image(trainAnimation, this.x, this.y, 500, 200);
+      image(trainAnimation, this.x, this.y, 700, 150);
     }
   
 }

@@ -972,7 +972,7 @@ function draw() {
         if (k <= 55) {
           bike.display();
           bike.x += 15;
-        } else if (k >= 100) {
+        } else if (k >= 70) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
@@ -982,10 +982,10 @@ function draw() {
           surveilScore += 12.5;
         }
 
-        if (k <= 55) {
+        if (k <= 48) {
           car.display();
           car.x += 15;
-        } else if (k >= 100) {
+        } else if (k >= 63) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
@@ -994,10 +994,10 @@ function draw() {
         if (k <= 1) {
           surveilScore += 18.75;
         }
-        if (k <= 55) {
+        if (k <= 40) {
           train.display();
           train.x += 15;
-        } else if (k >= 100) {
+        } else if (k >= 55) {
           talkingHandler.activeTalk = talkingHandler.empty6;
         }
       }
