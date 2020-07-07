@@ -523,7 +523,8 @@ function mouseMoved() {
   if (
     talkingHandler.activeTalk === talkingHandler.hologramEmotion1 ||
     talkingHandler.activeTalk === talkingHandler.hologramEmotion2 ||
-    talkingHandler.activeTalk === talkingHandler.hologramEmotion3
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion3 ||
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion4
   ) {
     happyButton.mouseMoved();
     surprisedButton.mouseMoved();
@@ -635,7 +636,8 @@ function mouseClicked() {
   if (
     talkingHandler.activeTalk === talkingHandler.hologramEmotion1 ||
     talkingHandler.activeTalk === talkingHandler.hologramEmotion2 ||
-    talkingHandler.activeTalk === talkingHandler.hologramEmotion3
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion3 ||
+    talkingHandler.activeTalk === talkingHandler.hologramEmotion4
   ) {
     happyButton.mouseClicked();
     surprisedButton.mouseClicked();
@@ -680,16 +682,13 @@ function mouseClicked() {
       c = 0;
     }
   }
-  if (
-    talkingHandler.activeTalk === talkingHandler.selfSpeech19 ||
-    talkingHandler.activeTalk === talkingHandler.selfSpeech22
-  ) {
-    c++;
-    if (c >= 2) {
-      swichScreen.mouseClicked();
-      c = 0;
-    }
-  }
+  // if (talkingHandler.activeTalk === talkingHandler.selfSpeech19) {
+  //   c++;
+  //   if (c >= 2) {
+  //     swichScreen.mouseClicked();
+  //     c = 0;
+  //   }
+  // }
 }
 window.mouseClicked = mouseClicked;
 
@@ -1978,7 +1977,7 @@ function draw() {
       image(party, 510, 30, 300, 570);
       if (swichScreen.triggered) {
         if (securityDoor === true) {
-          talkingHandler.activeTalk = talkingHandler.hologram4;
+          talkingHandler.activeTalk = talkingHandler.hologramEmotion3;
         } else {
           talkingHandler.activeTalk = talkingHandler.selfSpeech20;
         }
@@ -1992,6 +1991,11 @@ function draw() {
       }
       image(characterButton, 20, 630, 100, 100);
       image(phoneButtonImage, 1245, 630, 65, 100);
+      happyButton.triggered = false;
+      surprisedButton.triggered = false;
+      neutralButton.triggered = false;
+      sadButton.triggered = false;
+      angryButton.triggered = false;
 
       break;
     case talkingHandler.selfSpeech21:
@@ -2007,17 +2011,95 @@ function draw() {
       if (securityDoor === true) {
         image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       }
-      if (swichScreen.triggered) {
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      break;
+    case talkingHandler.hologramEmotion3:
+      image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      if (securityDoor === true) {
+        image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
+      }
+      image(characterButton, 20, 630, 100, 100);
+      image(phoneButtonImage, 1245, 630, 65, 100);
+      image(hologram, 331, 159, 654, 292);
+      image(smiley, 402, 315, 511, 96);
+      happyButton.display();
+      surprisedButton.display();
+      neutralButton.display();
+      sadButton.display();
+      angryButton.display();
+      if (happyButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(451, 363, 98, 98);
+      }
+      if (surprisedButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(555, 363, 98, 98);
+      }
+      if (neutralButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(659, 363, 98, 98);
+      }
+      if (sadButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(763, 363, 98, 98);
+      }
+      if (angryButton.effect === true) {
+        stroke(220, 220, 220);
+        noFill();
+        strokeWeight(2);
+        ellipse(865, 363, 98, 98);
+      }
+      if (happyButton.triggered === true) {
+        happy += 1;
         if (securityDoor === true) {
           talkingHandler.activeTalk = talkingHandler.hologram4;
         } else {
           talkingHandler.activeTalk = talkingHandler.selfSpeech20;
         }
       }
-      image(characterButton, 20, 630, 100, 100);
-      image(phoneButtonImage, 1245, 630, 65, 100);
+      if (surprisedButton.triggered === true) {
+        surprised += 1;
+        if (securityDoor === true) {
+          talkingHandler.activeTalk = talkingHandler.hologram4;
+        } else {
+          talkingHandler.activeTalk = talkingHandler.selfSpeech20;
+        }
+      }
+      if (neutralButton.triggered === true) {
+        neutral += 1;
+        if (securityDoor === true) {
+          talkingHandler.activeTalk = talkingHandler.hologram4;
+        } else {
+          talkingHandler.activeTalk = talkingHandler.selfSpeech20;
+        }
+      }
+      if (sadButton.triggered === true) {
+        sad += 1;
+        if (securityDoor === true) {
+          talkingHandler.activeTalk = talkingHandler.hologram4;
+        } else {
+          talkingHandler.activeTalk = talkingHandler.selfSpeech20;
+        }
+      }
+      if (angryButton.triggered === true) {
+        angry += 1;
+        if (securityDoor === true) {
+          talkingHandler.activeTalk = talkingHandler.hologram4;
+        } else {
+          talkingHandler.activeTalk = talkingHandler.selfSpeech20;
+        }
+      }
       break;
-    case talkingHandler.hologramEmotion3:
+    case talkingHandler.hologramEmotion4:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       if (securityDoor === true) {
         image(newDoor, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -2112,7 +2194,7 @@ function draw() {
       textAlign(LEFT);
       textSize(16);
       text(
-        "Durch deine Entscheidungen wurdest du zu\n\n" +
+        "Durch deine Entscheidungen wurdest du zu" +
           surveilScore +
           "% während \ndeines Aufenthalts überwacht.",
         380,
