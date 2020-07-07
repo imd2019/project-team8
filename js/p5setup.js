@@ -133,8 +133,8 @@ function preload() {
   phoneTextEffect = loadImage("png/objects/nachricht2.png");
   vibration = loadImage("png/objects/vibration.png");
   carAnimation = loadImage("png/objects/car.png");
-  trainAnimation = loadImage("png/objects/car.png");
-  bikeAnimation = loadImage("png/objects/car.png");
+  trainAnimation = loadImage("png/objects/train.png");
+  bikeAnimation = loadImage("png/objects/bike.png");
 
   //Logo
   logo = loadImage("png/objects/logo.png");

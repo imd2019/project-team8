@@ -7,7 +7,7 @@ export default class Car {
   }
 
    display() {
-      image(carAnimation, this.x, this.y, 500, 200);
+      image(carAnimation, this.x, this.y, 600, 200);
     }
   
 }
