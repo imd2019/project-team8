@@ -93,19 +93,3 @@ export default class Credits {
     }
   }
 }
-
-// hdaAbspann = new Abspann(100, 600);
-
-// function draw() {
-//   // background(60, 60, 60);
-//   // abspann();
-//   hdaAbspann.display();
-//   this.y = this.y - 3;
-//   // i++;
-//   if (i <= 5 && i >= 2) {
-//     // if (i <= 1) {
-//     i++;
-//     image(hdaAbspann, 100, 100);
-//     i = 0;
-//   }
-// }

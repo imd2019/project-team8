@@ -880,7 +880,7 @@ export default class TalkingHandler {
       "Ich gehe nicht so gerne feiern."
     );
     this.fbi = new Talking();
-    this.selfSpeech11 = new Talking(
+    this.selfSpeech11 = new Selfspeech(
       305,
       630,
       700,

@@ -2112,7 +2112,7 @@ function draw() {
       textAlign(LEFT);
       textSize(16);
       text(
-        "Durch deine Entscheidungen wurdest du zu\n\n" +
+        "Durch deine Entscheidungen wurdest du zu \n\n" +
           surveilScore +
           "% während \ndeines Aufenthalts überwacht.",
         380,
