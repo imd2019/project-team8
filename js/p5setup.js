@@ -35,6 +35,9 @@ let smiley;
 let phoneText;
 let phoneTextEffect;
 let vibration;
+let carAnimation;
+let trainAnimation;
+let bikeAnimation;
 
 //Logo
 let logo;
@@ -127,6 +130,9 @@ function preload() {
   phoneText = loadImage("png/objects/nachricht1.png");
   phoneTextEffect = loadImage("png/objects/nachricht2.png");
   vibration = loadImage("png/objects/vibration.png");
+  carAnimation =loadImage("png/objects/car.png");
+  trainAnimation =loadImage("png/objects/car.png");
+  bikeAnimation =loadImage("png/objects/car.png");
 
   //Logo
   logo = loadImage("png/objects/logo.png");
@@ -224,6 +230,9 @@ export {
   party,
   phoneBigclear,
   vibration,
+  carAnimation,
+  trainAnimation,
+  bikeAnimation,
 };
 export { logo };
 export { myFont };
