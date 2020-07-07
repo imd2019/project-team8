@@ -23,10 +23,19 @@ body {
 * {
   padding: 0;
   margin: 0 auto;
-  margin-top: 25px;
 }
 
-h2 {
+nav {
+  background-color: #1e1e1e;
+  padding: 15px;
+  text-align: right;
+}
+
+a {
+  color: #dcdcdc;
+}
+
+h1 {
   /* color: white; */
   color: #dcdcdc;
   top: 500px;
@@ -40,16 +49,6 @@ h2 {
   src: url ("https://use.typekit.net/dss7qvd.css"); */
 }
 
-p {
-  top: 100px;
-  text-align: center;
-  font-size: 30px;
-  font-family: hack, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  src: url ("https://use.typekit.net/dss7qvd.css");
-}
-
 img {
   align-items: center;
   background-position: center;
@@ -58,6 +57,7 @@ img {
   width: 30%;
   height: 30%;
   margin-left: 466px;
+  margin-top: 25px;
 }
 
 .Credits {
