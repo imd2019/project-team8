@@ -2232,7 +2232,7 @@ function draw() {
       textAlign(LEFT);
       textSize(16);
       text(
-        "Durch deine Entscheidungen wurdest du zu" +
+        "Durch deine Entscheidungen wurdest du zu " +
           surveilScore +
           "% während \ndeines Aufenthalts überwacht.",
         380,
