@@ -233,7 +233,7 @@ export default class TalkingHandler {
       150,
       "Hallo " +
         this.name.name.join("") +
-        ", ich hoffe, du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch bei NanoGen Corporation. Bitte mach dich auf den Weg."
+        ", ich hoffe, du bist gut angekommen. In dieser Welt bist du keine Person mehr, sondern nur noch eine ID-Nummer, unter der alles über dich abgespeichert wird, vergiss das nicht.\n\nDu hast jetzt gleich ein Bewerbungsgespräch bei NanoGen Corporation. Bitte mach dich auf den Weg."
     );
 
     this.selfSpeech1 = new Selfspeech(
@@ -434,7 +434,7 @@ export default class TalkingHandler {
         700,
         100,
         "Venus",
-        "Tut mir leid, hiermit beende ich das Bewerbungsgespräch! Versuchen sie es woanders!"
+        "Tut mir leid, hiermit beende ich das Bewerbungsgespräch! Versuchen Sie es woanders!"
       );
     } else {
       this.bossTalking14 = new Talking(
@@ -887,7 +887,7 @@ export default class TalkingHandler {
       700,
       100,
       "FBI",
-      "Wir nehmen sie fest wegen einer Bombenwahnung!"
+      "Wir nehmen sie fest wegen einer Bombenwarnung!"
     );
     this.selfSpeech11 = new Selfspeech(
       305,
@@ -1095,18 +1095,18 @@ export default class TalkingHandler {
     this.hologram4 = new Hologram(
       360,
       150,
-      "Guten Morgen. Ich hoffe, du bist schon wach, denn die Zeit läuft bald ab.\n\nIch habe fürs Erste genug Informationen gesammelt.\nHier, ich schicke sie dir."
+      "Guten Morgen. Ich hoffe, du bist schon wach, denn die Zeit läuft bald ab. Ich habe fürs Erste genug Informationen gesammelt und du warst wirklich eine große Hilfe.\n\nIch möchte dir erklären, worum es bei dieser Mission eigentlich geht."
     );
     this.hologram4_1 = new Hologramm(
       360,
       150,
-      "Währen deines Aufenhalts habe ich überwacht wie du dich in welcher Situation verhalten hast durch dein Verhalten ist das das Ergebnis:"
+      "Eventuell hast du bemerkt, dass es dort weniger Privatsphäre gibt gewohnt. Ich habe beobachtet, an welchen Stellen du durch deine Entscheidungen überwacht wurdest.\n\nHier ist das Ergebnis:"
     );
     this.hologramEvaluation = new Talking();
     this.hologram5 = new Hologram(
       360,
       150,
-      "Es war nötig dir diese Informationen zu geben, denn ich habe eine wichtige Frage an dich.\n\nMöchtest du zu unserer Welt zurückkehren?"
+      "Waren dir die Konsequenzen deines Verhaltens bewusst?\n\nEs war nötig dir diese Informationen zu geben, denn ich habe eine wichtige Frage an dich.\n\nMöchtest du zu unserer Welt zurückkehren?"
     );
     this.talking2Decision9 = new Talking2Decision(
       305,
@@ -1305,7 +1305,7 @@ export default class TalkingHandler {
     this._hologram1.text =
       "Hallo " +
       this.name.name.join("") +
-      ", ich hoffe du bist gut angekommen. In dieser Welt hast du jetzt gleich ein Bewerbungsgespräch bei NanoGen Corporation. Bitte mach dich auf den Weg.";
+      ", ich hoffe du bist gut angekommen. In dieser Welt bist du keine Person mehr, sondern nur noch eine ID-Nummer, unter der alles über dich abgespeichert wird, vergiss das nicht.\n\nDu hast jetzt gleich ein Bewerbungsgespräch bei NanoGen Corporation. Bitte mach dich auf den Weg.";
 
     return this._hologram1;
   }
