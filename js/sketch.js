@@ -34,6 +34,7 @@ import {
   evaluationSmiley,
   vibration,
   newDoor,
+ 
 } from "./p5setup.js";
 // Import Sounddateien
 import {
@@ -78,6 +79,9 @@ import TalkingHandler from "./talkingHandler.js";
 import Paper from "./paper.js";
 import CharacterOverview from "./characterOverview.js";
 import Credits from "./credits.js";
+import Car from "./car.js";
+import Bike from "./bike.js";
+import Train from "./train.js";
 
 //Buttons
 let start = new Start(562.5, 450, 185, 65);
@@ -158,6 +162,7 @@ let m = 0;
 let c = 0;
 let a = 0;
 let v = 0;
+let k = 0;
 
 let surveilScore = 0;
 let happy = 0;
@@ -169,6 +174,11 @@ let securityDoor = false;
 
 //Abspann
 let credits = new Credits(650, 600);
+
+//Animation
+let car = new Car (10,410);
+let train = new Train (10,410);
+let bike = new Bike (10,410);
 
 function relode() {
   window.location.reload();
@@ -954,15 +964,33 @@ function draw() {
       trainButton.display();
       if (bikeButton.triggered === true) {
         surveilScore += 6.25;
-        talkingHandler.activeTalk = talkingHandler.empty6;
+        k++;
+        if (k <= 55) {
+          bike.display();
+          bike.x += 15;
+        } else if(k >= 100) {
+          talkingHandler.activeTalk = talkingHandler.empty6;
+        }
       }
       if (carButton.triggered === true) {
         surveilScore += 12.5;
-        talkingHandler.activeTalk = talkingHandler.empty6;
+        k++;
+        if (k <= 55) {
+          car.display();
+          car.x += 15;
+        } else if(k >= 100) {
+          talkingHandler.activeTalk = talkingHandler.empty6;
+        }
       }
       if (trainButton.triggered === true) {
         surveilScore += 18.75;
-        talkingHandler.activeTalk = talkingHandler.empty6;
+        k++;
+        if (k <= 55) {
+          train.display();
+          train.x += 15;
+        } else if(k >= 100) {
+          talkingHandler.activeTalk = talkingHandler.empty6;
+        }
       }
       break;
     case talkingHandler.empty6:
