@@ -180,7 +180,7 @@ let credits = new Credits(650, 600);
 
 //Animation
 let car = new Car(10, 410);
-let train = new Train(10, 410);
+let train = new Train(0, 450);
 let bike = new Bike(10, 410);
 
 function relode() {
