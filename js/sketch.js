@@ -1483,6 +1483,7 @@ function draw() {
       image(phoneButtonImage, 1245, 630, 65, 100);
       image(hologram, 331, 159, 654, 292);
       image(smiley, 402, 315, 511, 96);
+      doorButton.triggered = false;
       if (happyButton.effect === true) {
         stroke(220, 220, 220);
         noFill();
