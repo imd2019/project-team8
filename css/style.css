@@ -12,8 +12,8 @@ body {
 
 canvas
  {
-  width: 50% !important;
-  height: 50% !important;
+  width: 70% !important;
+  height: 70% !important;
   display: flex;
   justify-content: center;
   align-items: center;

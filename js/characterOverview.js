@@ -59,9 +59,11 @@ export default class CharacterOverview {
     textSize(20);
     textAlign(CENTER);
     text("x", this.x + 613, this.y + 25);
-    textSize(15);
     textAlign(LEFT);
     fill(220, 220, 220);
+    textSize(20);
+    text("ID  H5-B783-T29CV76", this.x + 200, this.y + 50);
+    textSize(15);
     text("Name: " + this.name.name.join(""), this.x + 40, this.y + 80);
     text("Freundin: Pastell", this.x + 40, this.y + 150);
     text("Aktuelle Aufgabe:\n\n" + this.text, this.x + 40, this.y + 220);
