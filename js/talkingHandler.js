@@ -880,7 +880,7 @@ export default class TalkingHandler {
       "Ich gehe nicht so gerne feiern."
     );
     this.fbi = new Talking();
-    this.selfSpeech11 = new Talking(
+    this.selfSpeech11 = new Selfspeech(
       305,
       630,
       700,
@@ -1113,6 +1113,11 @@ export default class TalkingHandler {
       150,
       "Wie hast du dich gefühlt?"
     );
+    this.hologramEmotion4 = new HologramEmotion(
+      360,
+      150,
+      "Wie hast du dich gefühlt?"
+    );
 
     //scene1
     this.activeTalk = this.start;
@@ -1196,7 +1201,7 @@ export default class TalkingHandler {
     this.selfSpeech8.changeNext(this.selfSpeech9, this);
     this.selfSpeech9.changeNext(this.selfSpeech10, this);
     this.selfSpeech10.changeNext(this.talking2Decision5, this);
-    this.talking2Decision5.changeNext1(this.empty7, this);
+    this.talking2Decision5.changeNext1(this.hologramEmotion2, this);
     this.talking2Decision5.changeNext2(this._partnerTalking1, this);
     this._partnerTalking1.changeNext(this.partnerTalking2, this);
     this.partnerTalking2.changeNext(this.userTalking1, this);
@@ -1260,18 +1265,18 @@ export default class TalkingHandler {
     this.selfSpeech16.changeNext(this.selfSpeech17, this);
     this.selfSpeech17.changeNext(this.selfSpeech18, this);
     this.selfSpeech18.changeNext(this.selfSpeech19, this);
-    // this.selfSpeech19.changeNext(this.selfSpeech20, this);
-    this.selfSpeech20.changeNext(this.hologramEmotion3, this);
+    this.selfSpeech19.changeNext(this.hologramEmotion3, this);
+    this.selfSpeech20.changeNext(this.hologramEmotion4, this);
     this.hologram4.changeNext(this.hologramEvaluation, this);
     // this.hologramEvaluation.changeNext(this.hologram5, this);
     this.friend1Talking7.changeNext(this.selfSpeech21, this);
     this.selfSpeech21.changeNext(this.selfSpeech22, this);
-    // this.selfSpeech22.changeNext(this.hologramEmotion3, this);
+    this.selfSpeech22.changeNext(this.hologramEmotion4, this);
     this.hologram5.changeNext(this.talking2Decision9, this);
     this.talking2Decision9.changeNext1(this.hologram6, this);
     this.talking2Decision9.changeNext2(this.hologram6, this);
     this.hologram6.changeNext(this.end, this);
-    this.selfSpeech12.changeNext(this.hologramEmotion3, this);
+    this.selfSpeech12.changeNext(this.hologramEmotion4, this);
   }
 
   get selfSpeech2() {
