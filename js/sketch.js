@@ -2305,25 +2305,21 @@ function draw() {
 
   if (start.start === false) {
     start.display();
-    image(logo, 355, 100, 600, 330);
+    image(logo, 355, 100, 600, 310);
     l++;
 
-    if (l >= 15) {
-      image(logo, 355, 100, 600, 330);
-    }
     if (l >= 20) {
-      image(logohalb, 355, 100, 600, 330);
+      image(logohalb, 355, 100, 600, 310);
     }
     if (l >= 25) {
-      image(logozu, 355, 100, 600, 330);
+      image(logozu, 355, 100, 600, 310);
     }
     if (l >= 30) {
-      image(logohalb, 355, 100, 600, 330);
+      image(logohalb, 355, 100, 600, 310);
     }
     if (l >= 35) {
       l = 0;
     }
-    console.log(l);
   } else {
     talkingHandler.display();
   }
