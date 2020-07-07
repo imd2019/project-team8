@@ -300,11 +300,6 @@ function sound() {
     mentorSound3.stop();
     mentorSound4.play();
   }
-  // if (s === 3 && talkingHandler.activeTalk === talkingHandler.mentorTalking4) { //andere version von sound4
-  //   s++;
-  //   mentorSound3.stop();
-  //   mentorSound5.play();
-  // }
   if (s === 4 && talkingHandler.activeTalk === talkingHandler.mentorTalking5) {
     s++;
     mentorSound4.stop();
@@ -594,7 +589,6 @@ function mouseClicked() {
         character.mouseClicked();
       }
     }
-
     if (phoneButton.triggered === false && character.triggered === false) {
       window1Button.mouseClicked();
     }
@@ -699,13 +693,6 @@ function mouseClicked() {
       c = 0;
     }
   }
-  // if (talkingHandler.activeTalk === talkingHandler.selfSpeech19) {
-  //   c++;
-  //   if (c >= 2) {
-  //     swichScreen.mouseClicked();
-  //     c = 0;
-  //   }
-  // }
 }
 window.mouseClicked = mouseClicked;
 
@@ -847,20 +834,11 @@ function draw() {
         image(phoneImage, 800, 440, 70, 10);
       }
       break;
-    //case talkingHandler.animation1:
-    //a++
-    //bilder einfügen (Hintergründe)
-    //animation einfügen
-    //if(a>=50){
-    //takingHandler.aktiveTalk=takingHandler.hologram1;
-    // }
-    //break;
     case talkingHandler.hologram1:
       //a=0;
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
       image(characterButton, 20, 630, 100, 100);
       image(phoneImage, 800, 440, 70, 10);
-
       break;
     case talkingHandler.selfSpeech1:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -926,7 +904,6 @@ function draw() {
       if (character.triggered === true) {
         characterOverview1.display();
         xCharacterButton.display();
-        // this.text = "Gehe zum Bewerbungsgespräch";
         if (xCharacterButton.triggered === true) {
           character.triggered = false;
           xCharacterButton.triggered = false;
@@ -2038,7 +2015,6 @@ function draw() {
           talkingHandler.activeTalk = talkingHandler.selfSpeech20;
         }
       }
-
       break;
     case talkingHandler.selfSpeech20:
       image(messyRoomBackground, 15, 15, 1300, 600, 0, 0, 8300, 3300);
@@ -2318,8 +2294,6 @@ function draw() {
       } else if (e >= 30) {
         credits.display();
         credits.y -= 3;
-        // // creditsY + 0, 2;
-        // creditsY = creditsY-3;
       }
       if (end.end === true) {
         reload();
@@ -2333,7 +2307,6 @@ function draw() {
       end.display();
 
       break;
-    // case Abspann:
   }
 
   if (start.start === false) {
@@ -2364,7 +2337,6 @@ function draw() {
   line(10, 10, 1320, 10);
   line(10, 10, 10, 610);
   line(1320, 10, 1320, 610);
-  // rect(10, 10, 1310, 610);
 }
 
 window.draw = draw;
