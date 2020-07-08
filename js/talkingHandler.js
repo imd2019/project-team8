@@ -1100,7 +1100,7 @@ export default class TalkingHandler {
     this.hologram4_1 = new Hologramm(
       360,
       150,
-      "Eventuell hast du bemerkt, dass es dort weniger Privatsphäre gibt gewohnt. Ich habe beobachtet, an welchen Stellen du durch deine Entscheidungen überwacht wurdest.\n\nHier ist das Ergebnis:"
+      "Eventuell hast du bemerkt, dass es dort weniger Privatsphäre gibt als gewohnt. Ich habe beobachtet, an welchen Stellen du durch deine Entscheidungen überwacht wurdest.\n\nHier ist das Ergebnis:"
     );
     this.hologramEvaluation = new Talking();
     this.hologram5 = new Hologram(
