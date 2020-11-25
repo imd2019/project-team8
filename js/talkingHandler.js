@@ -1294,7 +1294,7 @@ export default class TalkingHandler {
     this.hologram6.changeNext(this.end, this);
     this.selfSpeech12.changeNext(this.hologramEmotion4, this);
   }
-
+//this.name.name wird mit der Methode get aufgerufen, da this.name.name sonst erst in der function draw aufgerufen wird
   get selfSpeech2() {
     if (this.activeTalk != this._selfSpeech2) {
       this._selfSpeech2.text = random(this.selfSpeechArray1);
@@ -1362,7 +1362,7 @@ export default class TalkingHandler {
       "Hallo " +
       this.name.name.join("") +
       ".\n\nWir haben dich in einem Video auf Insta Connect identifizieren können.\nHier findest du den Link zu dem Video.\n\nTrust is Power,\nInsta Connect";
-    return this._message2;
+    return this._message2; 
   }
 
   mouseMoved() {

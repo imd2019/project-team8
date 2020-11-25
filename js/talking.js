@@ -43,6 +43,8 @@ export default class Talking extends Button {
   }
   clicked() {
     if (this.handler != null) {
+      //handler wird durch this.handler ersetzt, jedes Objekt hat eigenen handler
+      //durch das Klicken wird gewechselt zwischen den Szenen
       this.handler.activeTalk = this.next;
     }
   }

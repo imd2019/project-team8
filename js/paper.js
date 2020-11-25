@@ -10,6 +10,7 @@ export default class Paper {
 
   keyPressed() {
     if (keyCode === 8) {
+      //zurück-Button, löscht den letzten Buchstaben
       this.name.pop();
     }
     if (
@@ -19,6 +20,7 @@ export default class Paper {
       keyCode === 186 ||
       keyCode === 32
     ) {
+      //Buchstaben, aber keine anderen Eingaben möglich
       this.name.push(key);
     }
   }
