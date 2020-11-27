@@ -1,0 +1,98 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  background-size: cover; 
+  margin: 0 auto;
+}
+
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #1e1e1e;
+  padding: 20px;
+  color: #dcdcdc;
+  text-align: right;
+  font-size: 20px;
+  font-family: hack, sans-serif;
+  font-style: normal;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+}
+
+a {
+  color: #dcdcdc;
+}
+
+img {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 20% !important;
+  height: 20% !important;
+  margin-top: 25px; 
+  display: flex; 
+   justify-content: center; 
+    align-items: center;
+}
+
+h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-family: hack, sans-serif;
+  font-style: normal;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+}
+
+h2 {
+  align-items: center;
+  padding-bottom: 10px;
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-family: Hack;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+}
+
+h3 {
+  padding-bottom: 10px;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-family: Hack;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+}
+
+p {
+  padding: 5px;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  font-family: hack, sans-serif;
+  font-style: normal;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+  color: #dcdcdc;
+}
+
+.abstand{
+  align-items: center;
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  font-family: hack, sans-serif;
+  font-style: normal;
+  src: url ("https://use.typekit.net/dss7qvd.css");
+  color: #dcdcdc;
+  padding-bottom: 50px;
+}
